@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-matrices-elimination" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Elimination and Matrices</title>
+  <introduction>
+    <p>
+      Material in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
+    </p>
+  </introduction>
+  <p>
+    Let's return to <xref ref="ex_by_hand">Example</xref>. As we mentioned before, there isn't just one
+    <q>right</q> way of finding the solution to this system of equations.
+    Here is another way to do it.
+  </p>
+  <p>
+    First, we rewrite the equations so that all variables are on the left of the equal sign and all constants are on the right.
+    Also, for a bit more consistency,
+    let's list the variables in alphabetical order in each equation.
+    Therefore we can write the equations as
+    <men xml:id="eq_before_matrix">
+      \begin{array}{ccccccc} b\amp +\amp g\amp +\amp r\amp =\amp 30\\ \amp -\amp 2g\amp +\amp r\amp =\amp 0\\ -b\amp +\amp g\amp +\amp r\amp =\amp 0 \end{array}
+    </men>
+  </p>
+  <p>
+    Now, let's add the first and last equations together,
+    and write the result as a new third equation.
+    This gives us:
+    <me>
+      \begin{array}{ccccccc} b\amp +\amp g\amp +\amp r\amp =\amp 30\\ \amp -\amp 2g\amp +\amp r\amp =\amp 0\\ \amp  \amp 2g\amp +\amp 2r\amp =\amp 30 \end{array}
+    </me>.
+    A nice feature of this is that the only equation with a <m>b</m> in it is the first equation.
+  </p>
+  <p>
+    Next let's multiply the second equation by <m>-\frac{1}{2}</m>.
+    This gives
+    <me>
+      \begin{array}{ccccccc} b\amp +\amp g\amp +\amp r\amp =\amp 30\\ \amp  \amp  g\amp -\amp \frac{1}{2}r\amp =\amp 0\\ \amp  \amp 2g\amp +\amp 2r\amp =\amp 30 \end{array}
+    </me>
+  </p>
+  <p>
+    Let's now do two steps in a row; our goal is to get rid of the <m>g</m> coefficients in the first and third equations.
+    In order to remove the <m>g</m> in the first equation, let's multiply the second equation by <m>-1</m> and add that to the first equation,
+    replacing the first equation with that sum. To remove the <m>g</m> in the third equation,
+    let's multiply the second equation by <m>-2</m> and add that to the third equation, replacing the third equation. Our new system of equations now becomes
+    <me>
+      \begin{array}{ccccccc} b\amp +\amp  \amp  \amp \frac{3}{2}r\amp =\amp 30\\ \amp  \amp g\amp -\amp \frac{1}{2}r\amp =\amp 0\\ \amp  \amp  \amp  \amp 3r\amp =\amp 30 \end{array}
+    </me>
+  </p>
+  <p>
+    Clearly we can multiply the third equation by <m>\frac{1}{3}</m> and find that <m>r=10</m>;
+    let's make this our new third equation, giving
+    <me>
+      \begin{array}{ccccccc} b\amp +\amp  \amp  \amp \frac{3}{2}r\amp =\amp 30\\ \amp  \amp g\amp -\amp \frac{1}{2}r\amp =\amp 0\\ \amp  \amp  \amp  \amp r\amp =\amp 10 \end{array}
+    </me>
+  </p>
+  <p>
+    Now let's get rid of the <m>r</m>'s in the first and second equation.
+    To remove the <m>r</m> in the first equation,
+    let's multiply the third equation by
+    <m>-\frac{3}{2}</m> and add the result to the first equation,
+    replacing the first equation with that sum.
+    To remove the <m>r</m> in the second equation,
+    we can multiply the third equation by <m>\frac{1}{2}</m> and add that to the second equation,
+    replacing the second equation with that sum.
+    This gives us:
+    <me>
+      \begin{array}{ccccccc} b\amp  \amp  \amp  \amp  \amp =\amp 15\\ \amp  \amp g\amp  \amp  \amp =\amp 5\\ \amp  \amp  \amp  \amp r\amp =\amp 10 \end{array}
+    </me>.
+    Clearly we have discovered the same result as when we solved this problem in <xref ref="ex_by_hand">Example</xref>, 
+    even though our steps were different.
+  </p>
+  <p>
+    As we said before, all that really matters for the solution to a problem like this are the coefficients and the constants.
+    There is nothing special about the letters <m>b</m>, <m>g</m> and <m>r</m>;
+    we could have used <m>x</m>, <m>y</m> and <m>z</m>, or <m>x_1</m>, <m>x_2</m> and <m>x_3</m>.
+    This second method suggests that we don't actually need to write the variable names at all, as long as we carefully line them up in the system of equations.
+  </p>
+  <p>
+    Let's look again at our system of equations in <xref ref="eq_before_matrix"/> and write the coefficients and the constants in a rectangular array. This time we won't ignore the zeros, but rather write them out.
+    <me>
+      \begin{array}{ccccccc} b\amp +\amp g\amp +\amp r\amp =\amp 30\\ \amp -\amp 2g\amp +\amp r\amp =\amp 0\\ -b\amp +\amp g\amp +\amp r\amp =\amp 0 \end{array} \quad \Longleftrightarrow \quad \left[\begin{array}{cccc} 1\amp 1\amp 1\amp 30\\ 0\amp -2\amp 1\amp 0\\ -1\amp 1\amp 1\amp 0 \end{array} \right]
+    </me>
+  </p>
+  <p>
+    Notice how even the equal signs are gone; we don't need them, for we know that the last entry
+     in each row is the constant of the corresponding equation.
+  </p>
+  <p>
+    We call this array we have just created a <em>matrix</em>.
+  </p>
+  <definition xml:id="def_matrix">
+    <title>Matrix</title>
+      <idx><h>matrix</h><h>augmented matrix</h></idx>
+    <statement>
+      <p>
+        A <term>matrix</term> is a rectangular array of numbers.
+      </p>
+      <p>
+        The horizontal lines of numbers form <term>rows</term>
+        and the vertical lines of numbers form <term>columns</term>.
+        A matrix with <m>m</m> rows and <m>n</m> columns is said to be an <term><m>m\times n</m> matrix</term> (said out loud as
+        <q>an <m>m</m> by <m>n</m> matrix</q>).
+      </p>
+      <p>
+        If a matrix corresponds to a linear system of equations such that the last column corresponds to the constants
+        of the system, we call the matrix an <term>augmented matrix</term>.
+      </p>
+      <p>
+        It is often useful to be able to refer to specific entries of a matrix.  We tend to use capital letters
+        for matrices, such as <m>A</m>, <m>B</m>, and <m>C</m>, and then we use lower case letters with subscripts 
+        for the entries within a matrix.  That is, <m>a_{32}</m> means
+        <q>the number in the third row and second column.</q>
+      </p>
+      <p>
+        All the entries of an <m>m\times n</m> matrix <m>A</m> would appear like this:
+        <me>
+          A=\left[\begin{array}{ccccc} a_{11}\amp a_{12}\amp a_{13}\amp \cdots\amp a_{1n}\\ a_{21}\amp a_{22}\amp a_{23}\amp \cdots\amp a_{2n}\\ a_{31}\amp a_{32}\amp a_{33}\amp \cdots\amp a_{3n}\\ \vdots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\\ a_{m1}\amp a_{m2}\amp a_{m3}\amp \cdots\amp a_{mn} \end{array} \right]
+        </me>
+      </p>
+      
+    </statement>
+  </definition>
+
+
+<exercises>
+ <exercisegroup>
+     <introduction>
+          <p>
+            In the following exercises, state whether or not the given equation is linear.
+          </p>
+     </introduction>
+  <exercise>
+    <statement>
+      <p>
+        <m>x+y+z = 10</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        y
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>xy + yz+ xz = 1</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        n
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>-3x + 9 = 3y - 5z+ x-7</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        y
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>\sqrt{5}y + \pi x =-1</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        y
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>(x-1)(x+1) = 0</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        n
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>\sqrt{x_1^2+x_2^2} = 25</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        n
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>x_1 + y + t = 1</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        y
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>\frac{1}{x} + 9 = 3\cos(y) - 5z</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        n
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>\cos(15)y + \frac{x}{4} =-1</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        y
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>2^x + 2^y = 16</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        n
+      </p>
+    </answer>
+  </exercise>
+ </exercisegroup>
+ <exercisegroup>
+   <introduction>
+      <p>
+          In the following exercises, solve the system of linear equations.
+      </p>
+   </introduction>
+  <exercise>
+    <statement>
+      <p>
+        <m>\begin{array}{ccccc} x\amp +\amp y\amp =\amp -1\\ 2x\amp -\amp 3y\amp =\amp 8 \end{array}</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>x = 1, y=-2</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>\begin{array}{ccccc} 2x\amp -\amp 3y\amp =\amp 3\\ 3x\amp +\amp 6y\amp =\amp 8 \end{array}</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>x = 2, y=\frac13</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>\begin{array}{ccccccc} x\amp -\amp y\amp +\amp z\amp =\amp 1\\ 2x\amp +\amp 6y\amp -\amp z\amp =\amp -4\\ 4x\amp -\amp 5y\amp +\amp 2z\amp =\amp 0 \end{array}</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>x = -1, y=0,z=2</m>
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        <m>\begin{array}{ccccccc} x\amp +\amp y\amp -\amp z\amp =\amp 1\\ 2x\amp +\amp y\amp \amp \amp =\amp 2\\ \amp \amp y\amp +\amp 2z\amp =\amp 0 \end{array}</m>
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>x =1,\ y=0,\ z=0</m>
+      </p>
+    </answer>
+  </exercise>
+ </exercisegroup>
+  <exercise>
+    <statement>
+      <p>
+        A farmer looks out his window at his chickens and pigs.
+        He tells his daughter that he sees <m>62</m> heads and <m>190</m> legs.
+        How many chickens and pigs does the farmer have?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>29</m> chickens and <m>33</m> pigs
+      </p>
+    </answer>
+  </exercise>
+  <exercise>
+    <statement>
+      <p>
+        A lady buys <m>20</m> trinkets at a yard sale. 
+        The cost of each trinket is either <m>\$ 0.30</m> or <m>\$ 0.65</m>. 
+        If she spends <m>\$8.80</m>, how many of each type of trinket does she buy?
+      </p>
+    </statement>
+    <answer>
+      <p>
+        <m>12</m> of the <m>\$ 0.30</m> trinkets, <m>8</m> of the <m>\$ 0.65</m> trinkets
+      </p>
+    </answer>
+  </exercise>
+</exercises>
+</section>

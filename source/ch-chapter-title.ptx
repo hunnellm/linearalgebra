@@ -8,6 +8,7 @@
   </introduction>
 
   <!-- include sections -->
-  <xi:include href="sec-section-name.ptx" />
+  <xi:include href="sec-lin-eqn-substitution.ptx" />
+  <xi:include href="sec-matrices-elimination.ptx" />
 
 </chapter>
