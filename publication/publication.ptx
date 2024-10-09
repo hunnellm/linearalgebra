@@ -11,13 +11,13 @@
     <!-- Level at which are html files generated (chapter/section/etc): -->
     <chunking level="2" />
     <!-- Depth for table of contents.  0 means no TOC -->
-    <tableofcontents level="2" />
+    <tableofcontents level="3" />
     <!-- Visibility of exercise components where they first appear.          -->
     <!-- There are four components (statement/hint/answer/solution) for each -->
     <!-- of five exercise types (inline/divisional/worksheet/reading/        -->
     <!-- project). Some examples:                                            -->
     <exercise-inline statement="yes" hint="yes" answer="no" solution="no" />
-    <exercise-divisional statement="yes" hint="yes" />
+    <exercise-divisional statement="yes" hint="yes" answer="yes"/>
     <!-- Style of fill-in-the-blanks: -->
     <fillin textstyle="underline" mathstyle="shade" />
     <!-- You can set a watermark: -->
@@ -47,6 +47,7 @@
     <!-- For use with a book organized by part, you can set the -->
     <!--  @part-structure to "decorative" or "structural" -->
     <!-- <divisions part-structure="decorative" chapter-start="1" level="3"/> -->
+    <divisions level="2"/>
     <!-- The next elements say how the levels deep to break up the    -->
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->
@@ -93,7 +94,7 @@
       table="no"
       listing="no"
       list="no"
-      exercise-inline="yes"
+      exercise-inline="no"
       exercise-divisional="no"
       exercise-worksheet="no"
       exercise-readingquestion="no"
@@ -123,7 +124,7 @@
     <!-- Control behavior of online WeBWorK, per type: -->
     <webwork
       inline="dynamic"
-      divisional="static"
+      divisional="dynamic"
       reading="static"
       worksheet="static"
       project="dynamic"
@@ -133,8 +134,9 @@
     <!-- StatCounter requires both values to be set            -->
     <!-- <analytics google-gst="UA-0123456-1" statcounter-project="0123456"
     statcounter-security="0123456"/> -->
+    <tableofcontents focused="yes" preexpanded-levels="2" />
   </html>
 
   <!-- To use WeBWorK, you need a server.  -->
-  <!-- <webwork server="https://webwork-ptx.aimath.org"> -->
+  <webwork server="https://webwork-ptx.aimath.org"/>
 </publication>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- **********************************************************************-->
+<!-- Copyright 2012-2019                                                   -->
+<!-- Matthew Boelkins                                                      -->
+<!--                                                                       -->
+<!-- This file is part of Active Calculus.                                 -->
+<!--                                                                       -->
+<!-- Permission is granted to copy, distribute and/or modify this document -->
+<!-- under the terms of the Creative Commons BY-SA license.  The work      -->
+<!-- may be used for free by any party so long as attribution is given to  -->
+<!-- the author(s), the work and its derivatives are used in the spirit of -->
+<!-- "share and share alike".  All trademarks are the registered marks of  -->
+<!-- their respective owners.                                              -->
+<!-- **********************************************************************-->
+<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ww-lin-eqn-subs" ><title>Interactive Exercises</title>
+
+  <exercise label="ww-2-var-subs"><title>Two variable substitution</title>
+    <webwork>
+      <pg-code>
+        Context("Numeric");
+        $x = Compute(non_zero_random(-8,8,1));
+        $y = Compute(non_zero_random(-8,8,1));
+        $a=Compute(random(2,5,1));
+        $b=Compute(random(2,5,1));
+        $c=Compute(random(2,5,1));
+        $const1=$a*$x+$y;
+        $const2=$b*$x-$c*$y;
+      </pg-code>
+    
+      <statement>
+        <p> The solution of the linear system
+          <md>
+            <mrow><var name="$a"/>x+y \amp = <var name="$const1" /></mrow>
+            <mrow><var name="$b"/>x-<var name="$c"/>y \amp = <var name="$const2" /></mrow>
+          </md>
+          is
+        </p>
+
+        <p>
+          <m>x=</m><var name="$x" width="2" /> and <m>y=</m><var name="$y" width="2" /></p>
+      </statement>
+    </webwork>
+  </exercise>
+
+    <exercise label="ww-marble-jar"><title>Marbles in a Jar</title>
+        <webwork>
+          <pg-code>
+            Context("Numeric");
+            $g = Compute(random(3,20));
+            $r=2*$g;
+            $b=3*$g;
+    
+            $total = 6*$g;
+          </pg-code>
+        
+          <statement>
+            <p> Suppose a jar contains red, blue and green marbles. You are told that there are a total 
+              of <m><var name="$total" /></m> marbles in the jar; there are twice as many red marbles as green ones; 
+              the number of blue marbles is the same as the sum of the red and green marbles. 
+              How many marbles of each color are there?
+            </p>
+            <instruction>
+              Use <m>r</m> for the number of red marbles, <m>b</m> for the number of blue marbles, and
+              <m>g</m> for the number of green marbles.  
+            </instruction>
+    
+            <p>
+              <m>g=</m><var name="$g" width="2" /> </p>
+              <p><m>r=</m><var name="$r" width="2" /></p>
+              <p><m>b=</m><var name="$b" width="2" />
+            </p>
+          </statement>
+        </webwork>
+      </exercise>
+
+
+  
+
+    </subsection>

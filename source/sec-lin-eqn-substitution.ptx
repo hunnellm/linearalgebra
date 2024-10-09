@@ -7,12 +7,16 @@
     Material in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
   </p>
 </introduction>
+
+<subsection xml:id="subsec-lin-eqn-dc">
+  <title>During Class</title>
   
   <p>
     We'll begin our studies by examining a problem you probably already know how to solve.
   </p>
   <example xml:id="ex_by_hand">
     <title>Motivating Example, jar of multicolored marbles</title>
+      <statement>
       <p>
         Suppose a jar contains red, blue and green marbles.
         You are told that there are a total of <m>30</m> marbles in the jar;
@@ -20,6 +24,8 @@
         the number of blue marbles is the same as the sum of the red and green marbles.
         How many marbles of each color are there?
       </p>
+      </statement>
+      <solution>
       <p>
         We could attempt to solve this with some trial and error,
         and we'd probably get the correct answer without too much work.
@@ -83,18 +89,19 @@
         <m>r = 2g = 10</m> and then since <m>r+b+g = 30</m>,
         we easily find that <m>b = 15</m>.
       </p>
+    </solution>
   </example>
   <p>
-    Mathematicians often see solutions to given problems and then ask <q>What if <m>\ldots</m>?</q> It's an annoying habit that we would do well to develop <mdash/> we should learn to think like a mathematician.
+    Mathematicians often see solutions to given problems and ask <q>What if <m>\ldots</m>?</q> 
     What are the right kinds of <q>what if</q> questions to ask?
-    Here's another annoying habit of mathematicians: they often ask <q>wrong</q> questions.
+    It's impossible to know at first <mdash/> mathematicians often ask <q>wrong</q> questions.
     That is, they often ask questions and find that the answer isn't particularly interesting.
     But asking enough questions often leads to some good <q>right</q> questions.
-    So don't be afraid of doing something wrong; we mathematicians do it all the time.
+    Don't be afraid of doing something wrong; mathematicians do it all the time!
   </p>
   <p>
-    So what is a good question to ask after seeing <xref ref="ex_by_hand">Example</xref>?
-    Here are two possible questions:
+    What is a good question to ask after seeing <xref ref="ex_by_hand">Example</xref>?
+    Here are two possibilities (though not the only two):
     <ol>
       <li>
         <p>
@@ -110,12 +117,15 @@
   </p>
   <p>
     Let's look at the first question.
-    Would the solution to our problem change if we called the red balls <m>q</m>? Of course not. 
-    At the end, we'd find that <m>q = 10</m>, 
+    Would the solution to our problem change if we called the red balls <m>q</m>? Of course not <mdash/>
+    we picked the letter <q>r</q> because it made us think of <q>red</q>, and we could have picked any letter we liked.
+    The process of solving would have been exactly the same if we used <q>q</q> instead, and at the end we'd find that <m>q = 10</m>, 
     and we would know that this meant that we had <m>10</m> red balls.
   </p>
   <p>
-    Now let's look at the second question. Suppose we had <m>60</m> balls, but the other relationships stayed the same. How would the situation and solution change? Let's compare the original equations to the new equations.
+    Now let's look at the second question. Suppose we had <m>60</m> balls, but the other 
+    relationships stayed the same. How would the situation and solution change? Let's compare the 
+    original equations to the new equations.
   </p>
   <tabular halign="center">
     <row>
@@ -137,21 +147,34 @@
   </tabular>
   <p>
     By examining these equations, we see that nothing has changed except the first equation.
-    It isn't too much of a stretch of the imagination to see that we would solve this new problem exactly the same way that we solved the
-    original one, except that we'd have twice as many of each type of ball.
+    It isn't too much of a stretch of the imagination to see that we would solve this new problem 
+    exactly the same way that we solved the original one, except that we'd have twice as many of 
+    each type of ball so that the total was <m>60</m> instead of <m>30</m>.
   </p>
   <p>
-    A conclusion from answering these two questions is this:
-    it doesn't matter what we call our variables,
-    and while changing constants in the equations changes the solution,
+    Two conclusions from answering these two questions are:
+    <ul>
+      <li>
+        <p>
+          it doesn't matter what we call our variables, and
+        </p>
+      </li>
+      <li>
+        <p>
+          while changing constants in the equations changes the solution,
     they don't really change the <em>method</em>
     of how we solve these equations.
+        </p>
+      </li>
+    </ul>
   </p>
   <p>
     In fact, it is a great discovery to realize that all we care about are the <em>constants</em>
     and the <em>coefficients</em> of the equations.
     By systematically handling these,
     we can solve any set of linear equations in a very nice way.
+  </p>
+  <p>
     Before we go on, we must first define what a linear equation is.
   </p>
   <definition xml:id="def_lin_eq">
@@ -185,6 +208,181 @@
     <q>how many marbles of each color are there?,</q> we were also answering
     <q>find a solution to a certain system of linear equations.</q>
   </p>
+  <activity label="multiple-choice-not-randomized">
+    <title>Multiple-Choice, Not Randomized, One Answer</title>
+    <task>
+    <statement>
+      <p>
+        What color is a stop sign?
+      </p>
+    </statement>
+    <choices>
+    <choice>
+    <statement>
+      <p>
+        Green
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        Green means
+        <q>go!</q>.
+      </p>
+    </feedback>
+    </choice>
+    <choice correct="yes">
+    <statement>
+      <p>
+        Red
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        Red is universally used for prohibited activities or serious warnings.
+      </p>
+    </feedback>
+    </choice>
+    <choice>
+    <statement>
+      <p>
+        White
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        White might be hard to see.
+      </p>
+    </feedback>
+    </choice>
+    </choices>
+    <!-- <hint>
+      <p>
+        What did you see last time you went driving?
+      </p>
+    </hint> -->
+  </task>
+  <task>
+    <p>
+      testing another task
+    </p>
+  </task>
+  <task>
+    <statement>
+      <p>
+        why not tabbed?
+      </p>
+    </statement>
+  </task>
+</activity>
+  
+  <exploration label="matching-function-types">
+    <title>Matching Problem, Function Types</title>
+    <idx>matching function types</idx>
+    <statement>
+      <p>
+        Sort the following functions into their correct categories.
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        Review
+        <url href="https://activecalculus.org/prelude/sec-changing-linear.html" visual="A precalculus textbook that could help"> Active Prelude to Calculus</url>
+        url.
+      </p>
+    </feedback>
+    <matches>
+    <match>
+      <response>Linear</response>
+      <premise order="4"><m>y=5x+3</m></premise>
+      <premise order="5"><m>\pi x - 6y = \sqrt{2}</m></premise>
+      <premise order="6"><m>y=\frac{-1}{2}x+e</m></premise>
+    </match>
+    <match>
+      <response>Quadratic</response>
+    </match>
+    <match>
+      <premise order="7"><m>y=x^3-x</m></premise>
+    </match>
+    <match>
+      <response>Exponential</response>
+      <premise order="1"><m>y=2^x</m></premise>
+    </match>
+    <match>
+      <response>Power</response>
+      <premise order="2"><m>y=x^2</m></premise>
+      <premise order="3"><m>y=\sqrt{x}</m></premise>
+    </match>
+    </matches>
+  </exploration>
+
+  <project label="number-theory-proof" adaptive="yes">
+    <title>Parsons Problem, Mathematical Proof</title>
+    <idx>even numbers</idx>
+    <statement>
+      <p>
+        Create a proof of the theorem: If <m>n</m> is an even number,
+        then <m>n\equiv 0\mod 2</m>.
+      </p>
+    </statement>
+    <blocks>
+    <block order="2">
+    <p>
+      Suppose <m>n</m> is even.
+    </p>
+    </block>
+    <block order="3">
+    <choice>
+    <p>
+      Then <m>n</m> is a prime number.
+    </p>
+    </choice>
+    <choice correct="yes">
+    <p>
+      Then there exists an <m>m</m> so that <m>n = 2m</m>.
+    </p>
+    </choice>
+    <choice>
+    <p>
+      Then there exists an <m>m</m> so that <m>n = 2m + 1</m>.
+    </p>
+    </choice>
+    </block>
+    <block order="1" correct="no">
+    <p>
+      Click the heels of your ruby slippers together three times.
+    </p>
+    </block>
+    <block order="5">
+    <p>
+      So <m>n = 2m + 0</m>.
+    </p>
+    <p>
+      This is a superfluous second paragraph in this block.
+    </p>
+    </block>
+    <block order="4">
+    <p>
+      Thus <m>n\equiv 0\mod 2</m>.
+    </p>
+    </block>
+    <block order="6" correct="no">
+    <p>
+      And a little bit of irrelevant multi-line math
+      <md>
+        <mrow>c^2&amp;a^2+b^2</mrow>
+        <mrow>&amp;x^2+y^2</mrow>
+      </md>.
+    </p>
+    </block>
+    </blocks>
+    <hint>
+      <p>
+        Dorothy will not be much help with this proof.
+      </p>
+    </hint>
+  </project>
+
+
   <p>
     The following are examples of linear equations:
     <md>
@@ -246,10 +444,12 @@
     Right now we focus on identifying linear equations.
     It is also useful to <q>limber</q> up by solving a few systems of equations using any method we have at hand to refresh our memory about the basic process.
   </p>
+</subsection>
 
+  <xi:include href="interactive-exercises/ww-lin-eqn-subs.xml" />
 
-<exercises>
- <exercisegroup>
+<exercises><title>Additional Exercises</title>
+ <exercisegroup cols="2"><title>Linear equation: yes or no</title>
      <introduction>
           <p>
             In the following exercises, state whether or not the given equation is linear.
@@ -376,7 +576,7 @@
     </answer>
   </exercise>
  </exercisegroup>
- <exercisegroup>
+ <exercisegroup cols="2"><title>Solve the System</title>
    <introduction>
       <p>
           In the following exercises, solve the system of linear equations.
@@ -384,8 +584,14 @@
    </introduction>
   <exercise>
     <statement>
-      <p>
+      <!-- <p>
         <m>\begin{array}{ccccc} x\amp +\amp y\amp =\amp -1\\ 2x\amp -\amp 3y\amp =\amp 8 \end{array}</m>
+      </p> -->
+      <p>
+        <md>
+          <mrow> x + y \amp = -1</mrow> 
+          <mrow> 2x - 3y \amp = 8 </mrow>
+        </md>
       </p>
     </statement>
     <answer>
@@ -397,7 +603,7 @@
   <exercise>
     <statement>
       <p>
-        <m>\begin{array}{ccccc} 2x\amp -\amp 3y\amp =\amp 3\\ 3x\amp +\amp 6y\amp =\amp 8 \end{array}</m>
+        <md> <mrow> 2x - 3y\amp = 3</mrow> <mrow> 3x + 6y\amp = 8 </mrow> </md>
       </p>
     </statement>
     <answer>
@@ -409,7 +615,11 @@
   <exercise>
     <statement>
       <p>
-        <m>\begin{array}{ccccccc} x\amp -\amp y\amp +\amp z\amp =\amp 1\\ 2x\amp +\amp 6y\amp -\amp z\amp =\amp -4\\ 4x\amp -\amp 5y\amp +\amp 2z\amp =\amp 0 \end{array}</m>
+        <md>
+          <mrow> x - y + z\amp = 1</mrow>
+          <mrow> 2x + 6y - z\amp = -4</mrow> 
+          <mrow> 4x - 5y + 2z\amp = 0 </mrow>
+          </md>
       </p>
     </statement>
     <answer>
@@ -421,7 +631,11 @@
   <exercise>
     <statement>
       <p>
-        <m>\begin{array}{ccccccc} x\amp +\amp y\amp -\amp z\amp =\amp 1\\ 2x\amp +\amp y\amp \amp \amp =\amp 2\\ \amp \amp y\amp +\amp 2z\amp =\amp 0 \end{array}</m>
+        <md>
+          <mrow> x + y - z \amp = 1 </mrow>
+          <mrow> 2x + y \amp = 2</mrow>
+          <mrow>  y + 2z\amp = 0 </mrow>
+          </md>
       </p>
     </statement>
     <answer>

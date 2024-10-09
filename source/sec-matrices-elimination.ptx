@@ -7,6 +7,9 @@
       Material in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
     </p>
   </introduction>
+
+  <subsection xml:id="subsec-matrices-elim-bc">
+    <title>Before Class</title>
   <p>
     Let's return to <xref ref="ex_by_hand">Example</xref>. As we mentioned before, there isn't just one
     <q>right</q> way of finding the solution to this system of equations.
@@ -120,9 +123,56 @@
       
     </statement>
   </definition>
+  <reading-questions xml:id="rqs-matrices-elim">
+    <exercise label="matrix-indices">
+      <title>How a matrix is indexed</title>
+      <statement>
+        <p>
+          In the matrix <me>A=\begin{bmatrix} 2 \amp -1 \amp 3 \amp 5 \\ 0 \amp 3\amp 6\amp -3 \\ 4 \amp -2 \amp 7 \amp 5   \end{bmatrix}</me>
+          what is <m>a_{23}</m>? <var width="5" /> 
+        </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="6">
+            <feedback>
+              <p>
+                The entry in the second row and third column is 6.
+              </p>
+            </feedback>
+            </condition>
+        <condition number="-2">
+        <feedback>
+          <p>
+            The row number comes first, then the column number.  
+          </p>
+        </feedback>
+        </condition>
+        <condition string=".*">
+        <feedback>
+          <p>
+            Incorrect.
+          </p>
+        </feedback>
+        </condition>
+        </var>
+      </setup>
+    </exercise>
+  </reading-questions>
+
+  </subsection>
+
+  <subsection xml:id="subsec-matrices-elim-dc">
+    <title>During Class</title>
+    
+  </subsection>
+
+  <subsection xml:id="ww-matrices-elim">
+    <title>Interactive Exercises</title>
+  </subsection>
 
 
-<exercises>
+<exercises><title>Additional Exercises</title>
  <exercisegroup>
      <introduction>
           <p>
