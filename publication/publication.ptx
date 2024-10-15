@@ -129,6 +129,8 @@
       worksheet="static"
       project="dynamic"
     />
+
+    <exercises tabbed-tasks="project, inline" />
     <!-- Magic IDs identify HTML pages to analytics services   -->
     <!-- Presence implies relevant Javascript will be added    -->
     <!-- StatCounter requires both values to be set            -->

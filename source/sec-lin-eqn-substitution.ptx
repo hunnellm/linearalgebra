@@ -4,18 +4,242 @@
   <title>Linear Equations and Substitution</title>
 <introduction>
   <p>
-    Material in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
+    Some of the material in this section comes from Greg Hartman's Fundamentals of Matrix Algebra.
+  </p>
+  <p>
+    Normally, there will be some Prepare material before you are asked to Participate, but this is the first section.
+    Let's begin, not prepare to begin.
   </p>
 </introduction>
 
 <subsection xml:id="subsec-lin-eqn-dc">
-  <title>During Class</title>
-  
+  <title>Participate</title>
+
   <p>
-    We'll begin our studies by examining a problem you probably already know how to solve.
+    Perhaps you've seen images like the ones shown below.
   </p>
+
+  <figure xml:id="fruit-collage">
+    <image width="60%" source="fruitpuzzlecollage1.jpg">
+      <shortdescription>a collage of different math problems using pictures of food</shortdescription>
+    </image>
+    <caption>A collage of different math problems using pictures of food</caption>
+  </figure>
+
+  <p>
+    Images like the ones above have been frequently shared on social media, prompting this mathematician to
+    reflect that algebra seems more palatable when it's disguised as puzzles involving food.
+  </p>
+
+  <figure xml:id="yesnogirl-fruit">
+    <image width="60%" source="yesnogirlfruit.jpg">
+      <shortdescription>girl making a bad face at math with variables x, y, z, 
+        and an interested face at doing math with food </shortdescription>
+    </image>
+    <caption>Disguising math as food puzzles seems more palatable</caption>
+  </figure>
+
+  <p>
+    Most of the images in the collage above also contain an element of competetiveness <mdash/> of being 
+    able to figure out something that other people have a hard time with.<fn>Many of the puzzles in the collage 
+      say something like <q>Only 1 in 7 can solve this!</q> or <q>95% of people will fail to answer.</q> </fn>  
+      Many of them also contain a visual trick which causes extra confusion or controversy.  
+      For example, consider the puzzle in this image.
+  </p>
+
+
+  <activity label="fruit-puzzle">
+    <title>Solve a fruit puzzle</title>
+    <statement>
+        <image width="40%" source="fruitpuzzleimage8.jpeg">
+          <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
+        </image>
+      <p>
+        The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
+        and a bunch of bananas minus cherries equals 2.  
+      </p>
+      <p>
+        Then it asks a question: how much does cherries plus an apple plus 
+        a bunch of bananas equal? The answer is <var width="5" /> 
+      </p>
+    </statement>
+    <setup>
+      <var>
+        <condition number="11">
+          <feedback>
+            <p>
+              Each apple is worth 6, each bunch of 4 bananas is worth 4, so each banana is worth 1, and each group of cherries is worth 2. 
+              There are only 3 bananas in the question to answer, so 2+6+3=11. 
+            </p>
+          </feedback>
+          </condition>
+      <condition number="12">
+      <feedback>
+        <p>
+          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
+          people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
+           1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
+        </p>
+      </feedback>
+      </condition>
+      <condition string=".*">
+      <feedback>
+        <p>
+          Incorrect.   
+        </p>
+      </feedback>
+      </condition>
+      </var>
+    </setup>
+  </activity>
+
+  <p>
+    The food puzzle above was really setting up a number of algebraic equations.   
+  </p>
+  <tabular>
+    <row>
+      <cell>Three apples add up to 18.</cell>
+      <cell><m>3A=18</m></cell>
+    </row>
+    <row>
+      <cell>Apple plus 2 bunches of bananas equals 14.</cell>
+      <cell><m>A+2B=14</m></cell>
+    </row>
+    <row>
+      <cell>Bunch of bananas minus cherries equals 2.</cell>
+      <cell><m>B-C=2</m></cell>
+    </row>
+  </tabular>
+  <p>
+    Solving the puzzle meant finding values for each of the foods that made all the equations true, that is, 
+    finding the values of <m>A</m>, <m>B</m>, and <m>C</m>.<fn>And then also realizing that the picture of 
+      <q>bunch of bananas</q> changed so that we really needed to find the value of each banana.</fn>
+  </p>
+  <p>
+    Almost all the food puzzles are these same kinds of equations, called <em>linear equations</em>.  Before
+    defining what that means in general, let's explore another example from both graphical and algebraic perspectives.
+  </p>
+  <activity xml:id="act_sony-interview">
+    <task label="solnstoxplusyequals2">
+      <statement>
+        <p>
+          Consider the equation <m>x+y=2</m>.  When <m>x=0</m> and <m>y=2</m>, the equation is true, so I've plotted
+    the point <m>(0,2)</m>.  Think of some more values of <m>x</m> and <m>y</m> that satisfy the equation, and plot
+    them as points.  
+      </p>
+      <figure>
+        <caption>Solutions to the equation <m>x+y=2</m></caption>
+        <interactive xml:id="desmos-xplusyis2" desmos="aipnfasaht" width="90%" aspect="4:3" />
+      </figure>
+      <p>
+        What do you notice about all the <m>(x,y)</m> points that satisfy <m>x+y=2</m>?
+      </p>
+      </statement>
+      <response />
+    </task>
+    <task label="solnsto15xplus6yequals15">
+      <statement>
+        <p>
+          Now consider the equation <m>15x+6y=15</m>.  When <m>x=1</m> and <m>y=0</m>, the equation is true, so I've plotted
+    the point <m>(1,0)</m>.  Think of some more values of <m>x</m> and <m>y</m> that satisfy the equation 
+    (your answers don't have to be whole numbers!), and plot them as points.  
+      </p>
+      <figure>
+        <caption>Solutions to the equation <m>15x+6y=15</m></caption>
+        <interactive xml:id="desmos-15xplus6yis15" desmos="vvw2yv58qm" width="90%" aspect="4:3" />
+      </figure>
+      <p>
+        What does the graph of <m>15x+6y=15</m> look like?
+      </p>
+      </statement>
+      <response />
+    </task>
+    <task label="desmosintersectionpoint">
+      <statement>
+        <p>
+          The graphs of <m>x+y=2</m> and <m>15x+6y=15</m> are shown in the image below.
+      </p>
+        <image width="40%" source="graphsoftwolines.svg">
+          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
+        </image>
+      <p>
+        What does the point of intersection mean, and what are its coordinates?
+      </p>
+      </statement>
+      <response />
+    </task>
+  </activity>
+
+  <example><title>Sony and The Interview</title>
+    <statement>
+      <p>
+        Below is an image from a New York Times article about a movie <em>The Interview</em>
+      </p>
+      <image width="90%" source="timestheinterview.svg">
+        <shortdescription>Snapshot of part of an article from a major news source</shortdescription>
+      </image>
+      <p>
+        The article is about the release of the movie, which generated controversy and so was released direct to streaming.
+        Sony reported that the movie made about 15 million dollars total, split between $15 sales and $6 rentals, and also that
+        there were about 2 million transactions in total
+      </p>
+      <p>
+        Then the author of the article claimed that Sony did not release how many of the transactions were rentals and how many were sales.
+        Can you do better than that author?  How many of the transactions were sales and how many were rentals?
+      </p>
+    </statement>
+    <hint>
+      <p>
+        Perhaps refer to <xref ref="act_sony-interview"/>.  You might use <m>x</m> for the number of sales and <m>y</m> for the number
+        of rentals. What equations do you get from the information about the total number of transactions, and total
+        dollar amount earned?
+      </p>
+    </hint>
+    <solution>
+      <p>
+        If <m>x</m> is the number of sales and <m>y</m> is the number of rentals, then <m>x+y=2</m> million transactions.
+        Also, <m>15x+6y=15</m> million dollars of revenue, since each sale cost $15 and each rental cost $6.
+      </p>
+      <p>
+        We can solve this set of two linear equations by <em>substitution</em>: solving for one of the variables and substituting it into
+        the other equation.  Rearranging the first equation we get that <me>y=2-x</me>, and then plugging that in for <m>y</m>
+        in the second equation gives <me>15x+6(2-x)=15</me>.
+      </p>
+      <p>
+        Multiplying out gives <me>15x+12-6x=15</me>, and combining like terms results in <me>9x+12=15</me>.
+        Subtracting the 12 from both sides gives <me>9x=3</me>, and dividing both sides by 9 yields <me>x=\frac{1}{3}</me>.
+      </p>
+      <p>
+        So one-third of a million, or roughly <m>333,333</m> transactions were sales.  To find the number of rentals,
+        we can substitute this value back into either equation, but <m>x+y=2</m> seems easier. Then <me>\frac{1}{3}+y=2</me>, 
+        which means that <me>y=2-\frac{1}{3}=\frac{5}{3}</me>, and <m>\frac{5}{3}</m> of a million is roughly <m>1,666,667</m> transactions.
+      </p>
+    </solution>
+  </example>
+  
+
+
+  <!-- <p>
+    Consider the equation <m>x+y=2</m>.  When <m>x=0</m> and <m>y=2</m>, the equation is true, so I've plotted
+    the point <m>(0>,2)</m>.  Think of some more values of <m>x</m> and <m>y</m> that satisfy the equation, and plot
+    them as points.  
+  </p>
+  <figure>
+    <caption>Solutions to the equation <m>x+y=2</m></caption>
+    <interactive xml:id="desmos-xplusyis2a" desmos="aipnfasaht" width="100%" aspect="4:3" />
+  </figure>
+
+  <exercise label="lin-eqn-pointsplotted">
+    <statement>
+      <p>
+        What do you notice about all the <m>(x,y)</m> points that satisfy <m>x+y=2</m>?
+      </p>
+    </statement>
+    <response />
+  </exercise> -->
+
   <example xml:id="ex_by_hand">
-    <title>Motivating Example, jar of multicolored marbles</title>
+    <title>Jar of multicolored marbles</title>
       <statement>
       <p>
         Suppose a jar contains red, blue and green marbles.
@@ -26,12 +250,6 @@
       </p>
       </statement>
       <solution>
-      <p>
-        We could attempt to solve this with some trial and error,
-        and we'd probably get the correct answer without too much work.
-        However, this won't lend itself towards learning a good technique for solving larger problems,
-        so let's be more mathematical about it.
-      </p>
       <p>
         Let's let <m>r</m> represent the number of red marbles,
         and let <m>b</m> and <m>g</m> denote the number of blue and green marbles,
@@ -59,8 +277,7 @@
         </men>.
       </p>
       <p>
-        From this stage, there isn't one <q>right</q> way of proceeding.
-        Rather, there are <em>many</em> ways to use this information to find the solution.
+        There are <em>many</em> ways to use this information to find the solution.
         One way is to combine ideas from <xref ref="eq_r2g">equations</xref>
         and <xref ref="eq_brg"></xref>;
         in <xref ref="eq_brg"></xref> replace <m>r</m> with <m>2g</m>.
@@ -91,91 +308,11 @@
       </p>
     </solution>
   </example>
+  
   <p>
-    Mathematicians often see solutions to given problems and ask <q>What if <m>\ldots</m>?</q> 
-    What are the right kinds of <q>what if</q> questions to ask?
-    It's impossible to know at first <mdash/> mathematicians often ask <q>wrong</q> questions.
-    That is, they often ask questions and find that the answer isn't particularly interesting.
-    But asking enough questions often leads to some good <q>right</q> questions.
-    Don't be afraid of doing something wrong; mathematicians do it all the time!
-  </p>
-  <p>
-    What is a good question to ask after seeing <xref ref="ex_by_hand">Example</xref>?
-    Here are two possibilities (though not the only two):
-    <ol>
-      <li>
-        <p>
-          Did we really have to call the red balls <q><m>r</m></q>? Could we call them <q><m>q</m></q>?
-        </p>
-      </li>
-      <li>
-        <p>
-          What if we had <m>60</m> balls at the start instead of <m>30</m>?
-        </p>
-      </li>
-    </ol>
-  </p>
-  <p>
-    Let's look at the first question.
-    Would the solution to our problem change if we called the red balls <m>q</m>? Of course not <mdash/>
-    we picked the letter <q>r</q> because it made us think of <q>red</q>, and we could have picked any letter we liked.
-    The process of solving would have been exactly the same if we used <q>q</q> instead, and at the end we'd find that <m>q = 10</m>, 
-    and we would know that this meant that we had <m>10</m> red balls.
-  </p>
-  <p>
-    Now let's look at the second question. Suppose we had <m>60</m> balls, but the other 
-    relationships stayed the same. How would the situation and solution change? Let's compare the 
-    original equations to the new equations.
-  </p>
-  <tabular halign="center">
-    <row>
-      <cell right="minor" bottom="minor">Original</cell>
-      <cell bottom="minor">New</cell>
-    </row>
-    <row>
-      <cell right="minor"><m>r+b+g=30</m></cell>
-      <cell><m>r+b+g=60</m></cell>
-    </row>
-    <row>
-      <cell right="minor"><m>r=2g</m></cell>
-      <cell><m>r=2g</m></cell>
-    </row>
-    <row>
-      <cell right="minor"><m>b=r+g</m></cell>
-      <cell><m>b=r+g</m></cell>
-    </row>
-  </tabular>
-  <p>
-    By examining these equations, we see that nothing has changed except the first equation.
-    It isn't too much of a stretch of the imagination to see that we would solve this new problem 
-    exactly the same way that we solved the original one, except that we'd have twice as many of 
-    each type of ball so that the total was <m>60</m> instead of <m>30</m>.
-  </p>
-  <p>
-    Two conclusions from answering these two questions are:
-    <ul>
-      <li>
-        <p>
-          it doesn't matter what we call our variables, and
-        </p>
-      </li>
-      <li>
-        <p>
-          while changing constants in the equations changes the solution,
-    they don't really change the <em>method</em>
-    of how we solve these equations.
-        </p>
-      </li>
-    </ul>
-  </p>
-  <p>
-    In fact, it is a great discovery to realize that all we care about are the <em>constants</em>
-    and the <em>coefficients</em> of the equations.
-    By systematically handling these,
-    we can solve any set of linear equations in a very nice way.
-  </p>
-  <p>
-    Before we go on, we must first define what a linear equation is.
+    All of the examples we've seen so far have involved <em>linear equations</em>. It turns out that 
+    linear equations are at the heart of many modern applications: data science, sports analytics, 
+    machine learning, artificial intelligence, and so on.  Let's define what linear equations are.
   </p>
   <definition xml:id="def_lin_eq">
     <title>Linear Equation</title>
@@ -186,7 +323,7 @@
         <me>
           a_1x_1+a_2x_2+\cdots+a_nx_n = c
         </me>
-        where the <m>x_i</m> are variables (the unknowns), the <m>a_i</m> are coefficients, and <m>c</m> is a constant.
+        where the <m>x_i</m> are variables (the unknowns), the <m>a_i</m> are coefficients (numbers), and <m>c</m> is a constant.
       </p>
       <p>
         A <term>system of linear equations</term>
@@ -208,74 +345,186 @@
     <q>how many marbles of each color are there?,</q> we were also answering
     <q>find a solution to a certain system of linear equations.</q>
   </p>
-  <activity label="multiple-choice-not-randomized">
-    <title>Multiple-Choice, Not Randomized, One Answer</title>
-    <task>
+
+  <!-- Why is part (b) not working, even when I copy and paste into part (e)? -->
+  <activity label="mc-linear-or-not">
+    <title>Multiple-Choice, Linear or Nonlinear</title>
+    <introduction>
+      <p>
+        For each of the following equations, use <xref ref="def_lin_eq"/> to decide whether 
+        the equation is linear or not.
+      </p>
+    </introduction>
+    <task label="mc-lin-or-not-1">
     <statement>
       <p>
-        What color is a stop sign?
+        <me>x+y=2</me>
+      </p>
+    </statement>
+    <choices>
+    <choice correct="yes">
+    <statement>
+      <p>
+        Linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        The equation has the correct form: it is a sum of variables multiplied by numbers (that happen to be 1), which add up to equal a constant.
+      </p>
+    </feedback>
+    </choice>
+    <choice>
+    <statement>
+      <p>
+        Not linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        The equation <m>1x+1y=2</m> does have the form <m>a_1x+a_2x_2=c</m>,
+        because it is a sum of variables multiplied by numbers (that happen to be 1), which add up to equal a constant.
+      </p>
+    </feedback>
+    </choice>
+    </choices>
+  </task>
+  <task label="mc-lin-or-not-2b">
+    <statement>
+      <p>
+        <me>xy=2</me>
       </p>
     </statement>
     <choices>
     <choice>
     <statement>
       <p>
-        Green
+        Linear
       </p>
     </statement>
     <feedback>
       <p>
-        Green means
-        <q>go!</q>.
+        The equation does not have the correct form; the variables are multiplied together, not multiplied by numbers and added. 
       </p>
     </feedback>
     </choice>
     <choice correct="yes">
     <statement>
       <p>
-        Red
+        Not linear
       </p>
     </statement>
     <feedback>
       <p>
-        Red is universally used for prohibited activities or serious warnings.
+        The variables can't be multiplied together in a linear equation.  
+      </p>
+    </feedback>
+    </choice>
+    </choices>
+  </task>
+  <task label="mc-lin-or-not-3">
+    <statement>
+      <p>
+        <me>x=2-y</me>
+      </p>
+    </statement>
+    <choices>
+    <choice correct="yes">
+    <statement>
+      <p>
+        Linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        It doesn't matter for being linear or not that we have to rearrange the equation to see the correct form appear.
       </p>
     </feedback>
     </choice>
     <choice>
     <statement>
       <p>
-        White
+        Not linear
       </p>
     </statement>
     <feedback>
       <p>
-        White might be hard to see.
+        It doesn't matter for being linear or not that we have to rearrange the equation to see the correct form appear. 
+        This is the same as <m>x+y=2</m>, which is a sum of variables multiplied by numbers (that happen to be 1), which add up to equal a constant.
       </p>
     </feedback>
     </choice>
     </choices>
-    <!-- <hint>
-      <p>
-        What did you see last time you went driving?
-      </p>
-    </hint> -->
   </task>
-  <task>
-    <p>
-      testing another task
-    </p>
-  </task>
-  <task>
+  <task label="mc-lin-or-not-4">
     <statement>
       <p>
-        why not tabbed?
+        <me>x^2-5y=0</me>
       </p>
     </statement>
+    <choices>
+    <choice>
+    <statement>
+      <p>
+        Linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        The equation does not have the correct form; the variables are multiplied together, not multiplied by numbers and added. 
+      </p>
+    </feedback>
+    </choice>
+    <choice correct="yes">
+    <statement>
+      <p>
+        Not linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        The variables can't be multiplied together in a linear equation.  
+      </p>
+    </feedback>
+    </choice>
+    </choices>
+  </task>
+  <task label="mc-lin-or-not-5">
+    <statement>
+      <p>
+        <me>xy=2</me>
+      </p>
+    </statement>
+    <choices>
+    <choice>
+    <statement>
+      <p>
+        Linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        The equation does not have the correct form; the variables are multiplied together, not multiplied by numbers and added. 
+      </p>
+    </feedback>
+    </choice>
+    <choice correct="yes">
+    <statement>
+      <p>
+        Not linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        The variables can't be multiplied together in a linear equation.  
+      </p>
+    </feedback>
+    </choice>
+    </choices>
   </task>
 </activity>
   
-  <exploration label="matching-function-types">
+  <!-- <exploration label="matching-function-types">
     <title>Matching Problem, Function Types</title>
     <idx>matching function types</idx>
     <statement>
@@ -313,75 +562,7 @@
       <premise order="3"><m>y=\sqrt{x}</m></premise>
     </match>
     </matches>
-  </exploration>
-
-  <project label="number-theory-proof" adaptive="yes">
-    <title>Parsons Problem, Mathematical Proof</title>
-    <idx>even numbers</idx>
-    <statement>
-      <p>
-        Create a proof of the theorem: If <m>n</m> is an even number,
-        then <m>n\equiv 0\mod 2</m>.
-      </p>
-    </statement>
-    <blocks>
-    <block order="2">
-    <p>
-      Suppose <m>n</m> is even.
-    </p>
-    </block>
-    <block order="3">
-    <choice>
-    <p>
-      Then <m>n</m> is a prime number.
-    </p>
-    </choice>
-    <choice correct="yes">
-    <p>
-      Then there exists an <m>m</m> so that <m>n = 2m</m>.
-    </p>
-    </choice>
-    <choice>
-    <p>
-      Then there exists an <m>m</m> so that <m>n = 2m + 1</m>.
-    </p>
-    </choice>
-    </block>
-    <block order="1" correct="no">
-    <p>
-      Click the heels of your ruby slippers together three times.
-    </p>
-    </block>
-    <block order="5">
-    <p>
-      So <m>n = 2m + 0</m>.
-    </p>
-    <p>
-      This is a superfluous second paragraph in this block.
-    </p>
-    </block>
-    <block order="4">
-    <p>
-      Thus <m>n\equiv 0\mod 2</m>.
-    </p>
-    </block>
-    <block order="6" correct="no">
-    <p>
-      And a little bit of irrelevant multi-line math
-      <md>
-        <mrow>c^2&amp;a^2+b^2</mrow>
-        <mrow>&amp;x^2+y^2</mrow>
-      </md>.
-    </p>
-    </block>
-    </blocks>
-    <hint>
-      <p>
-        Dorothy will not be much help with this proof.
-      </p>
-    </hint>
-  </project>
-
+  </exploration> -->
 
   <p>
     The following are examples of linear equations:
@@ -439,16 +620,43 @@
     <m>\cos</m> or <m>\ln</m>, nor can our variables be raised as an exponent.
   </p>
   <p>
-    At this stage, we have yet to discuss how to efficiently find a solution to a system of linear equations.
+    At this stage, we have yet to discuss how to <em>efficiently</em> find a solution to a system of linear equations.
     That is a goal for the upcoming sections.
-    Right now we focus on identifying linear equations.
-    It is also useful to <q>limber</q> up by solving a few systems of equations using any method we have at hand to refresh our memory about the basic process.
+    Right now we focus on identifying linear equations and solving some smaller systems of equations using substitution.
   </p>
 </subsection>
 
-  <xi:include href="interactive-exercises/ww-lin-eqn-subs.xml" />
+<subsection xml:id="subsec-lin-eqn-summary">
+  <title>Summary</title>
+  <p>
+    <ul>
+      <li>
+        <p>
+          Linear equations are equations which can be written in the form <me>a_1x_1+a_2x_2+\cdots+a_nx_n = c</me>, 
+          where the <m>x_i</m> are variables, the <m>a_i</m> are coefficients, and <m>c</m> is a constant.
+        </p>
+      </li>
+      <li>
+        <p>
+          A system of linear equations is a set of linear equations referring to the same variables.  Solving a system
+          of linear equations means finding values for the variables such that all the equations are true with those values.
+        </p>
+      </li>
+      <li>
+        <p>
+          Systems of linear equations are behind many important applications in physics, engineering, and computer science, 
+          and solving systems will be the subject of much of this course.  For now, we use substitution and wait for a better way.
+        </p>
+      </li>
+    </ul>
+  </p>
+</subsection>
 
-<exercises><title>Additional Exercises</title>
+<!-- Have structured the included file as a subsection called Interactive Exercises for now.  I want the webwork to
+ not show answers, like the in-class questions, while the non-interactive exercises can show answers.  But the numbering is kind of a pain. -->
+<xi:include href="interactive-exercises/ww-lin-eqn-subs.xml" />
+
+<exercises><title>Additional Practice</title>
  <exercisegroup cols="2"><title>Linear equation: yes or no</title>
      <introduction>
           <p>

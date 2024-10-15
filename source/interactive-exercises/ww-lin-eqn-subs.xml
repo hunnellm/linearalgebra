@@ -12,7 +12,7 @@
 <!-- "share and share alike".  All trademarks are the registered marks of  -->
 <!-- their respective owners.                                              -->
 <!-- **********************************************************************-->
-<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ww-lin-eqn-subs" ><title>Interactive Exercises</title>
+<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ww-lin-eqn-subs" ><title>Practice</title>
 
   <exercise label="ww-2-var-subs"><title>Two variable substitution</title>
     <webwork>
