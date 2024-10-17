@@ -14,7 +14,7 @@
 <!-- **********************************************************************-->
 <subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="ww-lin-eqn-subs" ><title>Practice</title>
 
-  <exercise label="ww-2-var-subs"><title>Two variable substitution</title>
+  <activity label="ww-2-var-subs"><title>Two variable substitution</title>
     <webwork>
       <pg-code>
         Context("Numeric");
@@ -40,9 +40,9 @@
           <m>x=</m><var name="$x" width="2" /> and <m>y=</m><var name="$y" width="2" /></p>
       </statement>
     </webwork>
-  </exercise>
+  </activity>
 
-    <exercise label="ww-marble-jar"><title>Marbles in a Jar</title>
+    <activity label="ww-marble-jar"><title>Marbles in a Jar</title>
         <webwork>
           <pg-code>
             Context("Numeric");
@@ -71,7 +71,7 @@
             </p>
           </statement>
         </webwork>
-      </exercise>
+      </activity>
 
 
   

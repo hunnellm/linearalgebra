@@ -134,7 +134,7 @@
       </p>
       <figure>
         <caption>Solutions to the equation <m>x+y=2</m></caption>
-        <interactive xml:id="desmos-xplusyis2" desmos="aipnfasaht" width="90%" aspect="4:3" />
+        <interactive xml:id="desmos-xplusyis2" desmos="aipnfasaht" width="85%" aspect="4:3" />
       </figure>
       <p>
         What do you notice about all the <m>(x,y)</m> points that satisfy <m>x+y=2</m>?
@@ -151,7 +151,7 @@
       </p>
       <figure>
         <caption>Solutions to the equation <m>15x+6y=15</m></caption>
-        <interactive xml:id="desmos-15xplus6yis15" desmos="vvw2yv58qm" width="90%" aspect="4:3" />
+        <interactive xml:id="desmos-15xplus6yis15" desmos="vvw2yv58qm" width="85%" aspect="4:3" />
       </figure>
       <p>
         What does the graph of <m>15x+6y=15</m> look like?
@@ -159,7 +159,7 @@
       </statement>
       <response />
     </task>
-    <task label="desmosintersectionpoint">
+    <task label="interview-intersectionpoint">
       <statement>
         <p>
           The graphs of <m>x+y=2</m> and <m>15x+6y=15</m> are shown in the image below.
@@ -358,7 +358,7 @@
         the equation is linear or not.
       </p>
     </introduction>
-    <!-- <task label="mc-lin-or-not-1">
+    <task label="mc-lin-or-not-1">
     <statement>
       <p>
         <me>x+y=2</me>
@@ -391,11 +391,11 @@
     </feedback>
     </choice>
     </choices>
-  </task> -->
-  <task label="mc-lin-or-not-2b">
+  </task>
+  <task label="mc-lin-or-not-2">
     <statement>
       <p>
-        <me>xy=2</me>
+        <me>xy+z=2</me>
       </p>
     </statement>
     <choices>
@@ -407,7 +407,7 @@
     </statement>
     <feedback>
       <p>
-        The equation does not have the correct form; the variables are multiplied together, not multiplied by numbers and added. 
+        The equation does not have the correct form because the variables <m>x</m> and <m>y</m> are multiplied together, not multiplied by numbers and added. 
       </p>
     </feedback>
     </choice>
@@ -495,7 +495,7 @@
   <task label="mc-lin-or-not-5">
     <statement>
       <p>
-        <me>xy=2</me>
+        <me>\sin(x_1)+3x_2=2</me>
       </p>
     </statement>
     <choices>
@@ -507,7 +507,7 @@
     </statement>
     <feedback>
       <p>
-        The equation does not have the correct form; the variables are multiplied together, not multiplied by numbers and added. 
+        The equation does not have the correct form; the variables in a linear equation can't be arguments of functions like sine or natural log. 
       </p>
     </feedback>
     </choice>
@@ -519,7 +519,41 @@
     </statement>
     <feedback>
       <p>
-        The variables can't be multiplied together in a linear equation.  
+        The variables in a linear equation can't be arguments of functions like sine or natural log.
+      </p>
+    </feedback>
+    </choice>
+    </choices>
+  </task>
+  <task label="mc-lin-or-not-6">
+    <statement>
+      <p>
+        <me>\sqrt{5}y_1-\frac{y_3}{2}=-\pi</me>
+      </p>
+    </statement>
+    <choices>
+    <choice correct="yes">
+    <statement>
+      <p>
+        Linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        The variables are being multiplied by numbers and added up to equal a number.
+      </p>
+    </feedback>
+    </choice>
+    <choice>
+    <statement>
+      <p>
+        Not linear
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        The variables are <m>y_1</m>, <m>y_3</m>, and we can assume <m>y_2</m>.  They are being multiplied by numbers, since 
+        since <m>\sqrt{5}</m>, <m>\frac{1}{2}</m>, and 0 are numbers, and are being added up to equal a number, since <m>-\pi</m> is a number.
       </p>
     </feedback>
     </choice>
@@ -527,7 +561,7 @@
   </task>
 </exercise>
 
-<exercise><title>Testing tabs</title>
+<!-- <exercise><title>Testing tabs</title>
   <introduction>
     <p>
       testing the intro
@@ -554,7 +588,7 @@
       </p>
     </statement>
   </task>
-</exercise>
+</exercise> -->
   
   <!-- <exploration label="matching-function-types">
     <title>Matching Problem, Function Types</title>
@@ -590,13 +624,13 @@
     </match>
     <match>
       <response>Power</response>
-      <premise order="2"><m>y=x^2</m></premise>
+      <premise order="2"><m>y=3x^5</m></premise>
       <premise order="3"><m>y=\sqrt{x}</m></premise>
     </match>
     </matches>
   </exploration> -->
 
-  <p>
+  <!-- <p>
     The following are examples of linear equations:
     <md>
       <mrow>2x+3y-7z\amp =29</mrow>
@@ -650,7 +684,8 @@
     (remember that <m>1/x = x^{-1}</m> and <m>\sqrt{x} = x^{1/2}</m>).
     Our variables cannot be the argument of function like <m>\sin</m>,
     <m>\cos</m> or <m>\ln</m>, nor can our variables be raised as an exponent.
-  </p>
+  </p> -->
+
   <p>
     At this stage, we have yet to discuss how to <em>efficiently</em> find a solution to a system of linear equations.
     That is a goal for the upcoming sections.
@@ -670,14 +705,14 @@
       </li>
       <li>
         <p>
-          A <em>system of linear equations</em> is a set of linear equations referring to the same variables.  Solving a system
+          A <em>system of linear equations</em> is a set of linear equations referring to the same variables.  <em>Solving a system</em>
           of linear equations means finding values for the variables such that all the equations are true with those values.
         </p>
       </li>
       <li>
         <p>
           Systems of linear equations are behind many important applications in physics, engineering, and computer science, 
-          and solving systems will be the subject of much of this course.  For now, we use substitution and wait for a better way.
+          and solving linear systems will be a significant part of this course.  For now though, we use <em>substitution</em> and wait for a better way.
         </p>
       </li>
     </ul>

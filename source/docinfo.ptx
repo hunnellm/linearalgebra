@@ -27,7 +27,11 @@
 
   <!-- It is possible to rename elements: -->
   <!-- <rename element="assemblage" xml:lang="en-US">Summary</rename> -->
-  <rename element="inlineexercise">Exercise</rename>
+  <rename element="inlineexercise">Activity</rename>
+  <rename element="activity">Exercise</rename>
+  <!-- I know the above seems idiotic, but it accomplishes the numbering I want with two sets of what are really post-section exercises
+   one with answers showing (the divisional one) and one with no answers.  Also, I use a lot of runestone interactives inline that I want 
+   called Activity, but as of right now, work better as exercise elements. -->
 
   <!-- Specify the default type of cross reference: -->
   <!-- <cross-references text="type-global" /> -->
