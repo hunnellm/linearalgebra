@@ -193,20 +193,20 @@
         of the system, we call the matrix an <term>augmented matrix</term>.
       </p>
       <p>
-        It is often useful to be able to refer to specific entries of a matrix.  We tend to use capital letters
-        for matrices, such as <m>A</m>, <m>B</m>, and <m>C</m>, and then we use lower case letters with subscripts 
+        We tend to use capital letters for matrices, such as <m>A</m>, <m>B</m>, and <m>C</m>, and we use lowercase letters with subscripts 
         for the entries within a matrix.  That is, <m>a_{32}</m> means
-        <q>the number in the third row and second column.</q>
+        <q>the number in the third row and second column</q> of matrix <m>A</m>.
       </p>
       <p>
         All the entries of an <m>m\times n</m> matrix <m>A</m> would appear like this:
         <me>
-          A=\left[\begin{array}{ccccc} a_{11}\amp a_{12}\amp a_{13}\amp \cdots\amp a_{1n}\\ a_{21}\amp a_{22}\amp a_{23}\amp \cdots\amp a_{2n}\\ a_{31}\amp a_{32}\amp a_{33}\amp \cdots\amp a_{3n}\\ \vdots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\\ a_{m1}\amp a_{m2}\amp a_{m3}\amp \cdots\amp a_{mn} \end{array} \right]
+          A=\begin{bmatrix} a_{11}\amp a_{12}\amp a_{13}\amp \cdots\amp a_{1n}\\ a_{21}\amp a_{22}\amp a_{23}\amp \cdots\amp a_{2n}\\ a_{31}\amp a_{32}\amp a_{33}\amp \cdots\amp a_{3n}\\ \vdots\amp \vdots\amp \vdots\amp \ddots\amp \vdots\\ a_{m1}\amp a_{m2}\amp a_{m3}\amp \cdots\amp a_{mn} \end{bmatrix}
         </me>
       </p>
       
     </statement>
   </definition>
+  
   <reading-questions xml:id="rqs-matrices-elim">
     <exercise label="matrix-indices">
       <title>How a matrix is indexed</title>

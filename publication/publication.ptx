@@ -73,7 +73,7 @@
     <worksheets formatted="yes" />
   </latex>
 
-  <html>
+  <html short-answer-responses="always">
     <platform host="web"/>
     <!-- The host above could also be "runestone" -->
 

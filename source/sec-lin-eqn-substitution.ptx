@@ -47,8 +47,8 @@
       For example, consider the puzzle in this image.
   </p>
 
-
-  <activity label="fruit-puzzle">
+<!-- Why doesn't the number fillin work as an activity, only as an exercise? -->
+  <exercise label="fruit-puzzle">
     <title>Solve a fruit puzzle</title>
     <statement>
         <image width="40%" source="fruitpuzzleimage8.jpeg">
@@ -91,7 +91,7 @@
       </condition>
       </var>
     </setup>
-  </activity>
+  </exercise>
 
   <p>
     The food puzzle above was really setting up a number of algebraic equations.   
@@ -119,7 +119,12 @@
     Almost all the food puzzles are these same kinds of equations, called <em>linear equations</em>.  Before
     defining what that means in general, let's explore another example from both graphical and algebraic perspectives.
   </p>
-  <activity xml:id="act_sony-interview">
+  <exercise xml:id="act_sony-interview">
+    <!-- <introduction>
+      <p>
+        testing
+      </p>
+    </introduction> -->
     <task label="solnstoxplusyequals2">
       <statement>
         <p>
@@ -168,7 +173,7 @@
       </statement>
       <response />
     </task>
-  </activity>
+  </exercise>
 
   <example><title>Sony and The Interview</title>
     <statement>
@@ -185,14 +190,14 @@
       </p>
       <p>
         Then the author of the article claimed that Sony did not release how many of the transactions were rentals and how many were sales.
-        Can you do better than that author?  How many of the transactions were sales and how many were rentals?
+        Can you do better than the author of the article and figure out how many of the transactions were sales and how many were rentals?
       </p>
     </statement>
     <hint>
       <p>
-        Perhaps refer to <xref ref="act_sony-interview"/>.  You might use <m>x</m> for the number of sales and <m>y</m> for the number
+        Try using <m>x</m> for the number of sales and <m>y</m> for the number
         of rentals. What equations do you get from the information about the total number of transactions, and total
-        dollar amount earned?
+        dollar amount earned? Perhaps refer to <xref ref="act_sony-interview"/>.  
       </p>
     </hint>
     <solution>
@@ -311,12 +316,10 @@
   
   <p>
     All of the examples we've seen so far have involved <em>linear equations</em>. It turns out that 
-    linear equations are at the heart of many modern applications: data science, sports analytics, 
+    linear equations are at the heart of many modern applications: data science, sports analytics, graphics, 
     machine learning, artificial intelligence, and so on.  Let's define what linear equations are.
   </p>
-  <definition xml:id="def_lin_eq">
-    <title>Linear Equation</title>
-      
+  <definition xml:id="def_lin_eq"><title>Linear Equation</title> 
     <statement>
       <p>
         A <term>linear equation</term> is an equation that can be written in the form
@@ -346,16 +349,16 @@
     <q>find a solution to a certain system of linear equations.</q>
   </p>
 
-  <!-- Why is part (b) not working, even when I copy and paste into part (e)? -->
-  <activity label="mc-linear-or-not">
-    <title>Multiple-Choice, Linear or Nonlinear</title>
+  <!-- Why is part (b) not working, even when I copy and paste into part (e)? or comment out part a and the new 
+   part (b) is the one that doesn't work, when it worked fine before. -->
+  <exercise label="mc-linear-or-not"><title>Multiple-Choice, Linear or Nonlinear</title>
     <introduction>
       <p>
         For each of the following equations, use <xref ref="def_lin_eq"/> to decide whether 
         the equation is linear or not.
       </p>
     </introduction>
-    <task label="mc-lin-or-not-1">
+    <!-- <task label="mc-lin-or-not-1">
     <statement>
       <p>
         <me>x+y=2</me>
@@ -388,7 +391,7 @@
     </feedback>
     </choice>
     </choices>
-  </task>
+  </task> -->
   <task label="mc-lin-or-not-2b">
     <statement>
       <p>
@@ -471,7 +474,7 @@
     </statement>
     <feedback>
       <p>
-        The equation does not have the correct form; the variables are multiplied together, not multiplied by numbers and added. 
+        The equation does not have the correct form; the variables in a linear equation cannot be raised to exponents other than 1. 
       </p>
     </feedback>
     </choice>
@@ -483,7 +486,7 @@
     </statement>
     <feedback>
       <p>
-        The variables can't be multiplied together in a linear equation.  
+        The variables in a linear equation cannot be raised to exponents other than 1. 
       </p>
     </feedback>
     </choice>
@@ -522,7 +525,36 @@
     </choice>
     </choices>
   </task>
-</activity>
+</exercise>
+
+<exercise><title>Testing tabs</title>
+  <introduction>
+    <p>
+      testing the intro
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        bfhda
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        fhdjak
+      </p>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        fhdjak again
+      </p>
+    </statement>
+  </task>
+</exercise>
   
   <!-- <exploration label="matching-function-types">
     <title>Matching Problem, Function Types</title>
@@ -632,13 +664,13 @@
     <ul>
       <li>
         <p>
-          Linear equations are equations which can be written in the form <me>a_1x_1+a_2x_2+\cdots+a_nx_n = c</me>, 
+          <em>Linear equations</em> are equations which can be written in the form <me>a_1x_1+a_2x_2+\cdots+a_nx_n = c</me>, 
           where the <m>x_i</m> are variables, the <m>a_i</m> are coefficients, and <m>c</m> is a constant.
         </p>
       </li>
       <li>
         <p>
-          A system of linear equations is a set of linear equations referring to the same variables.  Solving a system
+          A <em>system of linear equations</em> is a set of linear equations referring to the same variables.  Solving a system
           of linear equations means finding values for the variables such that all the equations are true with those values.
         </p>
       </li>
