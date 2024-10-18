@@ -651,6 +651,9 @@
   <p>
     We would not regard the above collection of equations to constitute a system of equations,
     since each equation uses differently named variables.
+  </p>-->
+
+  <p>
     An example of a system of linear equations is
     <md>
       <mrow>x_1-x_2+x_3+x_4\amp =1</mrow>
@@ -665,7 +668,7 @@
     We could have had fewer, even just one,
     and we could have had more.
   </p>
-  <p>
+  <!--<p>
     To get a better feel for what a linear equation is,
     we point out some examples of what are
     <em>not</em> linear equations.
@@ -691,9 +694,9 @@
     That is a goal for the upcoming sections.
     Right now we focus on identifying linear equations and solving some smaller systems of equations using substitution.
   </p>
-</subsection>
+<!-- </subsection> -->
 
-<subsection xml:id="subsec-lin-eqn-summary">
+<subsubsection xml:id="subsec-lin-eqn-summary">
   <title>Summary</title>
   <p>
     <ul>
@@ -717,10 +720,11 @@
       </li>
     </ul>
   </p>
+  </subsubsection>
 </subsection>
 
-<!-- Have structured the included file as a subsection called Interactive Exercises for now.  I want the webwork to
- not show answers, like the in-class questions, while the non-interactive exercises can show answers.  But the numbering is kind of a pain. -->
+<!-- Have structured the included file as a subsection called Practice for now.  I want the webwork to
+ not show answers, like the in-class questions, while the non-interactive exercises can show answers.  -->
 <xi:include href="interactive-exercises/ww-lin-eqn-subs.xml" />
 
 <exercises><title>Additional Practice</title>
