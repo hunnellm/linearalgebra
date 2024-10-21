@@ -182,7 +182,7 @@
     </me>
   </p>
   <p>
-    Let's now do two steps in a row; our goal is to get rid of the <m>g</m> variables in the first and third equations.
+    Let's now do two steps in a row; our goal is to eliminate the <m>g</m> variables in the first and third equations.
     In order to remove the <m>g</m> in the first equation, let's multiply the second equation by <m>-1</m> and add that to the first equation,
     replacing the first equation with that sum. To remove the <m>g</m> in the third equation,
     let's multiply the second equation by <m>-2</m> and add that to the third equation, replacing the third equation. Our new system of equations now becomes
@@ -198,7 +198,7 @@
     </me>
   </p>
   <p>
-    Now let's get rid of the <m>r</m>'s in the first and second equation.
+    Now let's eliminate the <m>r</m>'s in the first and second equation.
     To remove the <m>r</m> in the first equation,
     let's multiply the third equation by
     <m>-\frac{3}{2}</m> and add the result to the first equation,
@@ -220,11 +220,13 @@
   </p>
   <p>
     Everyone thinks of a different way to solve a system using substitution <mdash/> Mary might choose a different variable
-    to solve for than John chose, and Steven might start with a different equation or substitute into a different equation.
+    to solve for than John chose, and Alicia might start with a different equation, and Steven might substitute into a different equation.
     When there are more than 2 or 3 variables, substituting gets really laborious, and it's not clear what steps should 
     come next in order to make progress in solving. Elimination can be made into an algorithm,
     a set of steps to follow in a particular order that will always result in an answer.<fn>Even if sometimes the answer
-      is that there is no solution, or that there are infinitely many solutions.</fn>
+      is that there is no solution, or that there are infinitely many solutions.</fn>  This is both comforting and practical; 
+      if you have to work a problem by hand, it's nice to know you'll be able to complete it as long as you remember the steps, 
+      and if you don't have to work the problem by hand, an algorithm means it's possible to program a computer to do the steps for you.
   </p>
 
   <!-- example of two equations, which is easier... free response or parsons?  or just parsons on elimination? -->
@@ -288,10 +290,13 @@
   <p>
     We noticed earlier that there is nothing special about the letters <m>b</m>, <m>g</m> and <m>r</m>;
     we could have used <m>x</m>, <m>y</m> and <m>z</m>, or <m>x_1</m>, <m>x_2</m> and <m>x_3</m>.
-    Our work in the method of elimination suggests that we don't actually need to write the variable names at all, as long as we carefully line them up in the system of equations.
+    Our work demonstrating the method of elimination suggests that we don't actually need to write the variable 
+    names at all, as long as we carefully line them up in the system of equations so that we can keep track of what's
+    being eliminated.  
   </p>
   <p>
-    Let's look again at our system of equations in <xref ref="eq_before_matrix"/> and write the coefficients and the constants in a rectangular array. This time we won't ignore the zeros, but rather write them out.
+    Let's look again at our system of equations in <xref ref="eq_before_matrix"/> and write the coefficients
+     and the constants in a rectangular array. If any variables are missing from any equations, we write that the coefficient is <m>0</m>.
     <me>
       \begin{array}{ccccccc} b\amp +\amp g\amp +\amp r\amp =\amp 30\\ \amp -\amp 2g\amp +\amp r\amp =\amp 0\\ -b\amp +\amp g\amp +\amp r\amp =\amp 0 \end{array} \quad \Longleftrightarrow \quad \left[\begin{array}{cccc} 1\amp 1\amp 1\amp 30\\ 0\amp -2\amp 1\amp 0\\ -1\amp 1\amp 1\amp 0 \end{array} \right]
     </me>
@@ -321,7 +326,7 @@
         of the system, we call the matrix an <term>augmented matrix</term>.
       </p>
       <p>
-        We tend to use capital letters for matrices, such as <m>A</m>, <m>B</m>, and <m>C</m>, and we use lowercase letters with subscripts 
+        We tend to use capital letters for matrices (the plural of matrix), such as <m>A</m>, <m>B</m>, and <m>C</m>, and we use lowercase letters with subscripts 
         for the entries within a matrix.  That is, <m>a_{32}</m> means
         <q>the number in the third row and second column</q> of matrix <m>A</m>.
       </p>
@@ -334,6 +339,13 @@
       
     </statement>
   </definition>
+
+  <p>
+    Since matrices contain all the important information from a linear system, we are working our way up to
+    solving systems using only augmented matrices.  It saves us from having to write out the variables over and over
+    again, and matrices are also easy for a computer to understand and manipulate.  It should be noted that
+     matrices will be used and computed with even when we don't think of them as corresponding to a system of linear equations.  
+  </p>
 
   </subsubsection>
   
@@ -373,6 +385,10 @@
       </setup>
     </exercise>
 
+    <!-- When card sort becomes available, would turn this into sorting with categories 
+     subsitution, elimination, or both. Things like finding the values of the variables, 
+     multiply both sides of equations by numbers, substitute
+     for one variable in another equation, add a multiple of one equation to another equation. -->
     <exercise label="rq-matrices-sub-vs-elim">
       <statement>
         <p>
@@ -423,16 +439,139 @@
 
   </subsection>
 
+  <!-- the worksheet can be its own section-like thing titled Participate.  
+   But then where would the summary go? On a new page of the Participate worksheet? At the start of the Practice?
+   I don't like having the summary show up in the TOC, so I don't want it to be its own Section. -->
+
   <subsection xml:id="subsec-matrices-elim-dc">
     <title>Participate</title>
-    <p>
-      something will go here
-    </p>
+    <worksheet><title></title>
+      <page>
+        <exercisegroup cols="2"><title>Elimination</title>
+          <introduction>
+            <p>
+              Solve the linear systems below using the method of elimination.
+            </p>
+          </introduction>
+          
+        <exercise workspace="3in">
+          <statement>
+            <p>
+              <md>
+                <mrow> x + y - z \amp = 1 </mrow>
+                <mrow> 2x + y \amp = 2</mrow>
+                <mrow>  y + 2z\amp = 0 </mrow>
+                </md>
+            </p>
+          </statement>
+          <!-- <answer>
+            <p>
+              <m>x =1,\ y=0,\ z=0</m>
+            </p>
+          </answer> -->
+        </exercise>
+        <exercise xml:id="dc-linsystem4var" workspace="3in">
+          <statement>
+            <p>
+              <md>
+                <mrow> x + y - z \amp = 1 </mrow>
+                <mrow> 2x + y \amp = 2</mrow>
+                <mrow>  y + 2z\amp = 0 </mrow>
+                </md>
+            </p>
+          </statement>
+          <!-- <answer>
+            <p>
+              <m>x =1,\ y=0,\ z=0</m>
+            </p>
+          </answer> -->
+        </exercise>
+      </exercisegroup>
+      </page>
+      <page>
+      <exercisegroup cols="3"><title>Parts of a Matrix</title>
+        <introduction>
+          <p>
+            For the matrix 
+            <m>B=\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>, 
+            identify the
+          </p>
+        </introduction>
+        <exercise workspace="1in">
+          <statement>
+            <p>
+              entry <m>b_{32}</m>.
+            </p>
+          </statement>
+        </exercise>
+        <exercise workspace="1in">
+          <statement>
+            <p>
+              third column.
+            </p>
+          </statement>
+        </exercise>
+        <exercise workspace="1in">
+          <statement>
+            <p>
+              second row.
+            </p>
+          </statement>
+        </exercise>
+      </exercisegroup>
+
+      <exercise workspace=".5in">
+        <statement>
+          <p>
+            If <m>A</m> is a <m>3\times 5</m> matrix, how many columns does <m>A</m> have?
+          </p>
+        </statement>
+      </exercise>
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Using variables <m>x_1, x_2, \ldots </m>, write the linear system corresponding to the above matrix <m>B</m>.
+          </p>
+        </statement>
+      </exercise>
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Give the augmented matrix corresponding to the linear system in 
+            <xref ref="dc-linsystem4var" text="local"/>.
+          </p>
+        </statement>
+      </exercise>
+        <!-- have objectives? solving two systems by elimination, one three variables and one 4? with lots of 0's,
+         then the same system with two sets of variables, or the same as the three variable one with different variables names,
+          then move to matrices, write two systems as a matrix, and two matrices as systems. 
+          Identify the coeffient of the x_2 variable in equation 3?  or the constants?  Circle first row or 3rd column? -->
+      </page>
+    </worksheet>
 
     <subsubsection xml:id="subsec-matrices-summary">
       <title>Summary</title>
       <p>
-        End with a summary?  More examples in knowls?  Links to videos? links inside the summary?
+        <ul>
+          <li>
+            <p>
+              The <em>method of elimination</em> is a way to solve systems of linear equations that can be made
+              systematic and algorithmic.  
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Matrices</em> are arrays of numbers.  Right now, we are most interested in <em>augmented matrices</em>,
+              whose entries correspond to the coefficients and constants of a system of linear equations.
+            </p>
+          </li>
+          <li>
+            <p>
+              Elimination works better than substitution when there are more than 2 or 3 variables
+              and is the foundation of future sections of material.
+            </p>
+          </li>
+        </ul>
       </p>
     </subsubsection>
   </subsection>
@@ -445,6 +584,7 @@
   </subsection>
 
 <exercises><title>Additional Practice</title>
+  <!-- Need to add some systems to solve by elimination... take from previous or next section? -->
   <exercisegroup cols="2"><title>Linear System to Augmented Matrix</title>
     <introduction>
      <p>
@@ -454,31 +594,35 @@
     <exercise>
       <statement>
          <p>
-           <m>\begin{array}{ccccccc} 3x\amp +\amp 4y\amp +\amp 5z\amp =\amp 7\\ -x\amp +\amp y\amp -\amp 3z\amp =\amp 1\\ 2x\amp -\amp 2y\amp +\amp 3z\amp =\amp 5 \end{array}</m>
+           <me>\begin{array}{ccccccc} 3x\amp +\amp 4y\amp +\amp 5z\amp =\amp 7\\ -x\amp +\amp y\amp -\amp 3z\amp =\amp 1\\ 2x\amp -\amp 2y\amp +\amp 3z\amp =\amp 5 \end{array}</me>
          </p>
        </statement>
        <answer>
          <p>
-           <m>\left[\begin{array}{cccc} 3\amp 4\amp 5\amp 7\\-1\amp 1\amp -3\amp 1\\2\amp -2\amp 3\amp 5\\ \end{array} \right]</m>
+           <me>\left[\begin{array}{cccc} 3\amp 4\amp 5\amp 7\\-1\amp 1\amp -3\amp 1\\2\amp -2\amp 3\amp 5\\ \end{array} \right]</me>
          </p>
        </answer>
      </exercise>
      <exercise>
        <statement>
          <p>
-           <m>\begin{array}{ccccccc} 2x\amp +\amp 5y\amp -\amp 6z\amp =\amp 2\\ 9x\amp \amp \amp -\amp 8z\amp =\amp 10\\ -2x\amp +\amp 4y\amp +\amp z\amp =\amp -7 \end{array}</m>
+           <me>\begin{array}{ccccccc} 2x\amp +\amp 5y\amp -\amp 6z\amp =\amp 2\\ 9x\amp \amp \amp -\amp 8z\amp =\amp 10\\ -2x\amp +\amp 4y\amp +\amp z\amp =\amp -7 \end{array}</me>
          </p>
        </statement>
        <answer>
          <p>
-           <m>\left[\begin{array}{cccc} 2\amp 5\amp -6\amp 2\\9\amp 0\amp -8\amp 10\\-2\amp 4\amp 1\amp -7\\ \end{array} \right]</m>
+           <me>\left[\begin{array}{cccc} 2\amp 5\amp -6\amp 2\\9\amp 0\amp -8\amp 10\\-2\amp 4\amp 1\amp -7\\ \end{array} \right]</me>
          </p>
        </answer>
      </exercise>
      <exercise>
        <statement>
          <p>
-           <m>\begin{array}{rl} x_1 +3x_2-4x_3 + 5x_4 =\amp 17 \\ -x_1+4x_3+8x_4 =\amp 1\\ 2x_1+3x_2+4x_3+5x_4=\amp 6 \end{array}</m>
+          <md>
+            <mrow> x_1 +3x_2-4x_3 + 5x_4 \amp = 17 </mrow>
+            <mrow> -x_1+4x_3+8x_4 \amp = 1</mrow>
+            <mrow> 2x_1+3x_2+4x_3+5x_4\amp = 6 </mrow>
+          </md>
          </p>
        </statement>
        <answer>
@@ -490,12 +634,17 @@
      <exercise>
        <statement>
          <p>
-           <m>\begin{array}{rl} 3x_1 -2x_2=\amp 4 \\ 2x_1 =\amp 3\\ -x_1+9x_2=\amp 8\\ 5x_1-7x_2=\amp 13 \end{array}</m>
+          <md>
+            <mrow> 3x_1 -2x_2\amp = 4 </mrow>
+            <mrow> 2x_1 \amp = 3</mrow> 
+            <mrow> -x_1+9x_2\amp = 8</mrow>
+            <mrow> 5x_1-7x_2\amp = 13 </mrow>
+          </md>
          </p>
        </statement>
        <answer>
          <p>
-           <m>\left[\begin{array}{ccc} 3\amp -2\amp 4\\ 2\amp 0\amp 3\\-1\amp 9\amp 8\\5\amp -7\amp 13\\ \end{array} \right]</m>
+           <me>\left[\begin{array}{ccc} 3\amp -2\amp 4\\ 2\amp 0\amp 3\\-1\amp 9\amp 8\\5\amp -7\amp 13\\ \end{array} \right]</me>
          </p>
        </answer>
      </exercise>
