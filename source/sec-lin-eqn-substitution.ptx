@@ -49,13 +49,99 @@
 
 <!-- Why doesn't the number fillin work as an activity, only as an exercise? -->
   <exercise label="fruit-puzzle">
-    <title>Solve a fruit puzzle</title>
+    <title>Solve a fruit puzzle, image child of paragraph</title>
     <statement>
       <p>
         <image width="40%" source="fruitpuzzleimage8.jpeg">
           <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
         </image>
       </p>
+      <p>
+        The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
+        and a bunch of bananas minus cherries equals 2.  
+      </p>
+      <p>
+        Then it asks a question: how much does cherries plus an apple plus 
+        a bunch of bananas equal? The answer is <fillin width="5" answer="11" /> 
+      </p>
+    </statement>
+    <evaluation>
+      <evaluate>
+      <test correct="yes">
+      <numcmp use-answer="yes" />
+      <feedback>
+        <p>
+          Each apple is worth 6, each bunch of 4 bananas is worth 4, so each banana is worth 1, and each group of cherries is worth 2. 
+          There are only 3 bananas in the question to answer, so 2+6+3=11. 
+        </p>
+      </feedback>
+      </test>
+    
+      <test>
+      <numcmp value="12" />
+      <feedback>
+        <p>
+          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
+          people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
+           1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
+        </p>
+      </feedback>
+      </test>
+  
+      </evaluate>
+      </evaluation>
+  </exercise>
+
+  <exercise label="fruit-puzzle2">
+    <title>Solve a fruit puzzle, image child of figure</title>
+    <statement>
+      <figure>
+        <image width="40%" source="fruitpuzzleimage8.jpeg">
+          <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
+        </image>
+      </figure>
+      <p>
+        The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
+        and a bunch of bananas minus cherries equals 2.  
+      </p>
+      <p>
+        Then it asks a question: how much does cherries plus an apple plus 
+        a bunch of bananas equal? The answer is <fillin width="5" answer="11" /> 
+      </p>
+    </statement>
+    <evaluation>
+      <evaluate>
+      <test correct="yes">
+      <numcmp use-answer="yes" />
+      <feedback>
+        <p>
+          Each apple is worth 6, each bunch of 4 bananas is worth 4, so each banana is worth 1, and each group of cherries is worth 2. 
+          There are only 3 bananas in the question to answer, so 2+6+3=11. 
+        </p>
+      </feedback>
+      </test>
+    
+      <test>
+      <numcmp value="12" />
+      <feedback>
+        <p>
+          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
+          people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
+           1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
+        </p>
+      </feedback>
+      </test>
+  
+      </evaluate>
+      </evaluation>
+  </exercise>
+
+  <exercise label="fruit-puzzle3">
+    <title>Solve a fruit puzzle, image child of statement</title>
+    <statement>
+        <image width="40%" source="fruitpuzzleimage8.jpeg">
+          <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
+        </image>
       <p>
         The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
         and a bunch of bananas minus cherries equals 2.  
