@@ -4,7 +4,7 @@
   <title>Matrices and Elimination</title>
   <introduction>
     <p>
-      Material in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
+      The non-interactive material in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
     </p>
   </introduction>
 
@@ -148,7 +148,8 @@
     </exercise>
 
 
-  <subsubsection xml:id="subsubsec-matrices-methodofelim">
+  <!-- <subsubsection xml:id="subsubsec-matrices-methodofelim"> -->
+   <paragraphs>
     <title>Method of Elimination (of Variables)</title>
   <p>
     Let's return to <xref ref="ex_by_hand">Example</xref>. As we mentioned before, there isn't just one
@@ -213,7 +214,8 @@
     We have arrived at the same result as when we solved this problem in <xref ref="ex_by_hand">Example</xref>, 
     even though our steps were different.
   </p>
-  </subsubsection>
+</paragraphs>
+  <!-- </subsubsection> -->
 
   <p>
     Why did we need to learn another method (elimination) when our old method (substitution) worked and got the same answer?
@@ -221,7 +223,7 @@
   <p>
     Everyone thinks of a different way to solve a system using substitution <mdash/> Mary might choose a different variable
     to solve for than John chose, and Alicia might start with a different equation, and Steven might substitute into a different equation.
-    When there are more than 2 or 3 variables, substituting gets really laborious, and it's not clear what steps should 
+    When there are more than 2 or 3 variables, substituting gets really laborious, and it's not always clear what steps should 
     come next in order to make progress in solving. Elimination can be made into an algorithm,
     a set of steps to follow in a particular order that will always result in an answer.<fn>Even if sometimes the answer
       is that there is no solution, or that there are infinitely many solutions.</fn>  This is both comforting and practical; 
@@ -285,7 +287,7 @@
     </blocks>
   </exercise>
 
-  <subsubsection xml:id="subsubsec-matrices-matrices">
+  <paragraphs xml:id="subsubsec-matrices-matrices">
     <title>Matrices</title>
   <p>
     We noticed earlier that there is nothing special about the letters <m>b</m>, <m>g</m> and <m>r</m>;
@@ -342,12 +344,12 @@
 
   <p>
     Since matrices contain all the important information from a linear system, we are working our way up to
-    solving systems using only augmented matrices.  It saves us from having to write out the variables over and over
-    again, and matrices are also easy for a computer to understand and manipulate.  It should be noted that
-     matrices will be used and computed with even when we don't think of them as corresponding to a system of linear equations.  
+    solving systems using only augmented matrices.  Using matrices saves us from having to write out the variables over and over
+    again, and matrices are also easy for a computer to understand and manipulate.  Matrices are important objects in their own right, 
+    and in future sections, we will be able to compute with matrices even when we don't think of them as corresponding to a system of linear equations.  
   </p>
 
-  </subsubsection>
+</paragraphs>
   
   <reading-questions xml:id="rqs-matrices-elim">
     <exercise label="matrix-indices">
@@ -385,9 +387,9 @@
       </setup>
     </exercise>
 
-    <!-- When card sort becomes available, would turn this into sorting with categories 
-     subsitution, elimination, or both. Things like finding the values of the variables, 
-     multiply both sides of equations by numbers, substitute
+    <!-- When card sort becomes available, will turn this into sorting with categories 
+     substitution, elimination, or both. Things like finding the values of the variables, 
+     multiply both sides of an equation by a non-zero number, plug in a number or expression
      for one variable in another equation, add a multiple of one equation to another equation. -->
     <exercise label="rq-matrices-sub-vs-elim">
       <statement>
@@ -439,13 +441,39 @@
 
   </subsection>
 
-  <!-- the worksheet can be its own section-like thing titled Participate.  
-   But then where would the summary go? On a new page of the Participate worksheet? At the start of the Practice?
-   I don't like having the summary show up in the TOC, so I don't want it to be its own Section. -->
+  <!-- the worksheet can be its own subsection-like thing titled Participate.  But then Participate shows up in the printed
+   worksheet itself.  Maybe I do want that, if I could change it to say 1.2 Participate only in the printed worksheet,
+   not in the html? I don't think I do though - I might sometimes want non-worksheet material in Participate, like in
+   Section 1.1, for example. Maybe upcoming sections that are sage heavy, too. -->
 
-  <subsection xml:id="subsec-matrices-elim-dc">
+  <subsection xml:id="subsec-matrices-elim-dc"> 
     <title>Participate</title>
-    <worksheet><title></title>
+    <worksheet xml:id="ws-matrices-elim"><title></title>
+      <objectives>
+        <ul>
+          <li>
+            <p>
+              Solve systems of linear equations using the method of elimination
+            </p>
+          </li>
+          <li>
+            <p>
+              Become more familiar with the terminology and parts of a matrix
+            </p>
+          </li>
+          <li>
+            <p>
+              Be able to go back and forth between a linear system and an augmented matrix
+            </p>
+          </li>
+        </ul>
+</objectives>
+
+      <!-- <introduction>
+        <p>
+          something else to say?
+        </p>
+      </introduction> -->
       <page>
         <exercisegroup cols="2"><title>Elimination</title>
           <introduction>
@@ -458,33 +486,34 @@
           <statement>
             <p>
               <md>
-                <mrow> x + y - z \amp = 1 </mrow>
-                <mrow> 2x + y \amp = 2</mrow>
-                <mrow>  y + 2z\amp = 0 </mrow>
-                </md>
+                <mrow> 2x_1 + 4x_2 \amp = -6</mrow>
+                <mrow> 5x_1 - 5x_2 \amp = 15 </mrow>
+              </md>
             </p>
-          </statement>
-          <!-- <answer>
+           </statement>
+           <answer>
             <p>
-              <m>x =1,\ y=0,\ z=0</m>
+              <m>x_1 =1 , x_2= -2</m>
             </p>
-          </answer> -->
-        </exercise>
+          </answer>
+         </exercise>
+          
         <exercise xml:id="dc-linsystem4var" workspace="3in">
           <statement>
             <p>
               <md>
-                <mrow> x + y - z \amp = 1 </mrow>
-                <mrow> 2x + y \amp = 2</mrow>
-                <mrow>  y + 2z\amp = 0 </mrow>
+                <mrow> x_1 + x_2 - x_3 \amp = 1 </mrow>
+                <mrow> x_1+ 2x_2 -x_3 \amp = 2</mrow>
+                <mrow> x_2+ x_3 \amp = 3 </mrow>
+                <mrow>  x_2 - x_4\amp = 4 </mrow>
                 </md>
             </p>
           </statement>
-          <!-- <answer>
+          <answer>
             <p>
-              <m>x =1,\ y=0,\ z=0</m>
+              <m>x_1 =2,\ x_2=1,\ x_3=2, \ x_4=-3</m>
             </p>
-          </answer> -->
+          </answer>
         </exercise>
       </exercisegroup>
       </page>
@@ -503,6 +532,11 @@
               entry <m>b_{32}</m>.
             </p>
           </statement>
+          <answer>
+            <p>
+              The entry in the third row and second column is <m>-5</m>
+            </p>
+          </answer>
         </exercise>
         <exercise workspace="1in">
           <statement>
@@ -510,6 +544,11 @@
               third column.
             </p>
           </statement>
+          <answer>
+            <p>
+              The third column is <m>\begin{array}{c}-1\\5\\-3\end{array}</m>
+            </p>
+          </answer>
         </exercise>
         <exercise workspace="1in">
           <statement>
@@ -517,6 +556,11 @@
               second row.
             </p>
           </statement>
+          <answer>
+            <p>
+              The second row is <m>\begin{array}{cccc} 2 \amp 1 \amp 5 \amp 7 \end{array}</m>
+            </p>
+          </answer>
         </exercise>
       </exercisegroup>
 
@@ -526,6 +570,11 @@
             If <m>A</m> is a <m>3\times 5</m> matrix, how many columns does <m>A</m> have?
           </p>
         </statement>
+        <answer>
+          <p>
+            A <m>3\times 5</m> matrix has 5 columns.  
+          </p>
+        </answer>
       </exercise>
       <exercise workspace="1in">
         <statement>
@@ -533,6 +582,15 @@
             Using variables <m>x_1, x_2, \ldots </m>, write the linear system corresponding to the above matrix <m>B</m>.
           </p>
         </statement>
+        <answer>
+          <p>
+            <md>
+              <mrow> x_1 + x_2 - x_3 \amp = 2 </mrow>
+              <mrow> 2x_1 + x_2 + 5x_3 \amp = 7</mrow>
+              <mrow>  -5x_2 - 3x_3 \amp = \frac{1}{2} </mrow>
+            </md>
+          </p>
+        </answer>
       </exercise>
       <exercise workspace="1in">
         <statement>
@@ -541,15 +599,17 @@
             <xref ref="dc-linsystem4var" text="local"/>.
           </p>
         </statement>
+        <answer>
+          <p>
+            <m>\left[\begin{array}{ccccc} 1\amp 1\amp -1 \amp 0 \amp 1\\ 1 \amp 2 \amp -1 \amp 0 \amp 2\\ 0 \amp 1 \amp 1 \amp 0 \amp 3\\ 0 \amp 1 \amp 0 \amp -1 \amp 4 \end{array} \right]</m>
+          </p>
+        </answer>
       </exercise>
-        <!-- have objectives? solving two systems by elimination, one three variables and one 4? with lots of 0's,
-         then the same system with two sets of variables, or the same as the three variable one with different variables names,
-          then move to matrices, write two systems as a matrix, and two matrices as systems. 
-          Identify the coeffient of the x_2 variable in equation 3?  or the constants?  Circle first row or 3rd column? -->
       </page>
     </worksheet>
+    </subsection>
 
-    <subsubsection xml:id="subsec-matrices-summary">
+    <conclusion xml:id="subsec-matrices-summary">
       <title>Summary</title>
       <p>
         <ul>
@@ -567,14 +627,14 @@
           </li>
           <li>
             <p>
-              Elimination works better than substitution when there are more than 2 or 3 variables
-              and is the foundation of future sections of material.
+              Elimination works better than substitution when there are more than 2 or 3 variables,
+              and it is the foundation of future sections of material.
             </p>
           </li>
         </ul>
       </p>
-    </subsubsection>
-  </subsection>
+    </conclusion>
+  
 
   
 
@@ -584,7 +644,45 @@
   </subsection>
 
 <exercises><title>Additional Practice</title>
-  <!-- Need to add some systems to solve by elimination... take from previous or next section? -->
+  <exercisegroup cols="2"><title>Method of Elimination</title>
+    <introduction>
+         <p>
+           In the following exercises, solve the systems of linear equations using the method of elimination.
+         </p>
+    </introduction>
+    <exercise>
+      <statement>
+        <p>
+          <md>
+            <mrow> x + y - z \amp = 1 </mrow>
+            <mrow> 2x + y \amp = 2</mrow>
+            <mrow>  y + 2z\amp = 0 </mrow>
+            </md>
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <m>x =1,\ y=0,\ z=0</m>
+        </p>
+      </answer>
+    </exercise>
+ <exercise>
+   <statement>
+    <p>
+      <md>
+        <mrow> x - y + z\amp = 1</mrow>
+        <mrow> 4x - 5y + 2z\amp = 0 </mrow>
+        <mrow> 2x + 6y - z\amp = -4</mrow> 
+      </md>
+    </p>
+   </statement>
+   <answer>
+    <p>
+      <m>x = -1, y=0,z=2</m>
+    </p>
+  </answer>
+ </exercise>
+</exercisegroup>
   <exercisegroup cols="2"><title>Linear System to Augmented Matrix</title>
     <introduction>
      <p>

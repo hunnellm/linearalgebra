@@ -694,9 +694,9 @@
     That is a goal for the upcoming sections.
     Right now we focus on identifying linear equations and solving some smaller systems of equations using substitution.
   </p>
-<!-- </subsection> -->
+</subsection>
 
-<subsubsection xml:id="subsec-lin-eqn-summary">
+<conclusion xml:id="subsec-lin-eqn-summary">
   <title>Summary</title>
   <p>
     <ul>
@@ -720,8 +720,8 @@
       </li>
     </ul>
   </p>
-  </subsubsection>
-</subsection>
+</conclusion>
+
 
 <!-- Have structured the included file as a subsection called Practice for now.  I want the webwork to
  not show answers, like the in-class questions, while the non-interactive exercises can show answers.  -->
