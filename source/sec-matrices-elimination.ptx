@@ -352,6 +352,7 @@
 </paragraphs>
   
   <reading-questions xml:id="rqs-matrices-elim">
+
     <exercise label="matrix-indices">
       <title>How a matrix is indexed</title>
       <statement>
@@ -387,11 +388,53 @@
       </setup>
     </exercise>
 
+
+    <exercise label="matrix-indices2">
+      <title>How a matrix is indexed</title>
+      <statement>
+        <p>
+          In the matrix <me>A=\begin{bmatrix} 2 \amp -1 \amp 3 \amp 5 \\ 0 \amp 3\amp 6\amp -3 \\ 4 \amp -2 \amp 7 \amp 5   \end{bmatrix}</me>
+          what is <m>a_{23}</m>? <fillin width="5" answer="6" /> 
+        </p>
+      </statement>
+      <evaluation>
+        <evaluate>
+        <test correct="yes">
+        <numcmp use-answer="yes" />
+        <feedback>
+          <p>
+            The number in the second row and third column is <m>6</m>. 
+          </p>
+        </feedback>
+        </test>
+      
+        <test>
+        <numcmp value="-2" />
+        <feedback>
+          <p>
+            You gave the entry in the third row and second column, but <m>a_{23}</m> is the number in the second row and third column.    
+          </p>
+        </feedback>
+        </test>
+
+        <test>
+          <feedback>
+            <p>
+              Incorrect.  If you're stuck, try reviewing the <xref ref="def_matrix ">definition of matrix</xref>.  
+            </p>
+          </feedback>
+        </test>
+        <!-- would like that link to go to the definition, not just the section.  check when it's deployed, maybe ask Brian. It worked in the old markup.-->
+    
+        </evaluate>
+        </evaluation>
+    </exercise>
+
     <!-- When card sort becomes available, will turn this into sorting with categories 
      substitution, elimination, or both. Things like finding the values of the variables, 
      multiply both sides of an equation by a non-zero number, plug in a number or expression
      for one variable in another equation, add a multiple of one equation to another equation. -->
-    <exercise label="rq-matrices-sub-vs-elim">
+    <exercise label="rq-matrices-sub-vs-elim"><title>Elimination vs. substitution</title>
       <statement>
         <p>
           Consider the <em>method of substitution</em> used in <xref ref="sec-lin-eqn-substitution"/> and 
@@ -413,7 +456,7 @@
       <response />
     </exercise>
 
-    <exercise label="rq-matrices-questions">
+    <exercise label="rq-matrices-questions"><title>Metacognition</title>
       <statement>
         <p>
           Enter a response to both of the following tasks:
@@ -463,7 +506,7 @@
           </li>
           <li>
             <p>
-              Be able to go back and forth between a linear system and an augmented matrix
+              Go back and forth between a linear system and an augmented matrix
             </p>
           </li>
         </ul>
