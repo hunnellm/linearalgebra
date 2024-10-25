@@ -306,27 +306,6 @@
       </p>
     </solution>
   </example>
-  
-
-
-  <!-- <p>
-    Consider the equation <m>x+y=2</m>.  When <m>x=0</m> and <m>y=2</m>, the equation is true, so I've plotted
-    the point <m>(0>,2)</m>.  Think of some more values of <m>x</m> and <m>y</m> that satisfy the equation, and plot
-    them as points.  
-  </p>
-  <figure>
-    <caption>Solutions to the equation <m>x+y=2</m></caption>
-    <interactive xml:id="desmos-xplusyis2a" desmos="aipnfasaht" width="100%" aspect="4:3" />
-  </figure>
-
-  <exercise label="lin-eqn-pointsplotted">
-    <statement>
-      <p>
-        What do you notice about all the <m>(x,y)</m> points that satisfy <m>x+y=2</m>?
-      </p>
-    </statement>
-    <response />
-  </exercise> -->
 
   <example xml:id="ex_by_hand">
     <title>Jar of multicolored marbles</title>
@@ -433,9 +412,7 @@
     <q>how many marbles of each color are there?,</q> we were also answering
     <q>find a solution to a certain system of linear equations.</q>
   </p>
-
-  <!-- Why is part (b) not working, even when I copy and paste into part (e)? or comment out part a and the new 
-   part (b) is the one that doesn't work, when it worked fine before. -->
+  
   <exercise label="mc-linear-or-not"><title>Multiple-Choice, Linear or Nonlinear</title>
     <introduction>
       <p>

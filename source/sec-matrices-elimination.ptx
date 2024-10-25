@@ -658,7 +658,7 @@
         <ul>
           <li>
             <p>
-              The <em>method of elimination</em> is a way to solve systems of linear equations that can be made
+              The <em>method of elimination</em> is a way of solving systems of linear equations that can be made
               systematic and algorithmic.  
             </p>
           </li>
@@ -681,68 +681,9 @@
 
   
 
-  <!-- put inside include file -->
-  <subsection xml:id="ww-matrices-elim">
-    <title>Practice</title>
-      <activity label="ww-aug-from-3var"><title>Augmented matrix from 3-variable system</title>
-        <webwork>
-          <pg-code>
-            Context("Numeric");
-            Context()->variables->add(y => 'Real', z=> 'Real');
-            Context()->reduction->set('(-x)+y'=>0, '(-x)-y'=>0);
-            $a1 = non_zero_random(-9,9,1);
-            $b1 = non_zero_random(-99,99,1);
-            $c1 = non_zero_random(-99,99,1);
-            $d1 = random(-99,99,1);
-            $a2 = 0;
-            $b2 = non_zero_random(-99,99,1);
-            $c2 = non_zero_random(-9,9,1);
-            $d2 = random(-9,9,1);
-            $a3 = non_zero_random(-99,99,1);
-            $b3 = 0;
-            $c3 = random(2,99,1);
-            $d3 = random(-99,99,1);
-            $coeff1=Formula("$a1*x+$b1*y+$c1*z")->reduce;
-            $coeff2=Formula("$a2*x+$b2*y+$c2*z")->reduce;
-            $coeff3=Formula("$a3*x+$b3*y+$c3*z")->reduce;
-          </pg-code>
-
-          <statement>
-            <p>Write the augmented matrix of the system
-            <md>
-              <mrow><var name="$coeff1"/> \amp = <var name="$d1" /></mrow>
-              <mrow><var name="$coeff2"/> \amp = <var name="$d2" /></mrow>
-              <mrow><var name="$coeff3"/> \amp = <var name="$d3" /></mrow>
-            </md>
-          </p>
-            <tabular>
-              <col />
-              <col />
-              <col right="medium" />
-              <col />
-            <row>
-            <cell><var name="$a1" width="2" /></cell>
-            <cell><var name="$b1" width="2" /></cell>
-            <cell><var name="$c1" width="2" /></cell>
-            <cell><var name="$d1" width="2" /></cell>
-            </row>
-            <row>
-              <cell><var name="$a2" width="2" /></cell>
-              <cell><var name="$b2" width="2" /></cell>
-              <cell><var name="$c2" width="2" /></cell>
-              <cell><var name="$d2" width="2" /></cell>
-            </row>
-            <row>
-              <cell><var name="$a3" width="2" /></cell>
-              <cell><var name="$b3" width="2" /></cell>
-              <cell><var name="$c3" width="2" /></cell>
-              <cell><var name="$d3" width="2" /></cell>
-            </row>
-            </tabular>
-          </statement>
-        </webwork>
-      </activity>
-  </subsection>
+  <!-- Have structured the included file as a subsection called Practice for now.  I want the webwork to
+ not show answers, like the in-class questions, while the non-interactive exercises can show answers.  -->
+<xi:include href="interactive-exercises/ww-matrices-elim.xml" />
 
 <exercises><title>Additional Practice</title>
   <exercisegroup cols="2"><title>Method of Elimination</title>
