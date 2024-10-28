@@ -36,27 +36,27 @@
         <webwork>
           <pg-code>
             Context("Numeric");
-            Context()->variables->are(x => 'Real', y=> 'Real', z=> 'Real');
+            Context()->variables->are(x_1 => 'Real', x_2=> 'Real', x_3=> 'Real');
             Context()->reduction->set('(-x)+y'=>0, '(-x)-y'=>0);
-            $x = Compute(non_zero_random(2,9,1));
-            $y = Compute(non_zero_random(-7,7,1));
-            $z = Compute(non_zero_random(-7,7,1));
+            $x1 = Compute(non_zero_random(2,9,1));
+            $x2 = Compute(non_zero_random(-7,7,1));
+            $x3 = Compute(non_zero_random(-7,7,1));
             $a1 = non_zero_random(-1,1,1)*non_zero_random(2,3,1);
             $b1 = non_zero_random(-6,6,1);
             $c1 = non_zero_random(-6,6,1);
-            $d1 = Compute("$a1*$x+$b1*$y+$c1*$z");
+            $d1 = Compute("$a1*$x1+$b1*$x2+$c1*$x3");
             $a2 = 0;
             $b2 = non_zero_random(-3,3,1);
             $c2 = non_zero_random(-7,7,1);
-            $d2 = Compute("$a2*$x+$b2*$y+$c2*$z");
+            $d2 = Compute("$a2*$x1+$b2*$x2+$c2*$x3");
             $a3 = non_zero_random(-7,7,1);
             $b3 = non_zero_random(-7,7,1);
             $c3 = random(2,9,1);
-            $d3 = Compute("$a3*$x+$b3*$y+$c3*$z");
+            $d3 = Compute("$a3*$x1+$b3*$x2+$c3*$x3");
 
-            $coeff1=Formula("$a1*x+$b1*y+$c1*z")->reduce;
-            $coeff2=Formula("$a2*x+$b2*y+$c2*z")->reduce;
-            $coeff3=Formula("$a3*x+$b3*y+$c3*z")->reduce;
+            $coeff1=Formula("$a1*x_1+$b1*x_2+$c1*x_3")->reduce;
+            $coeff2=Formula("$a2*x_1+$b2*x_2+$c2*x_3")->reduce;
+            $coeff3=Formula("$a3*x_1+$b3*x_2+$c3*x_3")->reduce;
           </pg-code>
 
           <statement>
@@ -69,7 +69,7 @@
             </md>
           </p>
           <p>
-            The solution is <m>x=</m><var name="$x" width="2" />, <m>y=</m><var name="$y" width="2" /> and <m>z=</m><var name="$z" width="2" />.
+            The solution is <m>x_1=</m><var name="$x" width="2" />, <m>x_2=</m><var name="$y" width="2" /> and <m>x_3=</m><var name="$z" width="2" />.
           </p>
             
           </statement>
@@ -185,7 +185,66 @@
         </webwork>
       </activity>
 
-      <activity label="ww-3var-system-from-aug"><title>Three variable system from augmented matrix</title>
+      <activity label="ww-matrix-properties"><title>About matrices and augmented matrices</title>
+        <webwork>
+          <pg-code>
+            $radio = RadioButtons([[
+              "The matrix is ${BM}3\times 5${EM}, with 3 rows and 5 columns.",
+              "The matrix is ${BM}3\times 5${EM}, with 3 columns and 5 rows.",
+              "The matrix is ${BM}5\times 3${EM}, with 5 rows and 3 columns.",
+              "The matrix is ${BM}5\times 3${EM}, with 5 columns and 3 rows.",
+              ]], 0
+            );
+
+            $n = Compute(non_zero_random(5,10,1));
+            $m = Compute(non_zero_random(1,3,1));
+            $numvars = $n-1;
+
+            $a1 = non_zero_random(-9,9,1);
+            $b1 = random(-9,9,1);
+            $c1 = non_zero_random(-9,9,1);
+            $d1 = Compute(non_zero_random(-9,9,1));
+            $e1 = Compute(random(-9,9,1));
+            $a2 = random(-9,9,1);
+            $b2 = non_zero_random(-9,9,1);
+            $c2 = non_zero_random(-9,9,1);
+            $d2 = Compute(non_zero_random(-9,9,1));
+            $e2 = Compute(random(-9,9,1));
+            $a3 = non_zero_random(-9,9,1);
+            $b3 = random(-9,9,1);
+            $c3 = random(-9,9,1);
+            $d3 = non_zero_random(-9,9,1);
+            $e3 = non_zero_random(-9,9,1);
+
+          </pg-code>
+          <statement>
+            <ol>
+              <li>
+                <p>
+                  Consider the matrix.
+              <me>A=
+                \begin{bmatrix} <var name="$a1" /> \amp <var name="$b1" /> \amp <var name="$c1" /> \amp <var name="$d1" /> \amp <var name="$e1" /> \\
+                <var name="$a2" /> \amp <var name="$b2" /> \amp <var name="$c2" /> \amp <var name="$d2" /> \amp <var name="$e2" />\\
+                <var name="$a3" /> \amp <var name="$b3" /> \amp <var name="$c3" /> \amp <var name="$d3" /> \amp <var name="$e3" /> \end{bmatrix}
+              </me>
+              Which of the following correctly describes the matrix above? 
+            </p>
+            <p>
+              <var name="$radio" form="buttons"/>
+            </p>
+              </li>
+              <li>
+                <p>
+                  Now consider an <m><var name="$m" /> \times <var name="$n" /></m> matrix <m>B</m>.  If <m>B</m> is an augmented
+                  matrix, the corresponding linear system has how many variables? <var name="$numvars" width="2"/>
+                </p>
+              </li>
+            </ol>
+          </statement>
+        </webwork>
+      </activity>
+
+      <activity label="ww-3var-system-from-aug"><title>Linear system from augmented matrix</title>
         <webwork>
           <pg-code>
             Context("Numeric");
@@ -230,7 +289,7 @@
             <col width="10%" halign="center" />
             <col halign="left" />
             <row header="yes">
-              <cell>Coefficients and variables</cell><cell><m>=</m></cell><cell>Constants</cell>
+              <cell>Expression containing the variables</cell><cell><m>=</m></cell><cell>Constants</cell>
             </row>
             <row>
               <cell><var name="$coeff1" width="8" /></cell><cell><m>=</m></cell><cell><var name="$d1" width="2" /></cell>
@@ -246,12 +305,5 @@
           </statement>
         </webwork>
       </activity>
-
-      <!-- <statement>
-        <p>Convert the augmented matrix</p>
-        <p><me>\left[\begin{array}{rrrr} 4 \amp   -3 \amp   -5 \amp   4 \\ 1 \amp   0 \amp   -1 \amp   4\end{array}\right]</me></p>
-        <p>to the equivalent linear system. Use <alert>x1</alert>, <alert>x2</alert>, and <alert>x3</alert> to enter the variables <m>x_1</m>, <m>x_2</m>, and <m>x_3</m>.</p>
-        <p><fillin name="AnSwEr0001" characters="15" /> <m>=</m> <fillin name="AnSwEr0002" characters="5" /></p>
-        <p><fillin name="AnSwEr0003" characters="15" /> <m>=</m> <fillin name="AnSwEr0004" characters="5" /></p>
-        </statement> -->
+      
   </subsection>
