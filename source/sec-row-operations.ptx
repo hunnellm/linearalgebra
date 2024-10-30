@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-row-ops" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Row Operations</title>
+  <introduction>
+    <p>
+      The non-interactive material in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
+    </p>
+    <p>
+      We've now seen how to solve linear systems using substitution and elimination, and how to create an augmented
+        matrix representing a linear system. In this section, we see how to perform the variable elimination steps directly
+        on the matrix and interpret the results to give the solution to the corresponding linear system. 
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-row-ops-bc">
+    <title>Prepare</title>
+    <p>
+        We will use the method of elimination again, but directly on the augmented matrix containing only the coefficients
+        and constants.  The steps are essentially the same, except that every time we used the word <q>equation</q> before, 
+        we substitute the word <q>row</q> instead. 
+      </p>
+      <paragraphs><title>Solve a system with equations and matrices side by side</title>
+        <p>
+          Let's recall the work we did last section in our <xref ref="elim-jar-marbles">marbles example</xref> and go through it again, this time side by side with
+          the augmented matrix representing the system.  Our first step was to write the equations with all the variables
+          on the left side of the equal sign and in alphabetical order, as we did in <xref ref="eq_before_matrix">Equation</xref>.
+        </p>
+      <p>
+        The words explain how we get from the current set of equations (or matrix) to the one on the next line.
+      </p>
+      <sbsgroup margins="0% 0%" widths="45% 45%">
+        <sidebyside>
+            <p> 
+                <me>\begin{array}{ccccccc} b\amp +\amp g\amp +\amp r\amp =\amp 30\\
+            \amp -\amp 2g\amp +\amp r\amp =\amp 0\\
+            -b\amp +\amp g\amp +\amp r\amp =\amp 0
+            \end{array}</me> 
+            </p>
+            
+            <p> 
+                <me>\left[\begin{array}{cccc} 1\amp 1\amp 1\amp 30\\ 0\amp -2\amp 1\amp 0\\-1\amp 1\amp 1\amp 0
+            \end{array} \right]</me>
+            </p>
+          </sidebyside>
+          
+        <sidebyside>
+            <p>Replace equation 3 with the sum of equations 1 and 3.
+            </p>
+            
+            <p>Replace row 3 with the sum of rows 1 and 3.
+            <!-- <m>(R_1+R_3\rightarrow R_3)</m> -->
+            </p>
+        </sidebyside>
+          
+        <sidebyside>
+          <p>
+              <me>\begin{array}{ccccccc}
+            b\amp +\amp g\amp +\amp r\amp =\amp 30\\
+            \amp -\amp 2g\amp +\amp r\amp =\amp 0\\
+            \amp  \amp 2g\amp +\amp 2r\amp =\amp 30
+            \end{array}</me>
+          </p>
+          
+          <p>
+              <me>\left[\begin{array}{cccc} 1\amp 1\amp 1\amp 30\\ 0\amp -2\amp 1\amp 0\\0\amp 2\amp 2\amp 30
+            \end{array} \right]</me>
+          </p>
+        </sidebyside>
+        
+        <sidebyside>
+            <p>
+                Multiply equation 2 by <m>-\frac12</m>. 
+            </p>
+            
+            <p>
+                Multiply row 2 by <m>-\frac{1}{2}</m>. 
+                <!-- <m>(-\frac{1}{2}R_2\rightarrow R_2)</m> -->
+            </p>
+        </sidebyside>
+        
+        <sidebyside>
+            <p>
+                <me>\begin{array}{ccccccc}
+            b\amp +\amp g\amp +\amp r\amp =\amp 30\\
+            \amp \amp g\amp +\amp -1/2r\amp =\amp 0\\
+            \amp  \amp 2g\amp +\amp 2r\amp =\amp 30
+            \end{array}</me>
+            </p>
+            
+            <p>
+                <me>\left[\begin{array}{cccc} 1\amp 1\amp 1\amp 30\\ 0\amp 1\amp -\frac12\amp 0\\0\amp 2\amp 2\amp 30
+            \end{array} \right]</me>
+            </p>
+        </sidebyside>
+          
+        <sidebyside>
+            <p>
+                Replace equation 1 with the sum of <m>(-1)</m> times equation 2 plus equation 1; Replace equation 3 with the sum of <m>(-2)</m> times equation 2 plus equation 3.
+            </p>
+            
+            <p>
+                Replace row 1 with the sum of <m>(-1)</m> times row 2 plus row 1; 
+                <!-- (<m>-R_2+R_1\rightarrow R_1)</m>;  -->
+                Replace row 3 with the sum of <m>(-2)</m> times row 2 plus row 3.
+                <!-- <m>(-2R_2+R_3\rightarrow R_3)</m> -->
+            </p>
+          </sidebyside>
+        
+        <sidebyside>
+            <p>
+                <me>\begin{array}{ccccccc}
+            b\amp +\amp  \amp  \amp 3/2r\amp =\amp 30\\
+            \amp  \amp g\amp -\amp 1/2r\amp =\amp 0\\
+            \amp  \amp  \amp  \amp 3r\amp =\amp 30
+            \end{array}</me>
+            </p>
+            
+            <p>
+                <me>\left[\begin{array}{cccc} 1\amp 0\amp \frac32\amp 30\\0\amp 1\amp -\frac12\amp 0\\0\amp 0\amp 3\amp 30
+            \end{array} \right]</me>
+            </p>
+          </sidebyside>
+        
+        <sidebyside>
+            <p>
+                Multiply equation 3 by <m>\frac13</m>.
+            </p>
+            
+            <p>
+                Multiply row 3 by <m>\frac13</m>. 
+                <!-- <m>(\frac13R_3\rightarrow R_3)</m> -->
+            </p>
+          </sidebyside>
+        
+        <sidebyside>
+            <p>
+                <me>\begin{array}{ccccccc}
+            b\amp +\amp  \amp  \amp 3/2r\amp =\amp 30\\
+            \amp  \amp g\amp -\amp 1/2r\amp =\amp 0\\
+            \amp  \amp  \amp  \amp r\amp =\amp 10
+            \end{array}</me>
+            </p>
+            
+            <p>
+                <me>\left[\begin{array}{cccc} 1\amp 0\amp \frac32\amp 30\\0\amp 1\amp -\frac12\amp 0\\0\amp 0\amp 1\amp 10
+            \end{array} \right]</me>
+            </p>
+          </sidebyside>
+        
+        <sidebyside>
+            <p>
+                Replace equation 2 with the sum of <m>\frac12</m> times equation 3 plus equation 2; Replace equation 1 with the sum of <m>-\frac32</m> times equation 3 plus equation 1.
+            </p>
+            
+            <p>
+                Replace row 2 with the sum of <m>\frac12</m> times row 3 plus row 2;
+                <!-- <m>(\frac12R_3+R_2\rightarrow R_2)</m>;  -->
+                Replace row 1 with the sum of <m>-\frac32</m> times row 3 plus row 1. 
+                <!-- <m>(-\frac32R_3+R_1\rightarrow R_1)</m> -->
+            </p>
+          </sidebyside>
+        
+        <sidebyside>
+            <p>
+                <me>\begin{array}{ccccccc}
+            b\amp  \amp  \amp  \amp  \amp =\amp 15\\
+            \amp  \amp g\amp  \amp  \amp =\amp 5\\
+            \amp  \amp  \amp  \amp r\amp =\amp 10
+            \end{array}</me>
+            </p>
+            
+            <p>
+                <me>\left[\begin{array}{cccc} 1\amp 0\amp 0\amp 15\\0\amp 1\amp 0\amp 5\\0\amp 0\amp 1\amp 10
+            \end{array} \right]</me>
+            </p>
+          </sidebyside>
+      </sbsgroup>
+      <p>
+        The final matrix contains the same solution information as we have on the left in the form of equations.
+        Recall that the first column of our matrices held the coefficients of the <m>b</m> variable;
+        the second and third columns held the coefficients of the <m>g</m> and <m>r</m> variables,
+        respectively. Therefore, the first row of the matrix can be interpreted as <q><m>b+0g+0r=15,</m></q>
+          or more concisely, <q><m>b=15.</m></q>
+      </p>
+    </paragraphs>
+      <p>
+        This is powerful stuff!  We write an augmented matrix so that we don't have to keep writing variables over and over again,
+        and now we can solve a linear system by performing operations on the rows of the matrix, without thinking about the linear equations at all,
+        until we can read off the solution to the linear system at the end of the process.  
+      </p>
+      <!-- Need interactive here... which matrix is the result of different operations, described in words, matrices as options. -->
+      <p>
+        We can save ourselves even more writing by using a shorthand to describe the operations we do to the matrix rows.  We use <m>R_1</m>, <m>R_2</m> to represent <em>Row 1</em> and <em>Row 2,</em> respectively. 
+        We can write <q>add Row 1 to Row 3, and replace Row 3 with that sum</q> as <q><m>R_1+R_3\rightarrow R_3</m>.</q> We also replaced Row 2 with <m>\frac{1}{2}</m> of Row 2; we write this in shorthand as
+        <q><m>\frac{1}{2}R_2\rightarrow R_2</m></q>.</p>
+        <p>
+          We haven't used it much yet, but there is one more operation we can do to rows of a matrix without changing the corresponding system of linear equations; the solutions
+          don't change if we write the equations down in a different order.  Thus we can swap the positions of two rows, and the expression <q><m>R_1 \leftrightarrow R_2</m></q> means <q>interchange Row 1 and Row 2.</q>
+      </p>
+      <definition xml:id="def_elementary_row_operations">
+        <title>Elementary Row Operations</title>
+      <p> 
+        Let <m>R_i</m>, <m>R_j</m> be two arbitrary rows of a matrix, say Row <m>i</m> and Row <m>j</m>, and let 
+        <m>c</m> be a nonzero number.  The three <term>elementary row operations</term> are:
+        <ol>
+          <li>
+            <p>
+              Add the result of multiplying a row by a nonzero number to another row,
+              and replace the latter row with that sum, denoted <m>cR_i+R_j\rightarrow R_j</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Multiply one row by a nonzero number, denoted <m>cR_i \rightarrow R_i</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Swap the position of two rows, denoted <m>R_i \leftrightarrow R_j</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </definition>
+      <!-- Another interactive, give two matrices, ask which row operation was done on it, using the shorthand notation. -->
+      <p>
+        Let's see one more example of solving a linear system with the equations and the augmented matrices side by side.
+      </p>
+      <example xml:id="ex_eq_mat">
+          <title>Equations and Matrices Side by Side</title>
+        <statement>
+          <p>
+            Find a solution to the following system of linear equations by simultaneously manipulating the equations and the corresponding augmented matrices.
+            <me>
+              \begin{array}{ccccccc} x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\ 2x_1\amp +\amp 2x_2\amp +\amp x_3\amp =\amp 0\\ -1x_1\amp +\amp x_2\amp -\amp 2x_3\amp =\amp 2 \end{array}
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We'll first convert this system of equations into a matrix, then we'll proceed by manipulating the system of equations (and hence the matrix) to find a solution. Again, there is not just one right way of proceeding; we'll choose a method that is pretty efficient, but other methods certainly exist (and may be <em>better</em>!). The method used here, though, is a good one, and it is the method that we will be learning in the future.
+          </p>
+          <p>
+            The given system and its corresponding augmented matrix are seen below.
+          </p>
+          <sbsgroup margins="0% 0%" widths="45% 45%">
+            <sidebyside>
+              <p>Original system of equations</p>
+              
+              <p>Corresponding matrix</p>
+            </sidebyside>
+            
+            <sidebyside>
+              <p><me>\begin{array}{ccccccc}
+                x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\
+                2x_1\amp +\amp 2x_2\amp +\amp x_3\amp =\amp 0\\
+                -1x_1\amp +\amp x_2\amp -\amp 2x_3\amp =\amp 2
+                \end{array}</me></p>
+            
+              <p><me>\left[\begin{array}{cccc}
+                1\amp 1\amp 1\amp 0\\ 2\amp 2\amp 1\amp 0\\ -1\amp 1\amp -2\amp 2\\
+                \end{array} \right]</me></p>
+            </sidebyside>
+          </sbsgroup>
+          <p>
+            We'll proceed by trying to get the <m>x_1</m> out of the second and third equation.
+          </p>
+          <sbsgroup margins="0% 0%" widths="45% 45%">
+            <sidebyside>
+              <p>Replace equation 2 with the sum of <m>(-2)</m> times equation 1 plus equation 2;
+                Replace equation 3 with the sum of equation 1 and equation 3</p>
+             
+              <p>Replace row 2 with the sum of <m>(-2)</m> times row 1 plus row 2
+                <m>(-2R_1+R_2\rightarrow R_2)</m>;
+                Replace row 3 with the sum of row 1 and row 3
+                <m>(R_1+R_3\rightarrow R_3)</m></p>
+            </sidebyside>
+            
+            <sidebyside>
+              <p><me>\begin{array}{ccccccc}
+                x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\
+                \amp  \amp    \amp  \amp -x_3\amp =\amp 0\\
+                \amp  \amp 2x_2\amp -\amp x_3\amp =\amp 2
+                \end{array}</me></p>
+            
+              <p><me>\left[\begin{array}{cccc}
+                1\amp 1\amp 1\amp 0\\ 0\amp 0\amp -1\amp 0\\ 0\amp 2\amp -1\amp 2\\
+                \end{array} \right]</me></p>
+            </sidebyside>
+          </sbsgroup>
+            
+          <p>
+            Notice that the second equation no longer contains <m>x_2</m>. We'll exchange the order of the equations so that we can follow the convention of solving for the second variable in the second equation.
+          </p>
+            
+          <sbsgroup margins="0% 0%" widths="45% 45%">
+            <sidebyside>
+              <p>Interchange equations 2 and 3</p>
+          
+              <p>Interchange rows 2 and 3
+                <m>R_2\leftrightarrow R_3</m></p>
+            </sidebyside>
+           
+            <sidebyside>
+              <p><me>\begin{array}{ccccccc}
+                x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\
+                \amp  \amp 2x_2\amp -\amp x_3\amp =\amp 2\\
+                \amp  \amp    \amp  \amp -x_3\amp =\amp 0
+                \end{array}</me></p>
+              
+              <p><me>\left[\begin{array}{cccc}
+                1\amp 1\amp 1\amp 0\\ 0\amp 2\amp -1\amp 2\\ 0\amp 0\amp -1\amp 0\\
+                \end{array} \right]</me></p>
+            </sidebyside>
+            
+            <sidebyside>
+              <p>Multiply equation 2 by <m>\frac12</m></p>
+              
+              <p>Multiply row 2 by <m>\frac12</m>
+                <m>(\frac12 R_2\rightarrow R_2)</m></p>
+            </sidebyside>
+            
+            <sidebyside>
+              <p><me>\begin{array}{ccccccc}
+                x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\
+                \amp  \amp x_2\amp -\amp \frac12x_3\amp =\amp 1\\
+                \amp  \amp    \amp  \amp -x_3\amp =\amp 0
+                \end{array}</me></p>
+              
+              <p><me>\left[\begin{array}{cccc}
+                1\amp 1\amp 1\amp 0\\ 0\amp 1\amp -\frac12\amp 1\\ 0\amp 0\amp -1\amp 0\\
+                \end{array} \right]</me></p>
+            </sidebyside>
+            
+            <sidebyside>
+              <p>Multiply equation 3 by <m>-1</m></p>
+              
+              <p>Multiply row 3 by <m>-1</m>
+                <m>(-1 R_3\rightarrow R_3)</m></p>
+            </sidebyside>
+            
+            <sidebyside>
+              <p><me>\begin{array}{ccccccc}
+                x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\
+                \amp  \amp x_2\amp -\amp \frac12x_3\amp =\amp 1\\
+                \amp  \amp    \amp  \amp x_3\amp =\amp 0
+                \end{array}</me></p>
+              
+              <p><me>\left[\begin{array}{cccc}
+                1\amp 1\amp 1\amp 0\\ 0\amp 1\amp -\frac12\amp 1\\ 0\amp 0\amp 1\amp 0\\
+                \end{array} \right]</me></p>
+            </sidebyside>
+          </sbsgroup>
+            
+          <p>
+            Notice that the last equation (and also the last row of the matrix) show that <m>x_3=0</m>. Knowing this would allow us to simply eliminate the <m>x_3</m> from the first two equations. However, we will formally do this by manipulating the equations (and rows) as we have previously.
+          </p>
+            
+          <sbsgroup margins="0% 0%" widths="45% 45%">
+            <sidebyside>
+              <p>Replace equation 1 with the sum of <m>(-1)</m> times equation 3 plus equation 1;
+                Replace equation 2 with the sum of <m>\frac12</m> times equation 3 plus equation 2</p>
+              
+              <p>Replace row 1 with the sum of <m>(-1)</m> times row 3 plus row 1
+                <m>(-R_3+R_1\rightarrow R_1)</m>;
+                Replace row 2 with the sum of <m>\frac12</m> times row 3 plus row 2
+                <m>(\frac12R_3+R_2\rightarrow R_2)</m></p>
+            </sidebyside>
+            
+            <sidebyside>
+              <p><me>\begin{array}{ccccccc}
+                x_1\amp +\amp x_2\amp \amp \amp =\amp 0\\
+                \amp  \amp x_2\amp \amp \amp =\amp 1\\
+                \amp  \amp    \amp  \amp x_3\amp =\amp 0
+                \end{array}</me></p>
+              
+              <p><me>\left[\begin{array}{cccc}
+                1\amp 1\amp 0\amp 0\\ 0\amp 1\amp 0\amp 1\\ 0\amp 0\amp 1\amp 0\\
+                  \end{array} \right]</me></p>
+            </sidebyside>
+          </sbsgroup>
+            
+          <p>
+            Notice how the second equation shows that <m>x_2 = 1</m>. All that remains to do is to solve for <m>x_1</m>.
+          </p>
+            
+          <sbsgroup margins="0% 0%" widths="45% 45%">
+            <sidebyside>
+              <p>Replace equation 1 with the sum of <m>(-1)</m> times equation 2 plus equation 1</p>
+              
+              <p>Replace row 1 with the sum of <m>(-1)</m> times row 2 plus row 1
+                <m>(-R_2+R_1\rightarrow R_1)</m></p>
+            </sidebyside>
+            
+            <sidebyside>
+              <p><me>\begin{array}{ccccccc}
+                x_1\amp  \amp    \amp \amp \amp =\amp -1\\
+                \amp  \amp x_2\amp \amp \amp =\amp 1\\
+                \amp  \amp    \amp  \amp x_3\amp =\amp 0
+                \end{array}</me></p>
+              
+              <p><me>\left[\begin{array}{cccc}
+                1\amp 0\amp 0\amp -1\\ 0\amp 1\amp 0\amp 1\\ 0\amp 0\amp 1\amp 0\\
+                \end{array} \right]</me></p>
+            </sidebyside>
+          </sbsgroup>
+            
+          <p>
+            The equations on the left tell us that <m>x_1 = -1</m>, <m>x_2 = 1</m> and <m>x_3=0</m>, and notice how the matrix on the right tells us the same information.
+          </p>
+        </solution>
+      </example>
+  
+  <reading-questions xml:id="rqs-row-ops">
+
+    <!-- Which of these are elementary row operations, include things like cRi+Rj->R_i, and R_i -> R_j, and 0R_i->R_i. -->
+    <exercise label="select-row-ops">
+      <title>Row operation, yes or no?</title>
+      <statement>
+        <p>
+          Let <m>A</m> be a <m>4\times 5</m> matrix.  Which of the following notations represent elementary operations we can 
+          perform on <m>A</m>?
+        </p>
+      </statement>
+      <choices randomize="yes">
+        <choice correct="no">
+          <statement>
+            <p>
+              <m>0R_1 \rightarrow R_1</m>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              We can't multiply a row by <m>0</m>, only by a nonzero number.  If we multiply both sides of an equation by 0, we get 0=0, which is true but rarely helpful.
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>5R_2+R_4 \rightarrow R_4</m>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Replace Row 4 with the result of multiplying Row 2 by the number 5 and adding that to Row 4. 
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>2R_1 \rightarrow R_1</m>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Two times Row 1 replaces Row 1.
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <m>2R_1 + R_2 \rightarrow R_1</m>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              In the row operation involving multiplying and adding, we don't replace the same row that we multiplied by a number.
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="yes">
+          <statement>
+            <p>
+              <m>R_3 \leftrightarrow R_4</m>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Swap Row 3 and Row 4.
+            </p>
+          </feedback>
+        </choice>
+        <choice correct="no">
+          <statement>
+            <p>
+              <m>R_3 \rightarrow R_4 </m>
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              We can't just replace Row 4 with Row 3 without losing information about the linear system.  
+            </p>
+          </feedback>
+        </choice>
+      </choices>
+    </exercise>
+
+    <exercise label="rq-row-ops-questions"><title>Metacognition</title>
+      <statement>
+        <p>
+          Enter a response to both of the following tasks:
+          <ol>
+            <li>
+              <p>
+                Ask a question about the material, either about something you're not sure you fully understand, 
+          or a <q>what if</q> question.
+              </p>
+            </li>
+            <li>
+              <p>
+                Give a percentage from 0 to 100 that reflects how confident you are with the material you 
+                just read about, and give one sentence as to why you feel that way.  0 means you didn't 
+                actually do the reading and 100 means that everything makes sense so far and you think you are 
+                completely ready to engage with the material more deeply.  
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <response />
+    </exercise>
+  </reading-questions>
+
+  </subsection>
+
+  <!-- the worksheet can be its own subsection-like thing titled Participate.  But then Participate shows up in the printed
+   worksheet itself.  Maybe I do want that, if I could change it to say 1.2 Participate only in the printed worksheet,
+   not in the html? I don't think I do though - I might sometimes want non-worksheet material in Participate, like in
+   Section 1.1, for example. Maybe upcoming sections that are sage heavy, too. But apparently sage can go in worksheets!-->
+
+  <subsection xml:id="subsec-row-ops-dc"> 
+    <title>Participate</title>
+    <worksheet xml:id="ws-row-ops"><title></title>
+      <objectives>
+        <ul>
+          <li>
+            <p>
+              Solve systems of linear equations using the method of elimination
+            </p>
+          </li>
+          <li>
+            <p>
+              Become more familiar with the terminology and parts of a matrix
+            </p>
+          </li>
+          <li>
+            <p>
+              Go back and forth between a linear system and an augmented matrix
+            </p>
+          </li>
+        </ul>
+</objectives>
+
+      <!-- <introduction>
+        <p>
+          something else to say?
+        </p>
+      </introduction> -->
+      <page>
+        <exercisegroup cols="2"><title>Elimination</title>
+          <introduction>
+            <p>
+              Solve the linear systems below using the method of elimination.
+            </p>
+          </introduction>
+          
+        <exercise workspace="3in">
+          <statement>
+            <p>
+              <md>
+                <mrow> 2x_1 + 4x_2 \amp = -6</mrow>
+                <mrow> 5x_1 - 5x_2 \amp = 15 </mrow>
+              </md>
+            </p>
+           </statement>
+           <answer>
+            <p>
+              <m>x_1 =1 , x_2= -2</m>
+            </p>
+          </answer>
+         </exercise>
+          
+        <exercise xml:id="dc-linsystem4vara" workspace="3in">
+          <statement>
+            <p>
+              <md>
+                <mrow> x_1 + x_2 - x_3 \amp = 1 </mrow>
+                <mrow> x_1+ 2x_2 -x_3 \amp = 2</mrow>
+                <mrow> x_2+ x_3 \amp = 3 </mrow>
+                <mrow>  x_2 - x_4\amp = 4 </mrow>
+                </md>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>x_1 =2,\ x_2=1,\ x_3=2, \ x_4=-3</m>
+            </p>
+          </answer>
+        </exercise>
+      </exercisegroup>
+      </page>
+      <page>
+      <exercisegroup cols="3"><title>Parts of a Matrix</title>
+        <introduction>
+          <p>
+            For the matrix 
+            <m>B=\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>, 
+            identify the
+          </p>
+        </introduction>
+        <exercise workspace=".7in">
+          <statement>
+            <p>
+              entry <m>b_{32}</m>.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              The entry in the third row and second column is <m>-5</m>
+            </p>
+          </answer>
+        </exercise>
+        <exercise workspace=".7in">
+          <statement>
+            <p>
+              third column.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              The third column is <m>\begin{array}{c}-1\\5\\-3\end{array}</m>
+            </p>
+          </answer>
+        </exercise>
+        <exercise workspace=".7in">
+          <statement>
+            <p>
+              second row.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              The second row is <m>\begin{array}{cccc} 2 \amp 1 \amp 5 \amp 7 \end{array}</m>
+            </p>
+          </answer>
+        </exercise>
+      </exercisegroup>
+
+      <exercise workspace=".2in">
+        <statement>
+          <p>
+            If <m>A</m> is a <m>3\times 5</m> matrix, how many columns does <m>A</m> have?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            A <m>3\times 5</m> matrix has 5 columns.  
+          </p>
+        </answer>
+      </exercise>
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Using variables <m>x_1, x_2, \ldots </m>, write the linear system corresponding to the above matrix <m>B</m>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <md>
+              <mrow> x_1 + x_2 - x_3 \amp = 2 </mrow>
+              <mrow> 2x_1 + x_2 + 5x_3 \amp = 7</mrow>
+              <mrow>  -5x_2 - 3x_3 \amp = \frac{1}{2} </mrow>
+            </md>
+          </p>
+        </answer>
+      </exercise>
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Give the augmented matrix corresponding to the linear system in 
+            <xref ref="dc-linsystem4vara" text="local"/>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left[\begin{array}{ccccc} 1\amp 1\amp -1 \amp 0 \amp 1\\ 1 \amp 2 \amp -1 \amp 0 \amp 2\\ 0 \amp 1 \amp 1 \amp 0 \amp 3\\ 0 \amp 1 \amp 0 \amp -1 \amp 4 \end{array} \right]</m>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Create your own augmented matrix, of any size you choose.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Create your own linear system, with however many variables and equations you choose.
+          </p>
+        </statement>
+      </exercise>
+      </page>
+    </worksheet>
+    </subsection>
+
+    <conclusion xml:id="subsec-row-ops-summary">
+      <title>Summary</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+              The <em>method of elimination</em> is a way of solving systems of linear equations that can be made
+              systematic and algorithmic.  
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Matrices</em> are arrays of numbers.  Right now, we are most interested in <em>augmented matrices</em>,
+              whose entries correspond to the coefficients and constants of a system of linear equations.
+            </p>
+          </li>
+          <li>
+            <p>
+              Elimination works better than substitution when there are more than 2 or 3 variables,
+              and it is the foundation of future sections of material.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </conclusion>
+  
+
+  
+
+  <!-- Have structured the included file as a subsection called Practice for now.  I want the webwork to
+ not show answers, like the in-class questions, while the non-interactive exercises can show answers.  -->
+<!-- <xi:include href="interactive-exercises/ww-row-ops.xml" /> -->
+
+    <xi:include href="noninteractive-exercises/exer-row-ops.xml" />
+
+</section>

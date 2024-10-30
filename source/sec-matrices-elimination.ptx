@@ -149,7 +149,7 @@
 
 
   <!-- <subsubsection xml:id="subsubsec-matrices-methodofelim"> -->
-   <paragraphs>
+   <paragraphs xml:id="elim-jar-marbles">
     <title>Method of Elimination (of Variables)</title>
   <p>
     Let's return to <xref ref="ex_by_hand">Example</xref>. As we mentioned before, there isn't just one
@@ -182,11 +182,119 @@
       \begin{array}{ccccccc} b\amp +\amp g\amp +\amp r\amp =\amp 30\\ \amp  \amp  g\amp -\amp \frac{1}{2}r\amp =\amp 0\\ \amp  \amp 2g\amp +\amp 2r\amp =\amp 30 \end{array}
     </me>
   </p>
+  
+  <exercise label="mc-elimination-check">
+    <title>Using an equation to eliminate a variable from another equation</title>
+    <introduction>
+      <p>
+        We eliminate variables by multiplying one equation by a number and adding the result to another equation.  
+        How can we use the second equation (which has no <m>b</m> in it) to eliminate the <m>g</m> from the first and third equations?
+      </p>
+    </introduction>
+    <task label="mc-elimination-check-a">
+    <statement>
+      <p>
+        Consider the equations
+        <me>
+          \begin{array}{ccccccc} b\amp +\amp g\amp +\amp r\amp =\amp 30\\ \amp  \amp  g\amp -\amp \frac{1}{2}r\amp =\amp 0 \end{array}
+        </me>
+        We want to use the second equation to eliminate the variable <m>g</m> from the first equation.  What step should we take?
+      </p>
+    </statement>
+    <choices>
+    <choice>
+    <statement>
+      <p>
+        Multiply the second equation by <m>1</m> and add to the first equation.
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        This would make the first equation <m>b+2g+\frac{1}{2}r=30</m>, which didn't eliminate the <m>g</m>.
+      </p>
+    </feedback>
+    </choice>
+    <choice correct="yes">
+    <statement>
+      <p>
+        Multiply the second equation by <m>-1</m> and add to the first equation.
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        This gives <m>b+\frac{3}{2}r=30</m>, which eliminates the <m>g</m>.
+      </p>
+    </feedback>
+    </choice>
+    <choice>
+    <statement>
+      <p>
+        Multiply the second equation by <m>2</m> and add to the first equation.
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        This makes the first equation <m>b+3g=30</m>, which eliminates the <m>r</m> in the first equation, not the <m>g</m>.
+      </p>
+    </feedback>
+    </choice>
+    </choices>
+    </task>
+    <task label="mc-elimination-check-b">
+      <statement>
+        <p>
+          Consider the equations
+          <me>
+            \begin{array}{ccccccc}  \amp  \amp  g\amp -\amp \frac{1}{2}r\amp =\amp 0\\ \amp  \amp 2g\amp +\amp 2r\amp =\amp 30 \end{array}
+          </me>
+          We want to use the top equation to eliminate the variable <m>g</m> from the bottom equation.  What step should we take?
+        </p>
+      </statement>
+      <choices>
+      <choice>
+      <statement>
+        <p>
+          Multiply the top equation by <m>-1</m> and add to the bottom equation.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          This would make the bottom equation <m>g+\frac{5}{2}r=30</m>, which didn't eliminate the <m>g</m>.
+        </p>
+      </feedback>
+      </choice>
+      <choice correct="no">
+      <statement>
+        <p>
+          Multiply the top equation by <m>2</m> and subtract from the bottom equation.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          This would eliminate the <m>g</m>, but to use this method systematically, we're always going to want to multiply and <em>add</em>, 
+          not subtract. Subtracting <m>2g</m> is the same as adding <m>-2g</m> though!
+        </p>
+      </feedback>
+      </choice>
+      <choice correct="yes">
+      <statement>
+        <p>
+          Multiply the top equation by <m>-2</m> and add to the bottom equation.
+        </p>
+      </statement>
+      <feedback>
+        <p>
+          This makes the bottom equation <m>3r=30</m>, which eliminates the <m>g</m> from the bottom equation.
+        </p>
+      </feedback>
+      </choice>
+      </choices>
+      </task>
+  </exercise>
+
   <p>
-    Let's now do two steps in a row; our goal is to eliminate the <m>g</m> variables in the first and third equations.
-    In order to remove the <m>g</m> in the first equation, let's multiply the second equation by <m>-1</m> and add that to the first equation,
-    replacing the first equation with that sum. To remove the <m>g</m> in the third equation,
-    let's multiply the second equation by <m>-2</m> and add that to the third equation, replacing the third equation. Our new system of equations now becomes
+    Let's now do both of those steps in a row to eliminate the <m>g</m> from the first and third equations; multiply the second equation by <m>-1</m> and add that to the first equation,
+    replacing the first equation with that sum, and multiply the second equation by <m>-2</m> and add that to the third equation, replacing the third equation. Our new system of equations now becomes
     <me>
       \begin{array}{ccccccc} b\amp +\amp  \amp  \amp \frac{3}{2}r\amp =\amp 30\\ \amp  \amp g\amp -\amp \frac{1}{2}r\amp =\amp 0\\ \amp  \amp  \amp  \amp 3r\amp =\amp 30 \end{array}
     </me>

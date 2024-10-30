@@ -10,5 +10,6 @@
   <!-- include sections -->
   <xi:include href="sec-lin-eqn-substitution.ptx" />
   <xi:include href="sec-matrices-elimination.ptx" />
+  <xi:include href="sec-row-operations.ptx" />
 
 </chapter>

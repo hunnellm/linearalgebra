@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exer-lin-eqn-subs" ><title>Additional Practice</title>
+
+    <exercisegroup cols="2"><title>Linear equation: yes or no</title>
+        <introduction>
+             <p>
+               In the following exercises, state whether or not the given equation is linear.
+             </p>
+        </introduction>
+     <exercise>
+       <statement>
+         <p>
+           <m>x+y+z = 10</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           y
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>xy + yz+ xz = 1</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           n
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>-3x + 9 = 3y - 5z+ x-7</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           y
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>\sqrt{5}y + \pi x =-1</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           y
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>(x-1)(x+1) = 0</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           n
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>\sqrt{x_1^2+x_2^2} = 25</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           n
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>x_1 + y + t = 1</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           y
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>\frac{1}{x} + 9 = 3\cos(y) - 5z</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           n
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>\cos(15)y + \frac{x}{4} =-1</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           y
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <m>2^x + 2^y = 16</m>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           n
+         </p>
+       </answer>
+     </exercise>
+    </exercisegroup>
+    <exercisegroup cols="2"><title>Solve the System</title>
+      <introduction>
+         <p>
+             In the following exercises, solve the system of linear equations.
+         </p>
+      </introduction>
+     <exercise>
+       <statement>
+         <!-- <p>
+           <m>\begin{array}{ccccc} x\amp +\amp y\amp =\amp -1\\ 2x\amp -\amp 3y\amp =\amp 8 \end{array}</m>
+         </p> -->
+         <p>
+           <md>
+             <mrow> x + y \amp = -1</mrow> 
+             <mrow> 2x - 3y \amp = 8 </mrow>
+           </md>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           <m>x = 1, y=-2</m>
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <md> <mrow> 2x - 3y\amp = 3</mrow> <mrow> 3x + 6y\amp = 8 </mrow> </md>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           <m>x = 2, y=\frac13</m>
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <md>
+             <mrow> x - y + z\amp = 1</mrow>
+             <mrow> 2x + 6y - z\amp = -4</mrow> 
+             <mrow> 4x - 5y + 2z\amp = 0 </mrow>
+             </md>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           <m>x = -1, y=0,z=2</m>
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           <md>
+             <mrow> x + y - z \amp = 1 </mrow>
+             <mrow> 2x + y \amp = 2</mrow>
+             <mrow>  y + 2z\amp = 0 </mrow>
+             </md>
+         </p>
+       </statement>
+       <answer>
+         <p>
+           <m>x =1,\ y=0,\ z=0</m>
+         </p>
+       </answer>
+     </exercise>
+    </exercisegroup>
+     <exercise>
+       <statement>
+         <p>
+           A farmer looks out his window at his chickens and pigs.
+           He tells his daughter that he sees <m>62</m> heads and <m>190</m> legs.
+           How many chickens and pigs does the farmer have?
+         </p>
+       </statement>
+       <answer>
+         <p>
+           <m>29</m> chickens and <m>33</m> pigs
+         </p>
+       </answer>
+     </exercise>
+     <exercise>
+       <statement>
+         <p>
+           A lady buys <m>20</m> trinkets at a yard sale. 
+           The cost of each trinket is either <m>\$ 0.30</m> or <m>\$ 0.65</m>. 
+           If she spends <m>\$8.80</m>, how many of each type of trinket does she buy?
+         </p>
+       </statement>
+       <answer>
+         <p>
+           <m>12</m> of the <m>\$ 0.30</m> trinkets, <m>8</m> of the <m>\$ 0.65</m> trinkets
+         </p>
+       </answer>
+     </exercise>
+   </exercises>

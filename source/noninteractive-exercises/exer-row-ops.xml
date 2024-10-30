@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exer-matrices-elim" ><title>Additional Practice</title>
+
+   
+  
+    <exercisegroup cols="2"><title>Perform row operations</title>
+       <introduction>
+       <p>
+         In the following exercises,
+         perform the given row operations on <m>A</m>, where
+         <me>
+           A = \left[\begin{array}{ccc} 2\amp -1\amp 7\\0\amp 4\amp -2\\5\amp 0\amp 3 \end{array} \right]
+         </me>
+       </p>
+       </introduction>
+       <exercise>
+         <statement>
+           <p>
+             <m>-1R_1\rightarrow R_1</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>\left[\begin{array}{ccc} -2\amp 1\amp -7\\0\amp 4\amp -2\\5\amp 0\amp 3\\ \end{array} \right]</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>R_2\leftrightarrow R_3</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>\left[\begin{array}{ccc} 2\amp -1\amp 7\\5\amp 0\amp 3\\0\amp 4\amp -2\\ \end{array} \right]</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>R_1+R_2\rightarrow R_2</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>\left[\begin{array}{ccc} 2\amp -1\amp 7\\2\amp 3\amp 5\\5\amp 0\amp 3\\ \end{array} \right]</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>2R_2+R_3\rightarrow R_3</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>\left[\begin{array}{ccc} 2\amp -1\amp 7\\0\amp 4\amp -2\\5\amp 8\amp -1\\ \end{array} \right]</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>\frac12R_2\rightarrow R_2</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>\left[\begin{array}{ccc} 2\amp -1\amp 7\\0\amp 2\amp -1\\5\amp 0\amp 3\\ \end{array} \right]</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>-\frac52R_1+R_3\rightarrow R_3</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>\left[\begin{array}{ccc} 2\amp -1\amp 7\\0\amp 4\amp -2\\0\amp 5/2\amp -29/2\\ \end{array} \right]</m>
+           </p>
+         </answer>
+       </exercise>
+      </exercisegroup>
+      <exercisegroup cols="2"><title>Which row operation was done?</title>
+          <introduction>
+               <p>
+                     A matrix <m>A</m> is given below. In the following exercises, a matrix <m>B</m> is given. Give the row operation that transforms <m>A</m> into <m>B</m>.
+         <me>
+           A = \left[\begin{array}{ccc} 1\amp 1\amp 1\\1\amp 0\amp 1\\1\amp 2\amp 3 \end{array} \right]
+         </me>
+               </p>
+           </introduction>
+       <exercise>
+         <statement>
+           <p>
+             <m>B = \left[\begin{array}{ccc} 1\amp 1\amp 1\\2\amp 0\amp 2\\1\amp 2\amp 3\\ \end{array} \right]</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>2R_2\rightarrow R_2</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>B = \left[\begin{array}{ccc} 1\amp 1\amp 1\\2\amp 1\amp 2\\1\amp 2\amp 3\\ \end{array} \right]</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>R_1+R_2\rightarrow R_2</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>B = \left[\begin{array}{ccc} 3\amp 5\amp 7\\1\amp 0\amp 1\\1\amp 2\amp 3\\ \end{array} \right]</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>2R_3+R_1\rightarrow R_1</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>B = \left[\begin{array}{ccc} 1\amp 0\amp 1\\1\amp 1\amp 1\\1\amp 2\amp 3\\ \end{array} \right]</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>R_1\leftrightarrow R_2</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>B = \left[\begin{array}{ccc} 1\amp 1\amp 1\\1\amp 0\amp 1\\0\amp 2\amp 2\\ \end{array} \right]</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>-R_2+R_3\leftrightarrow R_3</m>
+           </p>
+         </answer>
+       </exercise>
+      </exercisegroup>
+      <exercisegroup cols="2"><title>Equations and matrices together</title>
+          <introduction>
+             <p>
+                 In the following exercises, rewrite the system of equations in matrix form.
+                 Find the solution to the linear system by simultaneously manipulating the equations and the matrix.
+             </p>
+           </introduction>
+       <exercise>
+         <statement>
+           <p>
+             <m>\begin{array}{ccccc} x\amp +\amp y\amp =\amp 3\\ 2x\amp -\amp 3y\amp =\amp 1 \end{array}</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>x=2,y=1</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>\begin{array}{ccccc} 2x\amp +\amp 4y\amp =\amp 10\\ -x\amp +\amp y\amp =\amp 4 \end{array}</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>x=-1,y=3</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>\begin{array}{ccccc} -2x\amp +\amp 3y\amp =\amp 2\\ -x\amp +\amp y\amp =\amp 1 \end{array}</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>x=-1,y=0</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>\begin{array}{ccccccc} 2x\amp +\amp 3y\amp =\amp 2\\ -2x\amp +\amp 6y\amp =\amp 1 \end{array}</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>x=\frac12,y=\frac13</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>\begin{array}{ccccccc} -5x_1\amp \amp \amp +\amp 2x_3\amp =\amp 14\\ \amp \amp x_2\amp \amp \amp =\amp 1\\ -3x_1\amp \amp \amp +\amp x_3\amp =\amp 8 \end{array}</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>x_1=-2,x_2=1,x_3=2</m>
+           </p>
+         </answer>
+       </exercise>
+       <exercise>
+         <statement>
+           <p>
+             <m>\begin{array}{ccccccc} \amp -\amp 5x_2\amp +\amp 2x_3\amp =\amp -11\\ x_1\amp \amp \amp +\amp 2x_3\amp =\amp 15\\ \amp -\amp 3x_2\amp +\amp x_3\amp =\amp -8 \end{array}</m>
+           </p>
+         </statement>
+         <answer>
+           <p>
+             <m>x_1=1,x_2=5,x_3=7</m>
+           </p>
+         </answer>
+       </exercise>
+      </exercisegroup>
+</exercises>
