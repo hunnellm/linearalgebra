@@ -22,7 +22,7 @@
       </p>
       <example><title>Solve a system with equations and matrices side by side</title>
         <p>
-          Let's recall the work we did last section in our <xref ref="elim-jar-marbles" text="custom">marbles example</xref> and go through it again, this time side by side with
+          Let's redo the work we did last section in our <xref ref="elim-jar-marbles" text="custom">marbles example</xref>, this time side by side with
           the augmented matrix representing the system.  Our first step was to write the equations with all the variables
           on the left side of the equal sign and in alphabetical order, as we did in <xref ref="eq_before_matrix">Equation</xref>.
         </p>
@@ -189,7 +189,170 @@
         and now we can solve a linear system by performing operations on the rows of the matrix, without thinking about the linear equations at all,
         until we can read off the solution to the linear system at the end of the process.  
       </p>
+
       <!-- Need interactive here... which matrix is the result of different operations, described in words, matrices as options. -->
+      <exercise label="row-ops-practice">
+        <title>Row operations</title>
+        <introduction>
+          <p>
+            In the following tasks, perform the row operations described on the given matrix.  
+          </p>
+        </introduction>
+        <task label="row-ops-practice-a">
+        <statement>
+          <p>
+            Consider the matrix 
+            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
+            Which matrix is the result of multiplying Row 1 by <m>-2</m> and adding to Row 3?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This multiplied Row 1 by <m>-2</m> and replaced Row 1.  It didn't do anything to Row 3.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ -2\amp -7\amp -1\amp \frac{-7}{2}\\ \end{array} \right]</m> 
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct! 
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ -2\amp -7\amp -1\amp \frac{-7}{2}\\ \end{array} \right]</m> 
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                In the <q>multiply and add</q> row operation, you don't change the row you multiplied by a number; you only change the row you added to.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ -2\amp -5\amp -3 \amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                We have to do the operation to the entire row, not just the first entry.  
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="row-ops-practice-b">
+        <statement>
+          <p>
+            Consider the matrix 
+            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
+            Which matrix is the result of multiplying Row 1 by <m>-2</m>?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp 10\amp 6\amp -1\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This multiplied both Row 1 and Row 3 by <m>-2</m>.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ -2\amp -1\amp -5\amp -7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This multiplied Row 2 by <m>-1</m>.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="row-ops-practice-c">
+        <statement>
+          <p>
+            Consider the matrix 
+            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
+            Which matrix is the result of interchanging Row 2 and Row 3?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ 2\amp 1\amp 5\amp 7\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 2\amp 1\amp 5\amp 7\\ 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This interchanged Row 1 and Row 2.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This replaced Row 2 with a copy of Row 3, but didn't replace Row 3 with a copy of Row 2.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      </exercise>
+      
       <p>
         We can save ourselves even more writing by using a shorthand to describe the operations we do to the matrix rows.  We use <m>R_1</m>, <m>R_2</m> to represent <em>Row 1</em> and <em>Row 2,</em> respectively. 
         We can write <q>add Row 1 to Row 3, and replace Row 3 with that sum</q> as <q><m>R_1+R_3\rightarrow R_3</m>.</q> We also replaced Row 2 with <m>\frac{1}{2}</m> of Row 2; we write this in shorthand as
@@ -224,6 +387,184 @@
       </p>
     </definition>
       <!-- Another interactive, give two matrices, ask which row operation was done on it, using the shorthand notation. -->
+      <exercise label="row-ops-notation-practice">
+        <title>Row operations notation</title>
+        <introduction>
+          <p>
+            In the following tasks, say which elementary row operation was performed on matrix <m>A</m> to obtain matrix <m>B</m>.
+          </p>
+        </introduction>
+        <task label="row-ops-notation-practice-a">
+        <statement>
+          <p>
+            Consider the matrices
+            <sidebyside>
+              <p>
+            <me>A=\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>
+              </p>
+
+              <p>
+                <me>B=\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -1\amp 7\amp 3\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>
+                  </p>
+            </sidebyside>
+            Which row operation was done to <m>A</m> to obtain <m>B</m>?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>-2R_1+R_2 \rightarrow R_2</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Multiply Row 1 by <m>-2</m> and add to Row 2, replacing Row 2.  
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>-2R_1+R_2 \rightarrow R_1</m> 
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This says to multiply Row 1 by <m>-2</m>, add to Row 2, and replace <em>Row 1</em>.  Row 1 was not changed.  
+                This is also not one of the three elementary row operations: we replace the row we added to, not the row we multiplied by a number.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>2R_1-R_2 \rightarrow R_2</m> 
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This would make the second row <m>\begin{bmatrix} 0 \amp 1 \amp -7 \amp -3 \end{bmatrix}</m>. 
+                This is also not one of the elementary row operations - we multiply and add, never multiply and subtract. 
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="row-ops-notation-practice-b">
+        <statement>
+          <p>
+            Consider the matrices
+            <sidebyside>
+              <p>
+            <me>A=\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>
+              </p>
+
+              <p>
+                <me>B=\left[\begin{array}{cccc} 0\amp -5\amp -3\amp \frac{1}{2}\\ 2\amp 1\amp 5\amp 7\\ 1\amp 1\amp -1\amp 2\\ \end{array} \right]</me>
+                  </p>
+            </sidebyside>
+            Which row operation was done to <m>A</m> to obtain <m>B</m>?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>R_1 \leftrightarrow R_3</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>R_1 \leftrightarrow R_2</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This says Row 1 and Row 2 were swapped.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>R_1 \rightarrow R_3</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This says Row 1 replaces Row 3, but we need the arrow to go both ways to say that Row 3 also replaces Row 1. 
+                This is also not one of the three elementary row operations.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="row-ops-notation-practice-c">
+        <statement>
+          <p>
+            Consider the matrices
+            <sidebyside>
+              <p>
+            <me>A=\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>
+              </p>
+
+              <p>
+                <me>B=\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -10\amp -6\amp 1\\ \end{array} \right]</me>
+                  </p>
+            </sidebyside>
+            Which row operation was done to <m>A</m> to obtain <m>B</m>?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>2R_3 \rightarrow R_3</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>-2R_3 \rightarrow R_3</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This says Row 3 was multiplied by <m>-2</m>.  Check again.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>2R_3 \rightarrow R_2</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This says Row 3 was multiplied by <m>2</m> and the result replaced <em>Row 2</em>. This is not one
+                of the three elementary row operations. 
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      </exercise>
+      
       <p>
         Let's see one more example of solving a linear system with the equations and the augmented matrices side by side.
       </p>
@@ -238,16 +579,8 @@
           </p>
         </statement>
         <solution>
-          <!-- <p>
-            We'll first convert this system of equations into a matrix, then we'll proceed by manipulating the 
-            system of equations (and hence the matrix) to find a solution. 
-            Again, there is not just one right way of proceeding; 
-            we'll choose a method that is pretty efficient, but other methods certainly exist 
-            (and may be <em>better</em>!). The method used here, though, is a good one, 
-            and it is the method that we will be learning in the future.
-          </p> -->
           <p>
-            The given system and its corresponding augmented matrix are seen below.
+            We turn the given system into its corresponding augmented matrix.
           </p>
           <sbsgroup margins="0% 0%" widths="45% 45%">
             <sidebyside>
@@ -269,13 +602,13 @@
             </sidebyside>
           </sbsgroup>
           <p>
-            We first eliminate the <m>x_1</m> from the second and third equations.
+            First, we use the first equation to eliminate the <m>x_1</m> from the second and third equations.
           </p>
           <sbsgroup margins="0% 0%" widths="45% 45%">
             <sidebyside>
               <p>Replace equation 2 with the sum of <m>(-2)</m> times equation 1 plus equation 2.
-                Replace equation 3 with the sum of equation 1 and equation 3.</p>
-
+                Replace equation 3 with the sum of equation 1 and equation 3.
+              </p>
               <p>
                 <md>
                   <mrow>-2R_1+R_2 \amp \rightarrow R_2 </mrow>
