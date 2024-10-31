@@ -95,7 +95,7 @@
     <p>
       In fact, it is a great discovery to realize that all that matters about a linear system are the <em>constants</em>
       and the <em>coefficients</em> of the equations. By systematically handling these,
-      we can solve any set of linear equations in a very way that saves on processing power, whether the processing is being done
+      we can solve any set of linear equations in a way that saves on processing power, whether the processing is being done
       by a human or by a computer. 
     </p>
 
@@ -183,14 +183,7 @@
     </me>
   </p>
   
-  <exercise label="mc-elimination-check">
-    <title>Using an equation to eliminate a variable from another equation</title>
-    <introduction>
-      <p>
-        We eliminate variables by multiplying one equation by a number and adding the result to another equation.  
-        How can we use the second equation (which has no <m>b</m> in it) to eliminate the <m>g</m> from the first and third equations?
-      </p>
-    </introduction>
+  <exercise label="mc-elimination-check"><title>Use equations to eliminate variables</title>
     <task label="mc-elimination-check-a">
     <statement>
       <p>
@@ -462,7 +455,7 @@
   <reading-questions xml:id="rqs-matrices-elim">
 
     <exercise label="matrix-indices">
-      <title>How a matrix is indexed</title>
+      <title>How a matrix is indexed, old markup</title>
       <statement>
         <p>
           In the matrix <me>A=\begin{bmatrix} 2 \amp -1 \amp 3 \amp 5 \\ 0 \amp 3\amp 6\amp -3 \\ 4 \amp -2 \amp 7 \amp 5   \end{bmatrix}</me>
@@ -488,7 +481,7 @@
         <condition string=".*">
         <feedback>
           <p>
-            Incorrect.  If you're stuck, try reviewing the <xref ref="def_matrix ">definition of matrix</xref>.  
+            Incorrect.  If you're stuck, try reviewing the <xref ref="def_matrix">definition of matrix</xref>.  
           </p>
         </feedback>
         </condition>
@@ -498,7 +491,7 @@
 
 
     <exercise label="matrix-indices2">
-      <title>How a matrix is indexed</title>
+      <title>How a matrix is indexed, new markup</title>
       <statement>
         <p>
           In the matrix <me>A=\begin{bmatrix} 2 \amp -1 \amp 3 \amp 5 \\ 0 \amp 3\amp 6\amp -3 \\ 4 \amp -2 \amp 7 \amp 5   \end{bmatrix}</me>
@@ -528,7 +521,7 @@
         <test>
           <feedback>
             <p>
-              Incorrect.  If you're stuck, try reviewing the <xref ref="def_matrix ">definition of matrix</xref>.  
+              Incorrect.  If you're stuck, try reviewing the <xref ref="def_matrix">definition of matrix</xref>.  
             </p>
           </feedback>
         </test>

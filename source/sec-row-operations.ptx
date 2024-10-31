@@ -16,13 +16,13 @@
   <subsection xml:id="subsec-row-ops-bc">
     <title>Prepare</title>
     <p>
-        We will use the method of elimination again, but directly on the augmented matrix containing only the coefficients
+        We use the method of elimination again, but directly on the augmented matrix containing only the coefficients
         and constants.  The steps are essentially the same, except that every time we used the word <q>equation</q> before, 
         we substitute the word <q>row</q> instead. 
       </p>
-      <paragraphs><title>Solve a system with equations and matrices side by side</title>
+      <example><title>Solve a system with equations and matrices side by side</title>
         <p>
-          Let's recall the work we did last section in our <xref ref="elim-jar-marbles">marbles example</xref> and go through it again, this time side by side with
+          Let's recall the work we did last section in our <xref ref="elim-jar-marbles" text="custom">marbles example</xref> and go through it again, this time side by side with
           the augmented matrix representing the system.  Our first step was to write the equations with all the variables
           on the left side of the equal sign and in alphabetical order, as we did in <xref ref="eq_before_matrix">Equation</xref>.
         </p>
@@ -96,11 +96,11 @@
           
         <sidebyside>
             <p>
-                Replace equation 1 with the sum of <m>(-1)</m> times equation 2 plus equation 1; Replace equation 3 with the sum of <m>(-2)</m> times equation 2 plus equation 3.
+                Replace equation 1 with the sum of <m>(-1)</m> times equation 2 plus equation 1. Replace equation 3 with the sum of <m>(-2)</m> times equation 2 plus equation 3.
             </p>
             
             <p>
-                Replace row 1 with the sum of <m>(-1)</m> times row 2 plus row 1; 
+                Replace row 1 with the sum of <m>(-1)</m> times row 2 plus row 1. 
                 <!-- (<m>-R_2+R_1\rightarrow R_1)</m>;  -->
                 Replace row 3 with the sum of <m>(-2)</m> times row 2 plus row 3.
                 <!-- <m>(-2R_2+R_3\rightarrow R_3)</m> -->
@@ -150,11 +150,11 @@
         
         <sidebyside>
             <p>
-                Replace equation 2 with the sum of <m>\frac12</m> times equation 3 plus equation 2; Replace equation 1 with the sum of <m>-\frac32</m> times equation 3 plus equation 1.
+                Replace equation 2 with the sum of <m>\frac12</m> times equation 3 plus equation 2. Replace equation 1 with the sum of <m>-\frac32</m> times equation 3 plus equation 1.
             </p>
             
             <p>
-                Replace row 2 with the sum of <m>\frac12</m> times row 3 plus row 2;
+                Replace row 2 with the sum of <m>\frac12</m> times row 3 plus row 2.
                 <!-- <m>(\frac12R_3+R_2\rightarrow R_2)</m>;  -->
                 Replace row 1 with the sum of <m>-\frac32</m> times row 3 plus row 1. 
                 <!-- <m>(-\frac32R_3+R_1\rightarrow R_1)</m> -->
@@ -177,13 +177,13 @@
           </sidebyside>
       </sbsgroup>
       <p>
-        The final matrix contains the same solution information as we have on the left in the form of equations.
+        The final matrix contains the same solution information as we have on the left.
         Recall that the first column of our matrices held the coefficients of the <m>b</m> variable;
-        the second and third columns held the coefficients of the <m>g</m> and <m>r</m> variables,
-        respectively. Therefore, the first row of the matrix can be interpreted as <q><m>b+0g+0r=15,</m></q>
-          or more concisely, <q><m>b=15.</m></q>
+        the second column held the coefficients of the <m>g</m> variable, and the third column held the coefficients
+        of the <m>r</m> variable. Therefore, the first row of the matrix can be interpreted as <m>b+0g+0r=15,</m>
+          or more concisely, <m>b=15.</m>
       </p>
-    </paragraphs>
+    </example>
       <p>
         This is powerful stuff!  We write an augmented matrix so that we don't have to keep writing variables over and over again,
         and now we can solve a linear system by performing operations on the rows of the matrix, without thinking about the linear equations at all,
@@ -195,7 +195,7 @@
         We can write <q>add Row 1 to Row 3, and replace Row 3 with that sum</q> as <q><m>R_1+R_3\rightarrow R_3</m>.</q> We also replaced Row 2 with <m>\frac{1}{2}</m> of Row 2; we write this in shorthand as
         <q><m>\frac{1}{2}R_2\rightarrow R_2</m></q>.</p>
         <p>
-          We haven't used it much yet, but there is one more operation we can do to rows of a matrix without changing the corresponding system of linear equations; the solutions
+          There is one more operation we can do to rows of a matrix without changing the corresponding system of linear equations; the solutions
           don't change if we write the equations down in a different order.  Thus we can swap the positions of two rows, and the expression <q><m>R_1 \leftrightarrow R_2</m></q> means <q>interchange Row 1 and Row 2.</q>
       </p>
       <definition xml:id="def_elementary_row_operations">
@@ -217,7 +217,7 @@
           </li>
           <li>
             <p>
-              Swap the position of two rows, denoted <m>R_i \leftrightarrow R_j</m>.
+              Swap the positions of two rows, denoted <m>R_i \leftrightarrow R_j</m>.
             </p>
           </li>
         </ol>
@@ -233,20 +233,25 @@
           <p>
             Find a solution to the following system of linear equations by simultaneously manipulating the equations and the corresponding augmented matrices.
             <me>
-              \begin{array}{ccccccc} x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\ 2x_1\amp +\amp 2x_2\amp +\amp x_3\amp =\amp 0\\ -1x_1\amp +\amp x_2\amp -\amp 2x_3\amp =\amp 2 \end{array}
+              \begin{array}{ccccccc} x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\ 2x_1\amp +\amp 2x_2\amp +\amp x_3\amp =\amp 0\\ -x_1\amp +\amp x_2\amp -\amp 2x_3\amp =\amp 2 \end{array}
             </me>
           </p>
         </statement>
         <solution>
-          <p>
-            We'll first convert this system of equations into a matrix, then we'll proceed by manipulating the system of equations (and hence the matrix) to find a solution. Again, there is not just one right way of proceeding; we'll choose a method that is pretty efficient, but other methods certainly exist (and may be <em>better</em>!). The method used here, though, is a good one, and it is the method that we will be learning in the future.
-          </p>
+          <!-- <p>
+            We'll first convert this system of equations into a matrix, then we'll proceed by manipulating the 
+            system of equations (and hence the matrix) to find a solution. 
+            Again, there is not just one right way of proceeding; 
+            we'll choose a method that is pretty efficient, but other methods certainly exist 
+            (and may be <em>better</em>!). The method used here, though, is a good one, 
+            and it is the method that we will be learning in the future.
+          </p> -->
           <p>
             The given system and its corresponding augmented matrix are seen below.
           </p>
           <sbsgroup margins="0% 0%" widths="45% 45%">
             <sidebyside>
-              <p>Original system of equations</p>
+              <p>System of equations</p>
               
               <p>Corresponding matrix</p>
             </sidebyside>
@@ -255,7 +260,7 @@
               <p><me>\begin{array}{ccccccc}
                 x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 0\\
                 2x_1\amp +\amp 2x_2\amp +\amp x_3\amp =\amp 0\\
-                -1x_1\amp +\amp x_2\amp -\amp 2x_3\amp =\amp 2
+                -x_1\amp +\amp x_2\amp -\amp 2x_3\amp =\amp 2
                 \end{array}</me></p>
             
               <p><me>\left[\begin{array}{cccc}
@@ -264,17 +269,20 @@
             </sidebyside>
           </sbsgroup>
           <p>
-            We'll proceed by trying to get the <m>x_1</m> out of the second and third equation.
+            We first eliminate the <m>x_1</m> from the second and third equations.
           </p>
           <sbsgroup margins="0% 0%" widths="45% 45%">
             <sidebyside>
-              <p>Replace equation 2 with the sum of <m>(-2)</m> times equation 1 plus equation 2;
-                Replace equation 3 with the sum of equation 1 and equation 3</p>
+              <p>Replace equation 2 with the sum of <m>(-2)</m> times equation 1 plus equation 2.
+                Replace equation 3 with the sum of equation 1 and equation 3.</p>
+
+              <p>
+                <md>
+                  <mrow>-2R_1+R_2 \amp \rightarrow R_2 </mrow>
+                  <mrow> R_1+R_3 \amp \rightarrow R_3 </mrow>
+                </md>
+              </p>
              
-              <p>Replace row 2 with the sum of <m>(-2)</m> times row 1 plus row 2
-                <m>(-2R_1+R_2\rightarrow R_2)</m>;
-                Replace row 3 with the sum of row 1 and row 3
-                <m>(R_1+R_3\rightarrow R_3)</m></p>
             </sidebyside>
             
             <sidebyside>
@@ -291,15 +299,16 @@
           </sbsgroup>
             
           <p>
-            Notice that the second equation no longer contains <m>x_2</m>. We'll exchange the order of the equations so that we can follow the convention of solving for the second variable in the second equation.
+            Notice that the second equation no longer contains <m>x_2</m>. 
+            We'll exchange the order of the equations so that we can follow the convention 
+            of solving for the second variable in the second equation.
           </p>
             
           <sbsgroup margins="0% 0%" widths="45% 45%">
             <sidebyside>
-              <p>Interchange equations 2 and 3</p>
+              <p>Interchange equations 2 and 3.</p>
           
-              <p>Interchange rows 2 and 3
-                <m>R_2\leftrightarrow R_3</m></p>
+              <p><me>R_2\leftrightarrow R_3</me></p>
             </sidebyside>
            
             <sidebyside>
@@ -315,10 +324,9 @@
             </sidebyside>
             
             <sidebyside>
-              <p>Multiply equation 2 by <m>\frac12</m></p>
+              <p>Multiply equation 2 by <m>\frac12</m>.</p>
               
-              <p>Multiply row 2 by <m>\frac12</m>
-                <m>(\frac12 R_2\rightarrow R_2)</m></p>
+              <p><me>\frac12 R_2\rightarrow R_2</me></p>
             </sidebyside>
             
             <sidebyside>
@@ -334,10 +342,9 @@
             </sidebyside>
             
             <sidebyside>
-              <p>Multiply equation 3 by <m>-1</m></p>
+              <p>Multiply equation 3 by <m>-1</m>.</p>
               
-              <p>Multiply row 3 by <m>-1</m>
-                <m>(-1 R_3\rightarrow R_3)</m></p>
+              <p><me>-1 R_3\rightarrow R_3</me></p>
             </sidebyside>
             
             <sidebyside>
@@ -354,18 +361,25 @@
           </sbsgroup>
             
           <p>
-            Notice that the last equation (and also the last row of the matrix) show that <m>x_3=0</m>. Knowing this would allow us to simply eliminate the <m>x_3</m> from the first two equations. However, we will formally do this by manipulating the equations (and rows) as we have previously.
+            Notice that the last row tells us that <m>x_3=0</m>. 
+            If we wanted to combine the methods of substitution and elimination, we could substitute <m>0</m> 
+            in for the <m>x_3</m> in the first two equations, and that would make a lot of sense!  However, we 
+            choose to demonstrate how continuing with the method of elimination arrives at the same result.
           </p>
             
           <sbsgroup margins="0% 0%" widths="45% 45%">
             <sidebyside>
-              <p>Replace equation 1 with the sum of <m>(-1)</m> times equation 3 plus equation 1;
-                Replace equation 2 with the sum of <m>\frac12</m> times equation 3 plus equation 2</p>
+              <p>
+                Replace equation 2 with the sum of <m>\frac12</m> times equation 3 plus equation 2.
+                Replace equation 1 with the sum of <m>(-1)</m> times equation 3 plus equation 1.
+              </p>
               
-              <p>Replace row 1 with the sum of <m>(-1)</m> times row 3 plus row 1
-                <m>(-R_3+R_1\rightarrow R_1)</m>;
-                Replace row 2 with the sum of <m>\frac12</m> times row 3 plus row 2
-                <m>(\frac12R_3+R_2\rightarrow R_2)</m></p>
+              <p>
+                <md>
+                  <mrow> \frac{1}{2}R_3+R_2 \amp \rightarrow R_2 </mrow>
+                  <mrow> -R_3+R_1 \amp \rightarrow R_1 </mrow>
+                </md>
+              </p>
             </sidebyside>
             
             <sidebyside>
@@ -387,10 +401,9 @@
             
           <sbsgroup margins="0% 0%" widths="45% 45%">
             <sidebyside>
-              <p>Replace equation 1 with the sum of <m>(-1)</m> times equation 2 plus equation 1</p>
+              <p>Replace equation 1 with the sum of <m>(-1)</m> times equation 2 plus equation 1.</p>
               
-              <p>Replace row 1 with the sum of <m>(-1)</m> times row 2 plus row 1
-                <m>(-R_2+R_1\rightarrow R_1)</m></p>
+              <p><me>-R_2+R_1\rightarrow R_1</me></p>
             </sidebyside>
             
             <sidebyside>
@@ -407,7 +420,7 @@
           </sbsgroup>
             
           <p>
-            The equations on the left tell us that <m>x_1 = -1</m>, <m>x_2 = 1</m> and <m>x_3=0</m>, and notice how the matrix on the right tells us the same information.
+            The equations on the left tell us that <m>x_1 = -1</m>, <m>x_2 = 1</m> and <m>x_3=0</m>, and the matrix on the right tells us the same information.
           </p>
         </solution>
       </example>
