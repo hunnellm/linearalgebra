@@ -4,7 +4,7 @@
   <title>Row Operations</title>
   <introduction>
     <p>
-      The non-interactive material in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
+      The non-interactive Prepare material, and also the Additional Practice, in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
     </p>
     <p>
       We've now seen how to solve linear systems using substitution and elimination, and how to create an augmented
@@ -877,7 +877,7 @@
    worksheet itself.  Maybe I do want that, if I could change it to say 1.2 Participate only in the printed worksheet,
    not in the html? I don't think I do though - I might sometimes want non-worksheet material in Participate, like in
    Section 1.1, for example. Maybe upcoming sections that are sage heavy, too. But apparently sage can go in worksheets!-->
-   <xi:include href="participate-worksheets/row-ops-dc.xml" />
+   <xi:include href="participate-worksheets/dc-row-ops.xml" />
   
 
     <conclusion xml:id="subsec-row-ops-summary">
@@ -910,7 +910,7 @@
 
   <!-- Have structured the included file as a subsection called Practice for now.  I want the webwork to
  not show answers, like the in-class questions, while the non-interactive exercises can show answers.  -->
-<!-- <xi:include href="interactive-exercises/ww-row-ops.xml" /> -->
+    <xi:include href="interactive-exercises/ww-row-ops.xml" />
 
     <xi:include href="noninteractive-exercises/exer-row-ops.xml" />
 
