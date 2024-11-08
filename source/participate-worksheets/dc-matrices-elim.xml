@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-matrices-elim-dc"> 
+    <title>Participate</title>
+    <worksheet xml:id="ws-matrices-elim"><title></title>
+      <objectives>
+        <ul>
+          <li>
+            <p>
+              Solve systems of linear equations using the method of elimination
+            </p>
+          </li>
+          <li>
+            <p>
+              Become more familiar with the terminology and parts of a matrix
+            </p>
+          </li>
+          <li>
+            <p>
+              Go back and forth between a linear system and an augmented matrix
+            </p>
+          </li>
+        </ul>
+</objectives>
+
+      <!-- <introduction>
+        <p>
+          something else to say?
+        </p>
+      </introduction> -->
+      <page>
+        <exercisegroup cols="2"><title>Elimination</title>
+          <introduction>
+            <p>
+              Solve the linear systems below using the method of elimination.
+            </p>
+          </introduction>
+          
+        <exercise workspace="3in">
+          <statement>
+            <p>
+              <md>
+                <mrow> 2x_1 + 4x_2 \amp = -6</mrow>
+                <mrow> 5x_1 - 5x_2 \amp = 15 </mrow>
+              </md>
+            </p>
+           </statement>
+           <answer>
+            <p>
+              <m>x_1 =1 , x_2= -2</m>
+            </p>
+          </answer>
+         </exercise>
+          
+        <exercise xml:id="dc-linsystem4var" workspace="3in">
+          <statement>
+            <p>
+              <md>
+                <mrow> x_1 + x_2 - x_3 \amp = 1 </mrow>
+                <mrow> x_1+ 2x_2 -x_3 \amp = 2</mrow>
+                <mrow> x_2+ x_3 \amp = 3 </mrow>
+                <mrow>  x_2 - x_4\amp = 4 </mrow>
+                </md>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              <m>x_1 =2,\ x_2=1,\ x_3=2, \ x_4=-3</m>
+            </p>
+          </answer>
+        </exercise>
+      </exercisegroup>
+      </page>
+      <page>
+      <exercisegroup cols="3"><title>Parts of a Matrix</title>
+        <introduction>
+          <p>
+            For the matrix 
+            <m>B=\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>, 
+            identify the
+          </p>
+        </introduction>
+        <exercise workspace=".7in">
+          <statement>
+            <p>
+              entry <m>b_{32}</m>.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              The entry in the third row and second column is <m>-5</m>
+            </p>
+          </answer>
+        </exercise>
+        <exercise workspace=".7in">
+          <statement>
+            <p>
+              third column.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              The third column is <m>\begin{array}{c}-1\\5\\-3\end{array}</m>
+            </p>
+          </answer>
+        </exercise>
+        <exercise workspace=".7in">
+          <statement>
+            <p>
+              second row.
+            </p>
+          </statement>
+          <answer>
+            <p>
+              The second row is <m>\begin{array}{cccc} 2 \amp 1 \amp 5 \amp 7 \end{array}</m>
+            </p>
+          </answer>
+        </exercise>
+      </exercisegroup>
+
+      <exercise workspace=".2in">
+        <statement>
+          <p>
+            If <m>A</m> is a <m>3\times 5</m> matrix, how many columns does <m>A</m> have?
+          </p>
+        </statement>
+        <answer>
+          <p>
+            A <m>3\times 5</m> matrix has 5 columns.  
+          </p>
+        </answer>
+      </exercise>
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Using variables <m>x_1, x_2, \ldots </m>, write the linear system corresponding to the above matrix <m>B</m>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <md>
+              <mrow> x_1 + x_2 - x_3 \amp = 2 </mrow>
+              <mrow> 2x_1 + x_2 + 5x_3 \amp = 7</mrow>
+              <mrow>  -5x_2 - 3x_3 \amp = \frac{1}{2} </mrow>
+            </md>
+          </p>
+        </answer>
+      </exercise>
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Give the augmented matrix corresponding to the linear system in 
+            <xref ref="dc-linsystem4var" text="local"/>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <m>\left[\begin{array}{ccccc} 1\amp 1\amp -1 \amp 0 \amp 1\\ 1 \amp 2 \amp -1 \amp 0 \amp 2\\ 0 \amp 1 \amp 1 \amp 0 \amp 3\\ 0 \amp 1 \amp 0 \amp -1 \amp 4 \end{array} \right]</m>
+          </p>
+        </answer>
+      </exercise>
+
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Create your own augmented matrix, of any size you choose.
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise workspace="1in">
+        <statement>
+          <p>
+            Create your own linear system, with however many variables and equations you choose.
+          </p>
+        </statement>
+      </exercise>
+      </page>
+    </worksheet>
+    </subsection>
