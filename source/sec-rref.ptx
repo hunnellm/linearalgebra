@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Reduced Row Echelon Form</title>
+  <introduction>
+    <p>
+      The Prepare material, and also the Additional Practice, in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
+    </p>
+    <p>
+      We have learned about the method of elimination of variables and about row operations on matrices; in this section, we learn
+      <em>Gauss-Jordan elimination</em> to put matrices into <em>reduced row echelon form</em>.
+    </p>
+  </introduction>
+
+  <subsection xml:id="subsec-rref-bc">
+    <title>Prepare</title>
+    <p>
+        Performing elementary row operations on an augmented matrix resulted in a new linear system whose solution
+        was the same as the original linear system.  This brings to mind two good questions:
+        <ol>
+          <li>
+            <p>
+              What is the goal of using elementary row operations?
+            </p>
+          </li>
+          <li>
+            <p>
+              How do we achieve that goal the fastest?
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        We'll answer the first question first.  In <xref ref="sec-row-ops"/>, when we manipulated matrices to find solutions,
+        we were in fact putting the matrix into <em>reduced row echelon form</em>.
+        </p>
+      <definition xml:id="def_rref">
+          <title>Reduced Row Echelon Form</title>
+          <idx><h>reduced row echelon form</h></idx>
+          <idx><h>row echelon form</h></idx>
+        <statement>
+          <p>
+            A matrix is in <term>reduced row echelon form</term>
+            if its entries satisfy all four of the following conditions.
+            <ol>
+              <li>
+                <p>
+                  The first nonzero entry in each row is a <m>1</m>
+                  (called a <term>leading <m>1</m></term>).
+                    <idx><h>leading one</h></idx>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Each leading <m>1</m> comes in a column to the right of the leading <m>1</m>'s in rows above it.
+                </p>
+              </li>
+              <li>
+                <p>
+                  All rows of all <m>0</m>'s come at the bottom of the matrix.
+                </p>
+              </li>
+              <li>
+                <p>
+                  If a column contains a leading <m>1</m>, then all other entries in that column are <m>0</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+          <p>
+            A matrix that satisfies the first three conditions is said to be in
+            <term>row echelon form</term>.
+          </p>
+        </statement>
+      </definition>
+      <exercise xml:id="ex_rref-or-ref" label="rref-or-not-examples">
+          <title>RREF or not?</title>
+        <introduction>
+            <p>
+                For each of the following matrices, say whether they are in reduced row echelon form or not.
+            </p>
+        </introduction>
+          <task label="rref-or-not-a">
+            <statement>
+                <p>
+                    <me>\left[\begin{array}{cc} 1\amp 0\\0\amp 1
+                        \end{array} \right]</me>
+                </p>
+            </statement>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>
+                            Not in reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            The first nonzero entry in each row is a <m>1</m>, each leading 1 appears down and to the right from the previous leading 1, and all the entries in the same column as a leading 1 are <m>0</m>.
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="rref-or-not-b">
+            <statement>
+                <p>
+                    <me>\left[\begin{array}{ccc}  1\amp 0\amp 1\\0\amp 1\amp 2
+                        \end{array} \right]</me>
+                </p>
+            </statement>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>
+                            Not in reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            The first nonzero entry in each row is a <m>1</m>, each leading 1 appears down and to the right from the previous leading 1, and all the entries in the same column as a leading 1 are <m>0</m>.
+                        </p>
+                        <p>
+                            The third column does not have a leading 1 in it, but that's okay; the conditions for rref don't say that every column has to contain a leading 1. 
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="rref-or-not-c">
+            <statement>
+                <p>
+                    <me>\left[\begin{array}{cc} 0\amp 0\\0\amp 0
+                        \end{array} \right]</me>
+                </p>
+            </statement>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>
+                            Not in reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            The rref conditions don't say that leading 1's have to exist; the conditions say that if nonzero entries are present, then leading 1's have to be in certain relative positions.
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="rref-or-not-d">
+            <statement>
+                <p>
+                    <me>\left[\begin{array}{ccc}  1\amp 1\amp 0\\0\amp 0\amp 1
+                        \end{array} \right]</me>
+                </p>
+            </statement>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>
+                            Not in reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            The second column does not have a leading 1 in it, but that's okay; the conditions for rref don't say that every column has to contain a leading 1. 
+                            <me>\left[\begin{array}{ccc}  \fbox{1}\amp 1\amp 0\\0\amp 0\amp \fbox{1}
+                                \end{array} \right]</me>
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="rref-or-not-e">
+            <statement>
+                <p>
+                    <me>\left[\begin{array}{cccc} 1\amp 0\amp 0\amp 1\\0\amp 0\amp 0\amp 0\\0\amp 0\amp 1\amp 3
+                        \end{array} \right]</me>
+                </p>
+            </statement>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            Reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            The third condition in <xref ref="def_rref"/> says that any rows of all zeroes must be at the bottom.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Not in reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="rref-or-not-f">
+            <statement>
+                <p>
+                    <me>\left[\begin{array}{cccc} 1\amp 2\amp 0\amp 0 \\0\amp 0\amp 3\amp 0\\0\amp 0\amp 0\amp 4
+                        \end{array} \right]</me>
+                </p>
+            </statement>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            Reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            The first nonzero entry of the second row is <m>3</m>, and it needs to be <m>1</m> to be in rref. (The third row fails this condition also).
+                        </p>
+                    </feedback>
+                </choice>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Not in reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="rref-or-not-g">
+            <statement>
+                <p>
+                    <me>\left[\begin{array}{cccccc} 0\amp 1\amp 2\amp 3\amp 0\amp 4\\ 
+                        0\amp 0\amp 0\amp 0\amp 1\amp 5\\0\amp 0\amp 0\amp 0\amp 0\amp 0 \end{array} \right]</me>
+                </p>
+            </statement>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>
+                            Not in reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            The first, third, fourth, and sixth columns do not have a leading 1 in them, and that means that the other entries in those columns don't have to be <m>0</m>.
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="rref-or-not-h">
+            <statement>
+                <p>
+                    <me>\left[\begin{array}{ccc} 1\amp 1\amp 0\\ 0\amp 1\amp 0\\0\amp 0\amp 1 \end{array} \right]</me>
+                </p>
+            </statement>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            Reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            The second column has a leading <m>1</m> in it (from the second row), and that means all the other entries in that column have to be <m>0</m>.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Not in reduced row echelon form
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          </exercise>
+
+      <p>
+        We began this section with two questions,
+        <q>Where do we go?</q>
+        and
+        <q>How do we get there quickly?</q>
+        We've just answered the first question:
+        most of the time we are going to <em>reduced row echelon form.</em>
+        We now address the second question.
+      </p>
+      <p>
+        There are many ways to use elementary row operations to transform a matrix into reduced row echelon form, 
+        but there is a general technique that is efficient and doesn't waste time on unnecessary steps.
+        This technique is called <em>Gauss-Jordan elimination</em>, named in honor of the mathematicians Karl Friedrich Gauss
+        and Wilhelm Jordan.
+      </p>
+      <assemblage xml:id="def_gaussian_elimination">
+        <title>Gauss-Jordan Elimination</title>
+        <idx><h>Gauss-Jordan elimination</h></idx>
+        <p>
+          <term>Gauss-Jordan elimination</term>
+          is the technique for finding the reduced row echelon form of a matrix using the procedure summarized below:
+          <ol>
+            <li>
+              <p>
+                Create a leading <m>1</m>.
+              </p>
+            </li>
+            <li>
+              <p>
+                Use this leading <m>1</m> to put zeros underneath it.
+              </p>
+            </li>
+            <li>
+              <p>
+                Repeat the above steps until all possible rows have leading <m>1</m>'s.
+              </p>
+            </li>
+            <li>
+              <p>
+                Put zeros above these leading <m>1</m>'s.
+              </p>
+            </li>
+          </ol>
+        </p>
+  </assemblage>
+
+    <p>
+        This is roughly what we were already doing in previous sections when we used elimination and row operations, but let's see an example.
+    </p>
+
+      <example xml:id="ex_gaussian_elimination">
+          <title>Gauss-Jordan Elimination Demonstrated</title>
+          <p>
+            Put the augmented matrix of the following system of linear equations into reduced row echelon form.
+            <me>
+              \begin{array}{ccccccc} -3x_1\amp -\amp 3x_2\amp +\amp 9x_3\amp =\amp 12\\ 2x_1\amp +\amp 2x_2\amp -\amp 4x_3\amp =\amp -2\\ \amp \amp -2x_2\amp -\amp 4x_3\amp =\amp -8 \end{array}
+            </me>
+          </p>
+          <p>
+            We start by converting the linear system into an augmented matrix.
+            <me>
+              \left[\begin{array}{cccc} \fbox{-3}\amp -3\amp 9\amp 12\\ 2\amp 2\amp -4\amp -2\\0\amp -2\amp -4\amp -8 \end{array} \right]
+            </me>
+          </p>
+          <p>
+            Our first step is to make the first entry in the first row a <m>1</m>.  We do this by multiplying Row 1 by <m>-\frac13</m>. (This row operation is also called <q>scaling.</q>)
+          </p>
+          <sidebyside widths="20% 50%" margins="30% 0%" valign="middle">
+            <p>
+                <m>-\frac13R_1\rightarrow R_1</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{cccc} \fbox{1}\amp 1\amp -3\amp -4\\ 2\amp 2\amp -4\amp -2\\0\amp -2\amp -4\amp -8
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <p>
+            Our next step is to put zeros under this <m>1</m>. To create a 
+            <m>0</m> for the first entry in the second row, we'll use the <q>multiply and add</q> elementary row operation.
+          </p>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+                <m>-2R_1+R_2\rightarrow R_2</m>
+              </p>
+              <p>
+                  <m>\left[\begin{array}{cccc} 1\amp 1\amp -3\amp -4\\ 0\amp \fbox{0}\amp 2\amp 6\\0\amp -2\amp -4\amp -8
+                \end{array} \right]</m>
+              </p>
+          </sidebyside>
+          <p>
+            The first entry in the third row is already <m>0</m>, so our first column looks good for reduced
+            row echelon form.  We now shift our focus from the leading <m>1</m> down
+            and to the right, to the position that is boxed.
+            </p>
+            <p>
+            We want to put a <m>1</m> in this position,
+            but <alert>we need to restrict ourselves to using only the second row and any rows below it</alert>, as using the first row 
+            would put nonzero entries back into the first column and undo the work we just did.
+            Let's first swap Row 2 and Row 3, and then scale the new second row (multiply it by a number) so that there is a <m>1</m> in the desired position.
+          </p>
+          <sidebyside widths="16% 50%" margins="34% 0%" valign="middle">
+              <p>
+                <m>R_2\leftrightarrow R_3</m>
+              </p>
+              <p>
+                 <m>\left[\begin{array}{cccc} 1\amp 1\amp -3\amp -4\\0\amp \fbox{-2}\amp -4\amp -8 \\0\amp 0\amp 2\amp 6
+                \end{array} \right]</m>
+              </p>
+          </sidebyside>
+          <sidebyside widths="20% 50%" margins="30% 0%" valign="middle">
+                <p>
+                    <m>-\frac12R_2\rightarrow R_2</m>
+                </p>
+                <p>
+                    <m>\left[\begin{array}{cccc} 1\amp 1\amp -3\amp -4\\0\amp 1\amp 2\amp 4 \\0\amp 0\amp \fbox{2}\amp 6
+                \end{array} \right]</m>
+                </p>
+            </sidebyside>
+          <p>
+            We have now created another leading <m>1</m>, this time in the second row.
+            Our next desire is to put <m>0</m>'s underneath it,
+            but that's already done!
+            Therefore we again shift our attention down and to the right
+            to the next position in a box.
+            We want that to be a <m>1</m>, and so we multiply the row by <m>\frac{1}{2}</m>.
+          </p>
+          <sidebyside widths="20% 50%" margins="30% 0%" valign="middle">
+            <p>
+              <m>\frac12R_3\rightarrow R_3</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -3\amp -4\\0\amp 1\amp 2\amp 4 \\0\amp 0\amp 1\amp 3
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <p>
+            This ends what we will refer to as the <em>forward steps</em>.
+            Our next task is to use the "multiply and add" row operation to put zeros above the leading <m>1</m>'s.
+            This is referred to as the <em>backward steps</em>.
+          </p>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+              <md>
+                  <mrow>-2R_3+R_2 \amp \rightarrow R_2</mrow>
+                  <mrow>3R_3+R_1 \amp \rightarrow R_1 </mrow>
+              </md>
+            </p>
+            <p>
+              <m>\left[\begin{array}{cccc} 1\amp 1\amp 0\amp 5\\0\amp 1\amp 0\amp -2 \\0\amp 0\amp 1\amp 3
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <sidebyside widths="20% 50%" margins="25% 0%" valign="middle">
+              <p>
+                  <m>-R_2+R_1\rightarrow R_1</m>
+              </p>
+              <p>
+                  <m>\left[\begin{array}{cccc} 1\amp 0\amp 0\amp 7\\0\amp 1\amp 0\amp -2 \\0\amp 0\amp 1\amp 3
+                \end{array} \right]</m>
+              </p>
+          </sidebyside>
+          <p>
+            This matrix is now in reduced row echelon form, and we can read off the solution to the original linear system as <m>x_1 = 7</m>,
+            <m>x_2 = -2</m> and <m>x_3 = 3</m>.
+          </p>
+      </example>
+      <p>
+        We now summarize and try to formalize the steps we performed.
+      </p>
+      <p>
+        <em>Forward Steps</em><idx><h>Gaussian elimination</h><h>forward steps</h></idx>
+        <ol>
+          <li>
+            <p>
+                Start at the top left corner.  
+            </p>
+          </li>
+          <li>
+            <p>
+              If the entry in the row and column that we are considering is <m>0</m>,
+              swap rows with a row below the current row so that the entry is nonzero.
+              If this entry is <m>0</m> and all entries below are <m>0</m>,
+              we are done with this column; move to the right and do this step again.  
+            </p>
+          </li>
+          <li>
+            <p>
+              Since the entry we are considering is nonzero, multiply the current row by a number (<q>scale the row</q>) to make its first entry a <m>1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Repeatedly use the <q>multiply and add</q> row operation to put <m>0</m>'s underneath the leading <m>1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Move down and to the right.  Go back to step 2 and work on the new rows and columns until you run out of either rows or columns.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        The above steps accomplish the following things:
+        <ol>
+          <li>
+            <p>
+              The first nonzero entry in each row is a <m>1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Each leading <m>1</m> is in a column to the right of the leading <m>1</m>'s above it.
+            </p>
+          </li>
+          <li>
+            <p>
+              All rows of all <m>0</m>'s come at the bottom of the matrix.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        Note that this means we have just put a matrix into <em>row echelon form</em>.
+        The next steps finish the conversion into
+        <em>reduced</em> row echelon form.
+      </p>
+      <p>
+        <em>Backward Steps</em><idx><h>Gaussian elimination</h><h>backward steps</h></idx>
+        <ol>
+          <li>
+            <p>
+              Starting from the right and working left,
+              use the <q>multiply and add</q> row operation repeatedly to put zeros above each leading <m>1</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        By following these <q>Forward and Backward Steps</q>, 
+        we make use of the presence of zeros to make the computations easier and more efficient.
+      </p> 
+    <p>
+        Many authors call the forward steps <em>Gaussian elimination</em>, which puts a matrix into row echelon form,
+        and the forward-and-backward steps together <em>Gauss-Jordan elimination</em>, which puts a matrix into reduced
+        row echelon form. We will almost always want to obtain reduced row echelon form and will not make a big deal
+         about the distinction between the names Gaussian and Gauss-Jordan.  
+    </p>
+
+    <!-- need interactive.  would love a clickable areas within a matrix, click on leading 1's, click on next entry to work on, etc.   -->
+      
+    <!-- maybe save that for reading question... do a parsons with the row operation notations. focus on forward-backward steps, what operation comes next? -->
+    <exercise xml:id="exer_rref-steps" label="rref-steps">
+      <title>Gauss-Jordan Steps</title>
+    <introduction>
+        <p>
+            Answer the following questions about using Gauss-Jordan elimination, which entries to work on next and what row operations to perform.
+        </p>
+    </introduction>
+      <task label="rref-steps-a">
+        <statement>
+            <p>
+              Given the matrix
+              <me>
+                A=\begin{bmatrix} \fbox{2} \amp 4 \amp 6\amp -2 \\ 1 \amp -1 \amp -1 \amp -1 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+              </me>
+              the Gauss-Jordan algorithm starts by turning the <m>2</m> that is entry <m>a_{11}</m>, into a <m>1</m>. Which row operation do we use?
+            </p>
+        </statement>
+        <choices>
+            <choice correct="yes">
+                <statement>
+                    <p>
+                        Scaling (multiplying a row by a nonzero number)
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                        Correct!
+                    </p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>
+                        Swapping rows
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                        Swapping Row 1 and Row 2 would actually work for this matrix, and we'd end up in the same rref eventually. 
+                        But part of the beauty of the Gauss-Jordan procedure is that following the prescribed steps of the algorithm always works, 
+                        and swapping two rows won't always work to turn a <m>2</m> into a <m>1</m>.
+                    </p>
+                </feedback>
+            </choice>
+            <choice>
+              <statement>
+                  <p>
+                      Multiply and add
+                  </p>
+              </statement>
+              <feedback>
+                  <p>
+                      We use the <q>multiply and add</q> row operation when we are trying to get <m>0</m>'s, not when our goal is to get a <m>1</m>.
+                  </p>
+              </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="rref-steps-b">
+        <statement>
+            <p>
+              Given the matrix
+              <me>
+                B=\begin{bmatrix} 1 \amp 2 \amp 3\amp -1 \\ 1 \amp -1 \amp -1 \amp -1 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+              </me>
+              which entry do we focus on turning into a <m>1</m> or <m>0</m> next?
+            </p>
+        </statement>
+        <choices>
+            <choice >
+                <statement>
+                    <p>
+                        <m>b_{11}</m>
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                      <me>
+                        B=\begin{bmatrix} \fbox{1} \amp 2 \amp 3\amp -1 \\ 1 \amp -1 \amp -1 \amp -1 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+                      </me>
+                        This entry is already a <m>1</m> as required by the Gauss-Jordan method. 
+                    </p>
+                </feedback>
+            </choice>
+            <choice correct="yes">
+                <statement>
+                    <p>
+                        <m>b_{21}</m>
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                      <me>
+                        B=\begin{bmatrix} 1 \amp 2 \amp 3\amp -1 \\ \fbox{1} \amp -1 \amp -1 \amp -1 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+                      </me>
+                        Correct! We need to turn the entries below the leading <m>1</m> in Row 1 into <m>0</m>'s.
+                    </p>
+                </feedback>
+            </choice>
+            <choice>
+              <statement>
+                  <p>
+                      <m>b_{12}</m>
+                  </p>
+              </statement>
+              <feedback>
+                  <p>
+                    <me>
+                      B=\begin{bmatrix} 1 \amp \fbox{2} \amp 3\amp -1 \\ 1 \amp -1 \amp -1 \amp -1 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+                    </me>
+                    No, we finish putting <m>0</m>'s below the leading <m>1</m> in the first column before moving to the right.  
+                  </p>
+              </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="rref-steps-c">
+        <statement>
+            <p>
+                To turn the boxed entry below into a <m>0</m>, which row operation do we perform?
+                <me>
+                  B=\begin{bmatrix} 1 \amp 2 \amp 3\amp -1 \\ \fbox{1} \amp -1 \amp -1 \amp -1 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+                </me>
+            </p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>
+                        Scaling a row
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                        No, scaling a row means multiplying by a nonzero number which won't result in a <m>0</m> if we didn't start with a <m>0</m>.
+                    </p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>
+                        Swapping rows
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                        In this case, swapping Row 2 and Row 3 would put a <m>0</m> into position <m>b_{21}</m>, but that won't always work, and it just moves the problem down a row. 
+                    </p>
+                </feedback>
+            </choice>
+            <choice correct="yes">
+              <statement>
+                <p>
+                  Multiply and add
+                </p>
+              </statement>
+              <feedback>
+                <p>
+                  Correct!  Multiplying Row 1 by <m>-1</m> and adding to Row 2 will create a <m>0</m> in position <m>b_{21}</m>.
+                </p>
+              </feedback>
+            </choice>
+        </choices>
+      </task>
+      <task label="rref-steps-d">
+        <statement>
+            <p>
+                To continue the Gauss-Jordan algorithm on the matrix below, which entry do we next try to turn into a <m>1</m> or <m>0</m>?
+                <me>
+                  C=\begin{bmatrix} 1 \amp 2 \amp 3\amp -1 \\ 0 \amp -3 \amp -4 \amp 0 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix}
+                </me>
+            </p>
+        </statement>
+        <choices>
+            <choice>
+                <statement>
+                    <p>
+                        <m>c_{12}</m>
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                        No, entry <m>c_{12}</m> is the entry boxed below.  The Gauss-Jordan algorithm says that after finishing a column, we move down and to the right from the leading <m>1</m>.
+                        <me>
+                          C=\begin{bmatrix} 1 \amp \fbox{2} \amp 3\amp -1 \\ 0 \amp -3 \amp -4 \amp 0 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix}
+                        </me> 
+                    </p>
+                </feedback>
+            </choice>
+            <choice>
+              <statement>
+                  <p>
+                      <m>c_{31}</m>
+                  </p>
+              </statement>
+              <feedback>
+                  <p>
+                      No, entry <m>c_{31}</m> is the entry boxed below.  It's already a <m>0</m> below a leading <m>1</m>. 
+                      <me>
+                        C=\begin{bmatrix} 1 \amp 2 \amp 3\amp -1 \\ 0 \amp -3 \amp -4 \amp 0 \\ \fbox{0} \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+                      </me> 
+                  </p>
+              </feedback>
+          </choice>
+            <choice correct="yes">
+                <statement>
+                    <p>
+                        <m>c_{22}</m>
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                        Correct!  The next step in the Gauss-Jordan algorithm is to turn entry <m>c_{22}</m>, which is boxed below, into a <m>1</m>.
+                        <me>
+                          C=\begin{bmatrix} 1 \amp 2 \amp 3\amp -1 \\ 0 \amp \fbox{-3} \amp -4 \amp 0 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+                        </me>
+                    </p>
+                </feedback>
+            </choice>
+        </choices>
+      </task>
+      <task label="rref-steps-e">
+        <statement>
+            <p>
+              Given the matrix
+              <me>
+                C=\begin{bmatrix} 1 \amp 2 \amp 3\amp -1 \\ 0 \amp \fbox{-3} \amp -4 \amp 0 \\ 0 \amp 2\amp 3\amp 4 \\  \end{bmatrix},
+              </me>
+              which row operation do we use next in the Gauss-Jordan algorithm?
+            </p>
+        </statement>
+        <choices>
+            <choice correct="yes">
+                <statement>
+                    <p>
+                        Scaling a row
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                        Correct!
+                    </p>
+                </feedback>
+            </choice>
+            <choice>
+                <statement>
+                    <p>
+                        Swapping rows
+                    </p>
+                </statement>
+                <feedback>
+                    <p>
+                        No, swapping rows is only used when there is a <m>0</m> with nonzero entries below it.
+                    </p>
+                </feedback>
+            </choice>
+            <choice>
+              <statement>
+                  <p>
+                      Multiply and add
+                  </p>
+              </statement>
+              <feedback>
+                  <p>
+                      We use the <q>multiply and add</q> row operation when we are trying to get <m>0</m>'s, not when our goal is to get a <m>1</m>.
+                  </p>
+              </feedback>
+          </choice>
+        </choices>
+      </task>
+      </exercise>
+
+      <p>
+        Let's practice the Gauss-Jordan algorithm some more.
+      </p>
+      <example xml:id="ex_rref_2">
+          <title>Another Gauss-Jordan Elimination</title>
+        <statement>
+          <p>
+            Use Gauss-Jordan elimination to put the matrix <m>A</m> into reduced row echelon form, where
+            <me>
+              A = \left[\begin{array}{ccccc} -2\amp -4\amp -2\amp -10\amp 0\\2\amp 4\amp 1\amp 9\amp -2\\3\amp 6\amp 1\amp 13\amp -4 \end{array} \right]
+            </me>
+          </p>
+        </statement>
+        <solution>
+          <p>
+            We start by wanting to make the entry in the first column and first row a <m>1</m>.
+            To do this we'll scale the first row by a factor of <m>-\frac12</m>.
+          </p>
+          <sidebyside widths="20% 50%" margins="30% 0%" valign="middle">
+            <p>
+                <m>-\frac12R_1\rightarrow R_1</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{ccccc} 1\amp 2\amp 1\amp 5\amp 0\\2\amp 4\amp 1\amp 9\amp -2\\3\amp 6\amp 1\amp 13\amp -4
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <p>
+            Next we need to put zeros in the column below this newly formed leading <m>1</m>.
+          </p>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+              <md>
+                  <mrow>-2R_1+R_2 \amp \rightarrow R_2</mrow>
+                  <mrow>-3R_1+R_3 \amp \rightarrow R_3</mrow>
+              </md>
+            </p>
+            <p>
+              <m>\left[\begin{array}{ccccc} 1\amp 2\amp 1\amp 5\amp 0\\0\amp \fbox{0}\amp -1\amp -1\amp -2\\0\amp 0\amp -2\amp -2\amp -4
+                \end{array} \right]
+              </m>
+            </p>
+          </sidebyside>
+          <p>
+            Our attention now shifts to the right one column and down one row to the position indicated by the box.
+            We want to put a <m>1</m> in that position.
+            Our only options are to either scale the current row or to interchange rows with a row below it.
+            However, neither of those options will change the <m>0</m> into a <m>1</m> in this case.
+            Therefore, we shift our attention to the right one more column, to the <m>-1</m>.
+          </p>
+          <p>
+            <me>\left[\begin{array}{ccccc} 1\amp 2\amp 1\amp 5\amp 0\\0\amp 0\amp \fbox{-1}\amp -1\amp -2\\0\amp 0\amp -2\amp -2\amp -4
+              \end{array} \right]
+            </me>
+          </p>
+          <p>
+            We want to create a leading <m>1</m> for this row, so we multiply by a nonzero number.
+          </p>
+          <sidebyside widths="20% 50%" margins="30% 0%" valign="middle">
+            <p>
+              <m>-R_2\rightarrow R_2</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{ccccc} 1\amp 2\amp 1\amp 5\amp 0\\0\amp 0\amp 1\amp 1\amp 2\\0\amp 0\amp -2\amp -2\amp -4
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <p>
+            Next we use <q>multiply and add</q> to put a <m>0</m> underneath this leading <m>1</m>.
+          </p>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+              <m>2R_2+R_3\rightarrow R_3</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{ccccc} 1\amp 2\amp 1\amp 5\amp 0\\0\amp 0\amp 1\amp 1\amp 2\\0\amp 0\amp 0\amp 0\amp 0
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <p>
+            We would continue moving down and to the right, but since the third row is all <m>0</m>'s, and there aren't any more rows, we are done with the forward steps.
+          </p>
+          <p>
+            Our next goal is to put a <m>0</m> above each of the leading <m>1</m>'s.
+          </p>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+              <m>-R_2+R_1\rightarrow R_1</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{ccccc} 1\amp 2\amp 0\amp 4\amp -2\\0\amp 0\amp 1\amp 1\amp 2\\0\amp 0\amp 0\amp 0\amp 0
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <p>
+            This final matrix is in reduced row echelon form.
+          </p>
+        </solution>
+      </example>
+      <example xml:id="ex_rref_3">
+          <title>Gauss-Jordan Elimination Again, this time with fewer words</title>
+        <statement>
+          <p>
+            Put the matrix
+            <me>
+              \left[\begin{array}{cccc}  1\amp 2\amp 1\amp 3\\2\amp 1\amp 1\amp 1\\3\amp 3\amp 2\amp 1 \end{array} \right]
+            </me>
+            into reduced row echelon form.
+          </p>
+        </statement>
+        <solution>
+          <p>
+            Here we will show all steps without explaining each one.
+          </p>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+              <md>
+                  <mrow>-2R_1+R_2 \amp \rightarrow R_2</mrow>
+                  <mrow>-3R_1+R_3 \amp \rightarrow R_3</mrow>
+              </md>
+            </p>
+            <p>
+              <m>\left[\begin{array}{cccc}  1\amp 2\amp 1\amp 3\\0\amp -3\amp -1\amp -5\\0\amp -3\amp -1\amp -8
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <sidebyside widths="20% 50%" margins="30% 0%" valign="middle">
+            <p>
+                <m>-\frac13R_2\rightarrow R_2</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{cccc}  1\amp 2\amp 1\amp 3\\0\amp 1\amp 1/3\amp 5/3\\0\amp -3\amp -1\amp -8
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+              <m>3R_2+R_3\rightarrow R_3</m>
+            </p>
+            <p>
+              <m>\left[\begin{array}{cccc}  1\amp 2\amp 1\amp 3\\0\amp 1\amp 1/3\amp 5/3\\0\amp 0\amp 0\amp -3
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <sidebyside widths="20% 50%" margins="30% 0%" valign="middle">
+            <p>
+              <m>-\frac13R_3\rightarrow R_3</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{cccc}  1\amp 2\amp 1\amp 3\\0\amp 1\amp 1/3\amp 5/3\\0\amp 0\amp 0\amp 1
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+              <md>
+                  <mrow>-3R_3+R_1 \amp \rightarrow R_1</mrow>
+                  <mrow>-\frac53R_3+R_2 \amp \rightarrow R_2</mrow>
+              </md>
+            </p>
+            <p>
+              <m>\left[\begin{array}{cccc}  1\amp 2\amp 1\amp 0\\0\amp 1\amp 1/3\amp 0\\0\amp 0\amp 0\amp 1
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+          <sidebyside widths="20% 50%" margins="24% 0%" valign="middle">
+            <p>
+              <m>-2R_2+R_1\rightarrow R_1</m>
+            </p>
+            <p>
+                <m>\left[\begin{array}{cccc}  1\amp 0\amp 1/3\amp 0\\0\amp 1\amp 1/3\amp 0\\0\amp 0\amp 0\amp 1
+                \end{array} \right]</m>
+            </p>
+          </sidebyside>
+        </solution>
+      </example>
+      <p>
+        We were inspired by solving systems of linear equations to put matrices into reduced row echelon form, 
+        in order to make the solution easy to see.  Every time we've started with a linear system, there was exactly one solution, 
+        and the reduced row echelon form always had one particular form.  However, we've also practiced putting matrices 
+        in reduced row echelon form without referring back to their corresponding system of linear equations,
+        and we have seen various different ways that rref can look.  Connecting different reduced row echelon forms with
+        solutions to the corresponding linear system is the topic for next section.  
+    </p>
+      
+      <!-- <exercise label="">
+        <title>Row operations</title>
+        <introduction>
+          <p>
+            In the following tasks, perform the row operations described on the given matrix.  
+          </p>
+        </introduction>
+        <task label="row-ops-practice-a">
+        <statement>
+          <p>
+            Consider the matrix 
+            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
+            Which matrix is the result of multiplying Row 1 by <m>-2</m> and adding to Row 3?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This multiplied Row 1 by <m>-2</m> and replaced Row 1.  It didn't do anything to Row 3.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ -2\amp -7\amp -1\amp \frac{-7}{2}\\ \end{array} \right]</m> 
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct! 
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ -2\amp -7\amp -1\amp \frac{-7}{2}\\ \end{array} \right]</m> 
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                In the <q>multiply and add</q> row operation, you don't change the row you multiplied by a number; you only change the row you added to.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ -2\amp -5\amp -3 \amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                We have to do the operation to the entire row, not just the first entry.  
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="row-ops-practice-b">
+        <statement>
+          <p>
+            Consider the matrix 
+            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
+            Which matrix is the result of multiplying Row 1 by <m>-2</m>?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp 10\amp 6\amp -1\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This multiplied both Row 1 and Row 3 by <m>-2</m>.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ -2\amp -1\amp -5\amp -7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This multiplied Row 2 by <m>-1</m>.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="row-ops-practice-c">
+        <statement>
+          <p>
+            Consider the matrix 
+            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
+            Which matrix is the result of interchanging Row 2 and Row 3?
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="yes">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ 2\amp 1\amp 5\amp 7\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                Correct!
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 2\amp 1\amp 5\amp 7\\ 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This interchanged Row 1 and Row 2.
+              </p>
+            </feedback>
+          </choice>
+          <choice correct="no">
+            <statement>
+              <p>
+                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
+              </p>
+            </statement>
+            <feedback>
+              <p>
+                This replaced Row 2 with a copy of Row 3, but didn't replace Row 3 with a copy of Row 2.
+              </p>
+            </feedback>
+          </choice>
+        </choices>
+      </task>
+      </exercise> -->
+      
+<reading-questions xml:id="rqs-rref">
+
+    <exercise label="rq-rref-questions"><title>Metacognition</title>
+      <statement>
+        <p>
+          Enter a response to both of the following tasks:
+          <ol>
+            <li>
+              <p>
+                Ask a question about the material, either about something you're not sure you fully understand, 
+          or a <q>what if</q> question.
+              </p>
+            </li>
+            <li>
+              <p>
+                Give a percentage from 0 to 100 that reflects how confident you are with the material you 
+                just read about, and give one sentence as to why you feel that way.  0 means you didn't 
+                actually do the reading and 100 means that everything makes sense so far and you think you are 
+                completely ready to engage with the material more deeply.  
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+      <response/>
+    </exercise>
+  </reading-questions>
+
+  </subsection>
+
+<!-- <xi:include href="participate-worksheets/dc-rref.xml" /> -->
+  
+
+    <conclusion xml:id="sec-rref-summary">
+      <title>Summary</title>
+      <p>
+        <ul>
+          <li>
+            <p>
+                A matrix could either be in <em>reduced row echelon form</em> or not.  There are four conditions, concerning the locations of zero and nonzero entries, that
+                must all be true for a matrix to be in reduced row echelon form.  
+            </p>
+          </li>
+          <li>
+            <p>
+              <em>Gauss-Jordan elimination</em> is an algorithm that uses elementary row operations to efficiently transform a matrix into reduced
+              row echelon form.
+            </p>
+          </li>
+          <li>
+            <p>
+              Matrices in reduced row echelon form are useful for finding the solution to a system of linear equations.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </conclusion>
+  
+
+
+    <!-- <xi:include href="interactive-exercises/ww-rref.xml" /> -->
+
+    <!-- <xi:include href="noninteractive-exercises/exer-rref.xml" /> -->
+
+</section>

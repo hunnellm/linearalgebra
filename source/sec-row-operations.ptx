@@ -845,6 +845,68 @@
       </choices>
     </exercise>
 
+    <exercise label="parsons-row-ops-sequence" adaptive="yes">
+      <title>Parsons Problem, Sequence of Row Operations</title>
+      <statement>
+        <p>
+          Start with matrix <m>A</m> and perform these row operations one after another. 
+          Give the matrix that results from doing each operation in order.
+          <me>
+            A=\begin{bmatrix} 0 \amp 1 \amp 2\amp 3 \\ 1 \amp 2\amp 3\amp 4 \\ -1 \amp -1 \amp -1 \amp -1 \end{bmatrix} 
+          </me>
+          <md>
+            <mrow> R_1  \amp \leftrightarrow R_2 </mrow>
+            <mrow> R_1+R_3 \amp \rightarrow R_3 </mrow>
+            <mrow> -R_2+R_3 \amp \rightarrow R_3 </mrow>
+          </md>
+        </p>
+      </statement>
+      <blocks>
+      <block order="2">
+      <p>
+        <me>
+          \begin{bmatrix} 1 \amp 2\amp 3\amp 4 \\ 0 \amp 1 \amp 2\amp 3 \\  -1 \amp -1 \amp -1 \amp -1 \end{bmatrix} 
+        </me>
+      </p>
+      </block>
+      <block order="5" correct="no">
+        <p>
+          <me>
+            \begin{bmatrix} 0 \amp 1 \amp 2\amp 3 \\ 1 \amp 2\amp 3\amp 4 \\ -1 \amp -1 \amp -1 \amp -1 \end{bmatrix} 
+          </me>
+        </p>
+      </block>
+      <block order="4">
+        <p>
+          <me>
+            \begin{bmatrix} 1 \amp 2\amp 3\amp 4 \\ 0 \amp 1 \amp 2\amp 3 \\  0 \amp 1 \amp 2 \amp 3 \end{bmatrix} 
+          </me>
+        </p>
+      </block>
+      <block order="1">
+        <p>
+          <me>
+            \begin{bmatrix} 1 \amp 2\amp 3\amp 4 \\ 0 \amp 1 \amp 2\amp 3 \\  0 \amp 0 \amp 0 \amp 0 \end{bmatrix} 
+          </me>
+        </p>
+      </block>
+      <block order="3" correct="no">
+        <p>
+          <me>
+            \begin{bmatrix} 1 \amp 2\amp 3\amp 4 \\ 0 \amp 1 \amp 2\amp 3 \\  -1 \amp -2 \amp -3 \amp -4 \end{bmatrix} 
+          </me>
+        </p>
+      </block>
+      <block order="6" correct="no">
+        <p>
+          <me>
+            \begin{bmatrix} 0 \amp 1 \amp 2\amp 3 \\ 1 \amp 2\amp 3\amp 4 \\ 0 \amp 0 \amp 0 \amp 0 \end{bmatrix} 
+          </me>
+        </p>
+      </block>
+      </blocks>
+    </exercise>
+
     <exercise label="rq-row-ops-questions"><title>Metacognition</title>
       <statement>
         <p>
@@ -880,7 +942,7 @@
    <xi:include href="participate-worksheets/dc-row-ops.xml" />
   
 
-    <conclusion xml:id="subsec-row-ops-summary">
+    <conclusion xml:id="sec-row-ops-summary">
       <title>Summary</title>
       <p>
         <ul>

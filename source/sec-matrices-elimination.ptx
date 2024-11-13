@@ -592,7 +592,7 @@
 
    <xi:include href="participate-worksheets/dc-matrices-elim.xml" />
 
-    <conclusion xml:id="subsec-matrices-summary">
+    <conclusion xml:id="sec-matrices-summary">
       <title>Summary</title>
       <p>
         <ul>
