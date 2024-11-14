@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<section xml:id="sec-" xmlns:xi="http://www.w3.org/2001/XInclude">
+<section xml:id="sec-rref" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Reduced Row Echelon Form</title>
   <introduction>
     <p>
-      The Prepare material, and also the Additional Practice, in this section comes heavily from Greg Hartman's <pubtitle>Fundamentals of Matrix Algebra.</pubtitle>
+      The Prepare material, and also the Additional Practice, in this section comes heavily from Gregory Hartman's <pubtitle>Fundamentals of Matrix Algebra.</pubtitle>
     </p>
     <p>
       We have learned about the method of elimination of variables and about row operations on matrices; in this section, we learn
@@ -1259,7 +1259,7 @@
 
   </subsection>
 
-<!-- <xi:include href="participate-worksheets/dc-rref.xml" /> -->
+<xi:include href="participate-worksheets/dc-rref.xml" />
   
 
     <conclusion xml:id="sec-rref-summary">

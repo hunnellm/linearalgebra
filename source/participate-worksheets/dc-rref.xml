@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-rref-dc"> 
+    <title>Participate</title>
+    
+    <worksheet xml:id="ws-rref"><title></title>
+      <objectives>
+        <ul>
+          <li>
+            <p>
+              Identify matrices in reduced row echelon form and row echelon form
+            </p>
+          </li>
+          <li>
+            <p>
+              Use Gauss-Jordan elimination to put matrices into reduced row echelon form
+            </p>
+          </li>
+        </ul>
+</objectives>
+      <!-- <introduction>
+        <p>
+          something else to say?
+        </p>
+      </introduction> -->
+      <page>
+        <exercise workspace="1.2in"><title>Why rref?</title>
+            <statement>
+                <p>
+                    Write the associated system of linear equations for each of the matrices below.
+                </p>
+                <sidebyside widths="30% 30%">
+                    <p>
+                        <m>\begin{bmatrix} 1 \amp 2 \amp 3 \amp 4 \\ 2 \amp -1 \amp 3 \amp 0 \\ 3 \amp 1 \amp 5 \amp 3 \end{bmatrix}</m>
+                    </p>
+                    <p>
+                        <m>\begin{bmatrix} 1 \amp 0 \amp 0 \amp 4 \\ 0 \amp 1 \amp 0 \amp 0 \\ 0 \amp 0 \amp 1 \amp 3 \end{bmatrix}</m>
+                    </p>
+                </sidebyside>
+                <p>
+                    Which system of equations would you prefer to be asked to solve on an exam?
+                </p>
+            </statement>
+            </exercise>
+
+        <exercisegroup cols="3" workspace="4in"><title>Gauss-Jordan algorithm</title>
+        
+            <introduction>
+                <p>
+                    Use Gauss-Jordan elimination to put each of the matrices below into reduced row echelon form.
+                </p>
+            </introduction>
+        
+            <exercise>
+                <statement>
+                    <p>
+                        <me>\begin{bmatrix} 2 \amp 5 \amp -3 \\ 5 \amp -5 \amp -25 \end{bmatrix} </me>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <me>\begin{bmatrix} 1 \amp 0 \amp -4 \\ 0 \amp 1 \amp 1 \end{bmatrix} </me>
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <me>\begin{bmatrix} 2 \amp 5 \amp -3 \\ 2 \amp 5 \amp 1 \end{bmatrix} </me>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <m>\begin{bmatrix} 1 \amp \frac{5}{2} \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix} </m>
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <me>\begin{bmatrix} 1\amp 2 \amp 3 \amp 5 \\ 0 \amp 4 \amp 5 \amp 7 \\ 1 \amp 6 \amp 9 \amp 11 \end{bmatrix} </me>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <m>\begin{bmatrix} 1 \amp 0 \amp 0 \amp 2\\ 0 \amp 1 \amp 0 \amp 3\\ 0 \amp 0 \amp 1 \amp -1 \end{bmatrix} </m>
+                    </p>
+                </answer>
+            </exercise>
+        
+        </exercisegroup>
+    </page>
+    <page>
+        
+        <exercisegroup cols="2" workspace=".5in"><title> 5. Form of matrices</title>
+            <introduction>
+                <p>
+                    For each of the following matrices, say if it is in reduced row echelon form.  If it isn't, say
+                    whether it is in row echelon form or if it's in neither form.
+                </p>
+            </introduction>
+            <exercise number="a">
+                <statement>
+                      <p>
+                        <m>\left[\begin{array}{ccc} 1\amp 0 \amp -3\\0\amp 1 \amp 1\\ \end{array} \right]</m>
+                      </p>
+                </statement>
+                <answer>
+                  <p>
+                    rref
+                  </p>
+                </answer>
+            </exercise>
+
+            <exercise number="b">
+                <statement>
+                      <p>
+                        <m>\left[\begin{array}{cc} 1\amp 2\\0\amp 0\\ \end{array} \right]</m>
+                      </p>
+                </statement>
+                <answer>
+                  <p>
+                    rref
+                  </p>
+                </answer>
+            </exercise>
+            
+            <exercise number="c" xml:id="rrefsys1">
+                <statement>
+                      <p>
+                        <m>\left[\begin{array}{ccc} 1\amp 1 \amp -3\\0\amp 0 \amp 1\\ \end{array} \right]</m>
+                      </p>
+                </statement>
+                <answer>
+                  <p>
+                    ref
+                  </p>
+                </answer>
+            </exercise>
+            <exercise number="d">
+                <statement>
+                      <p>
+                        <m>\begin{bmatrix} 1\amp 0 \amp -3\\0\amp 0 \amp 0\\ 0 \amp 1 \amp 3 \end{bmatrix}</m>
+                      </p>
+                </statement>
+                <answer>
+                  <p>
+                    neither
+                  </p>
+                </answer>
+            </exercise>
+            <exercise number="e">
+                <statement>
+                      <p>
+                        <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 4 \amp 5 \\0\amp 0 \amp 1 \amp 2 \amp 7 \\ 0 \amp 1 \amp 0 \amp 3 \amp 11 \end{bmatrix}</m>
+                      </p>
+                </statement>
+                <answer>
+                  <p>
+                    neither
+                  </p>
+                </answer>
+            </exercise>
+            <exercise number="f">
+                <statement>
+                      <p>
+                        <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 5 \\0\amp 4 \amp 0 \amp 7 \\ 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
+                      </p>
+                </statement>
+                <answer>
+                  <p>
+                    neither
+                  </p>
+                </answer>
+            </exercise>
+            <exercise number="g" xml:id="rrefsys2">
+                <statement>
+                      <p>
+                        <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 5 \\0\amp 1 \amp 0 \amp 7 \\ 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
+                      </p>
+                </statement>
+                <answer>
+                  <p>
+                    rref
+                  </p>
+                </answer>
+            </exercise>
+            <exercise number="h" xml:id="rrefsys3">
+                <statement>
+                      <p>
+                        <m>\begin{bmatrix} 1\amp 0 \amp 3 \amp 0 \amp 6 \\0\amp 1 \amp -1 \amp 0 \amp -23 \\ 0 \amp 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
+                      </p>
+                </statement>
+                <answer>
+                  <p>
+                    rref
+                  </p>
+                </answer>
+            </exercise>
+        
+        </exercisegroup>
+
+        <exercise workspace="1.5in" number="6">
+            <statement>
+                <p>
+                    Write down the associated linear system of equations for <xref ref="rrefsys1">part</xref>, <xref ref="rrefsys2">part</xref> and <xref ref="rrefsys3">part</xref>. 
+                </p>
+            </statement>
+            <answer>
+                <sidebyside>
+                    
+                
+                <p>
+                    <md>
+                        <mrow>x+y \amp = -3 </mrow>
+                        <mrow>0x+0y \amp = 1 </mrow>
+                    </md>
+                </p>
+
+                <p>
+                    <md>
+                        <mrow>x \amp = 5 </mrow>
+                        <mrow>y \amp = 7</mrow>
+                        <mrow>z \amp = 11 </mrow>
+                    </md>
+                </p>
+
+                <p>
+                    <md>
+                        <mrow> x_1 + x_3 \amp = 6 </mrow>
+                        <mrow> x_2 -x_3 \amp = -23 </mrow>
+                        <mrow>x_4 \amp = 11 </mrow>
+                    </md>
+                </p>
+
+                </sidebyside>
+
+            </answer>
+            
+        </exercise>
+
+      
+      </page>
+    </worksheet>
+    </subsection>

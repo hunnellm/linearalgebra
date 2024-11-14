@@ -11,17 +11,17 @@
             </p>
         </introduction>
         <exercise>
-        <statement>
-              <p>
-                <m>\left[\begin{array}{cc} 1\amp 0\\0\amp 1\\ \end{array} \right]</m>
-              </p>
-        </statement>
-        <answer>
-          <p>
-            Yes
-          </p>
-        </answer>
-        </exercise>
+          <statement>
+                <p>
+                  <m>\left[\begin{array}{cc} 1\amp 0\\0\amp 1\\ \end{array} \right]</m>
+                </p>
+          </statement>
+          <answer>
+            <p>
+              rref
+            </p>
+          </answer>
+      </exercise>
         <exercise>
           <statement>
             <p>
@@ -206,7 +206,7 @@
           </answer>
         </exercise>
     </exercisegroup>
-    <exercisegroup cols="3"><title>Gauss-Jordan Elimination</title>
+    <exercisegroup cols="2"><title>Gauss-Jordan Elimination</title>
         <introduction>
             <p>
                 In the following exercises,
