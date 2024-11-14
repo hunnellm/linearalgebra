@@ -2,220 +2,215 @@
 
 <exercises xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="exer-rref" ><title>Additional Practice</title>
 
-    <exercisegroup><title>RREF: yes or no?</title>
+    <exercisegroup cols="2"><title>RREF: yes or no?</title>
         <introduction>
             <p>
                 In the following exercises,
-        state whether or not the given matrices are in reduced row echelon form.
+        state whether or not the given matrix is in reduced row echelon form.
         If it is not, state why.
             </p>
         </introduction>
         <exercise>
         <statement>
-          <ol>
-            <li>
               <p>
                 <m>\left[\begin{array}{cc} 1\amp 0\\0\amp 1\\ \end{array} \right]</m>
               </p>
-            </li>
-            <li>
+        </statement>
+        <answer>
+          <p>
+            Yes
+          </p>
+        </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
               <p>
                 <m>\left[\begin{array}{cc} 0\amp 1\\1\amp 0\\ \end{array} \right]</m>
               </p>
-            </li>
-            <li>
+            </p>
+          </statement>
+          <answer>
               <p>
-                <m>\left[\begin{array}{cc} 1\amp 1\\1\amp 1\\ \end{array} \right]</m>
+                No, the leading <m>1</m> in the second row doesn't appear to the right of the leading <m>1</m> in the row above.
               </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{ccc} 1\amp 0\amp 1\\0\amp 1\amp 2\\ \end{array} \right]</m>
-              </p>
-            </li>
-          </ol>
-        </statement>
-        <answer>
-          <ol>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-            <li>
-              <p>
-                no
-              </p>
-            </li>
-            <li>
-              <p>
-                no
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-          </ol>
-        </answer>
-      </exercise>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{cc} 1\amp 1\\1\amp 1\\ \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              No, the leading <m>1</m> in the second row doesn't appear to the right of the leading <m>1</m> in the row above, and 
+              not every entry in the same column as a leading <m>1</m> is <m>0</m>.
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{ccc} 1\amp 0\amp 1\\0\amp 1\amp 2\\ \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
       <exercise>
         <statement>
-          <ol>
-            <li>
-              <p>
-                <m>\left[\begin{array}{ccc} 1\amp 0\amp 0\\0\amp 0\amp 1\\ \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{ccc} 1\amp 0\amp 1\\0\amp 1\amp 1\\ \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{ccc} 0\amp 0\amp 0\\1\amp 0\amp 0\\ \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{ccc} 0\amp 0\amp 0\\0\amp 0\amp 0\\ \end{array} \right]</m>
-              </p>
-            </li>
-          </ol>
+          <p>
+            <m>\left[\begin{array}{ccc} 1\amp 0\amp 0\\0\amp 0\amp 1\\ \end{array} \right]</m>
+          </p>
         </statement>
         <answer>
-          <ol>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-            <li>
-              <p>
-                no
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-          </ol>
+          <p>
+            Yes
+          </p>
         </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <ol>
-            <li>
-              <p>
-                <m>\left[\begin{array}{ccc} 1\amp 1\amp 1\\0\amp 1\amp 1\\0\amp 0\amp 1\\ \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{ccc} 1\amp 0\amp 0\\0\amp 1\amp 0\\0\amp 0\amp 0 \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{ccc} 1\amp 0\amp 0\\0\amp 0\amp 1\\0\amp 0\amp 0 \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 0\amp 0\amp -5\\0\amp 1\amp 0\amp 7\\0\amp 0\amp 1\amp 3 \end{array} \right]</m>
-              </p>
-            </li>
-          </ol>
-        </statement>
-        <answer>
-          <ol>
-            <li>
-              <p>
-                no
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-          </ol>
-        </answer>
-      </exercise>
-      <exercise>
-        <statement>
-          <ol>
-            <li>
-              <p>
-                <m>\left[\begin{array}{cccc} 2\amp 0\amp 0\amp 2\\0\amp 2\amp 0\amp 2\\0\amp 0\amp 2\amp 2\\ \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{cccc} 0\amp 1\amp 0\amp 0\\0\amp 0\amp 1\amp 0\\0\amp 0\amp 0\amp 0 \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{cccc} 0\amp 0\amp 1\amp -5\\0\amp 0\amp 0\amp 0\\0\amp 0\amp 0\amp 0 \end{array} \right]</m>
-              </p>
-            </li>
-            <li>
-              <p>
-                <m>\left[\begin{array}{cccccc} 1\amp 1\amp 0\amp 0\amp 1\amp 1\\0\amp 0\amp 1\amp 0\amp 1\amp 1\\0\amp 0\amp 0\amp 1\amp 0\amp 0 \end{array} \right]</m>
-              </p>
-            </li>
-          </ol>
-        </statement>
-        <answer>
-          <ol>
-            <li>
-              <p>
-                no
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-            <li>
-              <p>
-                yes
-              </p>
-            </li>
-          </ol>
-        </answer>
-      </exercise>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{ccc} 1\amp 0\amp 1\\0\amp 1\amp 1\\ \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{ccc} 0\amp 0\amp 0\\1\amp 0\amp 0\\ \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              No, any rows of all zeros have to be at the bottom.
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{ccc} 0\amp 0\amp 0\\0\amp 0\amp 0\\ \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{ccc} 1\amp 1\amp 1\\0\amp 1\amp 1\\0\amp 0\amp 1\\ \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              No, there are nonzero entries in the same column as leading <m>1</m>'s.
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{ccc} 1\amp 0\amp 0\\0\amp 1\amp 0\\0\amp 0\amp 0 \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{ccc} 1\amp 0\amp 0\\0\amp 0\amp 1\\0\amp 0\amp 0 \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{cccc} 1\amp 0\amp 0\amp -5\\0\amp 1\amp 0\amp 7\\0\amp 0\amp 1\amp 3 \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{cccc} 2\amp 0\amp 0\amp 2\\0\amp 2\amp 0\amp 2\\0\amp 0\amp 2\amp 2\\ \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              No, the first nonzero entry in each row must be a <m>1</m>.
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{cccc} 0\amp 1\amp 0\amp 0\\0\amp 0\amp 1\amp 0\\0\amp 0\amp 0\amp 0 \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{cccc} 0\amp 0\amp 1\amp -5\\0\amp 0\amp 0\amp 0\\0\amp 0\amp 0\amp 0 \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
+        <exercise>
+          <statement>
+            <p>
+              <m>\left[\begin{array}{cccccc} 1\amp 1\amp 0\amp 0\amp 1\amp 1\\0\amp 0\amp 1\amp 0\amp 1\amp 1\\0\amp 0\amp 0\amp 1\amp 0\amp 0 \end{array} \right]</m>
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Yes
+            </p>
+          </answer>
+        </exercise>
     </exercisegroup>
-    <exercisegroup>
+    <exercisegroup cols="3"><title>Gauss-Jordan Elimination</title>
         <introduction>
             <p>
                 In the following exercises,
-                use Gaussian Elimination to put the given matrix into reduced row echelon form.
+                use Gauss-Jordan Elimination to put the given matrix into reduced row echelon form.
               </p>
         </introduction>
       <exercise>

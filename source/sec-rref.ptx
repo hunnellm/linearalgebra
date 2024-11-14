@@ -4,7 +4,7 @@
   <title>Reduced Row Echelon Form</title>
   <introduction>
     <p>
-      The Prepare material, and also the Additional Practice, in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
+      The Prepare material, and also the Additional Practice, in this section comes heavily from Greg Hartman's <pubtitle>Fundamentals of Matrix Algebra.</pubtitle>
     </p>
     <p>
       We have learned about the method of elimination of variables and about row operations on matrices; in this section, we learn
@@ -1291,6 +1291,6 @@
 
     <!-- <xi:include href="interactive-exercises/ww-rref.xml" /> -->
 
-    <!-- <xi:include href="noninteractive-exercises/exer-rref.xml" /> -->
+    <xi:include href="noninteractive-exercises/exer-rref.xml" />
 
 </section>
