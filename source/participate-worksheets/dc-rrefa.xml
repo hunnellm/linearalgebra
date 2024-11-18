@@ -64,55 +64,54 @@
             </answer>
             </exercise>
 
-        <exercise workspace="4in"><title>Gauss-Jordan algorithm</title>
+        <exercisegroup cols="3" workspace="4in"><title>2. Gauss-Jordan algorithm</title>
         
-            <statement>
+            <introduction>
                 <p>
                     Use Gauss-Jordan elimination to put each of the matrices below into reduced row echelon form.
                 </p>
-        <p>
-            <ol cols="3">
-                <li>
+            </introduction>
+        
+            <exercise number="a">
+                <statement>
                     <p>
                         <me>\begin{bmatrix} 2 \amp 5 \amp -3 \\ 5 \amp -5 \amp -25 \end{bmatrix} </me>
                     </p>
-                </li>
-                <li>
+                </statement>
+                <answer>
+                    <p>
+                        <me>\begin{bmatrix} 1 \amp 0 \amp -4 \\ 0 \amp 1 \amp 1 \end{bmatrix} </me>
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise number="b">
+                <statement>
                     <p>
                         <me>\begin{bmatrix} 2 \amp 5 \amp -3 \\ 2 \amp 5 \amp 1 \end{bmatrix} </me>
                     </p>
-                </li>
-                <li>
+                </statement>
+                <answer>
+                    <p>
+                        <m>\begin{bmatrix} 1 \amp \frac{5}{2} \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix} </m>
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise number="c">
+                <statement>
                     <p>
                         <me>\begin{bmatrix} 1\amp 2 \amp 3 \amp 5 \\ 0 \amp 4 \amp 5 \amp 7 \\ 1 \amp 6 \amp 9 \amp 11 \end{bmatrix} </me>
                     </p>
-                </li>
-            </ol>
-        </p>
-        </statement>
-        <answer>
-            <p>
-                <ol cols="3">
-                    <li>
-                        <p>
-                            <me>\begin{bmatrix} 1 \amp 0 \amp -4 \\ 0 \amp 1 \amp 1 \end{bmatrix} </me>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <m>\begin{bmatrix} 1 \amp \frac{5}{2} \amp 0 \\ 0 \amp 0 \amp 1 \end{bmatrix} </m>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <m>\begin{bmatrix} 1 \amp 0 \amp 0 \amp 2\\ 0 \amp 1 \amp 0 \amp 3\\ 0 \amp 0 \amp 1 \amp -1 \end{bmatrix} </m>
-                        </p>
-                    </li>
-                </ol>
-            </p>
-        </answer>
-              
-        </exercise>
+                </statement>
+                <answer>
+                    <p>
+                        <m>\begin{bmatrix} 1 \amp 0 \amp 0 \amp 2\\ 0 \amp 1 \amp 0 \amp 3\\ 0 \amp 0 \amp 1 \amp -1 \end{bmatrix} </m>
+                    </p>
+                </answer>
+            </exercise>
+        
+        </exercisegroup>
     </page>
     <page>
         
