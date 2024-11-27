@@ -388,7 +388,26 @@
             $rd2 = "R".$row2;
             $rstrlhs = nicestring([$c],[$rd1]);
             $lhs = Formula("$rd1");
-            $rhs = Formula($rd2);
+            $rhs = Formula("$rd2");
+            <!-- $eitherorder = UNORDERED_ANS($lhs->cmp,$rhs->cmp); -->
+            <!-- above doesn't compile.  below does, but has weird green gox behavior.  might get better in 2.19 -->
+            <!-- $multians = MultiAnswer($lhs, $rhs)->with(
+        singleResult => 1,
+        checker => sub {
+          my ($correct, $student, $self) = @_;
+          my ($astu, $bstu) = @{$student};
+          my ($acor, $bcor) = @{$correct};
+          if ($astu == $lhs &amp;&amp; $bstu == $rhs) {
+            return 1;
+          }
+          elsif ($astu == $rhs &amp;&amp; $bstu == $lhs) {
+            return 1;
+          }
+          else {
+            return 0;
+          }
+        }
+      ); -->
             
             $pop = PopUp(["select", "-&gt;", "&lt;--&gt;"], "&lt;--&gt;");
           </pg-code>

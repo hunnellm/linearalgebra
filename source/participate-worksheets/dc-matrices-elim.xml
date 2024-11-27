@@ -2,7 +2,7 @@
 
 <subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-matrices-elim-dc"> 
     <title>Participate</title>
-    <worksheet xml:id="ws-matrices-elim"><title></title>
+    <worksheet xml:id="ws-matrices-elim" margin="1in" bottom="1.25cm"><title component="print-worksheets">Elimination and Matrices Participate</title><title></title>
       <objectives>
         <ul>
           <li>
