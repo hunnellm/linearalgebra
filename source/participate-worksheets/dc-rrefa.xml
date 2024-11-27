@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-rref-dc"> 
+<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-rref-dca"> 
     <title>Participate</title>
     
-    <worksheet xml:id="ws-rref"><title></title>
+    <worksheet xml:id="ws-rrefa"><title></title>
       <objectives>
         <ul>
           <li>
@@ -148,7 +148,7 @@
                 </answer>
             </exercise>
             
-            <exercise number="c" xml:id="rrefsys1">
+            <exercise number="c" xml:id="rrefsys1a">
                 <statement>
                       <p>
                         <m>\left[\begin{array}{ccc} 1\amp 1 \amp -3\\0\amp 0 \amp 1\\ \end{array} \right]</m>
@@ -196,7 +196,7 @@
                   </p>
                 </answer>
             </exercise>
-            <exercise number="g" xml:id="rrefsys2">
+            <exercise number="g" xml:id="rrefsys2a">
                 <statement>
                       <p>
                         <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 5 \\0\amp 1 \amp 0 \amp 7 \\ 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
@@ -208,7 +208,7 @@
                   </p>
                 </answer>
             </exercise>
-            <exercise number="h" xml:id="rrefsys3">
+            <exercise number="h" xml:id="rrefsys3a">
                 <statement>
                       <p>
                         <m>\begin{bmatrix} 1\amp 0 \amp 3 \amp 0 \amp 6 \\0\amp 1 \amp -1 \amp 0 \amp -23 \\ 0 \amp 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
@@ -226,7 +226,7 @@
         <exercise workspace="2in" number="4">
             <statement>
                 <p>
-                    Write down the associated linear system of equations for <xref ref="rrefsys1">part</xref>, <xref ref="rrefsys2">part</xref> and <xref ref="rrefsys3">part</xref>. 
+                    Write down the associated linear system of equations for <xref ref="rrefsys1a">part</xref>, <xref ref="rrefsys2a">part</xref> and <xref ref="rrefsys3a">part</xref>. 
                     What observations and questions do you have about these systems?
                 </p>
             </statement>

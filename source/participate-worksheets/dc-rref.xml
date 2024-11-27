@@ -3,7 +3,7 @@
 <subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-rref-dc"> 
     <title>Participate</title>
     
-    <worksheet xml:id="ws-rref"><title></title>
+    <worksheet xml:id="ws-rref" margin="1in" bottom="1.25cm"><title component="print-worksheets"><xref ref="sec-rref"/> Participate</title>
       <objectives>
         <ul>
           <li>
@@ -29,7 +29,7 @@
                 <p>
                     Write the associated system of linear equations for each of the matrices below.
                 </p>
-                <sidebyside widths="30% 30%">
+                <sidebyside widths="30% 30%" valign = "top">
                     <p>
                         <m>\begin{bmatrix} 1 \amp 2 \amp 3 \amp 4 \\ 2 \amp -1 \amp 3 \amp 0 \\ 3 \amp 1 \amp 5 \amp 3 \end{bmatrix}</m>
                     </p>
@@ -116,118 +116,120 @@
     </page>
     <page>
         
-        <exercisegroup cols="2" workspace=".5in"><title> 3. Form of matrices</title>
-            <introduction>
+        <exercise workspace=".5in"><title>Form of matrices</title>
+            <statement>
                 <p>
                     For each of the following matrices, say if it is in reduced row echelon form.  If it isn't, say
                     whether it is in row echelon form or if it's in neither form.
                 </p>
-            </introduction>
-            <exercise number="a">
-                <statement>
+            <p>
+            <ol cols="2">
+                <li>
                       <p>
                         <m>\left[\begin{array}{ccc} 1\amp 0 \amp -3\\0\amp 1 \amp 1\\ \end{array} \right]</m>
                       </p>
+                </li>
+                <li>
+                  <p>
+                    <m>\left[\begin{array}{cc} 1\amp 2\\0\amp 0\\ \end{array} \right]</m>
+                  </p>
+                  
+                </li>
+                <li xml:id="rrefsys1">
+                  <p>
+                    <m>\left[\begin{array}{ccc} 1\amp 1 \amp -3\\0\amp 0 \amp 1\\ \end{array} \right]</m>
+                  </p>
+                  
+                </li>
+                <li>
+                  <p>
+                    <m>\begin{bmatrix} 1\amp 0 \amp -3\\0\amp 0 \amp 0\\ 0 \amp 1 \amp 3 \end{bmatrix}</m>
+                  </p>
+                  
+                </li>
+                <li>
+                  <p>
+                    <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 4 \amp 5 \\0\amp 0 \amp 1 \amp 2 \amp 7 \\ 0 \amp 1 \amp 0 \amp 3 \amp 11 \end{bmatrix}</m>
+                  </p>
+                  
+                </li>
+                <li>
+                  <p>
+                    <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 5 \\0\amp 4 \amp 0 \amp 7 \\ 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
+                  </p>
+                  
+                </li>
+                <li xml:id="rrefsys2">
+                  <p>
+                    <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 5 \\0\amp 1 \amp 0 \amp 7 \\ 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
+                  </p>
+                  
+                </li>
+                <li xml:id="rrefsys3">
+                  <p>
+                    <m>\begin{bmatrix} 1\amp 0 \amp 3 \amp 0 \amp 6 \\0\amp 1 \amp -1 \amp 0 \amp -23 \\ 0 \amp 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
+                  </p>
+                  
+                </li>
+
+              </ol>
+              </p>
                 </statement>
                 <answer>
                   <p>
-                    rref
+                    <ol cols="2">
+                      <li>
+                        <p>
+                          rref
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          rref
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          ref
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          neither
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          neither
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          neither
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          rref
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          rref
+                        </p>
+                      </li>
+                    </ol>
                   </p>
+                    
                 </answer>
+                
             </exercise>
 
-            <exercise number="b">
-                <statement>
-                      <p>
-                        <m>\left[\begin{array}{cc} 1\amp 2\\0\amp 0\\ \end{array} \right]</m>
-                      </p>
-                </statement>
-                <answer>
-                  <p>
-                    rref
-                  </p>
-                </answer>
-            </exercise>
-            
-            <exercise number="c" xml:id="rrefsys1">
-                <statement>
-                      <p>
-                        <m>\left[\begin{array}{ccc} 1\amp 1 \amp -3\\0\amp 0 \amp 1\\ \end{array} \right]</m>
-                      </p>
-                </statement>
-                <answer>
-                  <p>
-                    ref
-                  </p>
-                </answer>
-            </exercise>
-            <exercise number="d">
-                <statement>
-                      <p>
-                        <m>\begin{bmatrix} 1\amp 0 \amp -3\\0\amp 0 \amp 0\\ 0 \amp 1 \amp 3 \end{bmatrix}</m>
-                      </p>
-                </statement>
-                <answer>
-                  <p>
-                    neither
-                  </p>
-                </answer>
-            </exercise>
-            <exercise number="e">
-                <statement>
-                      <p>
-                        <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 4 \amp 5 \\0\amp 0 \amp 1 \amp 2 \amp 7 \\ 0 \amp 1 \amp 0 \amp 3 \amp 11 \end{bmatrix}</m>
-                      </p>
-                </statement>
-                <answer>
-                  <p>
-                    neither
-                  </p>
-                </answer>
-            </exercise>
-            <exercise number="f">
-                <statement>
-                      <p>
-                        <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 5 \\0\amp 4 \amp 0 \amp 7 \\ 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
-                      </p>
-                </statement>
-                <answer>
-                  <p>
-                    neither
-                  </p>
-                </answer>
-            </exercise>
-            <exercise number="g" xml:id="rrefsys2">
-                <statement>
-                      <p>
-                        <m>\begin{bmatrix} 1\amp 0 \amp 0 \amp 5 \\0\amp 1 \amp 0 \amp 7 \\ 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
-                      </p>
-                </statement>
-                <answer>
-                  <p>
-                    rref
-                  </p>
-                </answer>
-            </exercise>
-            <exercise number="h" xml:id="rrefsys3">
-                <statement>
-                      <p>
-                        <m>\begin{bmatrix} 1\amp 0 \amp 3 \amp 0 \amp 6 \\0\amp 1 \amp -1 \amp 0 \amp -23 \\ 0 \amp 0 \amp 0 \amp 1 \amp 11 \end{bmatrix}</m>
-                      </p>
-                </statement>
-                <answer>
-                  <p>
-                    rref
-                  </p>
-                </answer>
-            </exercise>
-        
-        </exercisegroup>
 
-        <exercise workspace="2in" number="4">
+        <exercise workspace="3in">
             <statement>
                 <p>
-                    Write down the associated linear system of equations for <xref ref="rrefsys1">part</xref>, <xref ref="rrefsys2">part</xref> and <xref ref="rrefsys3">part</xref>. 
+                    Write down the associated linear system of equations for <xref ref="rrefsys1"/>, <xref ref="rrefsys2"/> and <xref ref="rrefsys3" />. 
                     What observations and questions do you have about these systems?
                 </p>
             </statement>

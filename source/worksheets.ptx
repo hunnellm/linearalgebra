@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <!-- we first include a file which contains the docinfo element: -->
+  <xi:include href="./docinfo.ptx" />
+
+  <book xml:id="my-great-book">
+    <title>My Great Book</title>
+    <subtitle>An example to get you started</subtitle>
+
+
+    
+    <chapter xml:id="ch-chapter-titlea" xmlns:xi="http://www.w3.org/2001/XInclude">
+      <title>Chapter Title</title>
+  
+    
+      <!-- include sections -->
+      <xi:include href="participate-worksheets/dc-matrices-elim.xml" />
+      <xi:include href="participate-worksheets/dc-row-ops.xml" />
+      <xi:include href="participate-worksheets/dc-rref.xml" />
+      <xi:include href="participate-worksheets/dc-rrefa.xml" />
+    </chapter>
+
+
+    <!-- Include backmatter -->
+    <xi:include href="./backmatter.ptx" />
+
+  </book>
+</pretext>
+
+

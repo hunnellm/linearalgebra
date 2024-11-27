@@ -1067,167 +1067,6 @@
         solutions to the corresponding linear system is the topic for next section.  
     </p>
       
-      <!-- <exercise label="">
-        <title>Row operations</title>
-        <introduction>
-          <p>
-            In the following tasks, perform the row operations described on the given matrix.  
-          </p>
-        </introduction>
-        <task label="row-ops-practice-a">
-        <statement>
-          <p>
-            Consider the matrix 
-            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
-            Which matrix is the result of multiplying Row 1 by <m>-2</m> and adding to Row 3?
-          </p>
-        </statement>
-        <choices randomize="yes">
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This multiplied Row 1 by <m>-2</m> and replaced Row 1.  It didn't do anything to Row 3.
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="yes">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ -2\amp -7\amp -1\amp \frac{-7}{2}\\ \end{array} \right]</m> 
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                Correct! 
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ -2\amp -7\amp -1\amp \frac{-7}{2}\\ \end{array} \right]</m> 
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                In the <q>multiply and add</q> row operation, you don't change the row you multiplied by a number; you only change the row you added to.
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ -2\amp -5\amp -3 \amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                We have to do the operation to the entire row, not just the first entry.  
-              </p>
-            </feedback>
-          </choice>
-        </choices>
-      </task>
-      <task label="row-ops-practice-b">
-        <statement>
-          <p>
-            Consider the matrix 
-            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
-            Which matrix is the result of multiplying Row 1 by <m>-2</m>?
-          </p>
-        </statement>
-        <choices randomize="yes">
-          <choice correct="yes">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                Correct!
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp 10\amp 6\amp -1\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This multiplied both Row 1 and Row 3 by <m>-2</m>.
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ -2\amp -1\amp -5\amp -7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This multiplied Row 2 by <m>-1</m>.
-              </p>
-            </feedback>
-          </choice>
-        </choices>
-      </task>
-      <task label="row-ops-practice-c">
-        <statement>
-          <p>
-            Consider the matrix 
-            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
-            Which matrix is the result of interchanging Row 2 and Row 3?
-          </p>
-        </statement>
-        <choices randomize="yes">
-          <choice correct="yes">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ 2\amp 1\amp 5\amp 7\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                Correct!
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 2\amp 1\amp 5\amp 7\\ 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This interchanged Row 1 and Row 2.
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This replaced Row 2 with a copy of Row 3, but didn't replace Row 3 with a copy of Row 2.
-              </p>
-            </feedback>
-          </choice>
-        </choices>
-      </task>
-      </exercise> -->
       
 <reading-questions xml:id="rqs-rref">
 
@@ -1260,6 +1099,8 @@
   </subsection>
 
 <xi:include href="participate-worksheets/dc-rref.xml" />
+
+<xi:include href="participate-worksheets/dc-rrefa.xml" />
   
 
     <conclusion xml:id="sec-rref-summary">
@@ -1289,7 +1130,7 @@
   
 
 
-    <!-- <xi:include href="interactive-exercises/ww-rref.xml" /> -->
+    <xi:include href="interactive-exercises/ww-rref.xml" />
 
     <xi:include href="noninteractive-exercises/exer-rref.xml" />
 
