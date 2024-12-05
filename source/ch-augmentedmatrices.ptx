@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-chapter-title" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Chapter Title</title>
+  <title>Linear Equations and Augmented Matrices</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> The first chapter introduces linear equations and methods for analyzing their solutions, including augmented matrices
+    and Gauss-Jorden elimination. </p>
   </introduction>
 
   <!-- include sections -->

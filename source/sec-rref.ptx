@@ -562,7 +562,7 @@
       </p>
       <p>
         The above steps accomplish the following things:
-        <ol>
+        <ul>
           <li>
             <p>
               The first nonzero entry in each row is a <m>1</m>.
@@ -578,7 +578,7 @@
               All rows of all <m>0</m>'s come at the bottom of the matrix.
             </p>
           </li>
-        </ol>
+        </ul>
       </p>
       <p>
         Note that this means we have just put a matrix into <em>row echelon form</em>.
@@ -590,8 +590,14 @@
         <ol>
           <li>
             <p>
-              Starting from the right and working left,
-              use the <q>multiply and add</q> row operation repeatedly to put zeros above each leading <m>1</m>.
+              Starting from the bottom rightmost leading <m>1</m>,
+              use the <q>multiply and add</q> row operation repeatedly to put zeros above the leading <m>1</m>.
+            </p>
+          </li>
+          <li>
+            <p>
+              Continue this process by moving up and to the left to the next leading <m>1</m>, repeatedly use <q>multiply and add</q>
+              to put zeros above the leading <m>1</m>.  Repeat this step until every leading <m>1</m> has zeros above in all the rows. 
             </p>
           </li>
         </ol>
@@ -1070,7 +1076,7 @@
       
 <reading-questions xml:id="rqs-rref">
 
-    <exercise label="rq-rref-questions"><title>Metacognition</title>
+    <exercise label="rq-rref-questions"><title>Reflection</title>
       <statement>
         <p>
           Enter a response to both of the following tasks:

@@ -179,7 +179,10 @@
   </exercise>
 
   <p>
-    The food puzzle above was really setting up a number of algebraic equations.   
+    The food puzzle above was really setting up a number of algebraic equations. Let's see how we can
+    translate the puzzle into mathematical equations, with letters standing in for the images or words. We could
+    choose any letters we like, but we'll use <m>A</m> to represent <q>apples</q>, <m>B</m> to mean <q>bunch of bananas</q>,
+    and <m>C</m> to stand for <q>cherries.</q>
   </p>
   <tabular>
     <row>
@@ -214,25 +217,30 @@
       <statement>
         <p>
           Consider the equation <m>x+y=2</m>.  When <m>x=0</m> and <m>y=2</m>, the equation is true, so I've plotted
-    the point <m>(0,2)</m>.  Think of some more values of <m>x</m> and <m>y</m> that satisfy the equation, and plot
-    them as points.  
+    the point <m>(0,2)</m>.  Think of at least <m>3</m> more values of <m>x</m> and <m>y</m> that satisfy the equation, and plot
+    them as points.  Typing the point in a row below in the format <m>(x,y)</m> will plot the point. 
       </p>
       <figure>
         <caption>Solutions to the equation <m>x+y=2</m></caption>
         <interactive xml:id="desmos-xplusyis2" desmos="aipnfasaht" width="85%" aspect="4:3" />
       </figure>
       <p>
-        What do you notice about all the <m>(x,y)</m> points that satisfy <m>x+y=2</m>?
+        What do you notice about the visual relationship between the points on the graph, that is, points that satisfy the equation <m>x+y=2</m>?
       </p>
       </statement>
+      <hint>
+        <p>
+          Scroll down to the lower rows of the graph interactive, activate and animate the point found there.
+        </p>
+      </hint>
       <response />
     </task>
     <task label="solnsto15xplus6yequals15">
       <statement>
         <p>
           Now consider the equation <m>15x+6y=15</m>.  When <m>x=1</m> and <m>y=0</m>, the equation is true, so I've plotted
-    the point <m>(1,0)</m>.  Think of some more values of <m>x</m> and <m>y</m> that satisfy the equation 
-    (your answers don't have to be whole numbers!), and plot them as points.  
+    the point <m>(1,0)</m>.  Think of at least <m>3</m> more values of <m>x</m> and <m>y</m> that satisfy the equation 
+    (your answers don't have to be whole numbers!), and plot them as points by typing each one in <m>(x,y)</m> format in a row below.
       </p>
       <figure>
         <caption>Solutions to the equation <m>15x+6y=15</m></caption>
@@ -252,6 +260,37 @@
         <image width="40%" source="graphsoftwolines.svg">
           <shortdescription>Graph of two lines and their point of intersection</shortdescription>
         </image>
+        <image width="40%">
+          <prefigure xmlns="https://prefigure.org"
+              label="prefigure-sonylines-a">
+      <diagram dimensions="(300,300)" margins="5">
+  <definition>a=1/3</definition>
+  <definition>f(x) = 2-x</definition>
+  <definition>g(x) = (15-15*x)/6</definition>
+  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
+    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fg" outline="tactile">
+      <graph at="graph-f" function='f' stroke="red"/>
+      <graph at="graph-g" function='g' stroke="blue" />
+      <point at="point" p="(a, f(a))" stroke="black" fill="black">
+      </point>
+    </group>
+  </coordinates>
+
+  <annotations>
+    <annotation ref="figure"
+                text="The graph of two lines and their point of intersection">
+        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
+        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
+        <annotation ref="point" text="The point of intersection"/>
+    </annotation>
+  </annotations>
+
+</diagram>
+    </prefigure>
+          
+        </image>
       <p>
         What does the point of intersection mean, and what are its coordinates?
       </p>
@@ -259,6 +298,42 @@
       <response />
     </task>
   </exercise>
+
+<sidebyside>
+  
+
+  <image width="40%">
+    <prefigure xmlns="https://prefigure.org"
+              label="prefigure-sonylines">
+      <diagram dimensions="(300,300)" margins="5">
+  <definition>a=1/3</definition>
+  <definition>f(x) = 2-x</definition>
+  <definition>g(x) = (15-15*x)/6</definition>
+  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
+    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fg" outline="tactile">
+      <graph at="graph-f" function='f' stroke="red"/>
+      <graph at="graph-g" function='g' stroke="blue" />
+      <point at="point" p="(a, f(a))" stroke="black" fill="black">
+      </point>
+    </group>
+  </coordinates>
+
+  <annotations>
+    <annotation ref="figure"
+                text="The graph of two lines and their point of intersection">
+        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
+        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
+        <annotation ref="point" text="The point of intersection"/>
+    </annotation>
+  </annotations>
+
+</diagram>
+    </prefigure>
+    
+  </image>
+</sidebyside>
 
   <example><title>Sony and The Interview</title>
     <statement>
@@ -394,7 +469,7 @@
       </p>
       <p>
         A <term>system of linear equations</term>
-        is a set of linear equations that involve the same variables.
+        is a set of linear equations that involves the same set of variables.
       </p>
       <p>
         A <term>solution</term> to a system of linear equations is a set of values for the variables <m>x_i</m> such that each equation in the system is satisfied.

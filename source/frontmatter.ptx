@@ -7,21 +7,21 @@
   <bibinfo>
   
     <author>
-      <personname>You</personname>
-      <department>Your department</department>
-      <institution>Your institution</institution>
+      <personname>Chrissy Safranski</personname>
+      <department>Mathematics and Physical Sciences</department>
+      <institution>Franciscan University of Steubenville</institution>
     </author>
     <date>
       <today />
     </date>
 
-    <website>
+    <!-- <website>
       <url href="https://pretextbook.org">My Website</url>
-    </website>
+    </website> -->
 
     <copyright>
-      <year>2020<ndash />2024</year>
-      <holder>You</holder>
+      <year>2024<ndash />2025</year>
+      <holder>Chrissy Safranski</holder>
       <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
       </shortlicense>
     </copyright>
@@ -35,6 +35,62 @@
   <colophon xml:id="front-colophon">
     <colophon-items/>
   </colophon>
+
+  <preface>
+    <p>
+      It seems everyone finds a way to cover linear algebra differently, and my institution is no exception.  We have two separate
+       semester-long 1-credit courses that students typically take in their first year 
+      alongside calculus I and II.  The courses are aimed at introducing the calculations of linear algebra without much theory or abstraction. 
+       As I understand the department historical lore, the reason for this is so that computer science and engineering students learn the topics
+      they need without having to get the more theoretical (and proof-heavy) treatment involving abstract vector spaces that math majors will encounter in a later course. 
+    </p>
+    <p>
+      Before this book, we were happily using a combination of existing resources.  The first among these is <pubtitle>Fundamentals of Matrix Algebra</pubtitle> by Gregory Hartman.  
+      His work is similarly light on theory and abstraction and covers topics in a similar order, but it does too much of some things and omits other things we want to include. Still, 
+      I have made use of his Creative Commons license and borrowed much of his work as the foundation for mine, some of it not changed much or at all.  The second is 
+      <pubtitle>Understanding Linear Algebra</pubtitle> by David Austin.  I have also borrowed heavily from his work, particularly the material on LU Decomposition and Markov Chains.
+      I am deeply indebted to both of them for writing and sharing their work so freely.  
+    </p>
+    <p>
+      This book is written so that each section corresponds to one day of class.  As an instructor, I have often thought of student 
+      learning taking place <q>before class</q>, <q>during class</q>, and <q>after class</q>, and so each section of this book (except the first) contains
+      <em>Prepare</em>, <em>Participate</em>, and <em>Practice</em> material.  The <em>Prepare</em> material
+      is meant to be accessible for students to read and complete on their own without an instructor.  I have written and included at least 2
+      interactive questions plus a set of reading questions to be completed so that students can assess their understanding and identify any gaps.
+      I had the principle in mind that every student should be able to get or be shown the right answer eventually, with explanations provided for common mistakes.
+      The <em>Participate</em> material is structured much differently, with answers and feedback not as readily visible, and it's intended to be suitable 
+      for students to work on during class in groups under the supervision of an instructor.  
+    </p>
+    <p>
+      The <em>Practice</em> exercises are interactive and autograded so that students do have feedback as to correctness, but they most
+      often do not include explanations.  The <em>Additional Practice</em> exercises are what you might find in a typical paper textbook, with answers provided but not solutions.  Most of these
+      came directly from the books of Hartman or Austin.  Exercises from either set should be suitable to assign for after class or review before an exam.
+    </p>
+    <p>
+      If the html version of this book is hosted on Runestone, then student work on the interactive elements can be saved and grades assigned.
+    </p>
+    <p>
+      I welcome feedback and corrections.  As I tried to make clear above, many of the good ideas contained herein are not mine and credit is due to 
+      Gregory Hartman and David Austin.  I have rearranged the structure, added interactive elements, and done some amount of editing and revising.  
+      The blame for any errors belongs entirely to me.  
+    </p>
+  </preface>
+  <acknowledgement>
+    <p>
+      This book wouldn't exist without the open source and Creative Commons licensed work of Gregory Hartman and David Austin.  
+    </p>
+    <p>
+      I have learned much about what to include and how to teach the material for our audience from my colleagues David Burton, John Coleman, Justin Greenly, and Rachel Perrier.
+    </p>
+    <p>
+      I am indebted to Rob Beezer and David Farmer for PreTeXt, Alex Jordan for WeBWorK integration and help, and Brad Miller for Runestone.  
+      The platform affects what you write, and while I was writing I had in my mind the student and instructor experience of the 
+      html book being hosted on Runestone.  
+    </p>
+    <p>
+      Finally, I am grateful for the encouragement, ideas, and technical help provided by David Austin, Matt Boelkins, Steven Clontz, and Oscar Levin, and for Franciscan University of Steubenville granting me a sabbatical.   
+    </p>
+  </acknowledgement>
 
 </frontmatter>
 

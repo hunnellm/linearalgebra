@@ -5,14 +5,14 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>Matrix Calculations</title>
+    <subtitle>A low-theory introduction to parts of linear algebra</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+    <xi:include href="./ch-augmentedmatrices.ptx" />
 
 
     <!-- Include backmatter -->
