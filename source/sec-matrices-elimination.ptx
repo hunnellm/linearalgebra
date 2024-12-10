@@ -4,7 +4,9 @@
   <title>Matrices and Elimination</title>
   <introduction>
     <p>
-      The non-interactive Prepare material, and also the Additional Practice, in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
+      We saw that substitution is one way of solving systems of linear equations, but the method of 
+      substituion is not very practical when there are more than 2 or 3 varibables. In this section, we start
+      learning a more generalizable and easy to automate way of solving systems of linear equations.  
     </p>
   </introduction>
 
@@ -14,16 +16,17 @@
       <p>
         Mathematicians often see solutions to given problems and ask <q>What if <m>\ldots</m>?</q> 
         What are the right kinds of <q>what if</q> questions to ask?
-        It's impossible to know at first <mdash/> mathematicians often ask <q>wrong</q> questions.
+        It's impossible to know at first, and so mathematicians very often ask <em>wrong</em> questions.
         That is, they often ask questions and find that the answer isn't particularly interesting.
-        But asking enough questions often leads to some good <q>right</q> questions.
-        Don't be afraid of doing something wrong; mathematicians do it all the time!
+        However, asking enough questions often will result in some good <em>right</em> questions.  The answers to 
+        <q>right</q> questions help us see a bigger picture more clearly and usually lead to something applicable beyond
+         the initial problem. The moral of the story is: don't be afraid of doing something wrong because mathematicians do it all the time!
       </p>
     </remark>
     
     <p>
       Recall that in the previous section, we worked through a few examples of solving linear equations
-      using substitution <mdash/> that is, we solved for one variable in one equation and substituted the resulting 
+      using substitution; that is, we solved for one variable in one equation and substituted the resulting 
       expression into another equation.  What is a good question to ask after seeing <xref ref="ex_by_hand">Example</xref>?
       Here are two possibilities (though not the only two):
       <ol>

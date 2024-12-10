@@ -4,9 +4,6 @@
   <title>Row Operations</title>
   <introduction>
     <p>
-      The non-interactive Prepare material, and also the Additional Practice, in this section comes heavily from Greg Hartman's Fundamentals of Matrix Algebra.
-    </p>
-    <p>
       We've now seen how to solve linear systems using substitution and elimination, and how to create an augmented
         matrix representing a linear system. In this section, we see how to perform the variable elimination steps directly
         on the matrix and interpret the results to give the solution to the corresponding linear system. 

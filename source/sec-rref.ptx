@@ -4,9 +4,6 @@
   <title>Reduced Row Echelon Form</title>
   <introduction>
     <p>
-      The Prepare material, and also the Additional Practice, in this section comes heavily from Gregory Hartman's <pubtitle>Fundamentals of Matrix Algebra.</pubtitle>
-    </p>
-    <p>
       We have learned about the method of elimination of variables and about row operations on matrices; in this section, we learn
       <em>Gauss-Jordan elimination</em> to put matrices into <em>reduced row echelon form</em>.
     </p>

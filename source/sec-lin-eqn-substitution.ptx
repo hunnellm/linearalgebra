@@ -4,12 +4,13 @@
   <title>Linear Equations and Substitution</title>
 <introduction>
   <p>
-    Some of the material in this section comes from Greg Hartman's Fundamentals of Matrix Algebra.
-  </p>
-  <p>
     Normally, there will be some Prepare material before you are asked to Participate, but this is the first section.
     Let's begin, not prepare to begin.
   </p>
+  <p>
+    We start by examining a very common and useful type of equation and see one way of solving a collection of such equations.
+  </p>
+    
 </introduction>
 
 <subsection xml:id="subsec-lin-eqn-dc">
@@ -257,10 +258,11 @@
         <p>
           The graphs of <m>x+y=2</m> and <m>15x+6y=15</m> are shown in the image below.
       </p>
-        <image width="40%" source="graphsoftwolines.svg">
+        <!-- <image width="40%" source="graphsoftwolines">
           <shortdescription>Graph of two lines and their point of intersection</shortdescription>
-        </image>
+        </image> -->
         <image width="40%">
+          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
           <prefigure xmlns="https://prefigure.org"
               label="prefigure-sonylines-a">
       <diagram dimensions="(300,300)" margins="5">
@@ -278,14 +280,14 @@
     </group>
   </coordinates>
 
-  <annotations>
+  <!-- <annotations>
     <annotation ref="figure"
                 text="The graph of two lines and their point of intersection">
         <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
         <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
         <annotation ref="point" text="The point of intersection"/>
     </annotation>
-  </annotations>
+  </annotations> -->
 
 </diagram>
     </prefigure>
@@ -299,10 +301,11 @@
     </task>
   </exercise>
 
-<sidebyside>
+
   
 
   <image width="40%">
+  <shortdescription>Graph of two lines and their point of intersection</shortdescription>
     <prefigure xmlns="https://prefigure.org"
               label="prefigure-sonylines">
       <diagram dimensions="(300,300)" margins="5">
@@ -333,20 +336,154 @@
     </prefigure>
     
   </image>
-</sidebyside>
 
-  <example><title>Sony and The Interview</title>
+  <exercise><title>Testing tabs (and prefigure)</title>
+  <introduction>
+    <p>
+      testing the intro
+    </p>
+  </introduction>
+  <task>
     <statement>
       <p>
-        Below is an image from a New York Times article about a movie <em>The Interview</em>
+        With annotations
       </p>
-      <image width="90%" source="timestheinterview.svg">
+      <image width="40%">
+          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
+          <prefigure xmlns="https://prefigure.org"
+              label="prefigure-sonylines-d">
+      <diagram dimensions="(300,300)" margins="5">
+  <definition>a=1/3</definition>
+  <definition>f(x) = 2-x</definition>
+  <definition>g(x) = (15-15*x)/6</definition>
+  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
+    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fg" outline="tactile">
+      <graph at="graph-f" function='f' stroke="red"/>
+      <graph at="graph-g" function='g' stroke="blue" />
+      <point at="point" p="(a, f(a))" stroke="black" fill="black">
+      </point>
+    </group>
+  </coordinates>
+
+  <annotations>
+    <annotation ref="figure"
+                text="The graph of two lines and their point of intersection">
+        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
+        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
+        <annotation ref="point" text="The point of intersection"/>
+    </annotation>
+  </annotations>
+
+</diagram>
+    </prefigure>
+    </image>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        With annotations and dimensions changed to (200,200).
+      </p>
+      <image width="40%">
+          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
+          <prefigure xmlns="https://prefigure.org"
+              label="prefigure-sonylines-b">
+      <diagram dimensions="(200,200)" margins="5">
+  <definition>a=1/3</definition>
+  <definition>f(x) = 2-x</definition>
+  <definition>g(x) = (15-15*x)/6</definition>
+  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
+    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fg" outline="tactile">
+      <graph at="graph-f" function='f' stroke="red"/>
+      <graph at="graph-g" function='g' stroke="blue" />
+      <point at="point" p="(a, f(a))" stroke="black" fill="black">
+      </point>
+    </group>
+  </coordinates>
+
+  <annotations>
+    <annotation ref="figure"
+                text="The graph of two lines and their point of intersection">
+        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
+        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
+        <annotation ref="point" text="The point of intersection"/>
+    </annotation>
+  </annotations>
+
+</diagram>
+    </prefigure>
+    </image>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Without annotations
+      </p>
+      <image width="40%">
+          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
+          <prefigure xmlns="https://prefigure.org"
+              label="prefigure-sonylines-c">
+      <diagram dimensions="(300,300)" margins="5">
+  <definition>a=1/3</definition>
+  <definition>f(x) = 2-x</definition>
+  <definition>g(x) = (15-15*x)/6</definition>
+  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
+    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fg" outline="tactile">
+      <graph at="graph-f" function='f' stroke="red"/>
+      <graph at="graph-g" function='g' stroke="blue" />
+      <point at="point" p="(a, f(a))" stroke="black" fill="black">
+      </point>
+    </group>
+  </coordinates>
+
+  <!-- <annotations>
+    <annotation ref="figure"
+                text="The graph of two lines and their point of intersection">
+        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
+        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
+        <annotation ref="point" text="The point of intersection"/>
+    </annotation>
+  </annotations> -->
+
+</diagram>
+    </prefigure>
+    </image>
+    </statement>
+  </task>
+</exercise>
+
+
+  <example xml:id="ex_sony_interview"><title>Sony and The Interview</title>
+    <statement>
+      <p>
+        Below is an image of part of a New York Times article about a movie <em>The Interview</em>
+      </p>
+      <image width="90%" source="timestheinterview">
         <shortdescription>Snapshot of part of an article from a major news source</shortdescription>
       </image>
       <p>
         The article is about the release of the movie, which generated controversy and so was released direct to streaming.
-        Sony reported that the movie made about 15 million dollars total, split between $15 sales and $6 rentals, and also that
-        there were about 2 million transactions in total
+        Sony reported that 
+        <ul>
+          <li>
+            <p>
+              the movie made about 15 million dollars total, split between sales 
+              which cost $15 and rentals which cost $6, and
+            </p>
+          </li>
+          <li>
+            <p>
+              there were about 2 million transactions in total.
+            </p>
+          </li>
+        </ul>
       </p>
       <p>
         Then the author of the article claimed that Sony did not release how many of the transactions were rentals and how many were sales.
@@ -362,12 +499,16 @@
     </hint>
     <solution>
       <p>
-        If <m>x</m> is the number of sales and <m>y</m> is the number of rentals, then <m>x+y=2</m> million transactions.
+        If <m>x</m> is the number of millions of sales and <m>y</m> is the number of millions of rentals, then <m>x+y=2</m> million transactions.
         Also, <m>15x+6y=15</m> million dollars of revenue, since each sale cost $15 and each rental cost $6.
       </p>
       <p>
-        We can solve this set of two linear equations by <em>substitution</em>: solving for one of the variables and substituting it into
-        the other equation.  Rearranging the first equation we get that <me>y=2-x</me>, and then plugging that in for <m>y</m>
+        We can solve this set of two equations by <em>substitution</em>: solving for one of the variables in one equation and substituting the resulting expression into
+        the other equation.  The strategy is to use one equation to reduce the number of variables in the second equation, so that we obtain
+        an equation with just one variable that we can solve in our usual ways.
+      </p>
+      <p>  
+        Rearranging the first equation we get that <me>y=2-x</me>, and then plugging that in for <m>y</m>
         in the second equation gives <me>15x+6(2-x)=15</me>.
       </p>
       <p>
@@ -402,23 +543,31 @@
       </p>
       <p>
         Since we know there are <m>30</m> marbles in the jar, we know that
-        <men xml:id="eq_rbg30">
+        <me>
           r+b+g=30
-        </men>.
+        </me>.
       </p>
       <p>
         Also, we are told that there are twice as many red marbles as green ones,
         so we know that
-        <men xml:id="eq_r2g">
+        <me >
           r=2g
-        </men>.
+        </me>.
       </p>
       <p>
         Finally, we know that the number of blue marbles is the same as the sum of the red and green marbles,
         so we have
-        <men xml:id="eq_brg">
+        <me >
           b = r+g
-        </men>.
+        </me>.
+      </p>
+      <p>
+        Collecting these equations together and giving them numbers to make it easier to refer to them, we have
+        <mdn>
+          <mrow xml:id="eq_rbg30" > r+b+g  =30 </mrow>
+          <mrow xml:id="eq_r2g"> r  =2g </mrow>
+          <mrow xml:id="eq_brg"> b  = r+g </mrow>
+        </mdn>
       </p>
       <p>
         There are <em>many</em> ways to use this information to find the solution.
@@ -454,39 +603,30 @@
   </example>
   
   <p>
-    All of the examples we've seen so far have involved <em>linear equations</em>. It turns out that 
+    All of the examples we've seen so far, such as <m>15x+6y=15</m> or <m>r+b+g=30</m>, have involved <em>linear equations</em>. It turns out that 
     linear equations are at the heart of many modern applications: data science, sports analytics, graphics, 
     machine learning, artificial intelligence, and so on.  Let's define what linear equations are.
   </p>
   <definition xml:id="def_lin_eq"><title>Linear Equation</title> 
     <statement>
+      <idx><h>linear equation</h></idx>
+      <idx><h>coefficients</h></idx>
+      <idx><h>constant</h></idx>
       <p>
         A <term>linear equation</term> is an equation that can be written in the form
         <me>
           a_1x_1+a_2x_2+\cdots+a_nx_n = c
         </me>
-        where the <m>x_i</m> are variables (the unknowns), the <m>a_i</m> are coefficients (numbers), and <m>c</m> is a constant.
-      </p>
-      <p>
-        A <term>system of linear equations</term>
-        is a set of linear equations that involves the same set of variables.
-      </p>
-      <p>
-        A <term>solution</term> to a system of linear equations is a set of values for the variables <m>x_i</m> such that each equation in the system is satisfied.
+        where the <m>x_i</m> are variables (the unknowns), the <m>a_i</m> are <em>coefficients</em> (numbers), and <m>c</m> is a <em>constant</em> (also a number).
       </p>
     </statement>
   </definition>
+
   <p>
-        <idx><h>linear equation</h></idx>
-        <idx><h>system of linear equations</h><h>definition</h></idx>
-        <idx><h>system of linear equations</h><h>solution</h></idx>
-        <idx><h>solution</h></idx>
+    Let's look at some examples of equations and see if we can tell what makes an equation linear or not.
   </p>
-  <p>
-    So in <xref ref="ex_by_hand">Example</xref>, when we answered
-    <q>how many marbles of each color are there?,</q> we were also answering
-    <q>find a solution to a certain system of linear equations.</q>
-  </p>
+        
+  
   
   <exercise label="mc-linear-or-not"><title>Multiple-Choice, Linear or Nonlinear</title>
     <introduction>
@@ -698,34 +838,38 @@
   </task>
 </exercise>
 
-<!-- <exercise><title>Testing tabs</title>
-  <introduction>
-    <p>
-      testing the intro
-    </p>
-  </introduction>
-  <task>
+<p>
+  In all of our examples, we didn't have just one linear equation but rather a collection of linear 
+  equations we used together. A set of linear equations has a name we will define now.
+</p>
+
+<definition xml:id="def_lin_sys"><title>System of Linear Equations</title> 
     <statement>
+      <idx><h>system of linear equations</h><h>definition</h></idx>
+        <idx><h>system of linear equations</h><h>solution</h></idx>
+        <idx><h>solution</h></idx>
       <p>
-        bfhda
+        A <term>system of linear equations</term>
+        is a set of linear equations that involves the same set of variables.
+      </p>
+      <p>
+        A <term>solution</term> to a system of linear equations is a set of values for the variables such that each equation in the system is satisfied.
       </p>
     </statement>
-  </task>
-  <task>
-    <statement>
-      <p>
-        fhdjak
-      </p>
-    </statement>
-  </task>
-  <task>
-    <statement>
-      <p>
-        fhdjak again
-      </p>
-    </statement>
-  </task>
-</exercise> -->
+  </definition>
+
+  <p>
+    For example, in <xref ref="ex_by_hand">Example</xref>, when we answered
+    <q>how many marbles of each color are there?,</q> we were also answering
+    <q>find a solution to a system of linear equations,</q> where the linear system in the problem was
+    <md>
+          <mrow> r+b+g  =30 </mrow>
+          <mrow> r  =2g </mrow>
+          <mrow> b  = r+g </mrow>.
+      </md>
+  </p>
+
+
   
   <!-- <exploration label="matching-function-types">
     <title>Matching Problem, Function Types</title>
@@ -791,7 +935,7 @@
   </p>-->
 
   <p>
-    An example of a system of linear equations is
+    Anotherp example of a system of linear equations is
     <md>
       <mrow>x_1-x_2+x_3+x_4\amp =1</mrow>
       <mrow>2x_1+3x_2+x_4 \amp = 25</mrow>
