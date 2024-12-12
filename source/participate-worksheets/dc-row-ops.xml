@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-row-ops-dc"> 
-    <title>Participate</title>
-    <worksheet xml:id="ws-row-ops" margin="1in" bottom="1.25cm"><title component="print-worksheets">Row Operations Participate</title><title></title>
+<!-- <subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-row-ops-dc"> 
+    <title>Participate</title> -->
+    <worksheet xml:id="ws-row-ops" margin="1in" bottom="1.25cm"><title component="print-worksheets">Participate: Row Operations</title><title component="online-worksheets">Participate</title>
       <objectives>
         <ul>
           <li>
@@ -241,4 +241,4 @@
       
       </page>
     </worksheet>
-    </subsection>
+    <!-- </subsection> -->

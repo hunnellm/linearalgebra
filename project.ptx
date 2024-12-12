@@ -3,7 +3,8 @@
 <project ptx-version="2">
   <targets>
     <target name="web" format="html" />
-    <target name="print" format="pdf" />
+    <target name="print" format="pdf" publication="publication-print.ptx" />
     <target name="worksheets" format="pdf" source="worksheets.ptx"/>
+    <target name="latex" format="latex"/>
   </targets>
 </project>

@@ -1066,7 +1066,7 @@
         in order to make the solution easy to see.  Every time we've started with a linear system, there was exactly one solution, 
         and the reduced row echelon form always had one particular form.  However, we've also practiced putting matrices 
         in reduced row echelon form without referring back to their corresponding system of linear equations,
-        and we have seen various different ways that rref can look.  Connecting different reduced row echelon forms with
+        and we have seen various different ways that the reduced row echelon form of a matrix can look.  Connecting different reduced row echelon forms with
         solutions to the corresponding linear system is the topic for next section.  
     </p>
       
@@ -1103,7 +1103,7 @@
 
 <xi:include href="participate-worksheets/dc-rref.xml" />
 
-<xi:include href="participate-worksheets/dc-rrefa.xml" />
+<!-- <xi:include href="participate-worksheets/dc-rrefa.xml" /> -->
   
 
     <conclusion xml:id="sec-rref-summary">

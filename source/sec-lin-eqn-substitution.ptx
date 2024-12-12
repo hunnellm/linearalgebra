@@ -48,9 +48,8 @@
       For example, consider the puzzle in this image.
   </p>
 
-<!-- Why doesn't the number fillin work as an activity, only as an exercise? -->
   <exercise label="fruit-puzzle">
-    <title>Solve a fruit puzzle, image child of paragraph</title>
+    <title>Solve a fruit puzzle</title>
     <statement>
       <p>
         <image width="40%" source="fruitpuzzleimage8.jpeg">
@@ -82,7 +81,7 @@
       <numcmp value="12" />
       <feedback>
         <p>
-          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
+          You did the algebra correctly!  However, this puzzle also contains a visual trick, designed to make 
           people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
            1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
         </p>
@@ -93,91 +92,6 @@
       </evaluation>
   </exercise>
 
-  <exercise label="fruit-puzzle2">
-    <title>Solve a fruit puzzle, image child of figure</title>
-    <statement>
-      <figure>
-        <image width="40%" source="fruitpuzzleimage8.jpeg">
-          <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
-        </image>
-      </figure>
-      <p>
-        The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
-        and a bunch of bananas minus cherries equals 2.  
-      </p>
-      <p>
-        Then it asks a question: how much does cherries plus an apple plus 
-        a bunch of bananas equal? The answer is <fillin width="5" answer="11" /> 
-      </p>
-    </statement>
-    <evaluation>
-      <evaluate>
-      <test correct="yes">
-      <numcmp use-answer="yes" />
-      <feedback>
-        <p>
-          Each apple is worth 6, each bunch of 4 bananas is worth 4, so each banana is worth 1, and each group of cherries is worth 2. 
-          There are only 3 bananas in the question to answer, so 2+6+3=11. 
-        </p>
-      </feedback>
-      </test>
-    
-      <test>
-      <numcmp value="12" />
-      <feedback>
-        <p>
-          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
-          people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
-           1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
-        </p>
-      </feedback>
-      </test>
-  
-      </evaluate>
-      </evaluation>
-  </exercise>
-
-  <exercise label="fruit-puzzle3">
-    <title>Solve a fruit puzzle, image child of statement</title>
-    <statement>
-        <image width="40%" source="fruitpuzzleimage8.jpeg">
-          <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
-        </image>
-      <p>
-        The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
-        and a bunch of bananas minus cherries equals 2.  
-      </p>
-      <p>
-        Then it asks a question: how much does cherries plus an apple plus 
-        a bunch of bananas equal? The answer is <fillin width="5" answer="11" /> 
-      </p>
-    </statement>
-    <evaluation>
-      <evaluate>
-      <test correct="yes">
-      <numcmp use-answer="yes" />
-      <feedback>
-        <p>
-          Each apple is worth 6, each bunch of 4 bananas is worth 4, so each banana is worth 1, and each group of cherries is worth 2. 
-          There are only 3 bananas in the question to answer, so 2+6+3=11. 
-        </p>
-      </feedback>
-      </test>
-    
-      <test>
-      <numcmp value="12" />
-      <feedback>
-        <p>
-          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
-          people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
-           1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
-        </p>
-      </feedback>
-      </test>
-  
-      </evaluate>
-      </evaluation>
-  </exercise>
 
   <p>
     The food puzzle above was really setting up a number of algebraic equations. Let's see how we can
@@ -208,12 +122,7 @@
     Almost all the food puzzles are these same kinds of equations, called <em>linear equations</em>.  Before
     defining what that means in general, let's explore another example from both graphical and algebraic perspectives.
   </p>
-  <exercise xml:id="act_sony-interview">
-    <!-- <introduction>
-      <p>
-        testing
-      </p>
-    </introduction> -->
+  <exercise xml:id="act_sony-interview" label="graphing-eqns-sony">
     <task label="solnstoxplusyequals2">
       <statement>
         <p>
@@ -223,7 +132,7 @@
       </p>
       <figure>
         <caption>Solutions to the equation <m>x+y=2</m></caption>
-        <interactive xml:id="desmos-xplusyis2" desmos="aipnfasaht" width="85%" aspect="4:3" />
+        <interactive xml:id="desmos-xplusyis2" label="desmos-xplusyis2" desmos="aipnfasaht" width="85%" aspect="4:3" />
       </figure>
       <p>
         What do you notice about the visual relationship between the points on the graph, that is, points that satisfy the equation <m>x+y=2</m>?
@@ -234,7 +143,7 @@
           Scroll down to the lower rows of the graph interactive, activate and animate the point found there.
         </p>
       </hint>
-      <response />
+      <response component="responses"/>
     </task>
     <task label="solnsto15xplus6yequals15">
       <statement>
@@ -245,22 +154,19 @@
       </p>
       <figure>
         <caption>Solutions to the equation <m>15x+6y=15</m></caption>
-        <interactive xml:id="desmos-15xplus6yis15" desmos="vvw2yv58qm" width="85%" aspect="4:3" />
+        <interactive xml:id="desmos-15xplus6yis15" label="desmos-15xplus6yis15" desmos="vvw2yv58qm" width="85%" aspect="4:3" />
       </figure>
       <p>
         What does the graph of <m>15x+6y=15</m> look like?
       </p>
       </statement>
-      <response />
+      <response component="responses"/>
     </task>
     <task label="interview-intersectionpoint">
       <statement>
         <p>
           The graphs of <m>x+y=2</m> and <m>15x+6y=15</m> are shown in the image below.
       </p>
-        <!-- <image width="40%" source="graphsoftwolines">
-          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
-        </image> -->
         <image width="40%">
           <shortdescription>Graph of two lines and their point of intersection</shortdescription>
           <prefigure xmlns="https://prefigure.org"
@@ -297,167 +203,9 @@
         What does the point of intersection mean, and what are its coordinates?
       </p>
       </statement>
-      <response />
+      <response component="responses"/>
     </task>
   </exercise>
-
-
-  
-
-  <image width="40%">
-  <shortdescription>Graph of two lines and their point of intersection</shortdescription>
-    <prefigure xmlns="https://prefigure.org"
-              label="prefigure-sonylines">
-      <diagram dimensions="(300,300)" margins="5">
-  <definition>a=1/3</definition>
-  <definition>f(x) = 2-x</definition>
-  <definition>g(x) = (15-15*x)/6</definition>
-  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
-    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
-
-    <group at="graph-fg" outline="tactile">
-      <graph at="graph-f" function='f' stroke="red"/>
-      <graph at="graph-g" function='g' stroke="blue" />
-      <point at="point" p="(a, f(a))" stroke="black" fill="black">
-      </point>
-    </group>
-  </coordinates>
-
-  <annotations>
-    <annotation ref="figure"
-                text="The graph of two lines and their point of intersection">
-        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
-        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
-        <annotation ref="point" text="The point of intersection"/>
-    </annotation>
-  </annotations>
-
-</diagram>
-    </prefigure>
-    
-  </image>
-
-  <exercise><title>Testing tabs (and prefigure)</title>
-  <introduction>
-    <p>
-      testing the intro
-    </p>
-  </introduction>
-  <task>
-    <statement>
-      <p>
-        With annotations
-      </p>
-      <image width="40%">
-          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
-          <prefigure xmlns="https://prefigure.org"
-              label="prefigure-sonylines-d">
-      <diagram dimensions="(300,300)" margins="5">
-  <definition>a=1/3</definition>
-  <definition>f(x) = 2-x</definition>
-  <definition>g(x) = (15-15*x)/6</definition>
-  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
-    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
-
-    <group at="graph-fg" outline="tactile">
-      <graph at="graph-f" function='f' stroke="red"/>
-      <graph at="graph-g" function='g' stroke="blue" />
-      <point at="point" p="(a, f(a))" stroke="black" fill="black">
-      </point>
-    </group>
-  </coordinates>
-
-  <annotations>
-    <annotation ref="figure"
-                text="The graph of two lines and their point of intersection">
-        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
-        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
-        <annotation ref="point" text="The point of intersection"/>
-    </annotation>
-  </annotations>
-
-</diagram>
-    </prefigure>
-    </image>
-    </statement>
-  </task>
-  <task>
-    <statement>
-      <p>
-        With annotations and dimensions changed to (200,200).
-      </p>
-      <image width="40%">
-          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
-          <prefigure xmlns="https://prefigure.org"
-              label="prefigure-sonylines-b">
-      <diagram dimensions="(200,200)" margins="5">
-  <definition>a=1/3</definition>
-  <definition>f(x) = 2-x</definition>
-  <definition>g(x) = (15-15*x)/6</definition>
-  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
-    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
-
-    <group at="graph-fg" outline="tactile">
-      <graph at="graph-f" function='f' stroke="red"/>
-      <graph at="graph-g" function='g' stroke="blue" />
-      <point at="point" p="(a, f(a))" stroke="black" fill="black">
-      </point>
-    </group>
-  </coordinates>
-
-  <annotations>
-    <annotation ref="figure"
-                text="The graph of two lines and their point of intersection">
-        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
-        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
-        <annotation ref="point" text="The point of intersection"/>
-    </annotation>
-  </annotations>
-
-</diagram>
-    </prefigure>
-    </image>
-    </statement>
-  </task>
-  <task>
-    <statement>
-      <p>
-        Without annotations
-      </p>
-      <image width="40%">
-          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
-          <prefigure xmlns="https://prefigure.org"
-              label="prefigure-sonylines-c">
-      <diagram dimensions="(300,300)" margins="5">
-  <definition>a=1/3</definition>
-  <definition>f(x) = 2-x</definition>
-  <definition>g(x) = (15-15*x)/6</definition>
-  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
-    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
-
-    <group at="graph-fg" outline="tactile">
-      <graph at="graph-f" function='f' stroke="red"/>
-      <graph at="graph-g" function='g' stroke="blue" />
-      <point at="point" p="(a, f(a))" stroke="black" fill="black">
-      </point>
-    </group>
-  </coordinates>
-
-  <!-- <annotations>
-    <annotation ref="figure"
-                text="The graph of two lines and their point of intersection">
-        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
-        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
-        <annotation ref="point" text="The point of intersection"/>
-    </annotation>
-  </annotations> -->
-
-</diagram>
-    </prefigure>
-    </image>
-    </statement>
-  </task>
-</exercise>
 
 
   <example xml:id="ex_sony_interview"><title>Sony and The Interview</title>
@@ -871,45 +619,7 @@
 
 
   
-  <!-- <exploration label="matching-function-types">
-    <title>Matching Problem, Function Types</title>
-    <idx>matching function types</idx>
-    <statement>
-      <p>
-        Sort the following functions into their correct categories.
-      </p>
-    </statement>
-    <feedback>
-      <p>
-        Review
-        <url href="https://activecalculus.org/prelude/sec-changing-linear.html" visual="A precalculus textbook that could help"> Active Prelude to Calculus</url>
-        url.
-      </p>
-    </feedback>
-    <matches>
-    <match>
-      <response>Linear</response>
-      <premise order="4"><m>y=5x+3</m></premise>
-      <premise order="5"><m>\pi x - 6y = \sqrt{2}</m></premise>
-      <premise order="6"><m>y=\frac{-1}{2}x+e</m></premise>
-    </match>
-    <match>
-      <response>Quadratic</response>
-    </match>
-    <match>
-      <premise order="7"><m>y=x^3-x</m></premise>
-    </match>
-    <match>
-      <response>Exponential</response>
-      <premise order="1"><m>y=2^x</m></premise>
-    </match>
-    <match>
-      <response>Power</response>
-      <premise order="2"><m>y=3x^5</m></premise>
-      <premise order="3"><m>y=\sqrt{x}</m></premise>
-    </match>
-    </matches>
-  </exploration> -->
+  
 
   <!-- <p>
     The following are examples of linear equations:

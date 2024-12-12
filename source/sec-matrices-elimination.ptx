@@ -457,8 +457,9 @@
   
   <reading-questions xml:id="rqs-matrices-elim">
 
+<!-- This is the old markup... should switch to new when Brian fixes it.  See section Testing Things for the new markup version. -->
     <exercise label="matrix-indices">
-      <title>How a matrix is indexed, old markup</title>
+      <title>How a matrix is indexed</title>
       <statement>
         <p>
           In the matrix <me>A=\begin{bmatrix} 2 \amp -1 \amp 3 \amp 5 \\ 0 \amp 3\amp 6\amp -3 \\ 4 \amp -2 \amp 7 \amp 5   \end{bmatrix}</me>
@@ -490,48 +491,6 @@
         </condition>
         </var>
       </setup>
-    </exercise>
-
-
-    <exercise label="matrix-indices2">
-      <title>How a matrix is indexed, new markup</title>
-      <statement>
-        <p>
-          In the matrix <me>A=\begin{bmatrix} 2 \amp -1 \amp 3 \amp 5 \\ 0 \amp 3\amp 6\amp -3 \\ 4 \amp -2 \amp 7 \amp 5   \end{bmatrix}</me>
-          what is <m>a_{23}</m>? <fillin width="5" answer="6" /> 
-        </p>
-      </statement>
-      <evaluation>
-        <evaluate>
-        <test correct="yes">
-        <numcmp use-answer="yes" />
-        <feedback>
-          <p>
-            The number in the second row and third column is <m>6</m>. 
-          </p>
-        </feedback>
-        </test>
-      
-        <test>
-        <numcmp value="-2" />
-        <feedback>
-          <p>
-            You gave the entry in the third row and second column, but <m>a_{23}</m> is the number in the second row and third column.    
-          </p>
-        </feedback>
-        </test>
-
-        <test>
-          <feedback>
-            <p>
-              Incorrect.  If you're stuck, try reviewing the <xref ref="def_matrix">definition of matrix</xref>.  
-            </p>
-          </feedback>
-        </test>
-        <!-- would like that link to go to the definition, not just the section.  check when it's deployed, maybe ask Brian. It worked in the old markup.-->
-    
-        </evaluate>
-        </evaluation>
     </exercise>
 
     <!-- When card sort becomes available, will turn this into sorting with categories 

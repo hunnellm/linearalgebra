@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-testing-things" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Testing Things</title>
+    <introduction>
+        <p>
+            This is where I'm collecting things I've run into and need to keep for various people.
+        </p>
+    </introduction>
+
+    <xi:include href="./sec-testing-things.ptx" />
+
+</chapter>

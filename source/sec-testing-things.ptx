@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<section xml:id="sec-testing-things" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <title>Testing things</title>
+
+    <image width="50%">
+      <shortdescription>a number line</shortdescription>
+      <prefigure xmlns="https://prefigure.org"
+              label="prefigure-ex-numberline">
+        <diagram dimensions="(300,100)" margins="5">
+  <coordinates bbox="(-1,-2,11,2)">
+      <definition substitution="no">
+        labels=['0','1','2','3','4','5','6','7','8','9','10']
+      </definition>
+    <line endpoints="((-0.5,0), (10.5,0))" stroke="black"
+	  thickness="3" arrows="2"/>
+    <repeat parameter="k=0..10">
+      <line endpoints="((k,-.2), (k,.2))" stroke="black"
+	  thickness="1" />
+      <label anchor="(k,-.2)" alignment="south">
+        <m>${labels[k]}</m>
+    </label>
+    </repeat>
+    <line endpoints="((5,.2), (10,.2))" stroke="black"
+	  thickness="2" arrows="1"/>
+    <circle center="(5,.1)" radius=".3" fill="green" thickness="5"/>
+  </coordinates>
+</diagram>
+</prefigure>
+    </image>
+
+    
+
+  <exercise label="test-response"><title>Testing Interactive and Response together</title>
+    <statement>
+      <p>
+        Some text.
+      </p>
+      <figure>
+        <caption>Solutions to the equation <m>15x+6y=15</m></caption>
+        <interactive label="test-response-a" xml:id="desmos-15xplus6yis15-a" desmos="vvw2yv58qm" width="85%" aspect="4:3" />
+      </figure>
+    </statement>
+    <response component="responses"/> 
+  </exercise>
+
+
+  <exercise><title>Testing tabs and prefigure</title>
+  <introduction>
+    <p>
+      testing the intro
+    </p>
+  </introduction>
+  <task>
+    <statement>
+      <p>
+        With annotations
+      </p>
+      <image width="40%">
+          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
+          <prefigure xmlns="https://prefigure.org"
+              label="prefigure-sonylines-d">
+      <diagram dimensions="(300,300)" margins="5">
+  <definition>a=1/3</definition>
+  <definition>f(x) = 2-x</definition>
+  <definition>g(x) = (15-15*x)/6</definition>
+  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
+    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fg" outline="tactile">
+      <graph at="graph-f" function='f' stroke="red"/>
+      <graph at="graph-g" function='g' stroke="blue" />
+      <point at="point" p="(a, f(a))" stroke="black" fill="black">
+      </point>
+    </group>
+  </coordinates>
+
+  <annotations>
+    <annotation ref="figure"
+                text="The graph of two lines and their point of intersection">
+        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
+        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
+        <annotation ref="point" text="The point of intersection"/>
+    </annotation>
+  </annotations>
+
+</diagram>
+    </prefigure>
+    </image>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        With annotations and dimensions changed to (200,200).
+      </p>
+      <image width="40%">
+          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
+          <prefigure xmlns="https://prefigure.org"
+              label="prefigure-sonylines-b">
+      <diagram dimensions="(200,200)" margins="5">
+  <definition>a=1/3</definition>
+  <definition>f(x) = 2-x</definition>
+  <definition>g(x) = (15-15*x)/6</definition>
+  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
+    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fg" outline="tactile">
+      <graph at="graph-f" function='f' stroke="red"/>
+      <graph at="graph-g" function='g' stroke="blue" />
+      <point at="point" p="(a, f(a))" stroke="black" fill="black">
+      </point>
+    </group>
+  </coordinates>
+
+  <annotations>
+    <annotation ref="figure"
+                text="The graph of two lines and their point of intersection">
+        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
+        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
+        <annotation ref="point" text="The point of intersection"/>
+    </annotation>
+  </annotations>
+
+</diagram>
+    </prefigure>
+    </image>
+    </statement>
+  </task>
+  <task>
+    <statement>
+      <p>
+        Without annotations
+      </p>
+      <image width="40%">
+          <shortdescription>Graph of two lines and their point of intersection</shortdescription>
+          <prefigure xmlns="https://prefigure.org"
+              label="prefigure-sonylines-c">
+      <diagram dimensions="(300,300)" margins="5">
+  <definition>a=1/3</definition>
+  <definition>f(x) = 2-x</definition>
+  <definition>g(x) = (15-15*x)/6</definition>
+  <coordinates bbox="[-3.5,-2.5,3.5,4.5]">
+    <grid-axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fg" outline="tactile">
+      <graph at="graph-f" function='f' stroke="red"/>
+      <graph at="graph-g" function='g' stroke="blue" />
+      <point at="point" p="(a, f(a))" stroke="black" fill="black">
+      </point>
+    </group>
+  </coordinates>
+
+  <!-- <annotations>
+    <annotation ref="figure"
+                text="The graph of two lines and their point of intersection">
+        <annotation ref="graph-f" text="The graph of x+y=2" sonify="yes"/>
+        <annotation ref="graph-g" text="The graph of 15x+6y=15" sonify="yes"/>
+        <annotation ref="point" text="The point of intersection"/>
+    </annotation>
+  </annotations> -->
+
+</diagram>
+    </prefigure>
+    </image>
+    </statement>
+  </task>
+</exercise>
+
+<xi:include href="participate-worksheets/dc-rrefa.xml" />
+
+<exercise label="matching-function-types">
+    <title>Non 1-1 Matching Problem, Function Types</title>
+    <idx>matching function types</idx>
+    <statement>
+      <p>
+        Sort the following functions into their correct categories.
+      </p>
+    </statement>
+    <feedback>
+      <p>
+        Review
+        <url href="https://activecalculus.org/prelude/sec-changing-linear.html" visual="A precalculus textbook that could help"> Active Prelude to Calculus</url>
+        url.
+      </p>
+    </feedback>
+    <matches>
+    <match>
+      <response>Linear</response>
+      <premise order="4"><m>y=5x+3</m></premise>
+      <premise order="5"><m>\pi x - 6y = \sqrt{2}</m></premise>
+      <premise order="6"><m>y=\frac{-1}{2}x+e</m></premise>
+    </match>
+    <match>
+      <response>Quadratic</response>
+    </match>
+    <match>
+      <premise order="7"><m>y=x^3-x</m></premise>
+    </match>
+    <match>
+      <response>Exponential</response>
+      <premise order="1"><m>y=2^x</m></premise>
+    </match>
+    <match>
+      <response>Power</response>
+      <premise order="2"><m>y=3x^5</m></premise>
+      <premise order="3"><m>y=\sqrt{x}</m></premise>
+    </match>
+    </matches>
+  </exercise>
+
+  <exercise label="matrix-indices1">
+      <title>How a matrix is indexed, old markup</title>
+      <statement>
+        <p>
+          In the matrix <me>A=\begin{bmatrix} 2 \amp -1 \amp 3 \amp 5 \\ 0 \amp 3\amp 6\amp -3 \\ 4 \amp -2 \amp 7 \amp 5   \end{bmatrix}</me>
+          what is <m>a_{23}</m>? <var width="5" /> 
+        </p>
+      </statement>
+      <setup>
+        <var>
+          <condition number="6">
+            <feedback>
+              <p>
+                The entry in the second row and third column is 6.
+              </p>
+            </feedback>
+            </condition>
+        <condition number="-2">
+        <feedback>
+          <p>
+            The row number comes first, then the column number.  
+          </p>
+        </feedback>
+        </condition>
+        <condition string=".*">
+        <feedback>
+          <p>
+            Incorrect.  If you're stuck, try reviewing the <xref ref="def_matrix">definition of matrix</xref>.  
+          </p>
+        </feedback>
+        </condition>
+        </var>
+      </setup>
+    </exercise>
+
+
+    <exercise label="matrix-indices2">
+      <title>How a matrix is indexed, new markup</title>
+      <statement>
+        <p>
+          In the matrix <me>A=\begin{bmatrix} 2 \amp -1 \amp 3 \amp 5 \\ 0 \amp 3\amp 6\amp -3 \\ 4 \amp -2 \amp 7 \amp 5   \end{bmatrix}</me>
+          what is <m>a_{23}</m>? <fillin width="5" answer="6" /> 
+        </p>
+      </statement>
+      <evaluation>
+        <evaluate>
+        <test correct="yes">
+        <numcmp use-answer="yes" />
+        <feedback>
+          <p>
+            The number in the second row and third column is <m>6</m>. 
+          </p>
+        </feedback>
+        </test>
+      
+        <test>
+        <numcmp value="-2" />
+        <feedback>
+          <p>
+            You gave the entry in the third row and second column, but <m>a_{23}</m> is the number in the second row and third column.    
+          </p>
+        </feedback>
+        </test>
+
+        <test>
+          <feedback>
+            <p>
+              Incorrect.  If you're stuck, try reviewing the <xref ref="def_matrix">definition of matrix</xref>.  
+            </p>
+          </feedback>
+        </test>
+        <!-- would like that link to go to the definition, not just the section.  check when it's deployed, maybe ask Brian. It worked in the old markup.-->
+    
+        </evaluate>
+        </evaluation>
+    </exercise>
+
+    <exercise label="fruit-puzzle1">
+    <title>Solve a fruit puzzle, image child of paragraph</title>
+    <statement>
+      <p>
+        <image width="40%" source="fruitpuzzleimage8.jpeg">
+          <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
+        </image>
+      </p>
+      <p>
+        The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
+        and a bunch of bananas minus cherries equals 2.  
+      </p>
+      <p>
+        Then it asks a question: how much does cherries plus an apple plus 
+        a bunch of bananas equal? The answer is <fillin width="5" answer="11" /> 
+      </p>
+    </statement>
+    <evaluation>
+      <evaluate>
+      <test correct="yes">
+      <numcmp use-answer="yes" />
+      <feedback>
+        <p>
+          Each apple is worth 6, each bunch of 4 bananas is worth 4, so each banana is worth 1, and each group of cherries is worth 2. 
+          There are only 3 bananas in the question to answer, so 2+6+3=11. 
+        </p>
+      </feedback>
+      </test>
+    
+      <test>
+      <numcmp value="12" />
+      <feedback>
+        <p>
+          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
+          people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
+           1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
+        </p>
+      </feedback>
+      </test>
+  
+      </evaluate>
+      </evaluation>
+  </exercise>
+
+  <exercise label="fruit-puzzle2">
+    <title>Solve a fruit puzzle, image child of figure</title>
+    <statement>
+      <figure>
+        <image width="40%" source="fruitpuzzleimage8.jpeg">
+          <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
+        </image>
+      </figure>
+      <p>
+        The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
+        and a bunch of bananas minus cherries equals 2.  
+      </p>
+      <p>
+        Then it asks a question: how much does cherries plus an apple plus 
+        a bunch of bananas equal? The answer is <fillin width="5" answer="11" /> 
+      </p>
+    </statement>
+    <evaluation>
+      <evaluate>
+      <test correct="yes">
+      <numcmp use-answer="yes" />
+      <feedback>
+        <p>
+          Each apple is worth 6, each bunch of 4 bananas is worth 4, so each banana is worth 1, and each group of cherries is worth 2. 
+          There are only 3 bananas in the question to answer, so 2+6+3=11. 
+        </p>
+      </feedback>
+      </test>
+    
+      <test>
+      <numcmp value="12" />
+      <feedback>
+        <p>
+          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
+          people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
+           1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
+        </p>
+      </feedback>
+      </test>
+  
+      </evaluate>
+      </evaluation>
+  </exercise>
+
+  <exercise label="fruit-puzzle3">
+    <title>Solve a fruit puzzle, image child of statement</title>
+    <statement>
+        <image width="40%" source="fruitpuzzleimage8.jpeg">
+          <shortdescription>an algebra puzzle involving food, claiming most people can't solve it</shortdescription>
+        </image>
+      <p>
+        The image above says that three apples total 18, while an apple plus two bunches of bananas total 14, 
+        and a bunch of bananas minus cherries equals 2.  
+      </p>
+      <p>
+        Then it asks a question: how much does cherries plus an apple plus 
+        a bunch of bananas equal? The answer is <fillin width="5" answer="11" /> 
+      </p>
+    </statement>
+    <evaluation>
+      <evaluate>
+      <test correct="yes">
+      <numcmp use-answer="yes" />
+      <feedback>
+        <p>
+          Each apple is worth 6, each bunch of 4 bananas is worth 4, so each banana is worth 1, and each group of cherries is worth 2. 
+          There are only 3 bananas in the question to answer, so 2+6+3=11. 
+        </p>
+      </feedback>
+      </test>
+    
+      <test>
+      <numcmp value="12" />
+      <feedback>
+        <p>
+          You did the algebra correctly!  But this puzzle also contains a visual trick, designed to make 
+          people get the question wrong.  Earlier on, there are 4 bananas in each bunch of bananas, so each banana is worth
+           1.  But in the question you are asked to answer, the bunch of bananas picture has changed and contains 3 bananas, not 4.   
+        </p>
+      </feedback>
+      </test>
+  
+      </evaluate>
+      </evaluation>
+  </exercise>
+
+  <exercise label="testmultianswer"><title>MultiAnswer, and the logical <q>and</q></title>
+    <introduction>
+      <p>
+        This problem uses a MultiAnswer, where multiple blanks are needed for the right answer. Since the checking of
+        these problems often involves logic, we also demonstrate how to replace the perl <q>and</q> in the pretext source, since ampersands
+        are reserved characters.
+      </p>
+    </introduction>
+  <webwork>
+    <pg-code>
+      $a = 1;
+      $b = 1;
+      $multians = MultiAnswer($a, $b)->with(
+        singleResult => 0,
+        checker => sub {
+          my ($correct, $student, $self) = @_;
+          my ($astu, $bstu) = @{$student};
+          my ($acor, $bcor) = @{$correct};
+          if ($astu == $bstu &amp;&amp; $astu == 2) {
+            return [1,1];
+          } else {
+            return [0,0];
+          }
+        }
+      );
+    </pg-code>
+  
+    <statement>
+      <p>
+        Enter two numbers that are equal, and the first one must be a 2: <var name="$multians" width="5"/> <m> = </m> <var name="$multians" width="5"/>
+      </p>
+    </statement>
+  </webwork>
+</exercise>
+
+</section>

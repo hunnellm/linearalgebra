@@ -7,44 +7,32 @@
     <webwork source="matrixtheory/rrefprob1.pg"/>
   </activity>
 
-  <activity label="rref_prob2">
-    <webwork source="Library/Hope/Multi1/02-04-Row-reduction/Row_reduction_01.pg"/>
+  <activity label="rref_matrixforms_prob2">
+    <webwork source="matrixtheory/rrefprob2.pg"/>
   </activity>
 
-  <exercise label="testmultianswer"><title>MultiAnswer, and the logical <q>and</q></title>
-    <introduction>
-      <p>
-        This problem uses a MultiAnswer, where multiple blanks are needed for the right answer. Since the checking of
-        these problems often involves logic, we also demonstrate how to replace the perl <q>and</q> in the pretext source, since ampersands
-        are reserved characters.
-      </p>
-    </introduction>
-  <webwork>
-    <pg-code>
-      $a = 1;
-      $b = 1;
-      $multians = MultiAnswer($a, $b)->with(
-        singleResult => 0,
-        checker => sub {
-          my ($correct, $student, $self) = @_;
-          my ($astu, $bstu) = @{$student};
-          my ($acor, $bcor) = @{$correct};
-          if ($astu == $bstu &amp;&amp; $astu == 2) {
-            return [1,1];
-          } else {
-            return [0,0];
-          }
-        }
-      );
-    </pg-code>
+  <activity label="rref_performgauss1">
+    <webwork source="matrixtheory/rrefprob3a.pg"/>
+  </activity>
+
+  <activity label="rref_performgauss2">
+    <webwork source="matrixtheory/rrefprob3.pg"/>
+  </activity>
+
+  <activity label="rref_performgauss3">
+    <webwork source="Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_32.pg"/>
+  </activity>
+
+
+  <!-- <activity label="rref_prob5">
+    <webwork source="Library/Hope/Multi1/02-04-Row-reduction/Row_reduction_01.pg"/>
+  </activity> -->
+
+
+
+
+
   
-    <statement>
-      <p>
-        Enter two numbers that are equal, and the first one must be a 2: <var name="$multians" width="5"/> <m> = </m> <var name="$multians" width="5"/>
-      </p>
-    </statement>
-  </webwork>
-</exercise>
 
     <!-- <activity label="ww-"><title></title>
         <webwork>

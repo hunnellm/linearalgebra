@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-rref-dc"> 
-    <title>Participate</title>
+<!-- <subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-rref-dc"> 
+    <title>Participate</title> -->
     
-    <worksheet xml:id="ws-rref" margin="1in" bottom="1.25cm"><title component="print-worksheets">Reduced Row Echelon Form Participate</title><title></title>
+    <worksheet xml:id="ws-rref" margin="1in" bottom="1.25cm"><title component="print-worksheets">Participate: Reduced Row Echelon Form</title><title component="online-worksheets">Participate</title>
       <objectives>
         <ul>
           <li>
@@ -268,4 +268,4 @@
       
       </page>
     </worksheet>
-    </subsection>
+    <!-- </subsection> -->
