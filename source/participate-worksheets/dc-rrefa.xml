@@ -226,7 +226,7 @@
         <exercise workspace="2in" number="4">
             <statement>
                 <p>
-                    Write down the associated linear system of equations for <xref ref="rrefsys1a">part</xref>, <xref ref="rrefsys2a">part</xref> and <xref ref="rrefsys3a">part</xref>. 
+                    Write down the associated linear system of equations for <xref ref="rrefsys1a" text="local">part</xref>, <xref ref="rrefsys2a" text="local">part</xref> and <xref ref="rrefsys3a" text="local">part</xref>. 
                     What observations and questions do you have about these systems?
                 </p>
             </statement>

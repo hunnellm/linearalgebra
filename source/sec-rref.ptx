@@ -1073,6 +1073,91 @@
       
 <reading-questions xml:id="rqs-rref">
 
+  
+    <exercise label="rq-gauss-jordan-summary"><title>Gauss-Jordan Elimination</title>
+      <statement>
+        <p>
+          Describe how to perform Gauss-Jordan elimination in your own words.
+        </p>
+        <p>
+          If it helps you to describe the process, you can make up a specific matrix to use, or use an arbitrary one like
+          <m>\begin{bmatrix} a_{11} \amp a_{12} \amp a_{13} \\ a_{21} \amp a_{22} \amp a_{23} \\ a_{31} \amp a_{32} \amp a_{33} \\ \end{bmatrix}</m>.
+        </p>
+      </statement>
+      <response />
+    </exercise>
+
+    <exercise label="parsons-perform-gauss-jordan" adaptive="yes">
+      <title>Parsons Problem, Reduced Row Echelon Form</title>
+      <statement>
+        <p>
+          Perform Gauss-Jordan elimination on matrix <m>A</m>.
+          <me>
+            A=\begin{bmatrix} -1 \amp -1 \amp -1 \amp -1 \\ 0 \amp 1 \amp 2\amp 3 \\ 1 \amp 2\amp 4\amp 4 \\  \end{bmatrix} 
+          </me>
+        </p>
+      </statement>
+      <blocks>
+      <block order="2" correct="no">
+      <p>
+        <me>
+          R_1+R_3 \rightarrow R_3
+        </me>
+      </p>
+      </block>
+      <block order="5" correct="no">
+        <p>
+          <me>
+            R_1 \leftrightarrow R_3
+          </me>
+        </p>
+      </block>
+      <block order="7">
+        <p>
+          <me>
+            -R_1 \rightarrow R_1
+          </me>
+          
+        </p>
+      </block>
+      <block order="4">
+        <p>
+          <me>
+            -R_1 +R_3 \rightarrow R_3
+          </me>
+        </p>
+      </block>
+      <block order="1">
+        <p>
+          <me>
+            -R_2 + R_3 \rightarrow R_3
+          </me>
+        </p>
+      </block>
+      <block order="3">
+        <p>
+          <me>
+            -2R_3+R_2 \rightarrow R_2
+          </me>
+        </p>
+      </block>
+      <block order="6">
+        <p>
+          <me>
+            -R_3+R_1 \rightarrow R_1
+          </me>
+        </p>
+      </block>
+      <block order="8">
+        <p>
+          <me>
+            -R_2+R_1 \rightarrow R_1
+          </me>
+        </p>
+      </block>
+      </blocks>
+    </exercise>
+
     <exercise label="rq-rref-questions"><title>Reflection</title>
       <statement>
         <p>
