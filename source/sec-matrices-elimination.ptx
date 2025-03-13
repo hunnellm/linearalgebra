@@ -552,7 +552,7 @@
    not in the html? I don't think I do though - I might sometimes want non-worksheet material in Participate, like in
    Section 1.1, for example. Maybe upcoming sections that are sage heavy, too. -->
 
-   <xi:include href="participate-worksheets/dc-matrices-elim.xml" />
+   <xi:include href="participate-worksheets/dc-matrices-elim.ptx" />
 
     <conclusion xml:id="sec-matrices-summary">
       <title>Summary</title>
@@ -585,7 +585,7 @@
 
   <!-- Have structured the included file as a subsection called Practice for now.  I want the webwork to
  not show answers, like the in-class questions, while the non-interactive exercises can show answers.  -->
-<xi:include href="interactive-exercises/ww-matrices-elim.xml" />
-<xi:include href="noninteractive-exercises/exer-matrices-elim.xml" />
+<xi:include href="interactive-exercises/ww-matrices-elim.ptx" />
+<xi:include href="noninteractive-exercises/exer-matrices-elim.ptx" />
 
 </section>

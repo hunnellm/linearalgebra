@@ -936,7 +936,7 @@
    worksheet itself.  Maybe I do want that, if I could change it to say 1.2 Participate only in the printed worksheet,
    not in the html? I don't think I do though - I might sometimes want non-worksheet material in Participate, like in
    Section 1.1, for example. Maybe upcoming sections that are sage heavy, too. But apparently sage can go in worksheets!-->
-   <xi:include href="participate-worksheets/dc-row-ops.xml" />
+   <xi:include href="participate-worksheets/dc-row-ops.ptx" />
   
 
     <conclusion xml:id="sec-row-ops-summary">
@@ -969,8 +969,8 @@
 
   <!-- Have structured the included file as a subsection called Practice for now.  I want the webwork to
  not show answers, like the in-class questions, while the non-interactive exercises can show answers.  -->
-    <xi:include href="interactive-exercises/ww-row-ops.xml" />
+    <xi:include href="interactive-exercises/ww-row-ops.ptx" />
 
-    <xi:include href="noninteractive-exercises/exer-row-ops.xml" />
+    <xi:include href="noninteractive-exercises/exer-row-ops.ptx" />
 
 </section>

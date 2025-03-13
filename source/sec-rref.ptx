@@ -1186,7 +1186,7 @@
 
   </subsection>
 
-<xi:include href="participate-worksheets/dc-rref.xml" />
+<xi:include href="participate-worksheets/dc-rref.ptx" />
 
 <!-- <xi:include href="participate-worksheets/dc-rrefa.xml" /> -->
   
@@ -1218,8 +1218,8 @@
   
 
 
-    <xi:include href="interactive-exercises/ww-rref.xml" />
+    <xi:include href="interactive-exercises/ww-rref.ptx" />
 
-    <xi:include href="noninteractive-exercises/exer-rref.xml" />
+    <xi:include href="noninteractive-exercises/exer-rref.ptx" />
 
 </section>

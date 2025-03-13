@@ -48,7 +48,7 @@
       For example, consider the puzzle in this image.
   </p>
 
-  <exercise label="fruit-puzzle">
+  <exercise label="fruit-puzzle" xml:id="ex-fruitpuzzle">
     <title>Solve a fruit puzzle</title>
     <statement>
       <p>
@@ -645,7 +645,7 @@
   </p>-->
 
   <p>
-    Anotherp example of a system of linear equations is
+    Another example of a system of linear equations is
     <md>
       <mrow>x_1-x_2+x_3+x_4\amp =1</mrow>
       <mrow>2x_1+3x_2+x_4 \amp = 25</mrow>
@@ -716,9 +716,9 @@
 
 <!-- Have structured the included file as a subsection called Practice for now.  I want the webwork to
  not show answers, like the in-class questions, while the non-interactive exercises can show answers.  -->
-<xi:include href="interactive-exercises/ww-lin-eqn-subs.xml" />
+<xi:include href="interactive-exercises/ww-lin-eqn-subs.ptx" />
 
-<xi:include href="noninteractive-exercises/exer-lin-eqn-subs.xml" />
+<xi:include href="noninteractive-exercises/exer-lin-eqn-subs.ptx" />
 
 
 </section>

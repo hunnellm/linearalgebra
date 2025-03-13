@@ -15,10 +15,10 @@
   
     
       <!-- include sections -->
-      <xi:include href="participate-worksheets/dc-matrices-elim.xml" />
-      <xi:include href="participate-worksheets/dc-row-ops.xml" />
-      <xi:include href="participate-worksheets/dc-rref.xml" />
-      <xi:include href="participate-worksheets/dc-rrefa.xml" />
+      <xi:include href="participate-worksheets/dc-matrices-elim.ptx" />
+      <xi:include href="participate-worksheets/dc-row-ops.ptx" />
+      <xi:include href="participate-worksheets/dc-rref.ptx" />
+      <xi:include href="participate-worksheets/dc-rrefa.ptx" />
     </chapter>
 
 

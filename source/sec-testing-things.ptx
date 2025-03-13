@@ -167,7 +167,7 @@
   </task>
 </exercise>
 
-<xi:include href="participate-worksheets/dc-rrefa.xml" />
+<xi:include href="participate-worksheets/dc-rrefa.ptx" />
 
 <exercise label="matching-function-types">
     <title>Non 1-1 Matching Problem, Function Types</title>

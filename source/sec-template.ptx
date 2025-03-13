@@ -210,7 +210,7 @@
 
   </subsection>
 
-   <!-- <xi:include href="participate-worksheets/dc-.xml" /> -->
+   <!-- <xi:include href="participate-worksheets/dc-.ptx" /> -->
   
 
     <conclusion xml:id="subsec--summary">
@@ -238,8 +238,8 @@
   
 
 
-    <!-- <xi:include href="interactive-exercises/ww-.xml" /> -->
+    <!-- <xi:include href="interactive-exercises/ww-.ptx" /> -->
 
-    <!-- <xi:include href="noninteractive-exercises/exer-.xml" /> -->
+    <!-- <xi:include href="noninteractive-exercises/exer-.ptx" /> -->
 
 </section>
