@@ -177,30 +177,42 @@
     Visually, we think of the three options below, even though linear systems often have more than
     two equations and more than two variables. 
   </p>
-  <sidebyside>
-    <image>
-      <shortdescription>Two intersecting lines</shortdescription>
-      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofintersectinglines-2ndtime">
-        <xi:include href="prefigure/twoeqns-intersectinglines.xml" />
-      </prefigure>
-    </image>
-    <image>
-      <shortdescription>Two lines that are the same line</shortdescription>
-      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofsamelines-2ndtime">
-        <xi:include href="prefigure/twoeqns-sameline.xml" />
-      </prefigure>
-    </image>
-    <image>
-      <shortdescription>Two parallel lines</shortdescription>
-      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofparallellines-2ndtime">
-        <xi:include href="prefigure/twoeqns-parallellines.xml" />
-      </prefigure>
-    </image>
-  </sidebyside>
+  <figure xml:id="fig_visual_solution">
+    <caption>The three possibilities for two equations with two variables</caption>
+    <sidebyside>
+      <figure xml:id="fig_threepossibilities_intersecting">
+        <caption>One solution</caption>
+        <image>
+          <shortdescription>Two intersecting lines</shortdescription>
+          <prefigure xmlns="https://prefigure.org" label="prefigure-graphofintersectinglines-2ndtime">
+            <xi:include href="prefigure/twoeqns-intersectinglines.xml" />
+          </prefigure>
+        </image>
+      </figure>
+      <figure xml:id="fig_threepossibilities_sameline">
+        <caption>Infinitely many solutions</caption>
+        <image>
+          <shortdescription>Two lines that are the same line</shortdescription>
+          <prefigure xmlns="https://prefigure.org" label="prefigure-graphofsamelines-2ndtime">
+            <xi:include href="prefigure/twoeqns-sameline.xml" />
+          </prefigure>
+        </image>
+      </figure>
+      <figure xml:id="fig_threepossibilities_parallel">
+        <caption>No solutions</caption>
+       <image>
+          <shortdescription>Two parallel lines</shortdescription>
+          <prefigure xmlns="https://prefigure.org" label="prefigure-graphofparallellines-2ndtime">
+            <xi:include href="prefigure/twoeqns-parallellines.xml" />
+          </prefigure>
+        </image>
+      </figure>
+    </sidebyside>
+  </figure>
   </subsubsection>
 
   <subsubsection xml:id="subsubsec-consistent-or-inconsistent">
-    <title>Consistent or Inconsistent</title>
+    <title>Determining Consistency</title>
   <p>
     We now distinguish between systems which have a solution (either one or infinitely many) 
     and those which have no solution.
@@ -319,9 +331,7 @@
       </p>
     </solution>
   </example> -->
-  <p>
-    Let's try an example.
-  </p>
+  
   <example xml:id="ex_ex_un_1">
       <title>A free variable example</title>
     <!-- <statement> -->
@@ -346,30 +356,28 @@
         <md>
           <mrow>x_1 + 2x_3 \amp = 2</mrow>
           <mrow>x_2-x_3\amp =3</mrow>
-        </md>
-        or, equivalently,
+        </md>.
+        We solve for <m>x_1</m> and <m>x_2</m> in terms of <m>x_3</m> and get
         <md>
           <mrow>x_1 \amp = 2-2x_3</mrow>
           <mrow>x_2\amp =3+x_3</mrow>
-          <mrow>x_3\amp \, \text{is free.}</mrow>
+          <!-- <mrow>x_3\amp \ \ \text{is free.}</mrow> -->
         </md>
       </p>
       <p>
         These two equations tell us that the values of <m>x_1</m> and <m>x_2</m> depend on what <m>x_3</m> is.
         There is no restriction on what <m>x_3</m> must be; it is
-        <q>free</q>
-        to take on the value of any real number.
-        Once <m>x_3</m> is chosen, we have a solution.
+        <em>free</em> to take on the value of any real number.
         Since we have infinite choices for the value of <m>x_3</m>,
         we have infinite solutions.
       </p>
-      <p>
-        As examples, <m>x_1 = 2</m>, <m>x_2 = 3</m>,
+      <!-- <p>
+        Let's choose some different values for <m>x_3</m>.   <m>x_1 = 2</m>, <m>x_2 = 3</m>,
         <m>x_3 = 0</m> is one solution;
         <m>x_1 = -2</m>, <m>x_2 = 5</m>,
         <m>x_3 = 2</m> is another solution. We call these examples, 
         and any other specific solution to a system with infinite solutions, <em>particular solutions</em>.
-      </p>
+      </p> -->
     <!-- </solution> -->
   </example>
   <!-- could do some multiple choice or multiple select or card sort.  on the right has a linear system,
@@ -401,9 +409,10 @@
         <li>
           <p>
             a variable that does not correspond to a leading <m>1</m> is a <term>free</term>,
-            or <term>independent</term>,
-            variable<idx><h>variable</h><h>independent</h></idx>
-                <idx><h>variable</h><h>free</h></idx>.
+            or <term>independent</term>
+            variable.
+            <idx><h>variable</h><h>independent</h></idx>
+                <idx><h>variable</h><h>free</h></idx>
                 <idx><h>free variable</h></idx>
           </p>
         </li>
@@ -423,7 +432,7 @@
     then there is exactly one solution; inversely, if there are any free variables, then there are infinite solutions.
   </p>
   <!-- Move this assemblage to part of in-class? Making students fill in a table or something? -->
-  <assemblage xml:id="idea_consistent">
+  <!-- <assemblage xml:id="idea_consistent">
       <title>Consistent Solution Types</title>
       <idx><h>system of linear equations</h><h>consistent</h></idx>
       <idx><h>leading one</h></idx>
@@ -451,11 +460,11 @@
     If the consistent system has infinite solutions, then there will be at least one equation coming from the reduced row echelon form that contains more than one variable.
     The first variable in that equation will be the dependent variable;
     all others will be free variables.
-  </p>
+  </p> -->
   <!-- definitely do an interactive here.  unique or infinite solutions.  free vs basic, independent vs dependent -->
   <p>
-    We have now seen examples of consistent systems with exactly one solution and others with infinite solutions.
-    How can we recognize that a system is inconsistent?
+    We have now seen examples of both kinds of consistent linear systems;
+    how can we recognize when a linear system is inconsistent?
   </p>
   <example xml:id="ex_ex_un_2">
       <title>An Inconsistent System</title>
@@ -619,9 +628,9 @@
         So all the solutions to the system would look something like
         <md>
           <mrow>x_1 \amp = 4 +x_2 - 2x_4</mrow>
-          <mrow>x_2 \amp  \text{ is free }</mrow>
+          <mrow>x_2 \amp  \ \ \text{ is free }</mrow>
           <mrow>x_3 \amp = 7+3x_4</mrow>
-          <mrow>x_4 \amp  \text{ is free } </mrow>
+          <mrow>x_4 \amp  \ \ \text{ is free } </mrow>
         </md>.
       </p>
       <p>
@@ -792,7 +801,7 @@
     the coefficients determine whether a matrix will have exactly one solution or not.
     In the
     <q>or not</q>
-    case, the constants determine whether or not infinite solutions or no solution exists.
+    case, the constants determine whether the system has infinite solutions or no solution.
     </p>
     <p>
     In this section, we have been solving systems for the sake of solving systems.
@@ -1061,14 +1070,15 @@
             <p>
                To analyze how many solutions a given linear system has, we examine the reduced row
                echelon form of the system's augmented matrix. We look for number and location of 
-               leading <m>1</m>'s to see whether the system is inconsistent, or if it is consistent, to see which
+               leading <m>1</m>'s to see whether the system is inconsistent, or in the case that it is consistent, to see which
                variables are <em>free</em> or <em>independent</em> and which variables are <em>basic</em> or <em>dependent</em>.
             </p>
           </li>
           <li>
             <p>
               If a linear system has infinitely many solutions, we can describe all the possible solutions
-              in terms of the free variables, and we can also give <em>particular solutions</em>.
+              by solving for the dependent variables in terms of the free variables, and
+               we can also give <em>particular solutions</em> by choosing specific values for the free variables.
             </p>
           </li>
         </ul>
