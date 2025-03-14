@@ -1184,6 +1184,14 @@
     </exercise>
   </reading-questions>
 
+
+  <!-- <image width="50%">
+      <prefigure xmlns="https://prefigure.org"
+                 label="complex-add">
+        <xi:include href="prefigure/oneeqnline.xml"/>
+      </prefigure>
+    </image> -->
+
   </subsection>
 
 <xi:include href="participate-worksheets/dc-rref.ptx" />

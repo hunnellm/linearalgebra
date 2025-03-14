@@ -18,6 +18,8 @@
 
   <subsection xml:id="subsec-consistency-bc">
     <title>Prepare</title>
+    <subsubsection xml:id="subsubsec-typesofsolutions">
+      <title>Types of solutions</title>
     <p>
     In <xref ref="ex-fruitpuzzle"/>, <xref ref="ex_sony_interview"/>, <xref ref="ex_by_hand"/>, <xref ref="ex_eq_mat"/>,
     and all of our other examples of linear systems, there was exactly one solution, that is, one possible assignment
@@ -42,35 +44,15 @@
     <image width="40%">
       <shortdescription>Graph of the line y=x and three points on the line </shortdescription>
       <prefigure xmlns="https://prefigure.org" label="prefigure-graphofline">
-        <diagram dimensions="(300,300)" margins="5">
-          <definition>f(x) = x</definition>
-          <coordinates bbox="[-6.5,-6.5,6.5,6.5]">
-            <axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
-
-            <group at="graph-fpoints" outline="tactile">
-              <graph at="graph-f" function='f' stroke="blue"/>
-              <point at="point1" p="(1, f(1))" stroke="black" fill="blue" alignment="e"><m>(1,1)</m></point>
-              <point at="point2" p="(3.14, f(3.14))" stroke="black" fill="blue" alignment="e"><m>(\pi,\pi)</m></point>
-              <point at="point3" p="(-5, f(-5))" stroke="black" fill="blue" alignment="se"><m>(-5,-5)</m></point>
-            </group>
-          </coordinates>
-
-          <!-- <annotations>
-            <annotation ref="figure"
-                        text="The graph of the line y=x and three points on the line">
-                <annotation ref="graph-f" text="The graph of y=x" sonify="yes"/>
-                <annotation ref="point1" text="The point x=1 and y=1"/>
-                <annotation ref="point2" text="The point x=pi and y=pi"/>
-                <annotation ref="point3" text="The point x=-5 and y=-5"/>
-            </annotation>
-          </annotations> -->
-        </diagram>
+        <xi:include href="prefigure/oneeqnline.xml" />
       </prefigure>       
     </image>
   </sidebyside>
 
   <p>
-    Let's now consider systems of linear equations with two equations and two variables.
+    Each single equation with two variables can be viewed in this way, as a line in the plane.
+    Let's now consider systems of linear equations with two equations and two variables, 
+    so that there are two lines in the plane.
   </p> 
   <sidebyside valign="middle">
     <p>
@@ -80,31 +62,10 @@
     </md>
     </p>
     <image>
-    <prefigure xmlns="https://prefigure.org" label="prefigure-graphofintersectinglines">
-      <diagram dimensions="(300,300)" margins="5">
-        <definition>f(x) = x</definition>
-        <definition>g(x) = -x+2</definition>
-        <coordinates bbox="[-5.5,-5.5,6.5,6.5]">
-          <axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
-
-          <group at="graph-fg" outline="tactile">
-            <graph at="graph-f" function='f' stroke="blue"/>
-            <graph at="graph-g" function='g' stroke="red"/>
-          </group>
-        </coordinates>
-
-        <!-- <annotations>
-          <annotation ref="figure"
-                      text="The graph of the line y=x and three points on the line">
-              <annotation ref="graph-f" text="The graph of y=x" sonify="yes"/>
-              <annotation ref="point1" text="The point x=1 and y=1"/>
-              <annotation ref="point2" text="The point x=pi and y=pi"/>
-              <annotation ref="point3" text="The point x=-5 and y=-5"/>
-          </annotation>
-        </annotations> -->
-      </diagram>
-    </prefigure>       
-  </image>
+      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofintersectinglines">
+        <xi:include href="prefigure/twoeqns-intersectinglines.xml" />
+      </prefigure>       
+    </image>
   </sidebyside>
   <p>
     Since each equation can be viewed as a line in the coordinate plane,
@@ -140,23 +101,7 @@
     </p>
     <image>
     <prefigure xmlns="https://prefigure.org" label="prefigure-graphofsamelines">
-      <diagram dimensions="(300,300)" margins="5">
-        <definition>f(x) = x</definition>
-        <coordinates bbox="[-6.5,-6.5,6.5,6.5]">
-          <axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
-          <graph at="graph-f" function='f' stroke="blue" thickness="5"/>
-        </coordinates>
-
-        <!-- <annotations>
-          <annotation ref="figure"
-                      text="The graph of the line y=x and three points on the line">
-              <annotation ref="graph-f" text="The graph of y=x" sonify="yes"/>
-              <annotation ref="point1" text="The point x=1 and y=1"/>
-              <annotation ref="point2" text="The point x=pi and y=pi"/>
-              <annotation ref="point3" text="The point x=-5 and y=-5"/>
-          </annotation>
-        </annotations> -->
-      </diagram>
+      <xi:include href="prefigure/twoeqns-sameline.xml"/>
     </prefigure>       
   </image>
   </sidebyside>
@@ -191,24 +136,24 @@
   </p>
   <p>
     We should immediately spot a problem with this system;
-    if the sum of <m>x</m> and <m>y</m> is <m>1</m>, how can it also be <m>2</m>? There is no solution to such a problem;
-    this linear system has no solution. We can visualize this situation in <xref ref="fig_visual_solution">Figure</xref> (c);
-    the two lines are parallel and never intersect.
+    if the difference between <m>x</m> and <m>y</m> is <m>0</m>, how can it also be <m>2</m>? 
+    This linear system has no solution. We see that the two lines are parallel and never intersect.
   </p>
+  <sidebyside valign="middle">
+    <p>
+      <md>
+      <mrow>x-y\amp =0</mrow>
+      <mrow>x-y\amp =2</mrow>
+    </md>
+    </p>
+    <image>
+    <prefigure xmlns="https://prefigure.org" label="prefigure-graphofparallellines">
+      <xi:include href="prefigure/twoeqns-parallellines.xml" />
+    </prefigure>       
+  </image>
+  </sidebyside>
   <p>
-    If we were to consider a linear system with three equations and two unknowns,
-    we could visualize the solution by graphing the corresponding three lines.
-    We can picture that perhaps all three lines would meet at one point,
-    giving exactly <m>1</m> solution;
-    perhaps all three equations describe the same line,
-    giving an infinite number of solutions;
-    perhaps we have different lines,
-    but they do not all meet at the same point, giving no solution.
-    We further visualize similar situations with,
-    say, <m>20</m> equations with two variables.
-  </p>
-  <p>
-    While it becomes harder to visualize when we add variables,
+    It becomes harder to visualize when we add variables, but
     no matter how many equations and variables we have,
     solutions to linear equations always come in one of three forms:
     exactly one solution, infinite solutions, or no solution.
@@ -217,6 +162,10 @@
   </p>
   <theorem xml:id="thm_existence_uniqueness">
       <title>Solution Forms of Linear Systems</title>
+      <idx><h>solution</h><h>types</h></idx>
+        <idx><h>solution</h><h>unique</h></idx>
+        <idx><h>solution</h><h>infinite</h></idx>
+        <idx><h>solution</h><h>none</h></idx>
     <statement>
       <p>
         Every linear system of equations has exactly one solution,
@@ -225,18 +174,39 @@
     </statement>
   </theorem>
   <p>
-        <idx><h>solution</h><h>types</h></idx>
-        <idx><h>solution</h><h>unique</h></idx>
-        <idx><h>solution</h><h>infinite</h></idx>
-        <idx><h>solution</h><h>none</h></idx>
+    Visually, we think of the three options below, even though linear systems often have more than
+    two equations and more than two variables. 
   </p>
+  <sidebyside>
+    <image>
+      <shortdescription>Two intersecting lines</shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofintersectinglines-2ndtime">
+        <xi:include href="prefigure/twoeqns-intersectinglines.xml" />
+      </prefigure>
+    </image>
+    <image>
+      <shortdescription>Two lines that are the same line</shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofsamelines-2ndtime">
+        <xi:include href="prefigure/twoeqns-sameline.xml" />
+      </prefigure>
+    </image>
+    <image>
+      <shortdescription>Two parallel lines</shortdescription>
+      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofparallellines-2ndtime">
+        <xi:include href="prefigure/twoeqns-parallellines.xml" />
+      </prefigure>
+    </image>
+  </sidebyside>
+  </subsubsection>
+
+  <subsubsection xml:id="subsubsec-consistent-or-inconsistent">
+    <title>Consistent or Inconsistent</title>
   <p>
-    This leads us to a definition.
-    Here we don't differentiate between having one solution and infinite solutions,
-    but rather just whether or not a solution exists.
+    We now distinguish between systems which have a solution (either one or infinitely many) 
+    and those which have no solution.
   </p>
   <definition xml:id="def_consistent">
-      <title>Consistent and Inconsistent Linear Systems</title>
+      <title>Consistency of Linear Systems</title>
       <idx><h>system of linear equations</h><h>consistent</h></idx>
         <idx><h>system of linear equations</h><h>inconsistent</h></idx>
         <idx><h>consistent</h></idx>
@@ -244,43 +214,40 @@
     <statement>
       <p>
         A system of linear equations is
-        <term>consistent</term> if it has a solution
-        (perhaps more than one).
+        <term>consistent</term> if it has at least one solution.
         A linear system is <term>inconsistent</term>
         if it does not have a solution.
       </p>
     </statement>
   </definition>
+  <!-- could do an interactive here, but would have to make it 2 variables.  
+  1 equation, 2 with 2 equations, 1 with 3 equations? Or show graphs? I think I like graphs better. -->
   <p>
-    How can we tell what kind of solution
-    (if one exists)
-    a given system of linear equations has?
-    The answer to this question lies with properly understanding the reduced row echelon form of a matrix.
-    To discover what the solution is to a linear system,
-    we first put the matrix into reduced row echelon form and then interpret that form properly.
+    How can we tell what kind of solution a given system of linear equations has?
+    The answer to this question lies with the reduced row echelon form of its 
+    corresponding augmented matrix.
   </p>
-  <p>
-    Before we start with a simple example,
-    let us make a note about finding the reduced row echelon form of a matrix.
-  </p>
-  <p>
-    <em><em> Technology Note:</em></em> In the previous section,
-    we learned how to find the reduced row echelon form of a matrix using Gaussian elimination <mdash/> by hand.
-    We need to know how to do this;
-    understanding the process has benefits.
-    However, actually executing the process by hand for every problem is not usually beneficial.
-    In fact, with large systems,
-    computing the reduced row echelon form by hand is effectively impossible.
-    Our main concern is <em>what</em>
-    <q>the rref</q>
-    is, not what exact steps were used to arrive there.
-    Therefore, the reader is encouraged to employ some form of technology to find the reduced row echelon form.
+  <remark><title>A note on using technology</title>
+    <p>
+    In the previous sections, we learned how to find the reduced row echelon form of a matrix using Gaussian elimination by hand.
+    We need to know how to do this; understanding the process has benefits, and when we are learning a new
+    technique or procedure, it's good to go through all the steps ourselves.  That's why we typically learn how to add
+    numbers using manipulatives like blocks or crayons or fingers; once we understand the concept, 
+    then we don't need to go through the steps of using aids anymore; in fact, we eventually add numbers we never could have
+    represented with physical manipulatives. The focus shifted from the ability to add for its own sake to solving a problem
+    which required addition as a step.
     </p>
     <p>
-    Computer programs such as <em>Mathematica</em>, MATLAB, and Maple can be used;
-    many handheld calculators
-    (such as Texas Instruments calculators)
-    will perform these calculations very quickly.  As will SageMath, a free online alternative to the more widely known <q>M</q> software programs listed above.  You can find a small workspace here: <url href="https://sagecell.sagemath.org/" />, but you can also simply modify the space below.  I like to show <m>A</m> first to make sure I don't have any typos, but it's not strictly necessary; you could have just the first and third lines.  Hit the <q>Evaluate</q> button to see the matrix and its reduced row echelon form.
+      In a similar way, once we understand the process of Gauss-Jordan elimination and are able to do it by hand for small systems, 
+      we move to using technology to quickly obtain the reduced row echelon form of a matrix, because the focus is no longer on our ability
+      to row reduce, but on answering a question which requires interpreting the result of row reducing.
+    </p>
+    </remark>
+    <p>
+      There is no shortage of apps, websites, and other software which can produce the reduced row echelon form
+      of a matrix very quickly.  This book will use SageMath, a language built on Python and a free alternative
+       to more widely known commercial software.  You can find a small blank workspace here: <url href="https://sagecell.sagemath.org/" />, 
+       but you can also use the space below.  Hit the <q>Evaluate</q> button to see both the matrix and its reduced row echelon form.
   </p>
     <sage>
         <input>
@@ -289,25 +256,23 @@
             show(A.rref())
         </input>
     </sage>
+
   <p>
-    As a general rule, when we are learning a new technique,
-    it is best to not use technology to aid us.
-    This helps us learn not only the technique but some of its
-    <q>inner workings.</q>
-    We can then use technology once we have mastered the technique and are now learning how to use it to solve problems.
+    The <q>QQ</q> in the Sage cell above is present for a technical reason, but the rest of syntax means
+    that <m>A</m> is being defined as a <m>2\times 3</m> matrix, whose first row is <m>[1, 2, 3]</m> and
+    whose second row is <m>[4,5,6]</m>. Note the extra set of square brackets around the two rows, and the 
+    parentheses around everything that comes after the word <q>matrix</q>.
   </p>
   <p>
-    From here on out, in our examples,
-    when we need the reduced row echelon form of a matrix,
-    we will not show the steps involved.
-    Rather, we will give the initial matrix,
-    then immediately give the reduced row echelon form of the matrix.
-    We trust that the reader can verify the accuracy of this form by both performing the necessary steps by hand or utilizing some technology to do it for them.
+    Try modifying the contents of the above Sage cell to calculate the reduced row echelon form of a different matrix.
+    Don't worry about messing anything up beyond repair; refreshing the page will reset the Sage cell back to its initial state.
   </p>
   <p>
-    Our first example explores officially a quick example used in the introduction of this section.
+    From now on, when we need the reduced row echelon form of a matrix in this text
+    we will give the initial matrix and then immediately give the reduced row echelon form of the matrix.
   </p>
-  <example xml:id="ex_ex_un_01">
+
+  <!-- <example xml:id="ex_ex_un_01">
       <title>Using RREF to analyze solutions; introducing free variables</title>
     <statement>
       <p>
@@ -345,31 +310,31 @@
         <q>free</q>
         to choose any value for <m>x_2</m>.
         Once this value is chosen, the value of <m>x_1</m> is determined.
-        We have infinite choices for the value of <m>x_2</m>,
-        so therefore we have infinite solutions.
+        Since we have infinite choices for the value of <m>x_2</m>,
+        we therefore have infinite solutions to the linear system.
       </p>
       <p>
         For example, if we set <m>x_2 = 0</m>, then <m>x_1 = 1</m>;
         if we set <m>x_2 = 5</m>, then <m>x_1 = -4</m>.
       </p>
     </solution>
-  </example>
+  </example> -->
   <p>
-    Let's try another example, one that uses more variables.
+    Let's try an example.
   </p>
   <example xml:id="ex_ex_un_1">
-      <title>Another RREF and free variable example</title>
-    <statement>
+      <title>A free variable example</title>
+    <!-- <statement> -->
       <p>
         Find the solution to the linear system
         <me>
           \begin{array}{ccccccc} \amp  \amp x_2\amp -\amp x_3\amp =\amp 3\\ x_1\amp   \amp  \amp +\amp 2x_3\amp =\amp 2\\ \amp \amp -3x_2\amp +\amp 3x_3\amp =\amp -9 \end{array}
         </me>
       </p>
-    </statement>
-    <solution>
+    <!-- </statement> -->
+    <!-- <solution> -->
       <p>
-        To find the solution,
+        <em>Answer:</em> To find the solution,
         put the corresponding matrix into reduced row echelon form.
         <me>
           \left[\begin{array}{cccc}  0\amp 1\amp -1\amp 3\\ 1\amp 0\amp 2\amp 2\\ 0\amp -3\amp 3\amp -9 \end{array} \right] \rrefarrow \left[\begin{array}{cccc} 1\amp 0\amp 2\amp 2\\ 0\amp 1\amp -1\amp 3\\ 0\amp 0\amp 0\amp 0 \end{array} \right]
@@ -391,8 +356,7 @@
       </p>
       <p>
         These two equations tell us that the values of <m>x_1</m> and <m>x_2</m> depend on what <m>x_3</m> is.
-        As we saw before,
-        there is no restriction on what <m>x_3</m> must be; it is
+        There is no restriction on what <m>x_3</m> must be; it is
         <q>free</q>
         to take on the value of any real number.
         Once <m>x_3</m> is chosen, we have a solution.
@@ -403,76 +367,63 @@
         As examples, <m>x_1 = 2</m>, <m>x_2 = 3</m>,
         <m>x_3 = 0</m> is one solution;
         <m>x_1 = -2</m>, <m>x_2 = 5</m>,
-        <m>x_3 = 2</m> is another solution.
-        Try plugging these values back into the original equations to verify that these indeed are solutions.
-        (By the way, since infinite solutions exist,
-        this system of equations is consistent.)
+        <m>x_3 = 2</m> is another solution. We call these examples, 
+        and any other specific solution to a system with infinite solutions, <em>particular solutions</em>.
       </p>
-    </solution>
+    <!-- </solution> -->
   </example>
+  <!-- could do some multiple choice or multiple select or card sort.  on the right has a linear system,
+  on the left has options like consistent or inconsistent, one solution, infinitely many solutions, or no solutions. -->
   <p>
-    In the two previous examples we have used the word
+    In the previous example we used the word
     <q>free</q>
-    to describe certain variables.
+    to describe a certain variable.
     What exactly is a free variable?
     How do we recognize which variables are free and which are not?
-  </p>
-  <p>
-    Look back to the reduced matrix in <xref ref="ex_ex_un_01">Example</xref>. Notice that there is only one leading <m>1</m> in that matrix, and that leading <m>1</m> corresponded to the <m>x_1</m> variable. That told us that <m>x_1</m> was <em>not</em> a free variable; since <m>x_2</m> <em>did not</em> correspond to a leading <m>1</m>, it was a free variable.
-  </p>
-  <p>
-    Look also at the reduced matrix in <xref ref="ex_ex_un_1">Example</xref>.
-    There were two leading <m>1</m>'s in that matrix;
-    one corresponded to <m>x_1</m> and the other to <m>x_2</m>.
-    This meant that <m>x_1</m> and <m>x_2</m> were not free variables;
-    since there was not a leading <m>1</m> that corresponded to <m>x_3</m>,
-    it was a free variable.
-  </p>
-  <p>
-    We formally define this and a few other terms in this following definition.
   </p>
   <definition xml:id="def_free">
       <title>Dependent and Independent Variables</title>
     <statement>
       <p>
-        Consider the reduced row echelon form of an augmented matrix of a linear system of equations.
+        Consider the reduced row echelon form of an augmented matrix of a consistent system of linear equations.
         Then:
       </p>
-      <p>
-        a variable that corresponds to a leading <m>1</m> is a <term>basic</term>,
-        or <term>dependent</term>,
-        variable, and<idx><h>variable</h><h>dependent</h></idx>
-            <idx><h>variable</h><h>basic</h></idx>
-            <idx><h>basic variable</h></idx>
-      </p>
-      <p>
-        a variable that does not correspond to a leading <m>1</m> is a <term>free</term>,
-        or <term>independent</term>,
-        variable<idx><h>variable</h><h>independent</h></idx>
-            <idx><h>variable</h><h>free</h></idx>.
-            <idx><h>free variable</h></idx>
-      </p>
-    </statement>
+      <ul>
+        <li>
+          <p>
+            a variable that corresponds to a leading <m>1</m> is a <term>dependent</term>,
+            or <term>determined</term>, or <term>basic</term>
+            variable, and <idx><h>variable</h><h>dependent</h></idx>
+                <idx><h>variable</h><h>basic</h></idx>
+                <idx><h>basic variable</h></idx>
+          </p>
+        </li>
+        <li>
+          <p>
+            a variable that does not correspond to a leading <m>1</m> is a <term>free</term>,
+            or <term>independent</term>,
+            variable<idx><h>variable</h><h>independent</h></idx>
+                <idx><h>variable</h><h>free</h></idx>.
+                <idx><h>free variable</h></idx>
+          </p>
+        </li>
+      </ul>
+     </statement>
   </definition>
   <p>
-    One can probably see that
-    <q>free</q>
-    and
-    <q>independent</q>
-    are relatively synonymous.
-    It follows that if a variable is not independent,
-    it must be dependent; the word
-    <q>basic</q>
-    comes from connections to other areas of mathematics that we won't explore here.
+    <em>Note:</em> <xref ref="def_free"/>
+    applies only to <em>consistent</em> systems.
+    If a system is <em>inconsistent</em>,
+    then there is no solution and it's meaningless to talk about being free (or not) to pick
+    values for the variables.
   </p>
   <p>
-    These definitions help us understand when a consistent system of linear equations will have infinite solutions.
-    If there are no free variables,
-    then there is exactly one solution;
-    if there are any free variables,
-    there are infinite solutions.
+    These definitions help us understand when a consistent system of linear equations 
+    will have infinite solutions.  If a consistent system has no free variables,
+    then there is exactly one solution; inversely, if there are any free variables, then there are infinite solutions.
   </p>
-  <insight xml:id="idea_consistent">
+  <!-- Move this assemblage to part of in-class? Making students fill in a table or something? -->
+  <assemblage xml:id="idea_consistent">
       <title>Consistent Solution Types</title>
       <idx><h>system of linear equations</h><h>consistent</h></idx>
       <idx><h>leading one</h></idx>
@@ -491,43 +442,34 @@
     <p>
       A consistent linear system with more variables than equations will always have infinite solutions.
     </p>
-  </insight>
+  </assemblage>
+  
   <p>
-    <em><em>Note:</em></em> <xref ref="idea_consistent">Key Idea</xref>
-    applies only to <em>consistent</em> systems.
-    If a system is <em>inconsistent</em>,
-    then no solution exists and talking about free and basic variables is meaningless.
-  </p>
-  <p>
-    When a consistent system has only one solution,
-    each equation that comes from the reduced row echelon form of the corresponding augmented matrix will contain exactly one variable.
-    If the consistent system has infinite solutions,
-    then there will be at least one equation coming from the reduced row echelon form that contains more than one variable.
-    The
-    <q>first</q>
-    variable will be the basic
-    (or dependent)
-    variable;
+    When a consistent system has only one solution, each equation that comes from the 
+    reduced row echelon form of the corresponding augmented matrix will contain exactly 
+    one variable.
+    If the consistent system has infinite solutions, then there will be at least one equation coming from the reduced row echelon form that contains more than one variable.
+    The first variable in that equation will be the dependent variable;
     all others will be free variables.
   </p>
+  <!-- definitely do an interactive here.  unique or infinite solutions.  free vs basic, independent vs dependent -->
   <p>
     We have now seen examples of consistent systems with exactly one solution and others with infinite solutions.
-    How will we recognize that a system is inconsistent?
-    Let's find out through an example.
+    How can we recognize that a system is inconsistent?
   </p>
   <example xml:id="ex_ex_un_2">
       <title>An Inconsistent System</title>
-    <statement>
+    <!-- <statement> -->
       <p>
         Find the solution to the linear system
         <me>
           \begin{array}{ccccccc} x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 1\\ x_1\amp +\amp 2x_2\amp +\amp x_3\amp =\amp 2\\ 2x_1\amp +\amp 3x_2\amp +\amp 2x_3\amp =\amp 0 \end{array}
         </me>
       </p>
-    </statement>
-    <solution>
+    <!-- </statement>
+    <solution> -->
       <p>
-        We start by putting the corresponding matrix into reduced row echelon form.
+        <em>Answer:</em> We start by putting the corresponding matrix into reduced row echelon form.
         <me>
           \left[\begin{array}{cccc}  1\amp 1\amp 1\amp 1\\1\amp 2\amp 1\amp 2\\ 2\amp 3\amp 2\amp 0\\ \end{array} \right] \rrefarrow \left[\begin{array}{cccc}  1\amp 0\amp 1\amp 0\\ 0\amp 1\amp 0\amp 0\\ 0\amp 0\amp 0\amp 1\\ \end{array} \right]
         </me>
@@ -549,38 +491,13 @@
         or, more concisely, <m>0=1</m>.
         Obviously, this is not true;
         we have reached a contradiction.
-        Therefore, no solution exists;
+        Therefore, no solution exists, and 
         this system is inconsistent.
       </p>
-    </solution>
+    <!-- </solution> -->
   </example>
-  <p>
-    In previous sections we have only encountered linear systems with unique solutions
-    (exactly one solution).
-    Now we have seen three more examples with different solution types.
-    The first two examples in this section had infinite solutions,
-    and the third had no solution.
-    How can we tell if a system is inconsistent?
-  </p>
-  <p>
-    A linear system will be inconsistent only when it implies that <m>0</m> equals <m>1</m>. We can tell if a linear system implies this by putting its corresponding augmented matrix into reduced row echelon form.
-    If we have any row where all entries are <m>0</m> except for the entry in the last column,
-    then the system implies <m>0=1</m>. More succinctly,
-    if we have a leading <m>1</m> in the last column of an augmented matrix,
-    then the linear system has no solution.
-  </p>
-  <insight xml:id="idea_inconsistent">
-      <title>Inconsistent Systems of Linear Equations</title>
-    <p>
-      A system of linear equations is inconsistent if the reduced row echelon form of its corresponding augmented matrix has a leading <m>1</m> in the last column.
-    </p>
-  </insight>
-  <p>
-        <idx><h>system of linear equations</h><h>inconsistent</h></idx>
-        <idx><h>leading one</h></idx>
-  </p>
-  <example xml:id="ex_ex_un_3">
-      <title>Another Inconsistent System</title>
+  <!-- <example xml:id="ex_ex_un_3">
+      <title>An Inconsistent System</title>
     <statement>
       <p>
         Confirm that the linear system
@@ -603,7 +520,7 @@
       </p>
       <p>
         Now let us confirm this using the prescribed technique from above.
-        The reduced row echelon form<nbsp/>of the corresponding augmented matrix is
+        The reduced row echelon form of the corresponding augmented matrix is
         <me>
           \left[\begin{array}{ccc}  1\amp 1\amp 0\\0\amp 0\amp 1\\ \end{array} \right]
         </me>.
@@ -611,25 +528,44 @@
         so therefore the system is inconsistent.
       </p>
     </solution>
-  </example>
+  </example> -->
   <p>
-    Let's summarize what we have learned up to this point.
-    Consider the reduced row echelon form of the augmented matrix of a system of linear equations.<fn>
-    That sure seems like a mouthful in and of itself.
-    However, it boils down to
-    <q>look at the reduced form of the usual matrix.</q>
-    </fn> If there is a leading <m>1</m> in the last column,
-    the system has no solution.
-    Otherwise, if there is a leading <m>1</m> for each variable,
-    then there is exactly one solution;
-    otherwise (i.e., there are free variables) there are infinite solutions.
+    The problem that occurred in <xref ref="ex_ex_un_2"/> was 
+    because there was a row with a leading <m>1</m> in the last column.
   </p>
   <p>
+    Let's summarize what we have learned up to this point.
+  </p>
+  <assemblage><title>Analyzing the solutions of a linear system</title>
+    <p>
+      Consider the reduced row echelon form of the augmented matrix of a system of linear equations.
+
+    <ul>
+      <li>
+        <p>
+          If there is a leading <m>1</m> in the last column, the system has no solution.
+        </p>
+      </li>
+      <li>
+        <p>
+          Otherwise, if there is a leading <m>1</m> for each variable,
+    then there is exactly one solution.
+        </p>
+      </li>
+      <li>
+        <p>
+          Otherwise, there are infinite solutions because there are free variables.
+        </p>
+      </li>
+    </ul>
+    </p>
+    </assemblage>
+  </subsubsection>
+  <subsubsection xml:id="subsubsec-infinitesolutions">
+    <title>More on Infinite Solutions</title>
+  <p>
     Systems with exactly one solution or no solution are the easiest to deal with;
-    systems with infinite solutions are a bit harder to deal with.
-    Therefore, we'll do a little more practice.
-    First, a definition: if there are infinite solutions,
-    what do we call one of those infinite solutions?
+    systems with infinite solutions are a bit harder, and we will often want to give one or two of the infinite possibilities.
   </p>
   <definition xml:id="def_particular">
       <title>Particular Solution</title>
@@ -639,17 +575,17 @@
       <p>
         Consider a linear system of equations with infinite solutions.
         A <term>particular solution</term>
-        is one solution out of the infinite set of possible solutions.
+        is one solution.
       </p>
     </statement>
   </definition>
   <p>
-    The easiest way to find a particular solution is to pick values for the free variables which then determines the values of the dependent variables.
-    Again, more practice is called for.
+    The easiest way to find a particular solution is to pick specific values for 
+    the free variables which then determines the values of the dependent variables.
   </p>
   <example xml:id="ex_ex_un_4">
       <title>Infinite Solutions; Particular Solutions</title>
-    <statement>
+    <!-- <statement> -->
       <p>
         Give the solution to a linear system whose augmented matrix in reduced row echelon form is
         <me>
@@ -657,16 +593,12 @@
         </me>
         and give two particular solutions.
       </p>
-    </statement>
-    <solution>
+    <!-- </statement>
+    <solution> -->
       <p>
-        We can essentially ignore the third row;
+        <em>Answer:</em> We can essentially ignore the third row;
         it does not divulge any information about the solution.<fn>
-        Then why include it?
-        Rows of zeros sometimes appear
-        <q>unexpectedly</q>
-        in matrices after they have been put in \rref.
-        When this happens, we do learn <em>something</em>;
+        When this happens,
         it means that at least one equation was a combination of some of the others.
         </fn> The first and second rows can be rewritten as the following equations:
         <md>
@@ -677,15 +609,14 @@
       <p>
         Notice how the variables <m>x_1</m> and <m>x_3</m> correspond to the leading <m>1</m>'s of the given matrix.
         Therefore <m>x_1</m> and <m>x_3</m> are dependent variables;
-        all other variables
-        (in this case, <m>x_2</m> and <m>x_4</m>)
+        all other variables, in this case <m>x_2</m> and <m>x_4</m>,
         are free variables.
       </p>
       <p>
         We generally write our solution with the dependent variables on the left and independent variables and constants on the right.
         It is also a good practice to acknowledge the fact that our free variables are,
         in fact, free.
-        So our final solution would look something like
+        So all the solutions to the system would look something like
         <md>
           <mrow>x_1 \amp = 4 +x_2 - 2x_4</mrow>
           <mrow>x_2 \amp  \text{ is free }</mrow>
@@ -695,42 +626,28 @@
       </p>
       <p>
         To find particular solutions,
-        choose values for our free variables.
-        There is no
-        <q>right</q>
-        way of doing this; we are
-        <q>free</q>
-        to choose whatever we wish.
+        choose any values you wish for the free variables.
       </p>
       <p>
-        By setting <m>x_2 = 0 = x_4</m>,
-        we have the solution <m>x_1 = 4</m>, <m>x_2 = 0</m>,
-        <m>x_3 = 7</m>, <m>x_4 = 0</m>.
-        By setting <m>x_2 = 1</m> and <m>x_4 = -5</m>,
-        we have the solution <m>x_1 = 15</m>, <m>x_2 = 1</m>,
-        <m>x_3 = -8</m>, <m>x_4 = -5</m>.
-        It is easier to read this when are variables are listed vertically,
-        so we repeat these solutions:
-      </p>
-      <sidebyside>
-        One particular solution is:
+        For example, by setting <m>x_2 = 0 = x_4</m>, we get:
         <md>
           <mrow>x_1 \amp = 4</mrow>
           <mrow>x_2 \amp =0</mrow>
           <mrow>x_3 \amp = 7</mrow>
           <mrow>x_4 \amp = 0</mrow>
         </md>.
-        Another particular solution is:
+        By setting <m>x_2 = 1</m> and <m>x_4 = -5</m>,
+        we have the solution:
         <md>
           <mrow>x_1 \amp = 15</mrow>
           <mrow>x_2 \amp =1</mrow>
           <mrow>x_3 \amp = -8</mrow>
           <mrow>x_4 \amp = -5</mrow>
         </md>.
-      </sidebyside>
-    </solution>
+      </p>
+    <!-- </solution> -->
   </example>
-  <example xml:id="ex_ex_un_5">
+  <!-- <example xml:id="ex_ex_un_5">
       <title>Infinite Solutions; Column of Zeros</title>
     <statement>
       <p>
@@ -808,8 +725,8 @@
         values for <m>x_3</m> and <m>x_4</m> just to highlight the fact that we can.)
       </p>
     </solution>
-  </example>
-  <example xml:id="ex_ex_un_6">
+  </example> -->
+  <!-- <example xml:id="ex_ex_un_6">
       <title>Infinite Solutions; One Variable Constant</title>
     <statement>
       <p>
@@ -848,7 +765,7 @@
         instead, it is always <m>1</m>. (We can think of it as depending on the value of <m>1</m>.) By picking two values for <m>x_3</m>,
         we get two particular solutions.
       </p>
-      <sidebyside>
+      <p>
         One particular solution is:
         <md>
           <mrow>x_1 \amp = 4</mrow>
@@ -861,24 +778,29 @@
           <mrow>x_2 \amp =1</mrow>
           <mrow>x_3 \amp = 1 </mrow>
         </md>.
-      </sidebyside>
+      </p>
     </solution>
-  </example>
-  <p>
-    The constants and coefficients of a matrix work together to determine whether a given system of linear equations has one,
+  </example> -->
+  </subsubsection>
+  <conclusion xml:id="subsec-consistency-bc-summary">
+    <p>
+      The constants and coefficients of a matrix work together to determine whether a given system of linear equations has one,
     infinite,
     or no solution.
-    The concept will be fleshed out more in later chapters,
+    The concept will be fleshed out more in later material,
     but in short,
     the coefficients determine whether a matrix will have exactly one solution or not.
     In the
     <q>or not</q>
     case, the constants determine whether or not infinite solutions or no solution exists.
-    (So if a given linear system has exactly one solution,
-    it will always have exactly one solution even if the constants are changed.)
-    Let's look at an example to get an idea of how the values of constants and coefficients work together to determine the solution type.
+    </p>
+    <p>
+    In this section, we have been solving systems for the sake of solving systems.
+    In the next section, we'll look at situations (i.e.,
+    <q>word problems</q>) which create linear systems that need to be solved. 
   </p>
-  <example xml:id="ex_variable_k">
+  </conclusion>
+  <!-- <example xml:id="ex_variable_k">
       <title>Analyzing the Effect of Different Coefficient Values on the Linear System</title>
     <statement>
       <p>
@@ -916,26 +838,18 @@
         In this example, it is not possible to have no solutions.
       </p>
     </solution>
-  </example>
-  <p>
+  </example> -->
+  <!-- <p>
     As an extension of the previous example,
     consider the similar augmented matrix where the constant <m>9</m> is replaced with a <m>10</m>. Performing the same elementary row operation gives
     <me>
       \left[\begin{array}{ccc}  1\amp 2\amp 3\\3\amp k\amp 10 \end{array} \right] \xrightarrow{-3R_1+R_2\rightarrow R_2} \left[\begin{array}{ccc}  1\amp 2\amp 3\\0\amp k-6\amp 1 \end{array} \right]
     </me>
-  </p>
-  <p>
+  </p> -->
+  <!-- <p>
     As in the previous example, if <m>k\neq6</m>, we can make the second row, second column entry a leading one and hence we have one solution. However, if <m>k=6</m>, then our last row is <m>\left[\begin{array}{ccc}0\amp 0\amp 1\end{array}\right]</m>, meaning we have no solution.
-  </p>
-  <p>
-    We have been studying the solutions to linear systems mostly in an
-    <q>academic</q>
-    setting; we have been solving systems for the sake of solving systems.
-    In the next section,
-    we'll look at situations which create linear systems that need solving (i.e.,
-    <q>word problems</q>).
-  </p>
-      
+  </p> -->
+  
       <!-- <exercise label="">
         <title>Row operations</title>
         <introduction>
@@ -1132,23 +1046,29 @@
    <!-- <xi:include href="participate-worksheets/dc-.ptx" /> -->
   
 
-    <conclusion xml:id="subsec-consistency-summary">
+    <conclusion xml:id="sec-consistency-summary">
       <title>Summary</title>
       <p>
         <ul>
           <li>
             <p>
-                
+                Every linear system has either no solutions, one solution, or infinitely many solutions. 
+                We call a linear system which has at least one solution <em>consistent</em>, and we call
+               a linear system with no solutions <em>inconsistent.</em>
             </p>
           </li>
           <li>
             <p>
-              
+               To analyze how many solutions a given linear system has, we examine the reduced row
+               echelon form of the system's augmented matrix. We look for number and location of 
+               leading <m>1</m>'s to see whether the system is inconsistent, or if it is consistent, to see which
+               variables are <em>free</em> or <em>independent</em> and which variables are <em>basic</em> or <em>dependent</em>.
             </p>
           </li>
           <li>
             <p>
-              
+              If a linear system has infinitely many solutions, we can describe all the possible solutions
+              in terms of the free variables, and we can also give <em>particular solutions</em>.
             </p>
           </li>
         </ul>
@@ -1159,6 +1079,6 @@
 
     <!-- <xi:include href="interactive-exercises/ww-.ptx" /> -->
 
-    <!-- <xi:include href="noninteractive-exercises/exer-.ptx" /> -->
+    <!-- <xi:include href="noninteractive-exercises/exer-consistency.ptx" /> -->
 
 </section>

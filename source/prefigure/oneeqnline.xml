@@ -1,0 +1,23 @@
+<diagram dimensions="(300,300)" margins="5" xmlns="https://prefigure.org">
+    <definition>f(x) = x</definition>
+    <coordinates bbox="[-6.5,-6.5,6.5,6.5]">
+    <axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+    <group at="graph-fpoints" outline="tactile">
+        <graph at="graph-f" function='f' stroke="blue"/>
+        <point at="point1" p="(1, f(1))" stroke="black" fill="blue" alignment="e"><m>(1,1)</m></point>
+        <point at="point2" p="(3.14, f(3.14))" stroke="black" fill="blue" alignment="e"><m>(\pi,\pi)</m></point>
+        <point at="point3" p="(-5, f(-5))" stroke="black" fill="blue" alignment="se"><m>(-5,-5)</m></point>
+    </group>
+    </coordinates>
+
+    <!-- <annotations>
+    <annotation ref="figure"
+                text="The graph of the line y=x and three points on the line">
+        <annotation ref="graph-f" text="The graph of y=x" sonify="yes"/>
+        <annotation ref="point1" text="The point x=1 and y=1"/>
+        <annotation ref="point2" text="The point x=pi and y=pi"/>
+        <annotation ref="point3" text="The point x=-5 and y=-5"/>
+    </annotation>
+    </annotations> -->
+</diagram>
