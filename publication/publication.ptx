@@ -140,7 +140,7 @@
     <!-- StatCounter requires both values to be set            -->
     <!-- <analytics google-gst="UA-0123456-1" statcounter-project="0123456"
     statcounter-security="0123456"/> -->
-    <tableofcontents focused="yes" preexpanded-levels="2" />
+    <!-- <tableofcontents focused="yes" preexpanded-levels="2" /> -->
 
     <feedback href="mailto:csafranski@franciscan.edu" />
   </html>

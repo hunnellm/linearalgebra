@@ -23,25 +23,19 @@
     <p>
     In <xref ref="ex-fruitpuzzle"/>, <xref ref="ex_sony_interview"/>, <xref ref="ex_by_hand"/>, <xref ref="ex_eq_mat"/>,
     and all of our other examples of linear systems, there was exactly one solution, that is, one possible assignment
-    of values to the variables which made all of the equations in the system true at the same time.
+    of values to the variables which made all of the equations in the system true at the same time. We now consider if 
+    that is always the case or not.
   </p>
-  <p>
-    However, consider the following linear system with one equation:
-    <me>
-      x-y=0
-    </me>.
-    We can see this equation is true when <m>x=1</m> and <m>y=1</m>, or when 
-    <m>x=-5</m> and <m>y=-5</m>, or when <m>x=\pi</m> and <m>y=\pi</m>.  In fact, as long as 
-    <m>x=y</m> this equation is satisfied, and we can picture all of the possible solutions 
-    by thinking of the graph of the equation <m>y=x</m>.
-  </p>
-  <sidebyside valign="middle">
+  <sidebyside widths="50% 45%" margins="0%">
     <p>
+      First, consider the following linear system with one equation:
       <me>
         x-y=0
-      </me>
+      </me>.
+      This equation is true whenever <m>x=y</m>.  We can picture 
+      all of the possible solutions by thinking of the graph of the equation <m>y=x</m>.
     </p>
-    <image width="40%">
+    <image>
       <shortdescription>Graph of the line y=x and three points on the line </shortdescription>
       <prefigure xmlns="https://prefigure.org" label="prefigure-graphofline">
         <xi:include href="prefigure/oneeqnline.xml" />
@@ -54,12 +48,15 @@
     Let's now consider systems of linear equations with two equations and two variables, 
     so that there are two lines in the plane.
   </p> 
-  <sidebyside valign="middle">
+  <sidebyside widths="50% 45%" margins="0%">
     <p>
+      Consider the linear system
       <md>
-      <mrow>x-y\amp =0</mrow>
-      <mrow>x+y\amp =2</mrow>
-    </md>
+        <mrow>x-y\amp =0</mrow>
+        <mrow>x+y\amp =2</mrow>
+      </md>.
+      Since each equation can be viewed as a line and since the slopes of the lines are different,
+      we know the lines will intersect somewhere, and that point of intersection is the only solution to the system. 
     </p>
     <image>
       <prefigure xmlns="https://prefigure.org" label="prefigure-graphofintersectinglines">
@@ -67,90 +64,43 @@
       </prefigure>       
     </image>
   </sidebyside>
-  <p>
-    Since each equation can be viewed as a line in the coordinate plane,
-    and since the slopes of the lines are different,
-    we know the lines will intersect somewhere.  In this case, the point of intersection is
-     <m>(1,1)</m>, that is, when <m>x=1</m> and <m>y=1</m>, and that is the only solution to 
-     <md>
-      <mrow>x-y\amp =0</mrow>
-      <mrow>x+y\amp =2</mrow>
-    </md>
-    since it is the only place where the two lines intersect.
-  </p>
-  <p>
-    Now consider the linear system
-    <md>
-      <mrow>x-y\amp =0</mrow>
-      <mrow>2x-2y\amp =0</mrow>
-    </md>.
-  </p>
-  <p>
-    While this system has two equations, the second is a multiple of the first.
-    Therefore, when we graph the two equations,
-    we are graphing the same line twice;
-    the thicker line is used to represent drawing the line twice.
-    </p>
+  
 
-    <sidebyside valign="middle">
+  <sidebyside widths="50% 45%" margins="0%">
     <p>
+      Now consider the linear system
       <md>
-      <mrow>x-y\amp =0</mrow>
-      <mrow>2x-2y\amp =0</mrow>
-    </md>
+        <mrow>x-y\amp =0</mrow>
+        <mrow>2x-2y\amp =0</mrow>
+      </md>.
+      While this system has two equations, the second is a multiple of the first.
+      The thicker line is used to represent that we've drawn the same line twice.
+      In this case, we have an infinite solution set,
+     just as if we only had the one equation <m>x-y=0</m>.
     </p>
     <image>
-    <prefigure xmlns="https://prefigure.org" label="prefigure-graphofsamelines">
-      <xi:include href="prefigure/twoeqns-sameline.xml"/>
-    </prefigure>       
-  </image>
+      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofsamelines">
+        <xi:include href="prefigure/twoeqns-sameline.xml"/>
+      </prefigure>       
+    </image>
   </sidebyside>
 
+  <sidebyside widths="50% 45%" margins="0%">
     <p>
-     In this case, we have an infinite solution set,
-     just as if we only had the one equation <m>x-y=0</m>.
-   </p>
-  <!-- <figure xml:id="fig_visual_solution">
-    <caption>The three possibilities for two linear equations with two unknowns.</caption>
-    <sidebyside>
-      <figure xml:id="fig-existence-intersecting-lines">
-        <image source="sec_existence_intersecting-lines.svg" />
-        <caption/>
-      </figure>
-      <figure xml:id="fig-existence-overlapping-lines">
-        <image source="sec_existence_overlapping-lines.svg" />
-        <caption/>
-      </figure>
-      <figure xml:id="fig-existence-parallel-lines">
-        <image source="sec_existence_parallel-lines.svg" />
-        <caption/>
-      </figure>
- </sidebyside>
-</figure> -->
-  <p>
-    Finally, consider the linear system
-    <md>
-      <mrow>x-y\amp =0</mrow>
-      <mrow>x-y\amp =2</mrow>
-    </md>.
-  </p>
-  <p>
-    We should immediately spot a problem with this system;
-    if the difference between <m>x</m> and <m>y</m> is <m>0</m>, how can it also be <m>2</m>? 
-    This linear system has no solution. We see that the two lines are parallel and never intersect.
-  </p>
-  <sidebyside valign="middle">
-    <p>
+      Finally, consider the linear system
       <md>
-      <mrow>x-y\amp =0</mrow>
-      <mrow>x-y\amp =2</mrow>
-    </md>
+        <mrow>x-y\amp =0</mrow>
+        <mrow>x-y\amp =2</mrow>
+      </md>.
+  
+      If the difference between <m>x</m> and <m>y</m> is <m>0</m>, it can't also be <m>2</m>. 
+      This linear system has no solution. We see that the two lines are parallel and never intersect.
     </p>
     <image>
-    <prefigure xmlns="https://prefigure.org" label="prefigure-graphofparallellines">
-      <xi:include href="prefigure/twoeqns-parallellines.xml" />
-    </prefigure>       
-  </image>
+      <prefigure xmlns="https://prefigure.org" label="prefigure-graphofparallellines">
+        <xi:include href="prefigure/twoeqns-parallellines.xml" />
+      </prefigure>       
+    </image>
   </sidebyside>
   <p>
     It becomes harder to visualize when we add variables, but
@@ -179,7 +129,7 @@
   </p>
   <figure xml:id="fig_visual_solution">
     <caption>The three possibilities for two equations with two variables</caption>
-    <sidebyside>
+    <sidebyside widths="30% 30% 30%" margins="0%">
       <figure xml:id="fig_threepossibilities_intersecting">
         <caption>One solution</caption>
         <image>
@@ -252,7 +202,7 @@
     <p>
       In a similar way, once we understand the process of Gauss-Jordan elimination and are able to do it by hand for small systems, 
       we move to using technology to quickly obtain the reduced row echelon form of a matrix, because the focus is no longer on our ability
-      to row reduce, but on answering a question which requires interpreting the result of row reducing.
+      to row reduce but on answering a question which requires interpreting the result of row reducing.
     </p>
     </remark>
     <p>
@@ -1089,6 +1039,6 @@
 
     <!-- <xi:include href="interactive-exercises/ww-.ptx" /> -->
 
-    <!-- <xi:include href="noninteractive-exercises/exer-consistency.ptx" /> -->
+    <xi:include href="noninteractive-exercises/exer-consistency.ptx" />
 
 </section>
