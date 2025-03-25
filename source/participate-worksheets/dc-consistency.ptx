@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!-- <subsection xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="subsec-name-dc"> 
+    <title>Participate</title> -->
+    
+    <worksheet xml:id="ws-consistency" margin="1in" bottom="1.25cm"><title component="print-worksheets">Participate: Consistency</title><title component="online-worksheets">Participate</title>
+      <objectives>
+        <ul>
+          <li>
+            <p>
+              Use the reduced row echelon form of an augmented matrix to analyze the consistency and solution(s) (or lack thereof) to a linear system.
+            </p>
+          </li>
+          <li>
+            <p>
+              Identify and use properties of free and basic variables to describe solutions to linear systems.
+            </p>
+          </li>
+        </ul>
+</objectives>
+      <!-- <introduction>
+        <p>
+          something else to say?
+        </p>
+      </introduction> -->
+      <page>
+        <exercise>
+            <introduction>
+                <p>
+                    Consider a linear system whose augmented matrix in reduced row echelon form is
+                    <me>
+                        \begin{bmatrix}  1\amp 0\amp 0\amp 2\amp 3\\0\amp 0\amp 1\amp 4\amp 5\\ \end{bmatrix}
+                    </me>.
+                </p>
+            </introduction>
+
+            <task workspace="1in">
+                <statement>
+                    <p>
+                        Is the system consistent, inconsistent, or is there not enough information to tell?
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        Consistent.
+                    </p>
+                </answer>
+            </task>
+
+            <task workspace="1.5in">
+                <statement>
+                    <p>
+                        Which variables are free and which are basic?
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <m>x_2</m> and <m>x_4</m> are free, while <m>x_1</m> and <m>x_3</m> are basic.
+                    </p>
+                </answer> 
+            </task>
+            
+            <task workspace="2.5in">
+                <statement>
+                    <p>
+                        Solve the system.  If there are infinitely many solutions, give two particular solutions.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>x_1 \amp =3-2x_4 </mrow>
+                            <mrow>x_2 \amp \text{is free} </mrow>
+                            <mrow>x_3 \amp =5-4x_4 </mrow>
+                            <mrow>x_4 \amp \text{is free} </mrow>
+                        </md>
+                        Two particular solutions might be when <m>x_2=x_4=0</m>, resulting in <m>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=\begin{bmatrix}3\\0\\5\\0\end{bmatrix}</m>, or
+                        when <m>x_2=7</m> and <m>x_4=-1</m>, resulting in <m>\begin{bmatrix}x_1\\x_2\\x_3\\x_4\end{bmatrix}=\begin{bmatrix}5\\7\\9\\-1\end{bmatrix}</m>.
+                    </p>
+                </answer>
+            </task>
+            
+        </exercise>
+
+        <exercise>
+            <introduction>
+                <p>
+                    Consider a linear system whose augmented matrix in reduced row echelon form is
+                    <me>
+                        \begin{bmatrix}  1\amp 0\amp 1\amp 4\\0\amp 1\amp 0\amp 1\\ \end{bmatrix}
+                    </me>.
+                </p>
+            </introduction>
+
+            <task workspace="1in">
+                <statement>
+                    <p>
+                        Is the system consistent, inconsistent, or is there not enough information to tell?
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        Consistent.
+                    </p>
+                </answer>
+            </task>
+
+            <task workspace="1.5in">
+                <statement>
+                    <p>
+                        Which variables are free and which are basic?
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <m>x_3</m> is free, while <m>x_1</m> and <m>x_2</m> are basic. 
+                        Note that <m>x_2</m> doesn't depend on <m>x_3</m>.
+                    </p>
+                </answer> 
+            </task>
+            
+            <task workspace="2.5in">
+                <statement>
+                    <p>
+                        Solve the system.  If there are infinitely many solutions, give two particular solutions.
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        <md>
+                            <mrow>x_1 \amp =4-x_3 </mrow>
+                            <mrow>x_2 \amp = 1 </mrow>
+                            <mrow>x_3 \amp \text{is free} </mrow>
+                        </md>
+                        Two particular solutions might be when <m>x_3=0</m>, resulting in <m>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=\begin{bmatrix}4\\1\\0\end{bmatrix}</m>, or
+                        when <m>x_3=10</m>, resulting in <m>\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}=\begin{bmatrix}-6\\1\\10\end{bmatrix}</m>.
+                    </p>
+                </answer>
+            </task>
+            
+        </exercise>
+
+        </page>
+        <page>
+
+        <exercise workspace="2in">
+            <statement>
+                <p>
+                    Construct a linear system with 3 variables that is inconsistent.  Use Sage or another tool 
+                    to calculate the reduced row echelon form of the augmented matrix of your linear system.  
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Prompt students to create two conflicting equations, with the same coefficients but 
+                    different constants, or perhaps to try a system with 4 or 5 equations and only 3 variables.
+                </p>
+            </answer>
+        </exercise>
+
+        <exercise workspace="2in">
+            <statement>
+                <p>
+                    Construct a linear system with 5 variables that has infinitely many solutions.  Use Sage or another tool 
+                    to calculate the reduced row echelon form of the augmented matrix of your linear system.  
+                </p>
+            </statement>
+            <answer>
+                <p>
+                    Prompt students to try using fewer than 5 equations.  See if any come up with an inconsistent system instead. 
+                </p>
+            </answer>
+        </exercise>
+
+        <exercisegroup cols="2" workspace="4in"><title>Analyzing the Effect of Different Coefficient and Constant Values</title>
+        
+            <introduction>
+                <p>
+                    For what values of <m>k</m> will the given system have exactly one solution, infinite solutions, or no solution?
+                </p>
+            </introduction>
+        
+            <exercise>
+                <statement>
+                    <p>
+                        <md>
+                            <mrow> x_1 + 2x_2\amp =3</mrow> 
+                            <mrow> 3x_1 + kx_2\amp = 9 </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        If <m>k\neq 6</m>, there is exactly one solution;
+                        if <m>k=6</m>, there are infinite solutions.
+                        It is not possible for this system to have no solutions.
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <md>
+                            <mrow> x_1 + 2x_2\amp =3</mrow> 
+                            <mrow> 3x_1 + kx_2\amp = 10 </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        If <m>k\neq 6</m>, there is exactly one solution;
+                        if <m>k=6</m>, there are no solutions.
+                        It is not possible for this system to have infinite solutions.
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <md>
+                            <mrow> x_1 + 2x_2\amp =3</mrow> 
+                            <mrow> 3x_1 + 6x_2\amp = k </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        If <m>k=9</m>, there are infinitely many solutions;
+                        if <m>k\neq 9</m>, there is no solution.
+                        It is not possible for this system to have exactly 1 solution.
+                    </p>
+                </answer>
+            </exercise>
+
+            <exercise>
+                <statement>
+                    <p>
+                        <md>
+                            <mrow> x_1 + 2x_2\amp =3</mrow> 
+                            <mrow> 3x_1 + 7x_2\amp = k </mrow>
+                        </md>
+                    </p>
+                </statement>
+                <answer>
+                    <p>
+                        There is exactly one solution for all possible values of <m>k</m>.
+                    </p>
+                </answer>
+            </exercise>
+        </exercisegroup>
+
+      
+      </page>
+    </worksheet>
+    <!-- </subsection> -->
