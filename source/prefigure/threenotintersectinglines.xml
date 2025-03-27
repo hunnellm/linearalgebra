@@ -1,0 +1,14 @@
+<diagram dimensions="(300,300)" margins="5" xmlns="https://prefigure.org">
+    <definition>f(x) = x</definition>
+    <definition>g(x) = -x+2</definition>
+    <definition>h(x) = 1/4*x-3</definition>
+    <coordinates bbox="[-6.5,-6.5,6.5,6.5]">
+        <axes hlabels="(1,1,1)" vlabels="(1,1,1)" xlabel="x" ylabel="y"/>
+
+        <group at="graph-fgh" outline="tactile">
+        <graph at="graph-f" function='f' stroke="blue"/>
+        <graph at="graph-g" function='g' stroke="red"/>
+        <graph at="graph-h" function='h' stroke="green"/>
+        </group>
+    </coordinates>
+</diagram>

@@ -163,7 +163,52 @@
   <subsubsection xml:id="subsubsec-consistent-or-inconsistent">
     <title>Determining Consistency</title>
     <p>
-      We now distinguish between systems which have a solution (either one or infinitely many) 
+      How can we tell whether a given system of linear equations has <m>0</m>, <m>1</m>, or infinitely many solutions?
+      The answer to this question lies with the reduced row echelon form of its 
+      corresponding augmented matrix.
+    </p>
+    <remark><title>A note on using technology</title>
+      <p>
+      When we are learning a new technique or procedure, it's good to go through all the steps ourselves because understanding the 
+      process has benefits.  That's why we typically learn how to add
+      numbers using manipulatives like blocks or fingers, with the goal of eventually being able to add faster without any aids; 
+      in fact, we eventually add numbers we never could have represented with physical manipulatives. The focus shifted from the 
+      ability to add for its own sake to solving a problem which required addition as a step.
+      </p>
+      <p>
+        In a similar way, once we are able to perform Gauss-Jordan elimination by hand for small systems, 
+        we move to using technology to quickly obtain the reduced row echelon form of a matrix.  The focus 
+        is no longer on our ability to row reduce for its own sake but on answering a question which 
+        requires interpreting the result of row reducing a matrix.
+      </p>
+      <p>
+        There are many apps, websites, etc., which can produce the reduced row echelon form
+        of a matrix very quickly.  This book will use SageMath, a language which is built on Python and free.  
+        Hit the <q>Evaluate (Sage)</q> button below to see both the matrix and its reduced row echelon form.
+      </p>
+      <sage>
+          <input>
+              A=matrix(QQ,2,3,[[1,2,3],[4,5,6]])
+              show(A,"-->",A.rref())
+          </input>
+      </sage>
+
+      <p>
+        The <q>QQ</q> in the Sage cell above is present for a technical reason, and the rest of syntax means
+        that <m>A</m> is being defined as a <m>2\times 3</m> matrix, whose first row is <m>[1, 2, 3]</m> and
+        whose second row is <m>[4,5,6]</m>. 
+      </p>
+      <p>
+        Try modifying the contents of the above Sage cell to calculate the reduced row echelon form of a different matrix.
+        Don't worry about messing anything up beyond repair; refreshing the page will reset the Sage cell back to its initial state.
+      </p>
+      <p>
+        From now on, we will give the reduced row echelon form of the matrix without showing work.
+      </p>
+    </remark>
+    
+    <p>
+      We begin by distinguishing between systems which have a solution (either one or infinitely many) 
       and those which have no solution.
     </p>
     <definition xml:id="def_consistent">
@@ -181,117 +226,226 @@
         </p>
       </statement>
     </definition>
-    <!-- could do an interactive here, but would have to make it 2 variables.  
-    1 equation, 2 with 2 equations, 1 with 3 equations? Or show graphs? I think I like graphs better. -->
-    <p>
-      How can we tell what kind of solution a given system of linear equations has?
-      The answer to this question lies with the reduced row echelon form of its 
-      corresponding augmented matrix.
-    </p>
-    <remark><title>A note on using technology</title>
-      <p>
-      In the previous sections, we learned how to find the reduced row echelon form of a matrix using Gaussian elimination by hand.
-      When we are learning a new technique or procedure, it's good to go through all the steps ourselves because understading the 
-      process has benefits.  That's why we typically learn how to add
-      numbers using manipulatives like blocks or crayons or fingers, with the goal of eventually being able to add faster without any aids; 
-      in fact, we eventually add numbers we never could have represented with physical manipulatives. The focus shifted from the 
-      ability to add for its own sake to solving a problem which required addition as a step.
-      </p>
-      <p>
-        In a similar way, once we are able to perform Gauss-Jordan elimination by hand for small systems, 
-        we move to using technology to quickly obtain the reduced row echelon form of a matrix.  The focus 
-        is no longer on our ability to row reduce for its own sake but on answering a question which 
-        requires interpreting the result of row reducing a matrix.
-      </p>
-    </remark>
-    <p>
-      There is no shortage of apps, websites, and other software which can produce the reduced row echelon form
-      of a matrix very quickly.  This book will use SageMath, a language built on Python and a free alternative
-       to more widely known commercial software.  You can find a small blank workspace here: <url href="https://sagecell.sagemath.org/" />, 
-       but you can also use the space below.  Hit the <q>Evaluate</q> button to see both the matrix and its reduced row echelon form.
-    </p>
-    <sage>
-        <input>
-            A=matrix(QQ,2,3,[[1,2,3],[4,5,6]])
-            show(A)
-            show(A.rref())
-        </input>
-    </sage>
 
     <p>
-      The <q>QQ</q> in the Sage cell above is present for a technical reason, but the rest of syntax means
-      that <m>A</m> is being defined as a <m>2\times 3</m> matrix, whose first row is <m>[1, 2, 3]</m> and
-      whose second row is <m>[4,5,6]</m>. Note the extra set of square brackets around the two rows, the 
-      parentheses around everything that comes after the word <q>matrix</q>, and where the commas are located.
-    </p>
-    <p>
-      Try modifying the contents of the above Sage cell to calculate the reduced row echelon form of a different matrix.
-      Don't worry about messing anything up beyond repair; refreshing the page will reset the Sage cell back to its initial state.
-    </p>
-    <p>
-      From now on, when we need the reduced row echelon form of a matrix in this text
-      we will give the initial matrix and then immediately give the reduced row echelon form of the matrix.
+      What happens in the reduced row echelon form if a linear system has no solutions?
     </p>
 
-  <!-- <example xml:id="ex_ex_un_01">
-      <title>Using RREF to analyze solutions; introducing free variables</title>
-    <statement>
-      <p>
-        Find the solution to the linear system
-        <me>
-          \begin{array}{ccccc} x_1 \amp  +\amp  x_2 \amp  = \amp  1\\ 2x_1 \amp  + \amp  2x_2 \amp  = \amp 2 \end{array}
-        </me>.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Create the corresponding augmented matrix,
-        and then put the matrix into reduced row echelon form.
-        <me>
-          \left[\begin{array}{ccc}  1\amp 1\amp 1\\2\amp 2\amp 2 \end{array} \right] \rrefarrow \left[\begin{array}{ccc}  1\amp 1\amp 1\\0\amp 0\amp 0 \end{array} \right]
-        </me>
-      </p>
-      <p>
-        Now convert the reduced matrix back into equations.
-        In this case, we only have one equation,
-        <me>
-          x_1+x_2=1
-        </me>
-        or, equivalently,
-        <md>
-          <mrow>x_1 \amp =1-x_2</mrow>
-          <mrow>x_2\amp \text{ is free } </mrow>
-        </md>.
-      </p>
-      <p>
-        We have just introduced a new term, the word <em>free</em>.
-            <idx><h>free variable</h></idx>
-            <idx><h>variable</h><h>free</h></idx>
-        It is used to stress that idea that <m>x_2</m> can take on <em>any</em> value; we are
-        <q>free</q>
-        to choose any value for <m>x_2</m>.
-        Once this value is chosen, the value of <m>x_1</m> is determined.
-        Since we have infinite choices for the value of <m>x_2</m>,
-        we therefore have infinite solutions to the linear system.
-      </p>
-      <p>
-        For example, if we set <m>x_2 = 0</m>, then <m>x_1 = 1</m>;
-        if we set <m>x_2 = 5</m>, then <m>x_1 = -4</m>.
-      </p>
-    </solution>
-  </example> -->
+    <example xml:id="ex_ex_un_2">
+        <title>A system with no solutions</title>
+        <p>
+          Find the solution to the linear system
+          <me>
+            \begin{array}{ccccccc} x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 1\\ x_1\amp +\amp 2x_2\amp +\amp x_3\amp =\amp 2\\ 2x_1\amp +\amp 3x_2\amp +\amp 2x_3\amp =\amp 0 \end{array}
+          </me>
+        </p>
+        <p>
+          <em>Answer:</em> We put the corresponding augmented matrix into reduced row echelon form.
+          <me>
+            \left[\begin{array}{cccc}  1\amp 1\amp 1\amp 1\\1\amp 2\amp 1\amp 2\\ 2\amp 3\amp 2\amp 0\\ \end{array} \right] \rrefarrow \left[\begin{array}{cccc}  1\amp 0\amp 1\amp 0\\ 0\amp 1\amp 0\amp 0\\ 0\amp 0\amp 0\amp 1\\ \end{array} \right]
+          </me>
+        </p>
+        <p>
+          Now let us take the reduced matrix and write out the corresponding equations.
+          The first two rows give us the equations
+          <md>
+            <mrow>x_1+x_3\amp =0</mrow>
+            <mrow>x_2 \amp = 0</mrow>
+          </md>.
+        </p>
+        <p>
+          So far, so good.
+          However the last row gives us the equation
+          <me>
+            0x_1+0x_2+0x_3 = 1
+          </me>.
+          There are no values of <m>x_1, x_2</m> and <m>x_3</m> which can make <m>0=1</m>.
+          Therefore, no solution exists, and 
+          this system is inconsistent.
+        </p>
+    </example>
+    <p>
+      The key takeaway from <xref ref="ex_ex_un_2"/> is: if any row has a leading <m>1</m> in the last column after 
+      row reducing the augmented matrix of a linear system, the system is inconsistent.  
+      Otherwise, the system is consistent, which means it has at least 1 solution. 
+    </p>
+
+    <exercise xml:id="ex_consistent-or-not" label="consistent-or-not-examples">
+        <title>Consistent or inconsistent?</title>
+        <introduction>
+            <p>
+                For each of the following linear systems, say whether it is consistent or inconsistent.
+            </p>
+        </introduction>
+          <task label="consistent-or-not-a">
+            <statement>
+                <p>
+                  The linear system whose augmented matrix in reduced row echelon form is
+                    <me>\begin{bmatrix} 1\amp 0 \amp -2\\0\amp 1 \amp 1
+                        \end{bmatrix}</me>.
+                </p>
+            </statement>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Consistent
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct! 
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>
+                            Inconsistent
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            There is no row with a leading <m>1</m> in the last column.  The first row says that 
+                            <m>x_1=-2</m> and the second row says that <m>x_2=1</m>.  If a linear system has a solution, it is consistent.
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="consistent-or-not-b">
+            <statement>
+                <p>
+                  The linear system whose augmented matrix in reduced row echelon form is
+                    <me>\begin{bmatrix} 1 \amp 1  \amp -3 \\ 0\amp 0\amp 0
+                        \end{bmatrix}</me>.
+                </p>
+            </statement>
+            <choices>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Consistent
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct! 
+                        </p>
+                    </feedback>
+                </choice>
+                <choice>
+                    <statement>
+                        <p>
+                            Inconsistent
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            There is no row with a leading <m>1</m> in the last column.  The first row says that 
+                            <m>x_1+x_2=-3</m> and the second row says that <m>0x_1+0x_2=0</m>, which is true.
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="consistent-or-not-c">
+            <statement>
+                <p>
+                  The linear system whose augmented matrix has been row reduced to
+                    <me>\begin{bmatrix} 1 \amp 0  \amp -3 \\ 0\amp 1\amp 1 \\0\amp 0\amp 1 \\ 0 \amp 0 \amp 0
+                        \end{bmatrix}</me>.
+                </p>
+            </statement>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            Consistent
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            There is a row with a leading <m>1</m> in the last column.  The third row says that 
+                            <m>0x_1+0x_2=1</m>, which is not true for any possible values of <m>x_1</m> and <m>x_2</m>. 
+                            A system with no solutions is inconsistent.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Inconsistent
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          <task label="consistent-or-not-d">
+            <statement>
+                <p>
+                  The linear system pictured below.
+                  <image width="40%">
+                    <shortdescription>Three lines with no common point of intersection</shortdescription>
+                    <prefigure xmlns="https://prefigure.org" label="prefigure-graphofthreelines">
+                      <xi:include href="prefigure/threenotintersectinglines.xml" />
+                    </prefigure>
+                  </image>
+
+                </p>
+            </statement>
+            <choices>
+                <choice>
+                    <statement>
+                        <p>
+                            Consistent
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            There is no common point of intersection.  Each line is an equation, and there is no point which satisfies
+                            all three equations.  The linear system pictured has no solution, which means it's inconsistent.
+                        </p>
+                    </feedback>
+                </choice>
+                <choice correct="yes">
+                    <statement>
+                        <p>
+                            Inconsistent
+                        </p>
+                    </statement>
+                    <feedback>
+                        <p>
+                            Correct!
+                        </p>
+                    </feedback>
+                </choice>
+            </choices>
+          </task>
+          
+    </exercise>
+
+
+    <p>
+      We've now seen a system which has no solution and 
+      systems which have exactly one solution such as <xref ref="ex_eq_mat"/>, 
+      so let's look next at a system which has infinitely many solutions.
+    </p>
+
   
     <example xml:id="ex_ex_un_1">
-      <title>A free variable example</title>
-    <!-- <statement> -->
+      <title>A system with infinitely many solutions</title>
       <p>
         Find the solution to the linear system
         <me>
           \begin{array}{ccccccc} \amp  \amp x_2\amp -\amp x_3\amp =\amp 3\\ x_1\amp   \amp  \amp +\amp 2x_3\amp =\amp 2\\ \amp \amp -3x_2\amp +\amp 3x_3\amp =\amp -9 \end{array}
         </me>
       </p>
-    <!-- </statement> -->
-    <!-- <solution> -->
       <p>
         <em>Answer:</em> To find the solution,
         put the corresponding matrix into reduced row echelon form.
@@ -310,7 +464,6 @@
         <md>
           <mrow>x_1 \amp = 2-2x_3</mrow>
           <mrow>x_2\amp =3+x_3</mrow>
-          <!-- <mrow>x_3\amp \ \ \text{is free.}</mrow> -->
         </md>
       </p>
       <p>
@@ -318,16 +471,8 @@
         There is no restriction on what <m>x_3</m> must be; it is
         <em>free</em> to take on the value of any real number.
         Since we have infinite choices for the value of <m>x_3</m>,
-        we have infinite solutions.
+        we have infinitely many solutions.
       </p>
-      <!-- <p>
-        Let's choose some different values for <m>x_3</m>.   <m>x_1 = 2</m>, <m>x_2 = 3</m>,
-        <m>x_3 = 0</m> is one solution;
-        <m>x_1 = -2</m>, <m>x_2 = 5</m>,
-        <m>x_3 = 2</m> is another solution. We call these examples, 
-        and any other specific solution to a system with infinite solutions, <em>particular solutions</em>.
-      </p> -->
-    <!-- </solution> -->
     </example>
   <!-- could do some multiple choice or multiple select or card sort.  on the right has a linear system,
   on the left has options like consistent or inconsistent, one solution, infinitely many solutions, or no solutions. -->
@@ -374,125 +519,16 @@
         applies only to <em>consistent</em> systems.
         If a system is <em>inconsistent</em>,
         then it's meaningless to talk about being free (or not) to pick
-        values for the variables because there is no solution to the system.
+        values for the variables because there are <em>no</em> values which satisfy 
+        all the equations in the system.
       </p>
     </remark>
     <p>
-      These definitions help us understand when a consistent system of linear equations 
-      will have infinite solutions.  If a consistent system has no free variables,
-      then there is exactly one solution; inversely, if there are any free variables, then there are infinite solutions.
+      <xref ref="def_free"/> helps us understand when a consistent system of linear equations 
+      will have infinitely many solutions.  If a consistent system has no free variables,
+      then there is exactly one solution; inversely, if there are any free variables, then there are infinitely many solutions.
     </p>
-  <!-- Move this assemblage to part of in-class? Making students fill in a table or something? -->
-  <!-- <assemblage xml:id="idea_consistent">
-      <title>Consistent Solution Types</title>
-      <idx><h>system of linear equations</h><h>consistent</h></idx>
-      <idx><h>leading one</h></idx>
-      <idx><h>solution</h><h>infinite</h></idx>
-    <p>
-      A consistent linear system of equations will have exactly one solution if and only if there is a leading <m>1</m> for each variable in the system.
-    </p>
-    <p>
-      If a consistent linear system of equations has a free variable,
-      it has infinite solutions.
-    </p>
-    <p>
-      If a consistent linear system has more variables than leading <m>1</m>'s,
-      then the system will have infinite solutions.
-    </p>
-    <p>
-      A consistent linear system with more variables than equations will always have infinite solutions.
-    </p>
-  </assemblage>
-  
-  <p>
-    When a consistent system has only one solution, each equation that comes from the 
-    reduced row echelon form of the corresponding augmented matrix will contain exactly 
-    one variable.
-    If the consistent system has infinite solutions, then there will be at least one equation coming from the reduced row echelon form that contains more than one variable.
-    The first variable in that equation will be the dependent variable;
-    all others will be free variables.
-  </p> -->
-  <!-- definitely do an interactive here.  unique or infinite solutions.  free vs basic, independent vs dependent -->
-    <p>
-      We have now seen examples of both kinds of consistent linear systems;
-      how can we recognize when a linear system is inconsistent?
-    </p>
-    <example xml:id="ex_ex_un_2">
-        <title>An Inconsistent System</title>
-      <!-- <statement> -->
-        <p>
-          Find the solution to the linear system
-          <me>
-            \begin{array}{ccccccc} x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 1\\ x_1\amp +\amp 2x_2\amp +\amp x_3\amp =\amp 2\\ 2x_1\amp +\amp 3x_2\amp +\amp 2x_3\amp =\amp 0 \end{array}
-          </me>
-        </p>
-      <!-- </statement>
-      <solution> -->
-        <p>
-          <em>Answer:</em> We start by putting the corresponding matrix into reduced row echelon form.
-          <me>
-            \left[\begin{array}{cccc}  1\amp 1\amp 1\amp 1\\1\amp 2\amp 1\amp 2\\ 2\amp 3\amp 2\amp 0\\ \end{array} \right] \rrefarrow \left[\begin{array}{cccc}  1\amp 0\amp 1\amp 0\\ 0\amp 1\amp 0\amp 0\\ 0\amp 0\amp 0\amp 1\\ \end{array} \right]
-          </me>
-        </p>
-        <p>
-          Now let us take the reduced matrix and write out the corresponding equations.
-          The first two rows give us the equations
-          <md>
-            <mrow>x_1+x_3\amp =0</mrow>
-            <mrow>x_2 \amp = 0</mrow>
-          </md>.
-        </p>
-        <p>
-          So far, so good.
-          However the last row gives us the equation
-          <me>
-            0x_1+0x_2+0x_3 = 1
-          </me>
-          or, more concisely, <m>0=1</m>.
-          Obviously, this is not true;
-          we have reached a contradiction.
-          Therefore, no solution exists, and 
-          this system is inconsistent.
-        </p>
-      <!-- </solution> -->
-    </example>
-  <!-- <example xml:id="ex_ex_un_3">
-      <title>An Inconsistent System</title>
-    <statement>
-      <p>
-        Confirm that the linear system
-        <me>
-          \begin{array}{ccccc} x\amp +\amp y\amp =\amp 0 \\2x\amp +\amp 2y\amp =\amp 4 \end{array}
-        </me>
-        has no solution.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        We can verify that this system has no solution in two ways.
-        First, let's just think about it.
-        If <m>x+y=0</m>, then it stands to reason,
-        by multiplying both sides of this equation by <m>2</m>, that <m>2x+2y = 0</m>.
-        However, the second equation of our system says that <m>2x+2y= 4</m>.
-        Since <m>0\neq 4</m>,
-        we have a contradiction and hence our system has no solution.
-        (We cannot possibly pick values for <m>x</m> and <m>y</m> so that <m>2x+2y</m> equals both <m>0</m> and <m>4</m>.)
-      </p>
-      <p>
-        Now let us confirm this using the prescribed technique from above.
-        The reduced row echelon form of the corresponding augmented matrix is
-        <me>
-          \left[\begin{array}{ccc}  1\amp 1\amp 0\\0\amp 0\amp 1\\ \end{array} \right]
-        </me>.
-        We have a leading <m>1</m> in the last column,
-        so therefore the system is inconsistent.
-      </p>
-    </solution>
-  </example> -->
-    <p>
-      The key aspect which made the system in <xref ref="ex_ex_un_2"/> inconsistent was that there was a row with a leading <m>1</m> in the last column.
-      Let's summarize what we have learned up to this point.
-    </p>
+
     <assemblage><title>Analyzing the solutions of a linear system</title>
       <p>
         Consider the reduced row echelon form of the augmented matrix of a system of linear equations.
@@ -517,6 +553,244 @@
       </ul>
       </p>
     </assemblage>
+
+    <exercise label="properties-of-linear-systems"><title>Number of solutions, free and basic variables</title>
+      <introduction>
+        <p>
+          For each augmented matrix in reduced row echelon form, select all that is true about the corresponding linear system.
+        </p>
+      </introduction>
+      <task label="properties-lin-sys-a">
+        <statement>
+          <p>
+            <me>
+              \begin{bmatrix} 1 \amp 2  \amp 0 \amp 7 \amp 6 \\ 0\amp 0 \amp 1 \amp -5  \amp -23 \end{bmatrix}
+            </me>
+          </p>
+        </statement>
+        <choices randomize="no">
+          <choice correct="no">
+          <statement>
+            <p>
+              The variable <m>x_1</m> is free.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              There is a leading 1 in the first column, so <m>x_1</m> is basic, or dependent.
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="yes">
+          <statement>
+            <p>
+              The variable <m>x_2</m> is free.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="no">
+          <statement>
+            <p>
+              The variable <m>x_3</m> is free.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              There is a leading 1 in the third column, so <m>x_3</m> is basic, or dependent.
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="yes">
+          <statement>
+            <p>
+              The variable <m>x_4</m> is free.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="no">
+          <statement>
+            <p>
+              The variable <m>x_5</m> is free.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              This system doesn't have an <m>x_5</m>.  The last column in an augmented matrix corresponds to the constants of the equations, so there are only
+              4 columns corresponding to variables.  
+            </p>
+          </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="properties-lin-sys-b">
+        <statement>
+          <p>
+            <me>
+              \begin{bmatrix} 1 \amp 2  \amp 0 \amp 7 \amp 6 \\ 0\amp 0 \amp 1 \amp -5  \amp -23 \end{bmatrix}
+            </me>
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="no">
+          <statement>
+            <p>
+              The system has no solutions.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              There is no row with a leading 1 in the last column, so there is at least one solution. 
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="no">
+          <statement>
+            <p>
+              The system has exactly 1 solution.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              This consistent system doesn't have a leading 1 in every column corresponding to variables, and so there is more than 1 solution.   
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="yes">
+          <statement>
+            <p>
+              There are infinitely many solutions.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct!  
+            </p>
+          </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="properties-lin-sys-c">
+        <statement>
+          <p>
+            <me>
+              \begin{bmatrix} 1 \amp 0  \amp 2 \\ 0\amp 1 \amp -1\\ 0 \amp 0 \amp 0 \end{bmatrix}
+            </me>
+          </p>
+        </statement>
+        <choices randomize="no">
+          <choice correct="no">
+          <statement>
+            <p>
+              The variable <m>x_1</m> is free.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              There is a leading 1 in the first column, so <m>x_1</m> is basic, or dependent.
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="no">
+          <statement>
+            <p>
+              The variable <m>x_2</m> is free.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              There is a leading 1 in the second column, so <m>x_2</m> is basic, or dependent.
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="no">
+          <statement>
+            <p>
+              The variable <m>x_3</m> is free.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              This system doesn't have an <m>x_3</m>.  The last column in an augmented matrix corresponds to the constants of the equations, so there are only
+              2 columns corresponding to variables.
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="yes">
+          <statement>
+            <p>
+              There are no free variables.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+          </choice>
+        </choices>
+      </task>
+      <task label="properties-lin-sys-d">
+        <statement>
+          <p>
+            <me>
+              \begin{bmatrix} 1 \amp 0  \amp 2 \\ 0\amp 1 \amp -1\\ 0 \amp 0 \amp 0 \end{bmatrix}
+            </me>
+          </p>
+        </statement>
+        <choices randomize="yes">
+          <choice correct="no">
+          <statement>
+            <p>
+              The system has no solutions.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              There is no row with a leading 1 in the last column, so there is at least one solution. 
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="yes">
+          <statement>
+            <p>
+              The system has exactly 1 solution.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Correct!
+            </p>
+          </feedback>
+          </choice>
+          <choice correct="no">
+          <statement>
+            <p>
+              There are infinitely many solutions.
+            </p>
+          </statement>
+          <feedback>
+            <p>
+              Every variable has a leading 1 in its column, so there are no free variables.  
+            </p>
+          </feedback>
+          </choice>
+        </choices>
+      </task>
+      
+      
+
+      
+    </exercise>
   </subsubsection>
   <subsubsection xml:id="subsubsec-infinitesolutions">
     <title>More on Infinite Solutions</title>
@@ -602,140 +876,6 @@
         </p>
       <!-- </solution> -->
     </example>
-  <!-- <example xml:id="ex_ex_un_5">
-      <title>Infinite Solutions; Column of Zeros</title>
-    <statement>
-      <p>
-        Find the solution to a linear system whose augmented matrix in reduced row echelon form is
-        <me>
-          \left[\begin{array}{ccccc}  1\amp 0\amp 0\amp 2\amp 3\\0\amp 1\amp 0\amp 4\amp 5\\ \end{array} \right]
-        </me>
-        and give two particular solutions.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        Converting the two rows into equations we have
-        <md>
-          <mrow>x_1 + 2x_4 \amp = 3</mrow>
-          <mrow>x_2 + 4x_4\amp =5</mrow>
-        </md>.
-      </p>
-      <p>
-        We see that <m>x_1</m> and <m>x_2</m> are our dependent variables,
-        for they correspond to the leading 1s.
-        Therefore, <m>x_3</m> and <m>x_4</m> are independent variables.
-        This situation feels a little unusual,<fn xml:id="footnote_extra_zeros">
-        What kind of situation would lead to a column of all zeros?
-        To have such a column,
-        the original matrix needed to have a column of all zeros,
-        meaning that while we acknowledged the existence of a certain variable,
-        we never actually used it in any equation.
-        In practical terms,
-        we could respond by removing the corresponding column from the matrix and just keep in mind that that variable is free.
-        In very large systems,
-        it might be hard to determine whether or not a variable is actually used and one would not worry about it.
-        When we learn about eigenvectors and eigenvalues,
-        we will see that under certain circumstances this situation arises.
-        In those cases we leave the variable in the system just to remind ourselves that it is there.
-        </fn> for <m>x_3</m> doesn't appear in any of the equations above,
-        but cannot overlook it;
-        it is still a free variable since there is not a leading <m>1</m> that corresponds to it.
-        We write our solution as:
-        <md>
-          <mrow>x_1 \amp = 3-2x_4</mrow>
-          <mrow>x_2 \amp =5-4x_4</mrow>
-          <mrow>x_3 \amp  \text{ is free }</mrow>
-          <mrow>x_4 \amp   \text{ is free } </mrow>
-        </md>.
-      </p>
-      <p>
-        To find two particular solutions,
-        we pick values for our free variables.
-        Again, there is no
-        <q>right</q>
-        way of doing this
-        (in fact, there are <m>\ldots</m> infinite ways of doing this)
-        so we give only an example here.
-      </p>
-      <sidebyside>
-        One particular solution is:
-        <md>
-          <mrow>x_1 \amp = 3</mrow>
-          <mrow>x_2 \amp =5</mrow>
-          <mrow>x_3 \amp = 1000</mrow>
-          <mrow>x_4 \amp = 0</mrow>
-        </md>.
-        Another particular solution is:
-        <md>
-          <mrow>x_1 \amp = 3-2\pi</mrow>
-          <mrow>x_2 \amp =5-4\pi</mrow>
-          <mrow>x_3 \amp = e^2</mrow>
-          <mrow>x_4 \amp = \pi</mrow>
-        </md>.
-      </sidebyside>
-      <p>
-        (In the second particular solution we picked
-        <q>unusual</q>
-        values for <m>x_3</m> and <m>x_4</m> just to highlight the fact that we can.)
-      </p>
-    </solution>
-  </example> -->
-  <!-- <example xml:id="ex_ex_un_6">
-      <title>Infinite Solutions; One Variable Constant</title>
-    <statement>
-      <p>
-        Find the solution to the linear system
-        <me>
-          \begin{array}{ccccccc}x_1\amp +\amp x_2\amp +\amp x_3\amp =\amp 5\\x_1\amp -\amp x_2\amp +\amp x_3\amp =\amp 3 \end{array}
-        </me>
-        and give two particular solutions.
-      </p>
-    </statement>
-    <solution>
-      <p>
-        The corresponding augmented matrix and its reduced row echelon form are given below
-        <me>
-          \left[\begin{array}{cccc} 1\amp 1\amp 1\amp 5\\1\amp -1\amp 1\amp 3\\ \end{array} \right] \rrefarrow \left[\begin{array}{cccc} 1\amp 0\amp 1\amp 4\\0\amp 1\amp 0\amp 1\\ \end{array} \right]
-        </me>
-      </p>
-      <p>
-        Converting these two rows into equations, we have
-        <md>
-          <mrow>x_1+x_3\amp =4</mrow>
-          <mrow>x_2\amp =1</mrow>
-        </md>
-        giving us the solution
-        <md>
-          <mrow>x_1\amp = 4-x_3</mrow>
-          <mrow>x_2\amp =1</mrow>
-          <mrow>x_3 \amp \text{ is free } </mrow>
-        </md>.
-      </p>
-      <p>
-        Once again, we get a bit of an
-        <q>unusual</q>
-        solution; while <m>x_2</m> is a dependent variable,
-        it does not depend on any free variable;
-        instead, it is always <m>1</m>. (We can think of it as depending on the value of <m>1</m>.) By picking two values for <m>x_3</m>,
-        we get two particular solutions.
-      </p>
-      <p>
-        One particular solution is:
-        <md>
-          <mrow>x_1 \amp = 4</mrow>
-          <mrow>x_2 \amp =1</mrow>
-          <mrow>x_3 \amp = 0 </mrow>
-        </md>.
-        Another particular solution is:
-        <md>
-          <mrow>x_1 \amp = 3</mrow>
-          <mrow>x_2 \amp =1</mrow>
-          <mrow>x_3 \amp = 1 </mrow>
-        </md>.
-      </p>
-    </solution>
-  </example> -->
 
     <p>
       The constants and coefficients of an augmented matrix work together to determine whether a given system of linear equations has one,
@@ -747,219 +887,43 @@
   </subsubsection>
     
 
-  <!-- <example xml:id="ex_variable_k">
-      <title>Analyzing the Effect of Different Coefficient Values on the Linear System</title>
-    <statement>
-      <p>
-        For what values of <m>k</m> will the given system have exactly one solution,
-        infinite solutions, or no solution?
-        <me>
-          \begin{array}{ccccc}x_1\amp +\amp 2x_2\amp =\amp 3\\ 3x_1\amp +\amp kx_2\amp =\amp 9 \end{array}
-        </me>
-      </p>
-    </statement>
-    <solution>
-      <p>
-        We answer this question by forming the augmented matrix and starting the process of putting it into reduced row echelon form.
-        Below we see the augmented matrix and one elementary row operation that starts the Gaussian elimination process.
-        <me>
-          \left[\begin{array}{ccc}  1\amp 2\amp 3\\3\amp k\amp 9 \end{array} \right] \xrightarrow{-3R_1+R_2\rightarrow R_2} \left[\begin{array}{ccc}  1\amp 2\amp 3\\0\amp k-6\amp 0 \end{array} \right]
-        </me>
-      </p>
-      <p>
-        This is as far as we need to go.
-        In looking at the second row,
-        we see that if <m>k=6</m>,
-        then that row contains only zeros and <m>x_2</m> is a free variable;
-        we have infinite solutions.
-        If <m>k\neq 6</m>,
-        then our next step would be to make that second row,
-        second column entry a leading one.
-        We don't particularly care about the solution,
-        only that we would have exactly one as both <m>x_1</m> and <m>x_2</m> would correspond to a leading one and hence be dependent variables.
-      </p>
-      <p>
-        Our final analysis is then this.
-        If <m>k\neq 6</m>, there is exactly one solution;
-        if <m>k=6</m>, there are infinite solutions.
-        In this example, it is not possible to have no solutions.
-      </p>
-    </solution>
-  </example> -->
-  <!-- <p>
-    As an extension of the previous example,
-    consider the similar augmented matrix where the constant <m>9</m> is replaced with a <m>10</m>. Performing the same elementary row operation gives
-    <me>
-      \left[\begin{array}{ccc}  1\amp 2\amp 3\\3\amp k\amp 10 \end{array} \right] \xrightarrow{-3R_1+R_2\rightarrow R_2} \left[\begin{array}{ccc}  1\amp 2\amp 3\\0\amp k-6\amp 1 \end{array} \right]
-    </me>
-  </p> -->
-  <!-- <p>
-    As in the previous example, if <m>k\neq6</m>, we can make the second row, second column entry a leading one and hence we have one solution. However, if <m>k=6</m>, then our last row is <m>\left[\begin{array}{ccc}0\amp 0\amp 1\end{array}\right]</m>, meaning we have no solution.
-  </p> -->
-  
-      <!-- <exercise label="">
-        <title>Row operations</title>
-        <introduction>
-          <p>
-            In the following tasks, perform the row operations described on the given matrix.  
-          </p>
-        </introduction>
-        <task label="row-ops-practice-a">
-        <statement>
-          <p>
-            Consider the matrix 
-            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
-            Which matrix is the result of multiplying Row 1 by <m>-2</m> and adding to Row 3?
-          </p>
-        </statement>
-        <choices randomize="yes">
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This multiplied Row 1 by <m>-2</m> and replaced Row 1.  It didn't do anything to Row 3.
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="yes">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ -2\amp -7\amp -1\amp \frac{-7}{2}\\ \end{array} \right]</m> 
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                Correct! 
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ -2\amp -7\amp -1\amp \frac{-7}{2}\\ \end{array} \right]</m> 
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                In the <q>multiply and add</q> row operation, you don't change the row you multiplied by a number; you only change the row you added to.
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ -2\amp -5\amp -3 \amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                We have to do the operation to the entire row, not just the first entry.  
-              </p>
-            </feedback>
-          </choice>
-        </choices>
-      </task>
-      <task label="row-ops-practice-b">
-        <statement>
-          <p>
-            Consider the matrix 
-            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
-            Which matrix is the result of multiplying Row 1 by <m>-2</m>?
-          </p>
-        </statement>
-        <choices randomize="yes">
-          <choice correct="yes">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                Correct!
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} -2\amp -2\amp 2\amp -4\\ 2\amp 1\amp 5\amp 7\\ 0\amp 10\amp 6\amp -1\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This multiplied both Row 1 and Row 3 by <m>-2</m>.
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ -2\amp -1\amp -5\amp -7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This multiplied Row 2 by <m>-1</m>.
-              </p>
-            </feedback>
-          </choice>
-        </choices>
-      </task>
-      <task label="row-ops-practice-c">
-        <statement>
-          <p>
-            Consider the matrix 
-            <me>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 2\amp 1\amp 5\amp 7\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</me>.
-            Which matrix is the result of interchanging Row 2 and Row 3?
-          </p>
-        </statement>
-        <choices randomize="yes">
-          <choice correct="yes">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ 2\amp 1\amp 5\amp 7\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                Correct!
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 2\amp 1\amp 5\amp 7\\ 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This interchanged Row 1 and Row 2.
-              </p>
-            </feedback>
-          </choice>
-          <choice correct="no">
-            <statement>
-              <p>
-                <m>\left[\begin{array}{cccc} 1\amp 1\amp -1\amp 2\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ 0\amp -5\amp -3\amp \frac{1}{2}\\ \end{array} \right]</m>
-              </p>
-            </statement>
-            <feedback>
-              <p>
-                This replaced Row 2 with a copy of Row 3, but didn't replace Row 3 with a copy of Row 2.
-              </p>
-            </feedback>
-          </choice>
-        </choices>
-      </task>
-      </exercise> -->
       
   <reading-questions xml:id="rqs-consistency">
+
+    <exercise label="systems-solution-types">
+      <title>Matching Problem, Solution Types</title>
+      <idx>matching solution types of linear systems</idx>
+      <statement>
+        <p>
+          The matrices below are each the augmented matrix of a linear system. Sort the matrices by how many solutions the system has.  
+        </p>
+      </statement>
+      <matches>
+      <match>
+      <response>No solutions</response>
+      <premise order="5"><m>\begin{bmatrix}1 \amp 1  \amp -3 \\ 0\amp 0\amp 1 \end{bmatrix}</m></premise>
+      <premise order="3"><m>\begin{bmatrix}1 \amp 0  \amp 2 \\ 0\amp 1\amp -4 \\ 0\amp 0 \amp 1\end{bmatrix}</m></premise>
+      </match>
+      <match>
+      <response>One solution</response>
+      <premise order="2"><m>\begin{bmatrix}1 \amp 0  \amp 0 \amp  5 \\ 0\amp  1 \amp 0 \amp 7 \\ 0\amp  0 \amp 1 \amp 11 \end{bmatrix}</m></premise>
+      </match>
+      <match>
+      <response>Infinitely many solutions</response>
+      <premise order="1"><m>\begin{bmatrix}1 \amp 0  \amp 4 \amp 0 \amp  5 \\ 0\amp  1 \amp -1 \amp 0 \amp 7 \\ 0\amp  0 \amp 0 \amp 1\amp 11 \end{bmatrix}</m></premise>
+      <premise order="4"><m>\begin{bmatrix}1 \amp 1  \amp -3 \\ 0\amp 0\amp 0 \end{bmatrix}</m></premise>
+      </match>
+      </matches>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Can there be a linear system which has exactly 3 solutions?  Why or why not?
+        </p>
+      </statement>
+      <response />
+    </exercise>
 
 
     <exercise label="rq-consistency-questions"><title>Reflection</title>
