@@ -1,397 +1,32 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-representations>
   <webwork-reps version="2" ww_major_version="2" ww_minor_version="19" xml:id="extracted-webwork-1" ww-id="webwork-1">
-    <static seed="1" source="matrixtheory/rrefprob1.pg">
-      <statement><p>Determine whether the following matrices are in echelon form, reduced echelon form or not in echelon form.</p>
-<p>a. 
-<ul form="popup" name="AnSwEr0001"><li>
-<p>Choose</p>
-</li><li>
-<p>Echelon Form</p>
-</li><li>
-<p>Reduced Echelon Form</p>
-</li><li>
-<p>Not in Echelon Form</p>
-</li></ul> <m>\left[\begin{array}{ccc}
-2 \amp 1 \amp 1\cr
-1 \amp -10 \amp 6\cr
-0 \amp 0 \amp 1
-\end{array}\right]</m></p>
-<p>b.
-<ul form="popup" name="AnSwEr0002"><li>
-<p>Choose</p>
-</li><li>
-<p>Echelon Form</p>
-</li><li>
-<p>Reduced Echelon Form</p>
-</li><li>
-<p>Not in Echelon Form</p>
-</li></ul> <m>\left[\begin{array}{cccc}
-0 \amp 1 \amp 0 \amp 9\cr
-0 \amp 0 \amp 1 \amp 4
-\end{array}\right]</m></p>
-<p>c.
-<ul form="popup" name="AnSwEr0003"><li>
-<p>Choose</p>
-</li><li>
-<p>Echelon Form</p>
-</li><li>
-<p>Reduced Echelon Form</p>
-</li><li>
-<p>Not in Echelon Form</p>
-</li></ul> <m>\left[\begin{array}{cccc}
-1 \amp 1 \amp 1 \amp 0\cr
-0 \amp 1 \amp -4 \amp 0\cr
-0 \amp 0 \amp 0 \amp 1
-\end{array}\right]</m></p>
-<p>d.
-<ul form="popup" name="AnSwEr0004"><li>
-<p>Choose</p>
-</li><li>
-<p>Echelon Form</p>
-</li><li>
-<p>Reduced Echelon Form</p>
-</li><li>
-<p>Not in Echelon Form</p>
-</li></ul> <m>\left[\begin{array}{cccc}
-1 \amp 0 \amp 0 \amp 10\cr
-0 \amp 1 \amp 0 \amp 5\cr
-0 \amp 0 \amp 1 \amp -2
-\end{array}\right]</m></p>
-</statement>
-      <answer>
-        <p>
-          <m>\text{Not in Echelon Form}</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>\text{Reduced Echelon Form}</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>\text{Echelon Form}</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>\text{Reduced Echelon Form}</m>
-        </p>
-      </answer>
-    </static>
-    <server-data sourceFilePath="matrixtheory/rrefprob1.pg" domain="https://webwork-dev.uleth.ca" course-id="chrissy-playground" user-id="anonymous" password="anonymous" language="en-US"/>
-    <pg source="matrixtheory/rrefprob1.pg"/>
-  </webwork-reps>
-  <webwork-reps version="2" ww_major_version="2" ww_minor_version="19" xml:id="extracted-webwork-2" ww-id="webwork-2">
-    <static seed="2" source="matrixtheory/rrefprob2.pg">
-      <statement><p>Determine whether the following matrices are in echelon form, reduced echelon form or not in echelon form.</p>
-<p>a. 
-<ul form="popup" name="AnSwEr0001"><li>
-<p>Choose</p>
-</li><li>
-<p>Echelon Form</p>
-</li><li>
-<p>Reduced Echelon Form</p>
-</li><li>
-<p>Not in Echelon Form</p>
-</li></ul> <m>\left[\begin{array}{ccc}
-1 \amp 1 \amp 5\cr
-1 \amp 0 \amp 9
-\end{array}\right]</m></p>
-<p>b.
-<ul form="popup" name="AnSwEr0002"><li>
-<p>Choose</p>
-</li><li>
-<p>Echelon Form</p>
-</li><li>
-<p>Reduced Echelon Form</p>
-</li><li>
-<p>Not in Echelon Form</p>
-</li></ul> <m>\left[\begin{array}{ccccc}
-1 \amp 7 \amp 9 \amp -7 \amp -6\cr
-0 \amp 1 \amp 1 \amp 1 \amp 1\cr
-0 \amp 0 \amp 1 \amp 0 \amp -2\cr
-0 \amp 0 \amp 0 \amp 1 \amp 0
-\end{array}\right]</m></p>
-<p>c.
-<ul form="popup" name="AnSwEr0003"><li>
-<p>Choose</p>
-</li><li>
-<p>Echelon Form</p>
-</li><li>
-<p>Reduced Echelon Form</p>
-</li><li>
-<p>Not in Echelon Form</p>
-</li></ul> <m>\left[\begin{array}{cccc}
-1 \amp 0 \amp 0 \amp -3\cr
-0 \amp 1 \amp 0 \amp 10\cr
-0 \amp 0 \amp 0 \amp 0
-\end{array}\right]</m></p>
-<p>d.
-<ul form="popup" name="AnSwEr0004"><li>
-<p>Choose</p>
-</li><li>
-<p>Echelon Form</p>
-</li><li>
-<p>Reduced Echelon Form</p>
-</li><li>
-<p>Not in Echelon Form</p>
-</li></ul> <m>\left[\begin{array}{ccc}
-1 \amp 0 \amp 0\cr
-0 \amp 1 \amp 0\cr
-0 \amp 0 \amp 0
-\end{array}\right]</m></p>
-</statement>
-      <answer>
-        <p>
-          <m>\text{Not in Echelon Form}</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>\text{Echelon Form}</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>\text{Reduced Echelon Form}</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>\text{Reduced Echelon Form}</m>
-        </p>
-      </answer>
-    </static>
-    <server-data sourceFilePath="matrixtheory/rrefprob2.pg" domain="https://webwork-dev.uleth.ca" course-id="chrissy-playground" user-id="anonymous" password="anonymous" language="en-US"/>
-    <pg source="matrixtheory/rrefprob2.pg"/>
-  </webwork-reps>
-  <webwork-reps version="2" ww_major_version="2" ww_minor_version="19" xml:id="extracted-webwork-3" ww-id="webwork-3">
-    <static seed="3" source="matrixtheory/rrefprob3a.pg">
-      <statement><p>Solve the following system using augmented matrix methods:
-<me>\begin{array}{c}
--5 x + 10 y = -50
-\\
--2 x + 5 y = -26
-\end{array}</me></p>
-<p>(a) The initial matrix is:</p>
-<tabular>
-<row>
-<cell><fillin characters="5" name="AnSwEr0001"/></cell>
-<cell><fillin characters="5" name="AnSwEr0002"/></cell>
-<cell><fillin characters="5" name="AnSwEr0003"/></cell>
-</row>
-<row>
-<cell><fillin characters="5" name="AnSwEr0004"/></cell>
-<cell><fillin characters="5" name="AnSwEr0005"/></cell>
-<cell><fillin characters="5" name="AnSwEr0006"/></cell>
-</row>
-</tabular>
-<p>(b) First, perform the Row Operation <m>\frac{1}{-5} R_1 \to R_1</m>.  The resulting matrix is:</p>
-<tabular>
-<row>
-<cell><fillin characters="5" name="AnSwEr0007"/></cell>
-<cell><fillin characters="5" name="AnSwEr0008"/></cell>
-<cell><fillin characters="5" name="AnSwEr0009"/></cell>
-</row>
-<row>
-<cell><fillin characters="5" name="AnSwEr0010"/></cell>
-<cell><fillin characters="5" name="AnSwEr0011"/></cell>
-<cell><fillin characters="5" name="AnSwEr0012"/></cell>
-</row>
-</tabular>
-<p>(c) Next, perform the operation <m>+ 2 R_1 + R_2 \to R_2</m>.  The resulting matrix is:</p>
-<tabular>
-<row>
-<cell><fillin characters="5" name="AnSwEr0013"/></cell>
-<cell><fillin characters="5" name="AnSwEr0014"/></cell>
-<cell><fillin characters="5" name="AnSwEr0015"/></cell>
-</row>
-<row>
-<cell><fillin characters="5" name="AnSwEr0016"/></cell>
-<cell><fillin characters="5" name="AnSwEr0017"/></cell>
-<cell><fillin characters="5" name="AnSwEr0018"/></cell>
-</row>
-</tabular>
-<p>(d) Finish simplifying the augmented matrix.  The reduced matrix is:</p>
-<tabular>
-<row>
-<cell><fillin characters="5" name="AnSwEr0019"/></cell>
-<cell><fillin characters="5" name="AnSwEr0020"/></cell>
-<cell><fillin characters="5" name="AnSwEr0021"/></cell>
-</row>
-<row>
-<cell><fillin characters="5" name="AnSwEr0022"/></cell>
-<cell><fillin characters="5" name="AnSwEr0023"/></cell>
-<cell><fillin characters="5" name="AnSwEr0024"/></cell>
-</row>
-</tabular>
-<p>(e) What are the solutions to the system?</p>
-<p><m>x=</m> <fillin characters="25" name="AnSwEr0025"/></p>
-<p><m>y=</m> <fillin characters="25" name="AnSwEr0026"/></p>
-</statement>
-      <answer>
-        <p>
-          <m>-5</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>10</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-50</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-2</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>5</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-26</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>1</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-2</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>10</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-2</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>5</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-26</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>1</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-2</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>10</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>0</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>1</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-6</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>1</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>0</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-2</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>0</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>1</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-6</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-2</m>
-        </p>
-      </answer>
-      <answer>
-        <p>
-          <m>-6</m>
-        </p>
-      </answer>
-    </static>
-    <server-data sourceFilePath="matrixtheory/rrefprob3a.pg" domain="https://webwork-dev.uleth.ca" course-id="chrissy-playground" user-id="anonymous" password="anonymous" language="en-US"/>
-    <pg source="matrixtheory/rrefprob3a.pg"/>
-  </webwork-reps>
-  <webwork-reps version="2" ww_major_version="2" ww_minor_version="19" xml:id="extracted-webwork-4" ww-id="webwork-4">
-    <static seed="4" source="matrixtheory/rrefprob3.pg">
+    <static seed="1" source="matrixtheory/rrefprob3.pg">
       <statement><p>Reduce the matrix <me>A= \left[\begin{array}{cccc}
--1 \amp -2 \amp -1 \amp 20\cr
-0 \amp 4 \amp 6 \amp -50\cr
-0 \amp -2 \amp -4 \amp 30
+-4 \amp -8 \amp -4 \amp -64\cr
+0 \amp 4 \amp 6 \amp 40\cr
+0 \amp -8 \amp -16 \amp -96
 \end{array}\right]</me>
 to reduced row-echelon form.</p>
 <p><fillin cols="4" rows="3"/></p>
 </statement>
-      <hint><p>First, do <m>\frac{1}{-1} R_1 \to R_1</m>, resulting in
+      <hint><p>First, do <m>\frac{1}{-4} R_1 \to R_1</m>, resulting in
 <me>\left[\begin{array}{cccc}
-1 \amp 2 \amp 1 \amp -20\cr
-0 \amp 4 \amp 6 \amp -50\cr
-0 \amp -2 \amp -4 \amp 30
+1 \amp 2 \amp 1 \amp 16\cr
+0 \amp 4 \amp 6 \amp 40\cr
+0 \amp -8 \amp -16 \amp -96
 \end{array}\right]</me></p>
 <p>Then, do <m>\frac{1}{4} R_2 \to R_2</m>, resulting in
 <me>\left[\begin{array}{cccc}
-1 \amp 2 \amp 1 \amp -20\cr
-0 \amp 1 \amp 1.5 \amp -12.5\cr
-0 \amp -2 \amp -4 \amp 30
+1 \amp 2 \amp 1 \amp 16\cr
+0 \amp 1 \amp 1.5 \amp 10\cr
+0 \amp -8 \amp -16 \amp -96
 \end{array}\right]</me>
-Next, do <m>2 R_2+R_3 \to R_3</m>, resulting in
+Next, do <m>8 R_2+R_3 \to R_3</m>, resulting in
 <me>\left[\begin{array}{cccc}
-1 \amp 2 \amp 1 \amp -20\cr
-0 \amp 1 \amp 1.5 \amp -12.5\cr
-0 \amp 0 \amp -1 \amp 5
+1 \amp 2 \amp 1 \amp 16\cr
+0 \amp 1 \amp 1.5 \amp 10\cr
+0 \amp 0 \amp -4 \amp -16
 \end{array}\right]</me></p>
 <p>Now we can multiply <m>R_3</m> by a constant to create the leading 1, and then do the backwards steps.</p>
 </hint>
@@ -399,12 +34,12 @@ Next, do <m>2 R_2+R_3 \to R_3</m>, resulting in
     <server-data sourceFilePath="matrixtheory/rrefprob3.pg" domain="https://webwork-dev.uleth.ca" course-id="chrissy-playground" user-id="anonymous" password="anonymous" language="en-US"/>
     <pg source="matrixtheory/rrefprob3.pg"/>
   </webwork-reps>
-  <webwork-reps version="2" ww_major_version="2" ww_minor_version="19" xml:id="extracted-webwork-5" ww-id="webwork-5">
-    <static seed="5" source="Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_32.pg">
+  <webwork-reps version="2" ww_major_version="2" ww_minor_version="19" xml:id="extracted-webwork-2" ww-id="webwork-2">
+    <static seed="2" source="Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_32.pg">
       <statement><p>Reduce the matrix <me>A= \left[\begin{array}{cccc}
-3 \amp 2 \amp -2 \amp -8\cr
-3 \amp 0 \amp -1 \amp -3\cr
-0 \amp 3 \amp -2 \amp -9
+1 \amp 3 \amp 4 \amp -2\cr
+1 \amp -1 \amp 0 \amp -2\cr
+-3 \amp 3 \amp -2 \amp 4
 \end{array}\right]</me>
 to reduced row-echelon form.</p>
 <p><fillin cols="4" rows="3"/></p>
