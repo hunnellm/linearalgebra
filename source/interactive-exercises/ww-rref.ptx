@@ -11,7 +11,7 @@
     <webwork source="matrixtheory/rrefprob2.pg"/>
   </activity> -->
 
-  <!-- <activity label="rref_performgauss1">
+  <!--  <activity label="rref_performgauss1">
     <webwork source="matrixtheory/rrefprob3a.pg"/>
   </activity> -->
 
