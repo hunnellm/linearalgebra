@@ -7,9 +7,9 @@
   <bibinfo>
   
     <author>
-      <personname>Chrissy Safranski</personname>
-      <department>Mathematics and Physical Sciences</department>
-      <institution>Franciscan University of Steubenville</institution>
+      <personname>Mark Hunnell</personname>
+      <department>Department of Mathematics</department>
+      <institution>Winston-Salem State University</institution>
     </author>
     <date>
       <today />
@@ -20,8 +20,8 @@
     </website> -->
 
     <copyright>
-      <year>2024<ndash />2025</year>
-      <holder>Chrissy Safranski</holder>
+      <year>2025<ndash />2026</year>
+      <holder>Mark Hunnell</holder>
       <shortlicense> This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual="creativecommons.org/licenses/by-sa/4.0"> CreativeCommons.org</url>
       </shortlicense>
     </copyright>
@@ -37,7 +37,8 @@
   </colophon>
 
   <preface>
-    <p>
+    Collected activities, forked from Chrissie Safranski's Matrix Theory
+    <!-- <p>
       It seems everyone finds a way to cover linear algebra differently, and my institution is no exception.  We have two separate
        semester-long 1-credit courses that students typically take in their first year 
       alongside calculus I and II.  The courses are aimed at introducing the calculations of linear algebra without much theory or abstraction. 
@@ -73,23 +74,13 @@
       I welcome feedback and corrections.  As I tried to make clear above, many of the good ideas contained herein are not mine and credit is due to 
       Gregory Hartman and David Austin.  I have rearranged the structure, added interactive elements, and done some amount of editing and revising.  
       The blame for any errors belongs entirely to me.  
-    </p>
+    </p> -->
   </preface>
   <acknowledgement>
     <p>
-      This book wouldn't exist without the open source and Creative Commons licensed work of Gregory Hartman and David Austin.  
+      Thanks to 2025 AIM Workshop <term>Open educational resources: adoption, curation, and customization </term> and the experts who sacrificed their time.
     </p>
-    <p>
-      I have learned much about what to include and how to teach the material for our audience from my colleagues David Burton, John Coleman, Justin Greenly, and Rachel Perrier.
-    </p>
-    <p>
-      I am indebted to Rob Beezer and David Farmer for PreTeXt, Alex Jordan for WeBWorK integration and help, and Brad Miller for Runestone.  
-      The platform affects what you write, and while I was writing I had in my mind the student and instructor experience of the 
-      html book being hosted on Runestone.  
-    </p>
-    <p>
-      Finally, I am grateful for the encouragement, ideas, and technical help provided by David Austin, Matt Boelkins, Steven Clontz, and Oscar Levin, and for Franciscan University of Steubenville granting me a sabbatical.   
-    </p>
+   
   </acknowledgement>
 
 </frontmatter>

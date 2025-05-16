@@ -5,15 +5,15 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>Matrix Calculations</title>
-    <subtitle>An introduction to parts of linear algebra</subtitle>
+    <title>Linear Algebra and Matrices</title>
+    <subtitle>A collection of linear algebra activities</subtitle>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
     <xi:include href="./ch-augmentedmatrices.ptx" />
-    <xi:include href="./ch-testing-things.ptx" />
+    <!-- <xi:include href="./ch-testing-things.ptx" /> -->
 
 
     <!-- Include backmatter -->

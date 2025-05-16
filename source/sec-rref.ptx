@@ -4,33 +4,13 @@
   <title>Reduced Row Echelon Form</title>
   <introduction>
     <p>
-      We have learned about the method of elimination of variables and about row operations on matrices; in this section, we learn
-      <em>Gauss-Jordan elimination</em> to put matrices into <em>reduced row echelon form</em>.
+      This page has activities to help practice the skills related the reduced row echelon form of a matrix, which contains a lot of the key information about many important features of the matrix.
     </p>
   </introduction>
 
   <subsection xml:id="subsec-rref-bc">
     <title>Prepare</title>
-    <p>
-        Performing elementary row operations on an augmented matrix resulted in a new linear system whose solution
-        was the same as the original linear system.  This brings to mind two good questions:
-        <ol>
-          <li>
-            <p>
-              What is the goal of using elementary row operations?
-            </p>
-          </li>
-          <li>
-            <p>
-              How do we achieve that goal the fastest?
-            </p>
-          </li>
-        </ol>
-      </p>
-      <p>
-        We'll answer the first question first.  In <xref ref="sec-row-ops"/>, when we manipulated matrices to find solutions,
-        we were in fact putting the matrix into <em>reduced row echelon form</em>.
-        </p>
+    <p> The simplest form of a matrix (at least for finding solutions to systems of linear equations is called the <term>reduced row echelon form)</term> or <term>RREF</term> of the matrix. </p>
       <definition xml:id="def_rref">
           <title>Reduced Row Echelon Form</title>
           <idx><h>reduced row echelon form</h></idx>
