@@ -96,8 +96,8 @@ window.MathJax = {
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
-<meta property="book:title" content="Matrix Calculations">
-<meta property="book:author" content="Chrissy Safranski">
+<meta property="book:title" content="Linear Algebra and Matrices">
+<meta property="book:author" content="Mark Hunnell">
 <script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
 <!--** Runestone components to run locally in reader's browser **-->
 <!--** No external communication:                              **-->
@@ -129,13 +129,13 @@ eBookConfig.enable_chatcodes =  false;
 <!--*** Runestone Services ***-->
 <script src="_static/prefix-runtime.052b07dd5d5bd82e.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.253ff4af1e53e55f.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.5bdeacdba067a0e3.css">
-<script src="_static/pretext/js/diagcess/diagcess.js"></script><script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script src="_static/pretext/js/pretext-webwork/2.19/pretext-webwork.js"></script><script src="https://webwork-dev.uleth.ca/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+<script src="_static/pretext/js/pretext-webwork/2.19/pretext-webwork.js"></script><script src="https://webwork-dev.uleth.ca/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script>
 </head>
 <body id="matrixtheory" class="pretext book ignore-math">
 <a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
-<h1 class="heading"><a href="my-great-book.html"><span class="title">Matrix Calculations:</span> <span class="subtitle">An introduction to parts of linear algebra</span></a></h1>
-<p class="byline">Chrissy Safranski</p>
+<h1 class="heading"><a href="my-great-book.html"><span class="title">Linear Algebra and Matrices:</span> <span class="subtitle">A collection of linear algebra activities</span></a></h1>
+<p class="byline">Mark Hunnell</p>
 </div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
 <button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
 <div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
@@ -154,7 +154,7 @@ eBookConfig.enable_chatcodes =  false;
 <textarea class="embed-code-textbox" id="embed-code-textbox" readonly aria-label="textbox"><iframe src="https://example.com/embed" width="100%" height="1000"></iframe></textarea><button class="copy-embed-button button" id="copy-embed-button" title="Copy embed code"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe14d;</span><span class="name">Copy</span></button>
 </div>
 </div>
-<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-row-ops.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-title.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-consistency.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="ch-chapter-title.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-chapter-title.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} 
 \newcommand{\Z}{\mathbb Z} 
 \newcommand{\Q}{\mathbb Q} 
@@ -180,41 +180,8 @@ eBookConfig.enable_chatcodes =  false;
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-chapter-title.html" class="internal"><span class="codenumber">1</span> <span class="title">Linear Equations and Augmented Matrices</span></a></div>
-<ul class="structural toc-item-list contains-active">
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-lin-eqn-substitution.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Linear Equations and Substitution</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-lin-eqn-substitution.html#subsec-lin-eqn-dc" class="internal"><span class="title">Participate</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-lin-eqn-substitution.html#ww-lin-eqn-subs" class="internal"><span class="title">Practice</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-lin-eqn-substitution.html#exer-lin-eqn-subs" class="internal"><span class="title">Additional Practice</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-matrices-elimination.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Matrices and Elimination</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec-matrices-elimination.html#subsec-matrices-elim-bc" class="internal"><span class="title">Prepare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-matrices-elimination.html#rqs-matrices-elim" class="internal"><span class="title">Reading Questions</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-matrices-elimination.html#ws-matrices-elim" class="internal"><span class="title">Participate</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-matrices-elimination.html#ww-matrices-elim" class="internal"><span class="title">Practice</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-matrices-elimination.html#exer-matrices-elim" class="internal"><span class="title">Additional Practice</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-row-ops.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Row Operations</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec-row-ops.html#subsec-row-ops-bc" class="internal"><span class="title">Prepare</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-row-ops.html#rqs-row-ops" class="internal"><span class="title">Reading Questions</span></a></div></li></ul>
-</li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-row-ops.html#ws-row-ops" class="internal"><span class="title">Participate</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-row-ops.html#ww-row-ops" class="internal"><span class="title">Practice</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-row-ops.html#exer-row-ops" class="internal"><span class="title">Additional Practice</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-section contains-active">
-<div class="toc-title-box"><a href="sec-rref.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Reduced Row Echelon Form</span></a></div>
+<ul class="structural toc-item-list contains-active"><li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-rref.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Reduced Row Echelon Form</span></a></div>
 <ul class="structural toc-item-list active">
 <li class="toc-item toc-subsection">
 <div class="toc-title-box"><a href="sec-rref.html#subsec-rref-bc" class="internal"><span class="title">Prepare</span></a></div>
@@ -224,51 +191,19 @@ eBookConfig.enable_chatcodes =  false;
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-rref.html#ww-rref" class="internal"><span class="title">Practice</span></a></div></li>
 <li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-rref.html#exer-rref" class="internal"><span class="title">Additional Practice</span></a></div></li>
 </ul>
-</li>
-<li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-consistency.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Consistent and Inconsistent Systems</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsection">
-<div class="toc-title-box"><a href="sec-consistency.html#subsec-consistency-bc" class="internal"><span class="title">Prepare</span></a></div>
-<ul class="structural toc-item-list">
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-consistency.html#subsubsec-typesofsolutions" class="internal"><span class="title">Types of solutions</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-consistency.html#subsubsec-consistent-or-inconsistent" class="internal"><span class="title">Determining Consistency</span></a></div></li>
-<li class="toc-item toc-subsubsection"><div class="toc-title-box"><a href="sec-consistency.html#subsubsec-infinitesolutions" class="internal"><span class="title">More on Infinite Solutions</span></a></div></li>
-<li class="toc-item toc-reading-questions"><div class="toc-title-box"><a href="sec-consistency.html#rqs-consistency" class="internal"><span class="title">Reading Questions</span></a></div></li>
-</ul>
-</li>
-<li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-consistency.html#ws-consistency" class="internal"><span class="title">Participate</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-consistency.html#ww-consistency" class="internal"><span class="title">Practice</span></a></div></li>
-<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec-consistency.html#exer-consistency" class="internal"><span class="title">Additional Practice</span></a></div></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toc-item toc-chapter">
-<div class="toc-title-box"><a href="ch-testing-things.html" class="internal"><span class="codenumber">2</span> <span class="title">Testing Things</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-section">
-<div class="toc-title-box"><a href="sec-testing-things.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Testing things</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-worksheet"><div class="toc-title-box"><a href="sec-testing-things.html#ws-rrefa" class="internal"><span class="codenumber">2.1</span> <span class="title">Participate</span></a></div></li></ul>
 </li></ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-rref"><h2 class="heading hide-type">
-<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.4</span><span class="space"> </span><span class="title">Reduced Row Echelon Form</span>
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.1</span><span class="space"> </span><span class="title">Reduced Row Echelon Form</span>
 </h2>
-<section class="introduction" id="sec-rref-2"><div class="para" id="sec-rref-2-1">We have learned about the method of elimination of variables and about row operations on matrices; in this section, we learn <em class="emphasis">Gauss-Jordan elimination</em> to put matrices into <em class="emphasis">reduced row echelon form</em>.</div></section><section class="subsection" id="subsec-rref-bc"><h3 class="heading hide-type">
+<section class="introduction" id="sec-rref-2"><div class="para" id="sec-rref-2-1">This page has activities to help practice the skills related the reduced row echelon form of a matrix, which contains a lot of the key information about many important features of the matrix.</div></section><section class="subsection" id="subsec-rref-bc"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Prepare</span>
 </h3>
-<div class="para logical" id="subsec-rref-bc-2">
-<div class="para">Performing elementary row operations on an augmented matrix resulted in a new linear system whose solution was the same as the original linear system.  This brings to mind two good questions:</div>
-<ol class="decimal" id="subsec-rref-bc-2-1">
-<li id="subsec-rref-bc-2-1-1"><div class="para" id="subsec-rref-bc-2-1-1-1">What is the goal of using elementary row operations?</div></li>
-<li id="subsec-rref-bc-2-1-2"><div class="para" id="subsec-rref-bc-2-1-2-1">How do we achieve that goal the fastest?</div></li>
-</ol>
-</div>
-<div class="para" id="subsec-rref-bc-3">We’ll answer the first question first.  In <a href="sec-row-ops.html" class="internal" title="Section 1.3: Row Operations">Section 1.3</a>, when we manipulated matrices to find solutions, we were in fact putting the matrix into <em class="emphasis">reduced row echelon form</em>.</div>
+<div class="para" id="subsec-rref-bc-2">The simplest form of a matrix (at least for finding solutions to systems of linear equations is called the <dfn class="terminology">reduced row echelon form)</dfn> or <dfn class="terminology">RREF</dfn> of the matrix.</div>
 <article class="definition definition-like" id="def_rref"><h4 class="heading">
-<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Reduced Row Echelon Form.</span>
+<span class="type">Definition</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Reduced Row Echelon Form.</span>
 </h4>
 <div class="para logical" id="def_rref-4-1">
 <div class="para">A matrix is in <dfn class="terminology">reduced row echelon form</dfn> if its entries satisfy all four of the following conditions.</div>
@@ -280,7 +215,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></li>
 </ol>
 </div> <div class="para" id="def_rref-4-2">A matrix that satisfies the first three conditions is said to be in <dfn class="terminology">row echelon form</dfn>.</div></article><article class="exercise exercise-like" id="rref-or-not-examples"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">RREF or not?</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span><span class="space"> </span><span class="title">RREF or not?</span>
 </h4>
 <div class="ptx-runestone-container"><div class="runestone tabbed_section">
 <div class="tabs-introduction exercise-leadin"><div class="introduction" id="rref-or-not-examples-2"><div class="para" id="rref-or-not-examples-2-1">For each of the following matrices, say whether they are in reduced row echelon form or not.</div></div></div>
@@ -367,7 +302,7 @@ eBookConfig.enable_chatcodes =  false;
 </div></div></div>
 <ul data-component="multiplechoice" class="exercise-interactives" id="rs-rref-or-not-e" data-multipleanswers="false">
 <li data-component="answer" id="rs-rref-or-not-e_opt_a"><div class="para" id="rref-or-not-e-2-1-1-1">Reduced row echelon form</div></li>
-<li data-component="feedback" id="rs-rref-or-not-e_opt_a"><div class="para" id="rref-or-not-e-2-1-2-1">The third condition in <a href="sec-rref.html#def_rref" class="xref" data-knowl="./knowl/xref/def_rref.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.4.1: Reduced Row Echelon Form">Definition 1.4.1</a> says that any rows of all zeroes must be at the bottom.</div></li>
+<li data-component="feedback" id="rs-rref-or-not-e_opt_a"><div class="para" id="rref-or-not-e-2-1-2-1">The third condition in <a href="sec-rref.html#def_rref" class="xref" data-knowl="./knowl/xref/def_rref.html" data-reveal-label="Reveal" data-close-label="Close" title="Definition 1.1.1: Reduced Row Echelon Form">Definition 1.1.1</a> says that any rows of all zeroes must be at the bottom.</div></li>
 <li data-component="answer" id="rs-rref-or-not-e_opt_b" data-correct=""><div class="para" id="rref-or-not-e-2-2-1-1">Not in reduced row echelon form</div></li>
 <li data-component="feedback" id="rs-rref-or-not-e_opt_b"><div class="para" id="rref-or-not-e-2-2-2-1">Correct!</div></li>
 </ul>
@@ -419,8 +354,8 @@ eBookConfig.enable_chatcodes =  false;
 </ul>
 </div></div></article></div>
 </div>
-</div></div></article><div class="para" id="subsec-rref-bc-6">We began this section with two questions, “Where do we go?” and “How do we get there quickly?” We’ve just answered the first question: most of the time we are going to <em class="emphasis">reduced row echelon form.</em> We now address the second question.</div>
-<div class="para" id="subsec-rref-bc-7">There are many ways to use elementary row operations to transform a matrix into reduced row echelon form, but there is a general technique that is efficient and doesn’t waste time on unnecessary steps. This technique is called <em class="emphasis">Gauss-Jordan elimination</em>, named in honor of the mathematicians Karl Friedrich Gauss and Wilhelm Jordan.</div>
+</div></div></article><div class="para" id="subsec-rref-bc-5">We began this section with two questions, “Where do we go?” and “How do we get there quickly?” We’ve just answered the first question: most of the time we are going to <em class="emphasis">reduced row echelon form.</em> We now address the second question.</div>
+<div class="para" id="subsec-rref-bc-6">There are many ways to use elementary row operations to transform a matrix into reduced row echelon form, but there is a general technique that is efficient and doesn’t waste time on unnecessary steps. This technique is called <em class="emphasis">Gauss-Jordan elimination</em>, named in honor of the mathematicians Karl Friedrich Gauss and Wilhelm Jordan.</div>
 <article class="assemblage assemblage-like" id="def_gaussian_elimination"><h4 class="heading"><span class="title">Gauss-Jordan Elimination.</span></h4>
 <div class="para logical" id="def_gaussian_elimination-3">
 <div class="para">
@@ -432,9 +367,9 @@ eBookConfig.enable_chatcodes =  false;
 <li id="def_gaussian_elimination-3-2-3"><div class="para" id="def_gaussian_elimination-3-2-3-1">Repeat the above steps until all possible rows have leading <span class="process-math">\(1\)</span>’s.</div></li>
 <li id="def_gaussian_elimination-3-2-4"><div class="para" id="def_gaussian_elimination-3-2-4-1">Put zeros above these leading <span class="process-math">\(1\)</span>’s.</div></li>
 </ol>
-</div></article><div class="para" id="subsec-rref-bc-9">This is roughly what we were already doing in previous sections when we used elimination and row operations, but let’s see an example.</div>
+</div></article><div class="para" id="subsec-rref-bc-8">This is roughly what we were already doing in previous sections when we used elimination and row operations, but let’s see an example.</div>
 <article class="example example-like" id="ex_gaussian_elimination"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Gauss-Jordan Elimination Demonstrated.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span><span class="space"> </span><span class="title">Gauss-Jordan Elimination Demonstrated.</span>
 </h4>
 <div class="para logical" id="ex_gaussian_elimination-2">
 <div class="para">Put the augmented matrix of the following system of linear equations into reduced row echelon form.</div>
@@ -500,41 +435,41 @@ eBookConfig.enable_chatcodes =  false;
 \end{array} \right]\)</span></div></div>
 </div></div>
 <div class="para" id="ex_gaussian_elimination-17">This matrix is now in reduced row echelon form, and we can read off the solution to the original linear system as <span class="process-math">\(x_1 = 7\text{,}\)</span> <span class="process-math">\(x_2 = -2\)</span> and <span class="process-math">\(x_3 = 3\text{.}\)</span>
-</div></article><div class="para" id="subsec-rref-bc-11">We now summarize and try to formalize the steps we performed.</div>
-<div class="para logical" id="subsec-rref-bc-12">
+</div></article><div class="para" id="subsec-rref-bc-10">We now summarize and try to formalize the steps we performed.</div>
+<div class="para logical" id="subsec-rref-bc-11">
 <div class="para"><em class="emphasis">Forward Steps</em></div>
-<ol class="decimal" id="subsec-rref-bc-12-3">
-<li id="subsec-rref-bc-12-3-1"><div class="para" id="subsec-rref-bc-12-3-1-1">Start at the top left corner.</div></li>
-<li id="subsec-rref-bc-12-3-2"><div class="para" id="subsec-rref-bc-12-3-2-1">If the entry in the row and column that we are considering is <span class="process-math">\(0\text{,}\)</span> swap rows with a row below the current row so that the entry is nonzero. If this entry is <span class="process-math">\(0\)</span> and all entries below are <span class="process-math">\(0\text{,}\)</span> we are done with this column; move to the right and do this step again.</div></li>
-<li id="subsec-rref-bc-12-3-3"><div class="para" id="subsec-rref-bc-12-3-3-1">Since the entry we are considering is nonzero, multiply the current row by a number (“scale the row”) to make its first entry a <span class="process-math">\(1\text{.}\)</span>
+<ol class="decimal" id="subsec-rref-bc-11-3">
+<li id="subsec-rref-bc-11-3-1"><div class="para" id="subsec-rref-bc-11-3-1-1">Start at the top left corner.</div></li>
+<li id="subsec-rref-bc-11-3-2"><div class="para" id="subsec-rref-bc-11-3-2-1">If the entry in the row and column that we are considering is <span class="process-math">\(0\text{,}\)</span> swap rows with a row below the current row so that the entry is nonzero. If this entry is <span class="process-math">\(0\)</span> and all entries below are <span class="process-math">\(0\text{,}\)</span> we are done with this column; move to the right and do this step again.</div></li>
+<li id="subsec-rref-bc-11-3-3"><div class="para" id="subsec-rref-bc-11-3-3-1">Since the entry we are considering is nonzero, multiply the current row by a number (“scale the row”) to make its first entry a <span class="process-math">\(1\text{.}\)</span>
 </div></li>
-<li id="subsec-rref-bc-12-3-4"><div class="para" id="subsec-rref-bc-12-3-4-1">Repeatedly use the “multiply and add” row operation to put <span class="process-math">\(0\)</span>’s underneath the leading <span class="process-math">\(1\text{.}\)</span>
+<li id="subsec-rref-bc-11-3-4"><div class="para" id="subsec-rref-bc-11-3-4-1">Repeatedly use the “multiply and add” row operation to put <span class="process-math">\(0\)</span>’s underneath the leading <span class="process-math">\(1\text{.}\)</span>
 </div></li>
-<li id="subsec-rref-bc-12-3-5"><div class="para" id="subsec-rref-bc-12-3-5-1">Move down and to the right.  Go back to step 2 and work on the new rows and columns until you run out of either rows or columns.</div></li>
+<li id="subsec-rref-bc-11-3-5"><div class="para" id="subsec-rref-bc-11-3-5-1">Move down and to the right.  Go back to step 2 and work on the new rows and columns until you run out of either rows or columns.</div></li>
 </ol>
 </div>
-<div class="para logical" id="subsec-rref-bc-13">
+<div class="para logical" id="subsec-rref-bc-12">
 <div class="para">The above steps accomplish the following things:</div>
-<ul class="disc" id="subsec-rref-bc-13-1">
-<li id="subsec-rref-bc-13-1-1"><div class="para" id="subsec-rref-bc-13-1-1-1">The first nonzero entry in each row is a <span class="process-math">\(1\text{.}\)</span>
+<ul class="disc" id="subsec-rref-bc-12-1">
+<li id="subsec-rref-bc-12-1-1"><div class="para" id="subsec-rref-bc-12-1-1-1">The first nonzero entry in each row is a <span class="process-math">\(1\text{.}\)</span>
 </div></li>
-<li id="subsec-rref-bc-13-1-2"><div class="para" id="subsec-rref-bc-13-1-2-1">Each leading <span class="process-math">\(1\)</span> is in a column to the right of the leading <span class="process-math">\(1\)</span>’s above it.</div></li>
-<li id="subsec-rref-bc-13-1-3"><div class="para" id="subsec-rref-bc-13-1-3-1">All rows of all <span class="process-math">\(0\)</span>’s come at the bottom of the matrix.</div></li>
+<li id="subsec-rref-bc-12-1-2"><div class="para" id="subsec-rref-bc-12-1-2-1">Each leading <span class="process-math">\(1\)</span> is in a column to the right of the leading <span class="process-math">\(1\)</span>’s above it.</div></li>
+<li id="subsec-rref-bc-12-1-3"><div class="para" id="subsec-rref-bc-12-1-3-1">All rows of all <span class="process-math">\(0\)</span>’s come at the bottom of the matrix.</div></li>
 </ul>
 </div>
-<div class="para" id="subsec-rref-bc-14">Note that this means we have just put a matrix into <em class="emphasis">row echelon form</em>. The next steps finish the conversion into <em class="emphasis">reduced</em> row echelon form.</div>
-<div class="para logical" id="subsec-rref-bc-15">
+<div class="para" id="subsec-rref-bc-13">Note that this means we have just put a matrix into <em class="emphasis">row echelon form</em>. The next steps finish the conversion into <em class="emphasis">reduced</em> row echelon form.</div>
+<div class="para logical" id="subsec-rref-bc-14">
 <div class="para"><em class="emphasis">Backward Steps</em></div>
-<ol class="decimal" id="subsec-rref-bc-15-3">
-<li id="subsec-rref-bc-15-3-1"><div class="para" id="subsec-rref-bc-15-3-1-1">Starting from the bottom rightmost leading <span class="process-math">\(1\text{,}\)</span> use the “multiply and add” row operation repeatedly to put zeros above the leading <span class="process-math">\(1\text{.}\)</span>
+<ol class="decimal" id="subsec-rref-bc-14-3">
+<li id="subsec-rref-bc-14-3-1"><div class="para" id="subsec-rref-bc-14-3-1-1">Starting from the bottom rightmost leading <span class="process-math">\(1\text{,}\)</span> use the “multiply and add” row operation repeatedly to put zeros above the leading <span class="process-math">\(1\text{.}\)</span>
 </div></li>
-<li id="subsec-rref-bc-15-3-2"><div class="para" id="subsec-rref-bc-15-3-2-1">Continue this process by moving up and to the left to the next leading <span class="process-math">\(1\text{,}\)</span> repeatedly use “multiply and add” to put zeros above the leading <span class="process-math">\(1\text{.}\)</span>  Repeat this step until every leading <span class="process-math">\(1\)</span> has zeros above in all the rows.</div></li>
+<li id="subsec-rref-bc-14-3-2"><div class="para" id="subsec-rref-bc-14-3-2-1">Continue this process by moving up and to the left to the next leading <span class="process-math">\(1\text{,}\)</span> repeatedly use “multiply and add” to put zeros above the leading <span class="process-math">\(1\text{.}\)</span>  Repeat this step until every leading <span class="process-math">\(1\)</span> has zeros above in all the rows.</div></li>
 </ol>
 </div>
-<div class="para" id="subsec-rref-bc-16">By following these “Forward and Backward Steps”, we make use of the presence of zeros to make the computations easier and more efficient.</div>
-<div class="para" id="subsec-rref-bc-17">Many authors call the forward steps <em class="emphasis">Gaussian elimination</em>, which puts a matrix into row echelon form, and the forward-and-backward steps together <em class="emphasis">Gauss-Jordan elimination</em>, which puts a matrix into reduced row echelon form. We will almost always want to obtain reduced row echelon form and will not make a big deal about the distinction between the names Gaussian and Gauss-Jordan.</div>
+<div class="para" id="subsec-rref-bc-15">By following these “Forward and Backward Steps”, we make use of the presence of zeros to make the computations easier and more efficient.</div>
+<div class="para" id="subsec-rref-bc-16">Many authors call the forward steps <em class="emphasis">Gaussian elimination</em>, which puts a matrix into row echelon form, and the forward-and-backward steps together <em class="emphasis">Gauss-Jordan elimination</em>, which puts a matrix into reduced row echelon form. We will almost always want to obtain reduced row echelon form and will not make a big deal about the distinction between the names Gaussian and Gauss-Jordan.</div>
 <article class="exercise exercise-like" id="rref-steps"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Gauss-Jordan Steps.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span><span class="space"> </span><span class="title">Gauss-Jordan Steps.</span>
 </h4>
 <div class="ptx-runestone-container"><div class="runestone tabbed_section">
 <div class="tabs-introduction exercise-leadin"><div class="introduction" id="rref-steps-2"><div class="para" id="rref-steps-2-1">Answer the following questions about using Gauss-Jordan elimination, which entries to work on next and what row operations to perform.</div></div></div>
@@ -689,9 +624,9 @@ C=\begin{bmatrix} 1 \amp 2 \amp 3\amp -1 \\ 0 \amp \fbox{-3} \amp -4 \amp 0 \\ 0
 </ul>
 </div></div></article></div>
 </div>
-</div></div></article><div class="para" id="subsec-rref-bc-19">Let’s practice the Gauss-Jordan algorithm some more.</div>
+</div></div></article><div class="para" id="subsec-rref-bc-18">Let’s practice the Gauss-Jordan algorithm some more.</div>
 <article class="example example-like" id="ex_rref_2"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span><span class="space"> </span><span class="title">Another Gauss-Jordan Elimination.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span><span class="space"> </span><span class="title">Another Gauss-Jordan Elimination.</span>
 </h4>
 <div class="para logical" id="ex_rref_2-2-1">
 <div class="para">Use Gauss-Jordan elimination to put the matrix <span class="process-math">\(A\)</span> into reduced row echelon form, where</div>
@@ -751,7 +686,7 @@ A = \left[\begin{array}{ccccc} -2\amp -4\amp -2\amp -10\amp 0\\2\amp 4\amp 1\amp
 </div></div>
 <div class="para" id="ex_rref_2-3-14">This final matrix is in reduced row echelon form.</div>
 </div></details></div></article><article class="example example-like" id="ex_rref_3"><h4 class="heading">
-<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.4.6</span><span class="period">.</span><span class="space"> </span><span class="title">Gauss-Jordan Elimination Again, this time with fewer words.</span>
+<span class="type">Example</span><span class="space"> </span><span class="codenumber">1.1.6</span><span class="period">.</span><span class="space"> </span><span class="title">Gauss-Jordan Elimination Again, this time with fewer words.</span>
 </h4>
 <div class="para logical" id="ex_rref_3-2-1">
 <div class="para">Put the matrix</div>
@@ -804,7 +739,7 @@ A = \left[\begin{array}{ccccc} -2\amp -4\amp -2\amp -10\amp 0\\2\amp 4\amp 1\amp
 <div class="sbspanel middle" style="width:65.7894736842105%;"><div class="para" id="ex_rref_3-3-7-2"><span class="process-math">\(\left[\begin{array}{cccc}  1\amp 0\amp 1/3\amp 0\\0\amp 1\amp 1/3\amp 0\\0\amp 0\amp 0\amp 1
 \end{array} \right]\)</span></div></div>
 </div></div>
-</div></details></div></article><div class="para" id="subsec-rref-bc-22">We were inspired by solving systems of linear equations to put matrices into reduced row echelon form, in order to make the solution easy to see.  Every time we’ve started with a linear system, there was exactly one solution, and the reduced row echelon form always had one particular form.  However, we’ve also practiced putting matrices in reduced row echelon form without referring back to their corresponding system of linear equations, and we have seen various different ways that the reduced row echelon form of a matrix can look.  Connecting different reduced row echelon forms with solutions to the corresponding linear system is the topic for next section.</div>
+</div></details></div></article><div class="para" id="subsec-rref-bc-21">We were inspired by solving systems of linear equations to put matrices into reduced row echelon form, in order to make the solution easy to see.  Every time we’ve started with a linear system, there was exactly one solution, and the reduced row echelon form always had one particular form.  However, we’ve also practiced putting matrices in reduced row echelon form without referring back to their corresponding system of linear equations, and we have seen various different ways that the reduced row echelon form of a matrix can look.  Connecting different reduced row echelon forms with solutions to the corresponding linear system is the topic for next section.</div>
 <section class="reading-questions" id="rqs-rref"><h4 class="heading hide-type">
 <span class="type">Reading Questions</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Reading Questions</span>
 </h4>
@@ -945,141 +880,142 @@ R_1 \leftrightarrow R_3
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber"></span><span class="space"> </span><span class="title">Practice</span>
 </h3>
 <article class="activity project-like" id="rref_matrixforms_prob1"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.4.1</span><span class="period">.</span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span>
 </h4>
-<div id="webwork-17" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="17" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="matrixtheory/rrefprob1.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-17')">Activate</button></div>
+<div id="webwork-1" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="1" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="matrixtheory/rrefprob1.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-1')">Activate</button></div>
 <div class="problem-contents">
-<div class="para" id="extracted-webwork-17-1-1-1">Determine whether the following matrices are in echelon form, reduced echelon form or not in echelon form.</div> <div class="para logical" id="extracted-webwork-17-1-1-2">
+<div class="para" id="extracted-webwork-1-1-1-1">Determine whether the following matrices are in echelon form, reduced echelon form or not in echelon form.</div> <div class="para logical" id="extracted-webwork-1-1-1-2">
 <div class="para">a.</div>
-<ul class="disc" id="extracted-webwork-17-1-1-2-1">
-<li id="extracted-webwork-17-1-1-2-1-1"><div class="para" id="extracted-webwork-17-1-1-2-1-1-1">Choose</div></li>
-<li id="extracted-webwork-17-1-1-2-1-2"><div class="para" id="extracted-webwork-17-1-1-2-1-2-1">Echelon Form</div></li>
-<li id="extracted-webwork-17-1-1-2-1-3"><div class="para" id="extracted-webwork-17-1-1-2-1-3-1">Reduced Echelon Form</div></li>
-<li id="extracted-webwork-17-1-1-2-1-4"><div class="para" id="extracted-webwork-17-1-1-2-1-4-1">Not in Echelon Form</div></li>
+<ul class="disc" id="extracted-webwork-1-1-1-2-1">
+<li id="extracted-webwork-1-1-1-2-1-1"><div class="para" id="extracted-webwork-1-1-1-2-1-1-1">Choose</div></li>
+<li id="extracted-webwork-1-1-1-2-1-2"><div class="para" id="extracted-webwork-1-1-1-2-1-2-1">Echelon Form</div></li>
+<li id="extracted-webwork-1-1-1-2-1-3"><div class="para" id="extracted-webwork-1-1-1-2-1-3-1">Reduced Echelon Form</div></li>
+<li id="extracted-webwork-1-1-1-2-1-4"><div class="para" id="extracted-webwork-1-1-1-2-1-4-1">Not in Echelon Form</div></li>
+</ul>
+<div class="para"><span class="process-math">\(\left[\begin{array}{ccc}
+2 \amp 1 \amp 1\cr
+1 \amp -10 \amp 6\cr
+0 \amp 0 \amp 1
+\end{array}\right]\)</span></div>
+</div> <div class="para logical" id="extracted-webwork-1-1-1-3">
+<div class="para">b.</div>
+<ul class="disc" id="extracted-webwork-1-1-1-3-1">
+<li id="extracted-webwork-1-1-1-3-1-1"><div class="para" id="extracted-webwork-1-1-1-3-1-1-1">Choose</div></li>
+<li id="extracted-webwork-1-1-1-3-1-2"><div class="para" id="extracted-webwork-1-1-1-3-1-2-1">Echelon Form</div></li>
+<li id="extracted-webwork-1-1-1-3-1-3"><div class="para" id="extracted-webwork-1-1-1-3-1-3-1">Reduced Echelon Form</div></li>
+<li id="extracted-webwork-1-1-1-3-1-4"><div class="para" id="extracted-webwork-1-1-1-3-1-4-1">Not in Echelon Form</div></li>
 </ul>
 <div class="para"><span class="process-math">\(\left[\begin{array}{cccc}
-0 \amp 1 \amp 0 \amp 5\cr
-0 \amp 0 \amp 1 \amp -4
+0 \amp 1 \amp 0 \amp 9\cr
+0 \amp 0 \amp 1 \amp 4
 \end{array}\right]\)</span></div>
-</div> <div class="para logical" id="extracted-webwork-17-1-1-3">
-<div class="para">b.</div>
-<ul class="disc" id="extracted-webwork-17-1-1-3-1">
-<li id="extracted-webwork-17-1-1-3-1-1"><div class="para" id="extracted-webwork-17-1-1-3-1-1-1">Choose</div></li>
-<li id="extracted-webwork-17-1-1-3-1-2"><div class="para" id="extracted-webwork-17-1-1-3-1-2-1">Echelon Form</div></li>
-<li id="extracted-webwork-17-1-1-3-1-3"><div class="para" id="extracted-webwork-17-1-1-3-1-3-1">Reduced Echelon Form</div></li>
-<li id="extracted-webwork-17-1-1-3-1-4"><div class="para" id="extracted-webwork-17-1-1-3-1-4-1">Not in Echelon Form</div></li>
-</ul>
-<div class="para"><span class="process-math">\(\left[\begin{array}{ccc}
--9 \amp 1 \amp 1\cr
-1 \amp -8 \amp -10\cr
-0 \amp 0 \amp 1
-\end{array}\right]\)</span></div>
-</div> <div class="para logical" id="extracted-webwork-17-1-1-4">
+</div> <div class="para logical" id="extracted-webwork-1-1-1-4">
 <div class="para">c.</div>
-<ul class="disc" id="extracted-webwork-17-1-1-4-1">
-<li id="extracted-webwork-17-1-1-4-1-1"><div class="para" id="extracted-webwork-17-1-1-4-1-1-1">Choose</div></li>
-<li id="extracted-webwork-17-1-1-4-1-2"><div class="para" id="extracted-webwork-17-1-1-4-1-2-1">Echelon Form</div></li>
-<li id="extracted-webwork-17-1-1-4-1-3"><div class="para" id="extracted-webwork-17-1-1-4-1-3-1">Reduced Echelon Form</div></li>
-<li id="extracted-webwork-17-1-1-4-1-4"><div class="para" id="extracted-webwork-17-1-1-4-1-4-1">Not in Echelon Form</div></li>
-</ul>
-<div class="para"><span class="process-math">\(\left[\begin{array}{ccc}
-1 \amp 0 \amp 1\cr
-0 \amp 1 \amp 1\cr
-0 \amp 0 \amp 1
-\end{array}\right]\)</span></div>
-</div> <div class="para logical" id="extracted-webwork-17-1-1-5">
-<div class="para">d.</div>
-<ul class="disc" id="extracted-webwork-17-1-1-5-1">
-<li id="extracted-webwork-17-1-1-5-1-1"><div class="para" id="extracted-webwork-17-1-1-5-1-1-1">Choose</div></li>
-<li id="extracted-webwork-17-1-1-5-1-2"><div class="para" id="extracted-webwork-17-1-1-5-1-2-1">Echelon Form</div></li>
-<li id="extracted-webwork-17-1-1-5-1-3"><div class="para" id="extracted-webwork-17-1-1-5-1-3-1">Reduced Echelon Form</div></li>
-<li id="extracted-webwork-17-1-1-5-1-4"><div class="para" id="extracted-webwork-17-1-1-5-1-4-1">Not in Echelon Form</div></li>
+<ul class="disc" id="extracted-webwork-1-1-1-4-1">
+<li id="extracted-webwork-1-1-1-4-1-1"><div class="para" id="extracted-webwork-1-1-1-4-1-1-1">Choose</div></li>
+<li id="extracted-webwork-1-1-1-4-1-2"><div class="para" id="extracted-webwork-1-1-1-4-1-2-1">Echelon Form</div></li>
+<li id="extracted-webwork-1-1-1-4-1-3"><div class="para" id="extracted-webwork-1-1-1-4-1-3-1">Reduced Echelon Form</div></li>
+<li id="extracted-webwork-1-1-1-4-1-4"><div class="para" id="extracted-webwork-1-1-1-4-1-4-1">Not in Echelon Form</div></li>
 </ul>
 <div class="para"><span class="process-math">\(\left[\begin{array}{cccc}
 1 \amp 1 \amp 1 \amp 0\cr
-0 \amp 1 \amp 5 \amp 0\cr
+0 \amp 1 \amp -4 \amp 0\cr
 0 \amp 0 \amp 0 \amp 1
+\end{array}\right]\)</span></div>
+</div> <div class="para logical" id="extracted-webwork-1-1-1-5">
+<div class="para">d.</div>
+<ul class="disc" id="extracted-webwork-1-1-1-5-1">
+<li id="extracted-webwork-1-1-1-5-1-1"><div class="para" id="extracted-webwork-1-1-1-5-1-1-1">Choose</div></li>
+<li id="extracted-webwork-1-1-1-5-1-2"><div class="para" id="extracted-webwork-1-1-1-5-1-2-1">Echelon Form</div></li>
+<li id="extracted-webwork-1-1-1-5-1-3"><div class="para" id="extracted-webwork-1-1-1-5-1-3-1">Reduced Echelon Form</div></li>
+<li id="extracted-webwork-1-1-1-5-1-4"><div class="para" id="extracted-webwork-1-1-1-5-1-4-1">Not in Echelon Form</div></li>
+</ul>
+<div class="para"><span class="process-math">\(\left[\begin{array}{cccc}
+1 \amp 0 \amp 0 \amp 10\cr
+0 \amp 1 \amp 0 \amp 5\cr
+0 \amp 0 \amp 1 \amp -2
 \end{array}\right]\)</span></div>
 </div>
 </div>
 </div></article><article class="activity project-like" id="rref_matrixforms_prob2"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.4.2</span><span class="period">.</span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.1.2</span><span class="period">.</span>
 </h4>
-<div id="webwork-18" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="18" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="matrixtheory/rrefprob2.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-18')">Activate</button></div>
+<div id="webwork-2" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="2" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="matrixtheory/rrefprob2.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-2')">Activate</button></div>
 <div class="problem-contents">
-<div class="para" id="extracted-webwork-18-1-1-1">Determine whether the following matrices are in echelon form, reduced echelon form or not in echelon form.</div> <div class="para logical" id="extracted-webwork-18-1-1-2">
+<div class="para" id="extracted-webwork-2-1-1-1">Determine whether the following matrices are in echelon form, reduced echelon form or not in echelon form.</div> <div class="para logical" id="extracted-webwork-2-1-1-2">
 <div class="para">a.</div>
-<ul class="disc" id="extracted-webwork-18-1-1-2-1">
-<li id="extracted-webwork-18-1-1-2-1-1"><div class="para" id="extracted-webwork-18-1-1-2-1-1-1">Choose</div></li>
-<li id="extracted-webwork-18-1-1-2-1-2"><div class="para" id="extracted-webwork-18-1-1-2-1-2-1">Echelon Form</div></li>
-<li id="extracted-webwork-18-1-1-2-1-3"><div class="para" id="extracted-webwork-18-1-1-2-1-3-1">Reduced Echelon Form</div></li>
-<li id="extracted-webwork-18-1-1-2-1-4"><div class="para" id="extracted-webwork-18-1-1-2-1-4-1">Not in Echelon Form</div></li>
+<ul class="disc" id="extracted-webwork-2-1-1-2-1">
+<li id="extracted-webwork-2-1-1-2-1-1"><div class="para" id="extracted-webwork-2-1-1-2-1-1-1">Choose</div></li>
+<li id="extracted-webwork-2-1-1-2-1-2"><div class="para" id="extracted-webwork-2-1-1-2-1-2-1">Echelon Form</div></li>
+<li id="extracted-webwork-2-1-1-2-1-3"><div class="para" id="extracted-webwork-2-1-1-2-1-3-1">Reduced Echelon Form</div></li>
+<li id="extracted-webwork-2-1-1-2-1-4"><div class="para" id="extracted-webwork-2-1-1-2-1-4-1">Not in Echelon Form</div></li>
 </ul>
 <div class="para"><span class="process-math">\(\left[\begin{array}{ccc}
-1 \amp -9 \amp 2\cr
-0 \amp 1 \amp 0
+1 \amp 1 \amp 5\cr
+1 \amp 0 \amp 9
 \end{array}\right]\)</span></div>
-</div> <div class="para logical" id="extracted-webwork-18-1-1-3">
+</div> <div class="para logical" id="extracted-webwork-2-1-1-3">
 <div class="para">b.</div>
-<ul class="disc" id="extracted-webwork-18-1-1-3-1">
-<li id="extracted-webwork-18-1-1-3-1-1"><div class="para" id="extracted-webwork-18-1-1-3-1-1-1">Choose</div></li>
-<li id="extracted-webwork-18-1-1-3-1-2"><div class="para" id="extracted-webwork-18-1-1-3-1-2-1">Echelon Form</div></li>
-<li id="extracted-webwork-18-1-1-3-1-3"><div class="para" id="extracted-webwork-18-1-1-3-1-3-1">Reduced Echelon Form</div></li>
-<li id="extracted-webwork-18-1-1-3-1-4"><div class="para" id="extracted-webwork-18-1-1-3-1-4-1">Not in Echelon Form</div></li>
-</ul>
-<div class="para"><span class="process-math">\(\left[\begin{array}{ccc}
-1 \amp 1 \amp 2\cr
-1 \amp 0 \amp -9
-\end{array}\right]\)</span></div>
-</div> <div class="para logical" id="extracted-webwork-18-1-1-4">
-<div class="para">c.</div>
-<ul class="disc" id="extracted-webwork-18-1-1-4-1">
-<li id="extracted-webwork-18-1-1-4-1-1"><div class="para" id="extracted-webwork-18-1-1-4-1-1-1">Choose</div></li>
-<li id="extracted-webwork-18-1-1-4-1-2"><div class="para" id="extracted-webwork-18-1-1-4-1-2-1">Echelon Form</div></li>
-<li id="extracted-webwork-18-1-1-4-1-3"><div class="para" id="extracted-webwork-18-1-1-4-1-3-1">Reduced Echelon Form</div></li>
-<li id="extracted-webwork-18-1-1-4-1-4"><div class="para" id="extracted-webwork-18-1-1-4-1-4-1">Not in Echelon Form</div></li>
-</ul>
-<div class="para"><span class="process-math">\(\left[\begin{array}{cccc}
-1 \amp 0 \amp 0 \amp -7\cr
-0 \amp 1 \amp 0 \amp -8\cr
-0 \amp 0 \amp 0 \amp 0
-\end{array}\right]\)</span></div>
-</div> <div class="para logical" id="extracted-webwork-18-1-1-5">
-<div class="para">d.</div>
-<ul class="disc" id="extracted-webwork-18-1-1-5-1">
-<li id="extracted-webwork-18-1-1-5-1-1"><div class="para" id="extracted-webwork-18-1-1-5-1-1-1">Choose</div></li>
-<li id="extracted-webwork-18-1-1-5-1-2"><div class="para" id="extracted-webwork-18-1-1-5-1-2-1">Echelon Form</div></li>
-<li id="extracted-webwork-18-1-1-5-1-3"><div class="para" id="extracted-webwork-18-1-1-5-1-3-1">Reduced Echelon Form</div></li>
-<li id="extracted-webwork-18-1-1-5-1-4"><div class="para" id="extracted-webwork-18-1-1-5-1-4-1">Not in Echelon Form</div></li>
+<ul class="disc" id="extracted-webwork-2-1-1-3-1">
+<li id="extracted-webwork-2-1-1-3-1-1"><div class="para" id="extracted-webwork-2-1-1-3-1-1-1">Choose</div></li>
+<li id="extracted-webwork-2-1-1-3-1-2"><div class="para" id="extracted-webwork-2-1-1-3-1-2-1">Echelon Form</div></li>
+<li id="extracted-webwork-2-1-1-3-1-3"><div class="para" id="extracted-webwork-2-1-1-3-1-3-1">Reduced Echelon Form</div></li>
+<li id="extracted-webwork-2-1-1-3-1-4"><div class="para" id="extracted-webwork-2-1-1-3-1-4-1">Not in Echelon Form</div></li>
 </ul>
 <div class="para"><span class="process-math">\(\left[\begin{array}{ccccc}
-1 \amp -4 \amp 8 \amp 10 \amp -5\cr
+1 \amp 7 \amp 9 \amp -7 \amp -6\cr
 0 \amp 1 \amp 1 \amp 1 \amp 1\cr
-0 \amp 0 \amp 1 \amp 0 \amp 4\cr
+0 \amp 0 \amp 1 \amp 0 \amp -2\cr
 0 \amp 0 \amp 0 \amp 1 \amp 0
+\end{array}\right]\)</span></div>
+</div> <div class="para logical" id="extracted-webwork-2-1-1-4">
+<div class="para">c.</div>
+<ul class="disc" id="extracted-webwork-2-1-1-4-1">
+<li id="extracted-webwork-2-1-1-4-1-1"><div class="para" id="extracted-webwork-2-1-1-4-1-1-1">Choose</div></li>
+<li id="extracted-webwork-2-1-1-4-1-2"><div class="para" id="extracted-webwork-2-1-1-4-1-2-1">Echelon Form</div></li>
+<li id="extracted-webwork-2-1-1-4-1-3"><div class="para" id="extracted-webwork-2-1-1-4-1-3-1">Reduced Echelon Form</div></li>
+<li id="extracted-webwork-2-1-1-4-1-4"><div class="para" id="extracted-webwork-2-1-1-4-1-4-1">Not in Echelon Form</div></li>
+</ul>
+<div class="para"><span class="process-math">\(\left[\begin{array}{cccc}
+1 \amp 0 \amp 0 \amp -3\cr
+0 \amp 1 \amp 0 \amp 10\cr
+0 \amp 0 \amp 0 \amp 0
+\end{array}\right]\)</span></div>
+</div> <div class="para logical" id="extracted-webwork-2-1-1-5">
+<div class="para">d.</div>
+<ul class="disc" id="extracted-webwork-2-1-1-5-1">
+<li id="extracted-webwork-2-1-1-5-1-1"><div class="para" id="extracted-webwork-2-1-1-5-1-1-1">Choose</div></li>
+<li id="extracted-webwork-2-1-1-5-1-2"><div class="para" id="extracted-webwork-2-1-1-5-1-2-1">Echelon Form</div></li>
+<li id="extracted-webwork-2-1-1-5-1-3"><div class="para" id="extracted-webwork-2-1-1-5-1-3-1">Reduced Echelon Form</div></li>
+<li id="extracted-webwork-2-1-1-5-1-4"><div class="para" id="extracted-webwork-2-1-1-5-1-4-1">Not in Echelon Form</div></li>
+</ul>
+<div class="para"><span class="process-math">\(\left[\begin{array}{ccc}
+1 \amp 0 \amp 0\cr
+0 \amp 1 \amp 0\cr
+0 \amp 0 \amp 0
 \end{array}\right]\)</span></div>
 </div>
 </div>
 </div></article><article class="activity project-like" id="rref_performgauss1"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.4.3</span><span class="period">.</span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.1.3</span><span class="period">.</span>
 </h4>
-<div id="webwork-19" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="19" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="matrixtheory/rrefprob3a.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-19')">Activate</button></div>
+<div id="webwork-3" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="3" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="matrixtheory/rrefprob3a.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-3')">Activate</button></div>
 <div class="problem-contents">
-<div class="para logical" id="extracted-webwork-19-1-1-1">
+<div class="para logical" id="extracted-webwork-3-1-1-1">
 <div class="para">Solve the following system using augmented matrix methods:</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \begin{array}{c}
-3 x  - 6 y = -15
+-5 x + 10 y = -50
 \\
-5 x  - 9 y = -25
+-2 x + 5 y = -26
 \end{array}
 \end{equation*}
 </div>
-</div> <div class="para" id="extracted-webwork-19-1-1-2">(a) The initial matrix is:</div> <div class="tabular-box natural-width"><table class="tabular">
+</div> <div class="para" id="extracted-webwork-3-1-1-2">(a) The initial matrix is:</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
@@ -1090,7 +1026,7 @@ R_1 \leftrightarrow R_3
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 </tr>
-</table></div> <div class="para" id="extracted-webwork-19-1-1-4">(b) First, perform the Row Operation <span class="process-math">\(\frac{1}{3} R_1 \to R_1\text{.}\)</span>  The resulting matrix is:</div> <div class="tabular-box natural-width"><table class="tabular">
+</table></div> <div class="para" id="extracted-webwork-3-1-1-4">(b) First, perform the Row Operation <span class="process-math">\(\frac{1}{-5} R_1 \to R_1\text{.}\)</span>  The resulting matrix is:</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
@@ -1101,7 +1037,7 @@ R_1 \leftrightarrow R_3
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 </tr>
-</table></div> <div class="para" id="extracted-webwork-19-1-1-6">(c) Next, perform the operation <span class="process-math">\(-5 R_1 + R_2 \to R_2\text{.}\)</span>  The resulting matrix is:</div> <div class="tabular-box natural-width"><table class="tabular">
+</table></div> <div class="para" id="extracted-webwork-3-1-1-6">(c) Next, perform the operation <span class="process-math">\(+ 2 R_1 + R_2 \to R_2\text{.}\)</span>  The resulting matrix is:</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
@@ -1112,7 +1048,7 @@ R_1 \leftrightarrow R_3
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 </tr>
-</table></div> <div class="para" id="extracted-webwork-19-1-1-8">(d) Finish simplifying the augmented matrix.  The reduced matrix is:</div> <div class="tabular-box natural-width"><table class="tabular">
+</table></div> <div class="para" id="extracted-webwork-3-1-1-8">(d) Finish simplifying the augmented matrix.  The reduced matrix is:</div> <div class="tabular-box natural-width"><table class="tabular">
 <tr>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
@@ -1123,82 +1059,82 @@ R_1 \leftrightarrow R_3
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="fillin underline" role="img" aria-label="5-character blank" style="width: 2.272727272727273em;"></span></td>
 </tr>
-</table></div> <div class="para" id="extracted-webwork-19-1-1-10">(e) What are the solutions to the system?</div> <div class="para" id="extracted-webwork-19-1-1-11">
+</table></div> <div class="para" id="extracted-webwork-3-1-1-10">(e) What are the solutions to the system?</div> <div class="para" id="extracted-webwork-3-1-1-11">
 <span class="process-math">\(x=\)</span> <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>
-</div> <div class="para" id="extracted-webwork-19-1-1-12">
+</div> <div class="para" id="extracted-webwork-3-1-1-12">
 <span class="process-math">\(y=\)</span> <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span>
 </div>
 </div>
 </div></article><article class="activity project-like" id="rref_performgauss2"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.4.4</span><span class="period">.</span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.1.4</span><span class="period">.</span>
 </h4>
-<div id="webwork-20" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="20" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="matrixtheory/rrefprob3.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-20')">Activate</button></div>
+<div id="webwork-4" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="4" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="matrixtheory/rrefprob3.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-4')">Activate</button></div>
 <div class="problem-contents">
-<div class="para logical" id="extracted-webwork-20-1-1-1">
+<div class="para logical" id="extracted-webwork-4-1-1-1">
 <div class="para">Reduce the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A= \left[\begin{array}{cccc}
--3 \amp -6 \amp -3 \amp -24\cr
-0 \amp -4 \amp -6 \amp -20\cr
-0 \amp -8 \amp -16 \amp -48
+-1 \amp -2 \amp -1 \amp 20\cr
+0 \amp 4 \amp 6 \amp -50\cr
+0 \amp -2 \amp -4 \amp 30
 \end{array}\right]
 \end{equation*}
 </div>
 <div class="para">to reduced row-echelon form.</div>
 </div>
-<div class="solutions"><details id="extracted-webwork-20-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
-<div class="para logical" id="extracted-webwork-20-1-2-1">
-<div class="para">First, do <span class="process-math">\(\frac{1}{-3} R_1 \to R_1\text{,}\)</span> resulting in</div>
+<div class="solutions"><details id="extracted-webwork-4-1-2" class="hint solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Hint</span><span class="period">.</span></summary><div class="hint solution-like knowl__content">
+<div class="para logical" id="extracted-webwork-4-1-2-1">
+<div class="para">First, do <span class="process-math">\(\frac{1}{-1} R_1 \to R_1\text{,}\)</span> resulting in</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left[\begin{array}{cccc}
-1 \amp 2 \amp 1 \amp 8\cr
-0 \amp -4 \amp -6 \amp -20\cr
-0 \amp -8 \amp -16 \amp -48
+1 \amp 2 \amp 1 \amp -20\cr
+0 \amp 4 \amp 6 \amp -50\cr
+0 \amp -2 \amp -4 \amp 30
 \end{array}\right]
 \end{equation*}
 </div>
 </div>
-<div class="para logical" id="extracted-webwork-20-1-2-2">
-<div class="para">Then, do <span class="process-math">\(\frac{1}{-4} R_2 \to R_2\text{,}\)</span> resulting in</div>
+<div class="para logical" id="extracted-webwork-4-1-2-2">
+<div class="para">Then, do <span class="process-math">\(\frac{1}{4} R_2 \to R_2\text{,}\)</span> resulting in</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left[\begin{array}{cccc}
-1 \amp 2 \amp 1 \amp 8\cr
-0 \amp 1 \amp 1.5 \amp 5\cr
-0 \amp -8 \amp -16 \amp -48
+1 \amp 2 \amp 1 \amp -20\cr
+0 \amp 1 \amp 1.5 \amp -12.5\cr
+0 \amp -2 \amp -4 \amp 30
 \end{array}\right]
 \end{equation*}
 </div>
-<div class="para">Next, do <span class="process-math">\(8 R_2+R_3 \to R_3\text{,}\)</span> resulting in</div>
+<div class="para">Next, do <span class="process-math">\(2 R_2+R_3 \to R_3\text{,}\)</span> resulting in</div>
 <div class="displaymath process-math">
 \begin{equation*}
 \left[\begin{array}{cccc}
-1 \amp 2 \amp 1 \amp 8\cr
-0 \amp 1 \amp 1.5 \amp 5\cr
-0 \amp 0 \amp -4 \amp -8
+1 \amp 2 \amp 1 \amp -20\cr
+0 \amp 1 \amp 1.5 \amp -12.5\cr
+0 \amp 0 \amp -1 \amp 5
 \end{array}\right]
 \end{equation*}
 </div>
 </div>
-<div class="para" id="extracted-webwork-20-1-2-3">Now we can multiply <span class="process-math">\(R_3\)</span> by a constant to create the leading 1, and then do the backwards steps.</div>
+<div class="para" id="extracted-webwork-4-1-2-3">Now we can multiply <span class="process-math">\(R_3\)</span> by a constant to create the leading 1, and then do the backwards steps.</div>
 </div></details></div>
 </div>
 </div></article><article class="activity project-like" id="rref_performgauss3"><h4 class="heading">
-<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.4.5</span><span class="period">.</span>
+<span class="type">Exercise</span><span class="space"> </span><span class="codenumber">1.1.5</span><span class="period">.</span>
 </h4>
-<div id="webwork-21" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="21" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_32.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
-<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-21')">Activate</button></div>
-<div class="problem-contents"><div class="para logical" id="extracted-webwork-21-1-1-1">
+<div id="webwork-5" class="exercise-wrapper" data-domain="https://webwork-dev.uleth.ca" data-seed="5" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-sourceFilePath="Library/Rochester/setLinearAlgebra3Matrices/ur_la_3_32.pg" data-courseID="chrissy-playground" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('webwork-5')">Activate</button></div>
+<div class="problem-contents"><div class="para logical" id="extracted-webwork-5-1-1-1">
 <div class="para">Reduce the matrix</div>
 <div class="displaymath process-math">
 \begin{equation*}
 A= \left[\begin{array}{cccc}
-3 \amp -3 \amp 4 \amp -15\cr
--1 \amp 0 \amp -1 \amp 2\cr
-3 \amp 3 \amp -2 \amp 3
+3 \amp 2 \amp -2 \amp -8\cr
+3 \amp 0 \amp -1 \amp -3\cr
+0 \amp 3 \amp -2 \amp -9
 \end{array}\right]
 \end{equation*}
 </div>
@@ -1292,12 +1228,11 @@ A= \left[\begin{array}{cccc}
 </div>
 </div></section></section></div>
 <div id="ptx-content-footer" class="ptx-content-footer">
-<a class="previous-button button" href="sec-row-ops.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-consistency.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="ch-chapter-title.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
-<a class="feedback-link" href="mailto:csafranski@franciscan.edu" target="_blank">Feedback</a><a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+<a class="feedback-link" href="mailto:hunnellm@wssu.edu" target="_blank">Feedback</a><a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
 </div>
-<script>diagcess.Base.init()</script>
 </body>
 </html>
