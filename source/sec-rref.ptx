@@ -16,7 +16,7 @@
           <idx><h>reduced row echelon form</h></idx>
           <idx><h>row echelon form</h></idx>
         <statement>
-          <p>
+          <p> 
             A matrix is in <term>reduced row echelon form</term>
             if its entries satisfy all four of the following conditions.
             <ol>
