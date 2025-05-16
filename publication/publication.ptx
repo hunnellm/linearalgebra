@@ -75,7 +75,7 @@
     <!-- Set @formatted to "no" to remove formatting on worksheets: -->
     <worksheets formatted="no" />
   </latex>
-
+  <html embed-button="yes"/>
   <html short-answer-responses="always">
     <platform host="web"/>
     <!-- The host above could also be "runestone" -->
