@@ -1137,7 +1137,7 @@
       </block>
       </blocks>
     </exercise>
-
+<!-- 
     <exercise label="rq-rref-questions"><title>Reflection</title>
       <statement>
         <p>
@@ -1161,7 +1161,7 @@
         </p>
       </statement>
       <response/>
-    </exercise>
+    </exercise> -->
   </reading-questions>
 
 
@@ -1174,7 +1174,7 @@
 
   </subsection>
 
-<xi:include href="participate-worksheets/dc-rref.ptx" />
+<!-- <xi:include href="participate-worksheets/dc-rref.ptx" /> -->
 
 <!-- <xi:include href="participate-worksheets/dc-rrefa.xml" /> -->
   
@@ -1208,6 +1208,6 @@
 
     <xi:include href="interactive-exercises/ww-rref.ptx" />
 
-    <xi:include href="noninteractive-exercises/exer-rref.ptx" />
+    <!-- <xi:include href="noninteractive-exercises/exer-rref.ptx" /> -->
 
 </section>
